@@ -3,7 +3,6 @@
 class ApplicationResource < Flexirest::Base
   request_body_type :json
   base_url 'https://www.e-solat.gov.my/index.php?r=esolatApi/TakwimSolat'
-  #https://www.e-solat.gov.my/index.php?r=esolatApi/TakwimSolat&period=today&zone=SGR01
 
   def assign_attributes(new_attributes)
     unless new_attributes.respond_to?(:stringify_keys)
