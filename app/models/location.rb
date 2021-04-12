@@ -1,6 +1,6 @@
 module Location
   def self.list
-    zones = [
+    [
       { code: "JHR01", zone: "Pulau Aur dan Pemanggil", state: "Johor"},
       { code: "JHR02", zone: "Kota Tinggi, Mersing, Johor Bahru", state: "Johor"},
       { code: "JHR03", zone: "Kluang dan Pontian", state: "Johor"},
