@@ -1,0 +1,42 @@
+require: rubocop-rails
+inherit_from: .rubocop_todo.yml
+AllCops:
+  NewCops: disable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'lib/templates/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/routes.rb'
+    - 'config/routes/**/*'
+    - 'spec/**/*'
+
+Naming/AccessorMethodName:
+  Exclude:
+    - 'app/controllers/**/*'
+    - 'app/datatables/**/*'
+
+Style/SymbolArray:
+  Enabled: false
