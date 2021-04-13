@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title MySolat
+    meta content="width=device-width,initial-scale=1" name="viewport" /
+    = csrf_meta_tags
+    = csp_meta_tag
+    = action_cable_meta_tag
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application', media: 'all'
+    = yield :head
+  body
+    nav.fixed.pin-t.pin-l.flex.items-center.justify-between.flex-wrap.bg-transparent.p-6.w-screen
+      #home.flex.items-center.flex-no-shrink.text-white.mr-6
+        svg.fill-current.text-teal.bg-white.rounded-full.h-8.w-8.mr-2.p-1 height="54" viewbox=("0 0 54 54") width="54" xmlns="http://www.w3.org/2000/svg"
+          path d=("M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z") /
+        span.font-semibold.text-xl.tracking-tight MySolat
+      #burger.block.md:hidden
+        button.flex.items-center.px-3.py-2.border.rounded.text-teal-500.border-teal-light.hover:text-white.hover:border-white
+          svg.fill-current.h-3.w-3 viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg"
+            title Menu
+            path d=("M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z") /
+      /! using both hidden and flex on same element
+      #menu.hidden.w-full.flex-grow.md:flex.md:items-center.md:w-auto
+        .text-sm.md:flex-grow
+          a.block.mt-4.md:inline-block.md:mt-0.text-teal-500.hover:text-white.mr-4 href="/api"
+            | API
+          a.block.mt-4.md:inline-block.md:mt-0.text-teal-500.hover:text-white href="https://github.com/mysolat/mysolat"
+            | Github
+        div
+          a.inline-block.text-sm.px-4.py-2.leading-none.border.rounded.text-white.border-white.hover:border-transparent.hover:text-teal-500.hover:bg-white.mt-4.md:mt-0 href="#"
+            svg.h-6.w-6 fill="none" stroke="currentColor" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+              path d=("M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4") stroke-linecap="round" stroke-linejoin="round" stroke-width="2" /
+
+    #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
+      .flex.items-center.justify-center.h-screen.text-white.z-0
+        h2.mt-12.font-bold.text-3xl.sm:text-4xl.text-center.bg-transparent
+          | A Utility-First CSS Framework
+          br.hidden.sm:inline-block/
+          | for Rapid UI Development
+    section#pages.flex.flex-col.h-screen.mx-8
+      = yield
