@@ -1,0 +1,43 @@
+.modal-wrapper {
+  @apply fixed inset-0;
+  @apply w-full h-full;
+  @apply flex flex-col items-center justify-center;
+  background-color: #fffe; /* [1] */
+  @apply z-10;
+  animation-name: fadeIn;
+  animation-fill-mode: both;
+  animation-duration: .2s;
+}
+
+.modal {
+  @apply relative w-full max-w-xl;
+  @apply bg-white rounded shadow-lg  p-4;
+  animation-name: slideUpSm;
+  animation-fill-mode: both;
+  animation-duration: .5s;
+  min-height: 100px;
+}
+
+.modal.modal-lg {
+
+}
+
+.modal-header {
+  @apply mb-1 pr-4 justify-center;
+  @apply text-xl font-medium leading-tight;
+}
+
+.modal-body {
+  @apply w-full;
+}
+
+.modal-close {
+  @apply absolute top-4 right-2;
+  @apply inline-block w-6 h-6;
+  @apply text-gray-700;
+  @apply fill-current;
+
+  &:hover {
+    @apply text-gray-700;
+  }
+}

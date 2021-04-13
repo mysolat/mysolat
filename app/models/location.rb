@@ -1,5 +1,5 @@
 module Location
-  def self.list
+  def self.all
     [
       { code: "JHR01", zone: "Pulau Aur dan Pemanggil", state: "Johor"},
       { code: "JHR02", zone: "Kota Tinggi, Mersing, Johor Bahru", state: "Johor"},
