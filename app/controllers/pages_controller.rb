@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
   def index
-     @locations = Location.all
+
   end
 
   def show

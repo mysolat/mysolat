@@ -59,6 +59,6 @@ module Location
       { code: "TRG03", zone: "Hulu Terengganu", state: "Terengganu"},
       { code: "TRG04", zone: "Kemaman Dungun", state: "Terengganu"},
       { code: "WLY02", zone: "Labuan", state: "Labuan"}
-    ]
+    ].map(&:stringify_keys)
   end
 end

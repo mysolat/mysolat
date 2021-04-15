@@ -1,10 +1,29 @@
 #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
-  .flex.items-center.justify-center.h-screen.text-white.z-0
+  .flex.flex-col.items-center.justify-center.h-screen.text-white.z-0
     h2.mt-12.font-bold.text-3xl.sm:text-4xl.text-center.bg-transparent
-      | A Utility-First CSS Framework
-      br.hidden.sm:inline-block/
-      | for Rapid UI Development
+      = "#{@location['zone']}, #{@location['state']}"
 
+
+    br
+    = @prayer_time['hijri']
+    br
+    = @prayer_time['date']
+    br
+    = @prayer_time['day']
+    br
+    = @prayer_time['imsak']
+    br
+    = @prayer_time['fajr']
+    br
+    = @prayer_time['dhuhr']
+    br
+    = @prayer_time['asr']
+    br
+    = @prayer_time['maghrib']
+    br
+    = @prayer_time['isha']
+    br
+    == @prayer_time['bearing']
 section#pages.flex.flex-col.h-screen.mx-8
 
 = content_for :modal_content do
@@ -14,5 +33,5 @@ section#pages.flex.flex-col.h-screen.mx-8
       path d=("M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z")
   .modal-body
     - @locations.each do |location|
-      = link_to location[:zone], zone_path(id: location[:code].downcase)
+      = link_to location['zone'], zone_path(id: location['code'].downcase)
       br
