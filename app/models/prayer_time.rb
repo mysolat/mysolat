@@ -17,8 +17,8 @@ module PrayerTime
 
   def self.get_data(period, zone)
     url = JAKIM_BASE_URL.gsub(':period', period).gsub(':zone', zone)
-    puts url
-    http = Curl.get(url)
-    JSON.parse http.body
+    response = Net::HTTP.get_response URI.parse(url)
+    JSON.parse(response.body)
   end
+
 end
