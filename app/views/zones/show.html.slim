@@ -1,29 +1,33 @@
 #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
-  .flex.flex-col.items-center.justify-center.h-screen.text-white.z-0
-    h2.mt-12.font-bold.text-3xl.sm:text-4xl.text-center.bg-transparent
+  .flex.flex-col.items-center.justify-center.h-screen.text-white.z-0.mx-5
+    h2.mt-12.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
       = "#{@location['zone']}, #{@location['state']}"
+    h3.mt-5.font-bold.text-xl.md:text-3xl
+      == @prayer_time['bearing']
+    h4.my-5 #{@prayer_time['date'].to_date.strftime("%d %B %Y, %A")} bersamaan dengan  #{@prayer_time['hijri']} hijrah
 
-
-    br
-    = @prayer_time['hijri']
-    br
-    = @prayer_time['date']
-    br
-    = @prayer_time['day']
-    br
-    = @prayer_time['imsak']
-    br
-    = @prayer_time['fajr']
-    br
-    = @prayer_time['dhuhr']
-    br
-    = @prayer_time['asr']
-    br
-    = @prayer_time['maghrib']
-    br
-    = @prayer_time['isha']
-    br
-    == @prayer_time['bearing']
+    .grid.grid-flow-row.grid-cols-2.sm:grid-cols-3.md:grid-cols-7.gap-7.font-bold.md:text-3xl.lg:text-4xl.sm:text-2xl.text-center.h-auto
+      .imsak
+        h4 IMSAK
+        = @prayer_time['imsak']
+      .subuh
+        h4 SUBUH
+        = @prayer_time['fajr']
+      .syuruk
+        h4 SYURUK
+        = @prayer_time['syuruk']
+      .zohor
+        h4 ZOHOR
+        = @prayer_time['dhuhr']
+      .asart
+        h4 ASAR
+        = @prayer_time['asr']
+      .maghrib
+        h4 MAGHRIB
+        = @prayer_time['maghrib']
+      .isyak
+        h4 ISYAK
+        = @prayer_time['isha']
 section#pages.flex.flex-col.h-screen.mx-8
 
 = content_for :modal_content do

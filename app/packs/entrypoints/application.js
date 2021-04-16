@@ -24,6 +24,7 @@ const imagePath = (name) => images(name, true)
 window.App || (window.App = {})
 window.jQuery = $
 window.$ = $
+window.Turbo = Turbo
 
 require('trix')
 require('@rails/actiontext')
