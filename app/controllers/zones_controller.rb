@@ -11,6 +11,6 @@ class ZonesController < ApplicationController
 
   def default_zone
     params[:id] ||= cookies['zone']
-    cookies['zone'] = params[:id].upcase
+    cookies['zone'] = params[:id].try(:upcase) || 'SGR01'
   end
 end

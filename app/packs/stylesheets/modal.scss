@@ -16,6 +16,7 @@
   animation-fill-mode: both;
   animation-duration: .5s;
   min-height: 100px;
+  max-height: 90%;
 }
 
 .modal.modal-lg {
@@ -23,12 +24,14 @@
 }
 
 .modal-header {
-  @apply mb-1 pr-4 justify-center;
+  @apply my-3 pr-4 justify-center;
   @apply text-xl font-medium leading-tight;
 }
 
 .modal-body {
   @apply w-full;
+  max-height: 95%;
+  overflow-y: auto;
 }
 
 .modal-close {
