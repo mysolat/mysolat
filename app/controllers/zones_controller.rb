@@ -5,6 +5,8 @@ class ZonesController < ApplicationController
     zone = PrayerTime.daily(zone: default_zone)
     @prayer_time = zone['prayerTime']&.first.merge!({ bearing: zone['bearing'] })
     @prayer_time.merge!({ 'bearing' => zone['bearing'] })
+
+    @monthly = PrayerTime.monthly(zone: default_zone)
   end
 
   private

@@ -1,4 +1,5 @@
 module PrayerTime
+  require 'open-uri'
   JAKIM_BASE_URL = "https://www.e-solat.gov.my/index.php?r=esolatApi/TakwimSolat&period=:period&zone=:zone"
 
   def self.daily(zone: 'SGR01')
@@ -17,8 +18,8 @@ module PrayerTime
 
   def self.get_data(period, zone)
     url = JAKIM_BASE_URL.gsub(':period', period).gsub(':zone', zone)
-    response = Net::HTTP.get_response URI.parse(url)
-    JSON.parse(response.body)
+    response = URI.open(url, read_timeout: 2).read
+    JSON.parse(response)
   end
 
 end
