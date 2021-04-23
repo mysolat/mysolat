@@ -29,7 +29,32 @@
         h4 ISYAK
         = @prayer_time['isha']
 section#pages.flex.flex-col.h-screen.mx-8
-  = @monthly.inspect
+  table.table-auto
+    thead
+      tr
+        th Tarikh Miladi
+        th Tarikh Hijri
+        th Hari
+        th Imsak
+        th Subuh
+        th Syuruk
+        th Zohor
+        th Asar
+        th Maghrib
+        th Isyak
+    tbody.text-center
+      - @monthly.each do |month|
+        tr
+          td = month['date']
+          td = month['hijri']
+          td = month['day']
+          td = month['imsak']
+          td = month['fajr']
+          td = month['syuruk']
+          td = month['dhuhr']
+          td = month['asr']
+          td = month['maghrib']
+          td = month['isha']
 
 = content_for :modal_content do
   .modal-header

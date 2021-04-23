@@ -6,7 +6,7 @@ class ZonesController < ApplicationController
     @prayer_time = zone['prayerTime']&.first.merge!({ bearing: zone['bearing'] })
     @prayer_time.merge!({ 'bearing' => zone['bearing'] })
 
-    @monthly = PrayerTime.monthly(zone: default_zone)
+    @monthly = PrayerTime.monthly(zone: default_zone).fetch('prayerTime')
   end
 
   private
