@@ -3,31 +3,31 @@
     h2.mt-12.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
       = "#{@location['zone']}, #{@location['state']}"
     h3.mt-5.font-bold.text-xl.md:text-3xl
-      == @prayer_time['bearing']
-    h4.my-5 #{@prayer_time['date'].to_date.strftime("%d %B %Y, %A")} bersamaan dengan  #{@prayer_time['hijri']} hijrah
+      == @today['bearing']
+    h4.my-5 #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{@today['hijri']} hijrah
 
     .grid.grid-flow-row.grid-cols-2.sm:grid-cols-3.md:grid-cols-7.gap-7.font-bold.md:text-3xl.lg:text-4xl.sm:text-2xl.text-center.h-auto
       .imsak
         h4 IMSAK
-        = @prayer_time['imsak']
+        = l @today['imsak'].to_time, format: "%I:%M %p"
       .subuh
         h4 SUBUH
-        = @prayer_time['fajr']
+        = l @today['fajr'].to_time, format: "%I:%M %p"
       .syuruk
         h4 SYURUK
-        = @prayer_time['syuruk']
+        = l @today['syuruk'].to_time, format: "%I:%M %p"
       .zohor
         h4 ZOHOR
-        = @prayer_time['dhuhr']
+        = l @today['dhuhr'].to_time, format: "%I:%M %p"
       .asart
         h4 ASAR
-        = @prayer_time['asr']
+        = l @today['asr'].to_time, format: "%I:%M %p"
       .maghrib
         h4 MAGHRIB
-        = @prayer_time['maghrib']
+        = l @today['maghrib'].to_time, format: "%I:%M %p"
       .isyak
         h4 ISYAK
-        = @prayer_time['isha']
+        = l @today['isha'].to_time, format: "%I:%M %p"
 section#pages.flex.flex-col.h-screen.mx-8
   table.table-auto
     thead
@@ -44,17 +44,18 @@ section#pages.flex.flex-col.h-screen.mx-8
         th Isyak
     tbody.text-center
       - @monthly.each do |month|
+        - date = month['date'].to_date
         tr
-          td = month['date']
+          td = l date, format: :long
           td = month['hijri']
-          td = month['day']
-          td = month['imsak']
-          td = month['fajr']
-          td = month['syuruk']
-          td = month['dhuhr']
-          td = month['asr']
-          td = month['maghrib']
-          td = month['isha']
+          td = l date, format: :day
+          td = l month['imsak'].to_time, format: "%I:%M %p"
+          td = l month['fajr'].to_time, format: "%I:%M %p"
+          td = l month['syuruk'].to_time, format: "%I:%M %p"
+          td = l month['dhuhr'].to_time, format: "%I:%M %p"
+          td = l month['asr'].to_time, format: "%I:%M %p"
+          td = l month['maghrib'].to_time, format: "%I:%M %p"
+          td = l month['isha'].to_time, format: "%I:%M %p"
 
 = content_for :modal_content do
   .modal-header

@@ -1,0 +1,6 @@
+ms:
+  hello: "Hello world"
+  date:
+    formats:
+      extra: "%d %B %Y, %A"
+      day: "%A"

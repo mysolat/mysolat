@@ -2,11 +2,10 @@ class ZonesController < ApplicationController
   def show
     @locations = Location.all
     @location =  @locations.find {|x| x['code'] == default_zone}
-    zone = PrayerTime.daily(zone: default_zone)
-    @prayer_time = zone['prayerTime']&.first.merge!({ bearing: zone['bearing'] })
-    @prayer_time.merge!({ 'bearing' => zone['bearing'] })
-
-    @monthly = PrayerTime.monthly(zone: default_zone).fetch('prayerTime')
+    prayer_times = PrayerTime.monthly(zone: default_zone)
+    @monthly = prayer_times.fetch('prayerTime')
+    @today = @monthly.select { |p| p['date'] == Date.today.strftime("%d-%b-%Y") }.first
+    @today.merge!({ 'bearing' => prayer_times['bearing'] })
   end
 
   private
