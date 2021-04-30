@@ -1,10 +1,14 @@
 #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
   .flex.flex-col.items-center.justify-center.h-screen.text-white.z-0.mx-5
-    h2.mt-12.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
-      = "#{@location['zone']}, #{@location['state']}"
-    h3.mt-5.font-bold.text-xl.md:text-3xl
+    h1.font-bold.text-xl.md:text-4xl
+      span = @location['code']
+      span.mx-3 -
+      span = @location['state'].upcase
+      span.mx-3 -
       == @today['bearing']
-    h4.my-5 #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{@today['hijri']} hijrah
+    h2.mt-5.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
+      = @location['zone'].upcase
+    p.my-5.font-bold.md:text-xl #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{@today['hijri']} hijrah
 
     .grid.grid-flow-row.grid-cols-2.sm:grid-cols-3.md:grid-cols-7.gap-7.font-bold.md:text-3xl.lg:text-4xl.sm:text-2xl.text-center.h-auto
       .imsak

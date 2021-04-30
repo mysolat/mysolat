@@ -18,7 +18,7 @@ module PrayerTime
 
   def self.get_data(period, zone)
     url = JAKIM_BASE_URL.gsub(':period', period).gsub(':zone', zone)
-    response = URI.open(url, read_timeout: 2).read
+    response = URI.open(url, read_timeout: 5).read
     JSON.parse(response)
   end
 
