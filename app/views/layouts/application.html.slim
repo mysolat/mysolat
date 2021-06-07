@@ -9,7 +9,7 @@ html
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application', media: 'all'
     = yield :head
-  body data-action="keydown@window->modal#closeWithKeyboard" data-controller="modal link"
+  body.bg-base-100.text-base-content data-action="keydown@window->modal#closeWithKeyboard" data-controller="modal link"
     nav.fixed.pin-t.pin-l.flex.items-center.justify-between.flex-wrap.bg-transparent.p-6.w-screen
       #home.flex.items-center.flex-no-shrink.text-white.mr-6 data-action='click->link#go' data-url="/"
         svg.fill-current.text-teal.bg-white.rounded-full.h-8.w-8.mr-2.p-1 height="54" viewbox=("0 0 54 54") width="54" xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +22,51 @@ html
             | API
           a.block.mt-4.md:inline-block.md:mt-0.text-teal-500.hover:text-white href="https://github.com/mysolat/mysolat"
             | Github
+      .dropdown.dropdown-end title=("Change Theme")
+        .m-1.normal-case.btn-ghost.btn tabindex="0"
+          svg.inline-block.w-6.h-6.stroke-current.md:mr-2 fill="none" viewbox=("0 0 24 24") xmlns="http://www.w3.org/2000/svg"
+            path d=("M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01") stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          span.hidden.md:inline
+            | Change Theme
+          svg.inline-block.w-4.h-4.ml-1.fill-current viewbox=("0 0 1792 1792") xmlns="http://www.w3.org/2000/svg"
+            path d=("M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z")
+
+        .mt-16.overflow-y-auto.shadow-2xl.top-px.dropdown-content.h-96.w-52.rounded-b-box.bg-base-200.text-base-content
+
+          ul.p-4.menu.compact data-controller="theme"
+            li
+              a data-action="click->theme#switch" data-theme-value="light" tabindex="0"  🌝  light
+            li
+              a data-action="click->theme#switch" data-theme-value="dark" tabindex="0"  🌚  dark
+            li
+              a data-action="click->theme#switch" data-theme-value="cupcake" tabindex="0"  🧁  cupcake
+            li
+              a data-action="click->theme#switch" data-theme-value="bumblebee" tabindex="0"  🐝  bumblebee
+            li
+              a data-action="click->theme#switch" data-theme-value="emerald" tabindex="0"  ✳️  Emerald
+            li
+              a data-action="click->theme#switch" data-theme-value="corporate" tabindex="0"  🏢  Corporate
+            li
+              a data-action="click->theme#switch" data-theme-value="synthwave" tabindex="0"  🌃  synthwave
+            li
+              a data-action="click->theme#switch" data-theme-value="garden" tabindex="0"  🌷  garden
+            li
+              a data-action="click->theme#switch" data-theme-value="forest" tabindex="0"  🌲  forest
+            li
+              a data-action="click->theme#switch" data-theme-value="aqua" tabindex="0"  🐟  aqua
+            li
+              a data-action="click->theme#switch" data-theme-value="lofi" tabindex="0"  👓  lofi
+            li
+              a data-action="click->theme#switch" data-theme-value="pastel" tabindex="0"  🖍  pastel
+            li
+              a data-action="click->theme#switch" data-theme-value="fantasy" tabindex="0"  🧚‍♀️  fantasy
+            li
+              a data-action="click->theme#switch" data-theme-value="wireframe" tabindex="0"  📝  Wireframe
+            li
+              a data-action="click->theme#switch" data-theme-value="black" tabindex="0"  🏴  black
+            li
+              a data-action="click->theme#switch" data-theme-value="luxury" tabindex="0"  💎  luxury
+
       #setting
         div
           a.inline-block.text-sm.px-4.py-2.leading-none.border.rounded.text-white.border-white.hover:border-transparent.hover:text-teal-500.hover:bg-white.mt-4.md:mt-0 href="#" data-action="click->modal#open"
@@ -32,5 +77,5 @@ html
 
     .hidden data-target="modal.container"
       .modal-wrapper data-action="click->modal#closeBackground" data-target="modal.background"
-        .modal
+        .modal.py-3.rounded-box.bg-base-100.text-base-content
           = yield :modal_content

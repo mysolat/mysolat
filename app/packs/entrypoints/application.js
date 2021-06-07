@@ -26,9 +26,6 @@ window.jQuery = $
 window.$ = $
 window.Turbo = Turbo
 
-require('trix')
-require('@rails/actiontext')
-
 // Rails.start()
 ActiveStorage.start()
 

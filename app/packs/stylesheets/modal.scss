@@ -11,12 +11,16 @@
 
 .modal {
   @apply relative w-full max-w-xl;
-  @apply bg-white rounded shadow-lg  p-4;
+  @apply rounded shadow-lg  p-4;
   animation-name: slideUpSm;
   animation-fill-mode: both;
   animation-duration: .5s;
   min-height: 100px;
   max-height: 90%;
+  opacity: 1;
+  visibility: inherit;
+  pointer-events: initial;
+  display: initial;
 }
 
 .modal.modal-lg {

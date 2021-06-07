@@ -67,6 +67,7 @@ section#pages.flex.flex-col.h-screen.mx-8
     svg.modal-close.text-gray-200 data-action="click->modal#close" role="button" viewbox=("0 0 20 20") xmlns="http://www.w3.org/2000/svg"
       path d=("M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z")
   .modal-body
-    - @locations.each do |location|
-      = link_to location['zone'], zone_path(id: location['code'].downcase)
-      br
+    ul.menu
+      - @locations.each do |location|
+        li.menu-title
+          = link_to location['zone'], zone_path(id: location['code'].downcase)
