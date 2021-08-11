@@ -4,7 +4,7 @@ class ZonesController < ApplicationController
     @location =  @locations.find {|x| x['code'] == default_zone}
     prayer_times = PrayerTime.monthly(zone: default_zone)
     @monthly = prayer_times.fetch('prayerTime')
-    today = I18n.l Date.today, format:"%d-%b-%Y"
+    today = I18n.l Date.today, format:"%d-%B-%Y"
     @today = @monthly.select { |p| p['date'] == today }.first
     @today.merge!({ 'bearing' => prayer_times['bearing'] })
   end
