@@ -4,3 +4,25 @@ ms:
     formats:
       extra: "%d %B %Y, %A"
       day: "%A"
+    abbr_day_names:
+    - Ahd
+    - Isn
+    - Sel
+    - Rab
+    - Kha
+    - Jum
+    - Sab
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mac
+    - Apr
+    - Mei
+    - Jun
+    - Jul
+    - Ogos
+    - Sep
+    - Okt
+    - Nov
+    - Dis

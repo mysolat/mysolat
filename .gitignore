@@ -39,3 +39,4 @@
 yarn-debug.log*
 .yarn-integrity
 .irb_history
+.vscode
