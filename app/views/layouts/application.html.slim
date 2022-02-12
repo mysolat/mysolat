@@ -6,10 +6,10 @@ html
     = csrf_meta_tags
     = csp_meta_tag
     = action_cable_meta_tag
-    = javascript_pack_tag 'application'
-    = stylesheet_pack_tag 'application', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all', "data-turbo-track": "reload"
+    = javascript_include_tag 'application', "data-turbo-track": "reload", defer: true
     = yield :head
-  body.bg-base-100.text-base-content data-action="keydown@window->modal#closeWithKeyboard" data-controller="modal link"
+  body.bg-base-100.text-base-content data-action="keydown@window->modal#closeWithKeyboard" data-controller="modal"
     nav.fixed.pin-t.pin-l.flex.items-center.justify-between.flex-wrap.bg-transparent.p-6.w-screen
       #home.flex.items-center.flex-no-shrink.text-white.mr-6 data-action='click->link#go' data-url="/"
         svg.fill-current.text-teal.bg-white.rounded-full.h-8.w-8.mr-2.p-1 height="54" viewbox=("0 0 54 54") width="54" xmlns="http://www.w3.org/2000/svg"
