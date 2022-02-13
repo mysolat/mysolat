@@ -1,5 +1,4 @@
 ms:
-  hello: "Hello world"
   date:
     formats:
       extra: "%d %B %Y, %A"
@@ -26,3 +25,14 @@ ms:
     - Okt
     - Nov
     - Dis
+
+
+hijri:
+  date:
+    formats:
+      default: "%d %B %Y"
+      short: "%b %d"
+      long: "%d %B %Y"
+    day_names: [Ahad, Isnin, Selasa, Rabu, Khamis, Jumaat, Sabtu]
+    abbr_day_names: [Ahd, Mon, Tue, Wed, Thu, Fri, Sat]
+    month_names: [~, Muharram, Safar, Rabiulawwal, Rabiulakhir, Jumaadilawal, Jumaadiakhir, Rejab, Syaaban, Ramadhan, Syawal, Dhul-Qi'dah, ZulHijjah]
