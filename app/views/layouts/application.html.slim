@@ -11,7 +11,7 @@ html lang="ms"
     = javascript_include_tag 'application', "data-turbo-track": "reload", defer: true
     = yield :head
   body.bg-base-100.text-base-content data-action="keydown@window->modal#closeWithKeyboard" data-controller="modal"
-    nav.fixed.pin-t.pin-l.flex.items-center.justify-between.flex-wrap.bg-transparent.p-6.w-screen
+    nav.fixed.pin-t.pin-l.flex.items-center.justify-between.flex-wrap.bg-transparent.p-6.w-screen.z-50
 
       a.flex.items-center.flex-no-shrink.text-white.mr-6 href='/'
         svg.fill-current.text-teal.bg-white.rounded-full.h-8.w-8.mr-2.p-1 height="54" viewbox=("0 0 54 54") width="54" xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ html lang="ms"
 
     .hidden data-target="modal.container"
       .modal-wrapper data-action="click->modal#closeBackground" data-target="modal.background"
-        .modal.py-3.rounded-box.bg-base-100.text-base-content
+        .modal.modal-lg.py-3.rounded-box.bg-base-100.text-base-content
           = yield :modal if content_for?(:modal)
 
     /! This example requires Tailwind CSS v2.0+

@@ -49,7 +49,7 @@ a {
 }
 
 .modal.modal-lg {
-
+  @apply max-w-2xl;
 }
 
 .modal-header {

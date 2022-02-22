@@ -11,7 +11,7 @@
         = @location['zone'].upcase
       p.my-5.font-bold.md:text-2xl #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{l @today['hijri'].to_date, locale: :hijri} hijrah
 
-      .flex.flex-wrap.justify-between.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
+      .flex.flex-wrap.justify-center.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
         .p-4.imsak
           h4 IMSAK
           = l @today['imsak'].to_time, format: "%I:%M %p"
@@ -48,7 +48,7 @@
         th.md:text-xl Maghrib
         th.md:text-xl Isyak
 
-    tbody.text-center.md:text-xl
+    tbody.text-center.font-medium.md:text-xl
       - @monthly.each do |month|
         - date = month['date'].to_date
         tr
