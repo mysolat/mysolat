@@ -26,7 +26,6 @@ ms:
     - Nov
     - Dis
 
-
 hijri:
   date:
     formats:
@@ -35,4 +34,4 @@ hijri:
       long: "%d %B %Y"
     day_names: [Ahad, Isnin, Selasa, Rabu, Khamis, Jumaat, Sabtu]
     abbr_day_names: [Ahd, Mon, Tue, Wed, Thu, Fri, Sat]
-    month_names: [~, Muharram, Safar, Rabiulawwal, Rabiulakhir, Jumaadilawal, Jumaadiakhir, Rejab, Syaaban, Ramadhan, Syawal, Dhul-Qi'dah, ZulHijjah]
+    month_names: [~, Muharram, Safar, Rabi'ulawal, Rabi'ulakhir, Jamadilawwal, Jamadilakhir, Rejab, Sya'aban, Ramadhan, Shawwal, Zulkaedah, ZulHijjah]

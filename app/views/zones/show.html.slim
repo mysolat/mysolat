@@ -34,8 +34,6 @@
         = l @today['isha'].to_time, format: "%I:%M %p"
 
 section#pages.flex.flex-col.h-screen.mx-8
-  = l Date.today, locale: :hijri
-
   table.table-auto
     thead
       tr
@@ -56,13 +54,13 @@ section#pages.flex.flex-col.h-screen.mx-8
           td = l date, format: :long
           td = l month['hijri'].to_date, locale: :hijri
           td = l date, format: :day
-          td = l month['imsak'].to_time, format: "%I:%M %p"
-          td = l month['fajr'].to_time, format: "%I:%M %p"
-          td = l month['syuruk'].to_time, format: "%I:%M %p"
-          td = l month['dhuhr'].to_time, format: "%I:%M %p"
-          td = l month['asr'].to_time, format: "%I:%M %p"
-          td = l month['maghrib'].to_time, format: "%I:%M %p"
-          td = l month['isha'].to_time, format: "%I:%M %p"
+          td = l month['imsak'].to_time, format: '%I:%M %p'
+          td = l month['fajr'].to_time, format: '%I:%M %p'
+          td = l month['syuruk'].to_time, format: '%I:%M %p'
+          td = l month['dhuhr'].to_time, format: '%I:%M %p'
+          td = l month['asr'].to_time, format: '%I:%M %p'
+          td = l month['maghrib'].to_time, format: '%I:%M %p'
+          td = l month['isha'].to_time, format: '%I:%M %p'
 
 = content_for :modal_content do
   .modal-header
