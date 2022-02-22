@@ -11,26 +11,26 @@
         = @location['zone'].upcase
       p.my-5.font-bold.md:text-2xl #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{l @today['hijri'].to_date, locale: :hijri} hijrah
 
-      .grid.grid-flow-row.grid-cols-2.sm:grid-cols-3.md:grid-cols-7.gap-7.font-bold.md:text-3xl.lg:text-4xl.text-2xl.text-center.h-auto
-        .imsak
+      .flex.flex-wrap.justify-between.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
+        .p-4.imsak
           h4 IMSAK
           = l @today['imsak'].to_time, format: "%I:%M %p"
-        .subuh
+        .p-4.subuh
           h4 SUBUH
           = l @today['fajr'].to_time, format: "%I:%M %p"
-        .syuruk
+        .p-4.syuruk
           h4 SYURUK
           = l @today['syuruk'].to_time, format: "%I:%M %p"
-        .zohor
+        .p-4.zohor
           h4 ZOHOR
           = l @today['dhuhr'].to_time, format: "%I:%M %p"
-        .asart
+        .p-4.asar
           h4 ASAR
           = l @today['asr'].to_time, format: "%I:%M %p"
-        .maghrib
+        .p-4.maghrib
           h4 MAGHRIB
           = l @today['maghrib'].to_time, format: "%I:%M %p"
-        .isyak
+        .p-4.isyak
           h4 ISYAK
           = l @today['isha'].to_time, format: "%I:%M %p"
 
@@ -38,22 +38,23 @@
   table.table.table-zebra.w-full
     thead.text-center
       tr
-        th Tarikh
-        th Hari
-        th Imsak
-        th Subuh
-        th Syuruk
-        th Zohor
-        th Asar
-        th Maghrib
-        th Isyak
-    tbody.text-center
+        th.md:text-xl Tarikh
+        th.md:text-xl Hari
+        th.md:text-xl Imsak
+        th.md:text-xl Subuh
+        th.md:text-xl Syuruk
+        th.md:text-xl Zohor
+        th.md:text-xl Asar
+        th.md:text-xl Maghrib
+        th.md:text-xl Isyak
+
+    tbody.text-center.md:text-xl
       - @monthly.each do |month|
         - date = month['date'].to_date
         tr
           td
-            .text-sm.font-medium = l date, format: :long
-            .text-sm = l month['hijri'].to_date, locale: :hijri
+            .font-medium = l date, format: :long
+            .font-italic = l month['hijri'].to_date, locale: :hijri
           td = l date, format: :day
           td = l month['imsak'].to_time, format: '%I:%M %p'
           td = l month['fajr'].to_time, format: '%I:%M %p'
