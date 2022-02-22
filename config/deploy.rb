@@ -14,7 +14,7 @@ set :port, '22'              # SSH port number.
 set :forward_agent, true     # SSH forward_agent.
 
 set :shared_dirs,  fetch(:shared_dirs, []).push('node_modules', 'public/packs', 'storage', 'tmp')
-set :shared_files, fetch(:shared_files, []).push('config/application.yml', 'config/database.yml', 'config/sidekiq.yml', 'config/secrets.yml', 'config/master.key')
+set :shared_files, fetch(:shared_files, []).push('config/application.yml', 'config/database.yml')
 
 
 task :remote_environment do
@@ -37,7 +37,7 @@ task :deploy do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
-    #invoke :'rails:db_create'
+    invoke :'rails:db_create'
     invoke :'rails:db_migrate'
     invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
