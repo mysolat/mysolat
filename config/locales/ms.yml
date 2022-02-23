@@ -3,28 +3,20 @@ ms:
     formats:
       extra: "%d %B %Y, %A"
       day: "%A"
-    abbr_day_names:
-    - Ahd
-    - Isn
-    - Sel
-    - Rab
-    - Kha
-    - Jum
-    - Sab
-    abbr_month_names:
+    month_names:
     -
-    - Jan
-    - Feb
+    - Januari
+    - Februari
     - Mac
-    - Apr
+    - April
     - Mei
     - Jun
-    - Jul
+    - Julai
     - Ogos
-    - Sep
-    - Okt
-    - Nov
-    - Dis
+    - September
+    - Oktober
+    - November
+    - Disember
 
 hijri:
   date:
