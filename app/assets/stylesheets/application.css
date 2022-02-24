@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-#main {
+body {
+  color: #222831;
   background-color: #222831;
   background-size: cover;
   background-position: center;
   background-size: cover !important;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%),
-              url("https://source.unsplash.com/collection/72065378") no-repeat center center scroll;
-}
-
-body {
-  color: #222831;
+  background-attachment: fixed;
+  background: radial-gradient(circle at top, rgba(0,0,0,0) 20%, var(--tw-gradient-from) 80%, var(--tw-gradient-stops) 100%),
+              url("https://source.unsplash.com/collection/72065378") no-repeat center center fixed;
 }
 
 a {

@@ -9,7 +9,7 @@
         == @today['bearing']
       h2.mt-5.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
         = @location['zone'].upcase
-      p.my-5.font-bold.md:text-2xl #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{l @today['hijri'].to_date, locale: :hijri} hijrah
+      p.my-5.font-bold.md:text-2xl #{l @today['date'].to_date, format: :extra} bersamaan dengan  #{l @today['hijri'].to_date, locale: :hijri}H
 
       .flex.flex-wrap.justify-center.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
         .p-4.imsak
@@ -34,8 +34,8 @@
           h4 ISYAK
           = l @today['isha'].to_time, format: "%I:%M %p"
 
-.w-full.overflow-x-auto
-  table.table.table-zebra.w-full
+.w-full.overflow-x-auto.glass.p-8.rounded-lg.opacity-100
+  table.table.w-full
     thead.text-center
       tr
         th.md:text-xl Tarikh
