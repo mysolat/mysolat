@@ -5,9 +5,7 @@ export default class extends Controller {
     this.apply()
   }
 
-  connect () {
-    console.log('connect theme')
-  }
+  connect () {  }
 
   apply () {
     document.documentElement.setAttribute('data-theme', this.theme)

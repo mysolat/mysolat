@@ -9,65 +9,11 @@ body {
   background-position: center;
   background-size: cover !important;
   background-attachment: fixed;
-  background: radial-gradient(circle at top, rgba(0,0,0,0) 20%, var(--tw-gradient-from) 80%, var(--tw-gradient-stops) 100%),
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 50%, var(--tw-gradient-from) 180%, var(--tw-gradient-stops) 200%),
               url("https://source.unsplash.com/collection/72065378") no-repeat center center fixed;
 }
 
-a {
-  text-decoration: none;
-}
 
 #main {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.modal-wrapper {
-  @apply fixed inset-0;
-  @apply w-full h-full;
-  @apply flex flex-col items-center justify-center;
-  background-color: #fffe; /* [1] */
-  @apply z-10;
-  animation-name: fadeIn;
-  animation-fill-mode: both;
-  animation-duration: .2s;
-}
-
-.modal {
-  @apply relative w-full max-w-xl;
-  @apply rounded shadow-lg  p-4;
-  animation-name: slideUpSm;
-  animation-fill-mode: both;
-  animation-duration: .5s;
-  min-height: 100px;
-  max-height: 90%;
-  opacity: 1;
-  visibility: inherit;
-  pointer-events: initial;
-  display: initial;
-}
-
-.modal.modal-lg {
-  @apply max-w-2xl;
-}
-
-.modal-header {
-  @apply my-3 pr-4 justify-center;
-  @apply text-xl font-medium leading-tight;
-}
-
-.modal-body {
-  @apply w-full;
-  max-height: 95%;
-  overflow-y: auto;
-}
-
-.modal-close {
-  @apply absolute top-4 right-2;
-  @apply inline-block w-6 h-6;
-  @apply text-gray-700;
-  @apply fill-current;
-
-  &:hover {
-    @apply text-gray-700;
-  }
 }
