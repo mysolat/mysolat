@@ -54,7 +54,7 @@
         tr
           td
             .font-medium = l date, format: :long
-            .font-italic = l month['hijri'].to_date, locale: :hijri
+            .font-italic = l month['hijri'].to_date, locale: :hijri rescue month['hijri']
           td = l date, format: :day
           td = l month['imsak'].to_time, format: '%I:%M %p'
           td = l month['fajr'].to_time, format: '%I:%M %p'
