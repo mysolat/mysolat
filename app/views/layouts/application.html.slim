@@ -17,7 +17,7 @@ html lang="ms"
     = stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
     = yield :head
-  body.bg-base-100.text-base-content.from-primary.to-secondary
+  body.bg-base-100.text-base-content.from-primary.to-secondary  data-controller="application service-worker"
     .h-screen.drawer.w-full.rounded
       input#my-drawer.drawer-toggle type="checkbox" /
       .drawer-content
