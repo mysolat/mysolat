@@ -41,3 +41,5 @@ yarn-debug.log*
 .yarn-integrity
 .irb_history
 .vscode
+
+/public/service-worker.*
