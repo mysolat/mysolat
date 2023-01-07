@@ -3,11 +3,11 @@
 const path = require('path')
 const rails = require('esbuild-rails')
 const { build } = require('esbuild')
-
-// esbuild app/assets/javascripts/*.* --bundle --sourcemap --outdir=app/assets/builds
+const { copy } = require('esbuild-plugin-copy')
+const { exec } = require('child_process')
 
 build({
-  entryPoints: ['application.js'],
+  entryPoints: ['application.js', 'service-worker.js'],
   bundle: true,
   sourcemap: process.argv.includes('--sourcemap'),
   minify: true,
@@ -15,8 +15,38 @@ build({
   outdir: path.join(process.cwd(), 'app/assets/builds'),
   absWorkingDir: path.join(process.cwd(), 'app/assets/javascripts'),
   watch: process.argv.includes('--watch'),
-  plugins: [rails()]
-}).catch((error) => {
-  console.error(error)
-  process.exit(1)
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(
+      process.env.NODE_ENV || 'production'
+    ),
+    'process.env.RELEASE_STAGE': JSON.stringify(
+      process.env.RAILS_ENV || 'production'
+    ),
+    'process.env.BUILD_AT': JSON.stringify(process.env.BUILD_AT || Date.now()),
+    global: 'window'
+  },
+  plugins: [
+    rails(),
+    copy({
+      resolveFrom: path.join(process.cwd(), 'public/assets'),
+      assets: [
+        {
+          from: [
+            './node_modules/tinymce/**/*.js',
+            './node_modules/tinymce/**/*.css'
+          ],
+          to: ['./tinymce'],
+          keepStructure: true
+        }
+      ]
+    })
+  ]
 })
+  .then(() => {
+    console.log('⚡ Build complete! ⚡')
+    exec(' workbox injectManifest')
+  })
+  .catch(error => {
+    console.error(error)
+    process.exit(1)
+  })

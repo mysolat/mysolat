@@ -1,0 +1,212 @@
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <title>System is offline</title>
+  <style>
+   html { overflow:hidden; }
+   body { font: 60px Arial, sans-serif; letter-spacing:0; margin:0; overflow:hidden; background:#25d; color:#fff; }
+   html, body, #container {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+   }
+
+   /* Thanks, http://www.colorzilla.com/gradient-editor/ */
+   #container {
+     background: #083a7f;
+     background: -moz-linear-gradient(top, #083a7f 0%, #242b3d 100%);
+     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#083a7f), color-stop(100%,#242b3d));
+     background: -webkit-linear-gradient(top, #083a7f 0%,#242b3d 100%);
+     background: -o-linear-gradient(top, #083a7f 0%,#242b3d 100%);
+     background: -ms-linear-gradient(top, #083a7f 0%,#242b3d 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#083a7f', endColorstr='#242b3d', GradientType=0);
+     background: linear-gradient(top, #083a7f 0%,#242b3d 100%);
+   }
+
+   h1, h2 { margin:0; text-shadow:0 5px 0px rgba(0,0,0,.2); }
+   h1 { font-size:1em; }
+   h2 { font-size:.5em; }
+   a { color:#fff; }
+   h3 { font-size:.25em; margin:1em 50px; }
+   h3, h3 a { color:#6b778d; }
+   h3 img { margin:0 3px; }
+   #logo { display:block; height:218px; margin-bottom:10px; }
+   #title { position:absolute; top:50%; width:100%; height:322px; margin-top:-180px; text-align:center; z-index:10; }
+   .cloud { position:absolute; display:block; }
+   .puff { position:absolute; display:block; width:15px; height:15px; background:white; opacity:.05; filter:alpha(opacity=5); }
+ </style>
+
+</head>
+<body>
+	<div id="container">
+		<div id="title">
+			<div id="logo"></div>
+			<h1>Your are offline</h1>
+			<h2>or no internet access</h2>
+			<h3 id="message"></h3>
+      <button type="button">⤾ Reload</button>
+		</div>
+	</div>
+</body>
+
+<script>
+function randomInt(min, max) {
+   return Math.floor(Math.random() * (max - min + 1)) + min
+ }
+
+ function randomChoice(items) {
+   return items[randomInt(0, items.length-1)]
+ }
+
+ var PIXEL_SIZE = 25
+
+ function makeCloud() {
+   var w = 8,
+   h = 5,
+   maxr = Math.sqrt(w*w + h*h),
+   density = .4
+
+   var cloud = document.createElement('div')
+   cloud.className = 'cloud'
+   for (var x=-w; x<=w; x++) {
+    for (var y=-h; y<=h; y++) {
+     r = Math.sqrt(x*x + y*y)
+     if (r/maxr < Math.pow(Math.random(), density)) {
+      var puff = document.createElement('div')
+      puff.className = 'puff'
+      puff.style.left = (x + w) * PIXEL_SIZE + 'px'
+      puff.style.top = (y + h) * PIXEL_SIZE + 'px'
+      cloud.appendChild(puff)
+    }
+    }
+  }
+  return cloud
+  }
+
+  clouds = []
+
+  function randomPosition(max) {
+    return Math.round(randomInt(-400, max)/PIXEL_SIZE)*PIXEL_SIZE
+  }
+
+  function addCloud(randomLeft) {
+    var cloudiness = .3
+
+    if (Math.random() < cloudiness) {
+      newCloud = {
+        x: randomLeft ? randomPosition(document.documentElement.clientWidth) : -400,
+        el: makeCloud()
+      }
+
+      newCloud.el.style.top = randomPosition(document.documentElement.clientHeight) + 'px'
+      newCloud.el.style.left = newCloud.x + 'px'
+      document.body.appendChild(newCloud.el)
+      clouds.push(newCloud)
+    }
+  }
+
+  function animateClouds() {
+    var speed = 25
+
+    addCloud()
+
+    var newClouds = []
+    for (var i=0; i<clouds.length; i++) {
+      var cloud = clouds[i]
+      cloud.x += speed
+
+      if (cloud.x > document.documentElement.clientWidth) {
+        document.body.removeChild(cloud.el)
+      } else {
+        cloud.el.style.left = cloud.x + 'px'
+        newClouds.push(cloud)
+      }
+    }
+
+    clouds = newClouds
+  }
+
+  function changeMessage(msg) {
+    var msgEl = document.getElementById('message')
+    msgEl.innerHTML = msg || randomChoice(messages)
+  }
+
+  function startMessages() {
+    try {
+      if (window.sessionStorage) {
+        var times
+        if (sessionStorage.times) {
+          times = ++sessionStorage.times
+        } else {
+          times = sessionStorage.times = 0
+        }
+        var msg = 'you have refreshed this page '+times+' time'+(times != 1 ? 's' : '')+'.'
+        messages.push(msg)
+      }
+    } catch (e) {}
+
+    setInterval(function() { changeMessage() }, 10*1000)
+  }
+
+  messages = [
+  'you could always go outside or something',
+  'time actually is going slower right now',
+  'go ahead, click refresh again.',
+  'it\'s not you, it\'s me.',
+  'well, there goes our new years resolutions.',
+  'BSOD: blue screen of downtime',
+  'reply hazy, try again.',
+  'SHUT DOWN EVERYTHING'
+  ]
+
+  function start() {
+    if (arguments.callee.ran) { return; }
+    arguments.callee.ran = true
+
+    startMessages()
+    setInterval(animateClouds, 2*1000)
+
+    for (n=0; n<50; n++) {
+      addCloud(true)
+    }
+  }
+
+  if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', start, false)
+  }
+  window.onload = start
+
+
+   // Manual reload feature.
+   document.querySelector("button").addEventListener("click", () => {
+        window.location.reload();
+      });
+
+      // Listen to changes in the network state, reload when online.
+      // This handles the case when the device is completely offline.
+      window.addEventListener('online', () => {
+        window.location.reload();
+      });
+
+      // Check if the server is responding and reload the page if it is.
+      // This handles the case when the device is online, but the server
+      // is offline or misbehaving.
+      async function checkNetworkAndReload() {
+        try {
+          const response = await fetch('.');
+          // Verify we get a valid response from the server
+          if (response.status >= 200 && response.status < 500) {
+            window.location.reload();
+            return;
+          }
+        } catch {
+          // Unable to connect to the server, ignore.
+        }
+        window.setTimeout(checkNetworkAndReload, 2500);
+      }
+
+      checkNetworkAndReload();
+</script>
+</html>
