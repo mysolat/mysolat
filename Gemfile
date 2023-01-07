@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.1'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.2.3'
-gem 'rails-i18n', '~> 7.0.3'
+gem 'rails', '~> 7.0.4'
+gem 'rails-i18n', '~> 7.0.4'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -81,6 +81,23 @@ group :test do
   gem 'webdrivers'
 end
 
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "bullet"
+  gem "colorize"
+  gem "overcommit", require: false
+  gem "rails_best_practices", require: false
+  gem "rails-erd", require: false
+  gem "standard", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+  gem "ruby-lsp", require: false
+  gem "slim_lint", require: false
+  gem "slimcop", require: false
+end
 gem 'country_select'
 gem 'enum_help'
 gem 'figaro'

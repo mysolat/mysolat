@@ -1,42 +1,33 @@
-require: rubocop-rails
+require:
+  - standard
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+inherit_gem:
+  standard: config/base.yml
+
 inherit_from: .rubocop_todo.yml
+
 AllCops:
-  NewCops: disable
+  NewCops: enable
   Exclude:
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'lib/templates/**/*'
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "lib/templates/**/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+Rails:
+  Enabled: true # enable rubocop-rails cops
 
-Style/Documentation:
-  Enabled: false
+RSpec:
+  Enabled: true # enable rubocop-rspec cops
 
-Style/HashEachMethods:
+RSpec/DescribeClass:
+  Enabled: false # ignore missing comments on classes
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
+
+Style/FrozenStringLiteralComment:
   Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
-
-Metrics/BlockLength:
-  Exclude:
-    - 'config/routes.rb'
-    - 'config/routes/**/*'
-    - 'spec/**/*'
-
-Naming/AccessorMethodName:
-  Exclude:
-    - 'app/controllers/**/*'
-    - 'app/datatables/**/*'
-
-Style/SymbolArray:
-  Enabled: false
+  SafeAutoCorrect: true
