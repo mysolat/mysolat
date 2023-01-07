@@ -24,6 +24,9 @@ html lang="ms"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
     = yield :head
   body.bg-base-100.text-base-content.from-primary.to-secondary  data-controller="application service-worker geolocation"
+    .absolute.inset-0.h-96.pt-16.box-content.-z-1.w-full
+      = image_tag "https://source.unsplash.com/collection/72065378?t=#{Time.now.to_i}", class: "absolute inset-0 w-full h-full bg-top bg-cover object-cover opacity-90 max-w-full ", alt: "Testimonials"
+      .absolute.inset-0.bg-gradient-to-t.from-base-100.to-transparent.w-full aria-hidden="true"
     .h-screen.drawer.w-full.rounded
       input#my-drawer.drawer-toggle type="checkbox" /
       .drawer-content

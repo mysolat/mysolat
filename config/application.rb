@@ -23,7 +23,9 @@ module Mysolat
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.responders.redirect_status = :see_other
 
+    # Allowed all host by default
     config.hosts.clear
   end
 end
