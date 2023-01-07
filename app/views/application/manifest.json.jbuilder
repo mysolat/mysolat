@@ -2,8 +2,8 @@
 
 json.set! :short_name, "MySolat"
 json.set! :name, "MySolat"
-json.set! :theme_color, "#42a5f5"
-json.set! :background_color, "#42a5f5"
+json.set! :theme_color, "#00A99D"
+json.set! :background_color, "#00A99D"
 json.set! :start_url, "/"
 json.set! :display, "standalone"
 json.set! :scope, "/"

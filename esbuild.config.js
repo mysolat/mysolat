@@ -44,7 +44,7 @@ build({
 })
   .then(() => {
     console.log('⚡ Build complete! ⚡')
-    exec(' workbox injectManifest')
+    exec(' workbox injectManifest workbox-config.js')
   })
   .catch(error => {
     console.error(error)
