@@ -373,7 +373,6 @@ DEPENDENCIES
   rambulance
   redis (~> 4.0)
   responders
-  rubocop
   rubocop-performance
   rubocop-rails
   rubocop-rspec

@@ -1,8 +1,8 @@
 module FormBuilderContainer
   def container_for(attribute, **options, &block)
-    return unless block_given?
+    return unless block
 
-    options.merge!(class: container_class_for(attribute))
+    options[:class] = container_class_for(attribute)
     @template.tag.div @template.capture(&block), options
   end
 
