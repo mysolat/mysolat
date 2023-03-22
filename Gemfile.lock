@@ -107,8 +107,6 @@ GEM
       railties (>= 6.0.0)
     date (3.3.3)
     debug (1.7.1)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
     debug_inspector (1.1.0)
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
@@ -125,9 +123,6 @@ GEM
     inline_svg (1.8.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
-    io-console (0.6.0)
-    irb (1.6.2)
-      reline (>= 0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -148,6 +143,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.17.0)
     msgpack (1.6.0)
     net-imap (0.3.4)
@@ -160,7 +156,8 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     overcommit (0.59.1)
       childprocess (>= 0.6.3, < 5)
@@ -227,8 +224,6 @@ GEM
       railties
     redis (4.8.0)
     regexp_parser (2.6.1)
-    reline (0.3.2)
-      io-console (~> 0.5)
     require_all (3.0.0)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -301,7 +296,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.5.4-x86_64-linux)
+    sqlite3 (1.5.4)
+      mini_portile2 (~> 2.8.0)
     standard (1.20.0)
       language_server-protocol (~> 3.17.0.2)
       rubocop (= 1.40.0)
@@ -394,7 +390,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.2.1p31
 
 BUNDLED WITH
    2.3.22

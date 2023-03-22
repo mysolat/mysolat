@@ -27,5 +27,9 @@ module Mysolat
 
     # Allowed all host by default
     config.hosts.clear
+
+
+    config.time_zone = 'Kuala Lumpur'
+
   end
 end
