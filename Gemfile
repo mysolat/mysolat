@@ -82,6 +82,7 @@ group :development do
   gem "binding_of_caller"
   gem "bullet"
   gem "colorize"
+  gem "dockerfile-rails", ">= 1.2"
   gem "overcommit", require: false
   gem "rails_best_practices", require: false
   gem "rails-erd", require: false

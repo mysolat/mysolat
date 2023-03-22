@@ -23,5 +23,6 @@
   "scripts": {
     "build": "node esbuild.config.mjs",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }

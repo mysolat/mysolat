@@ -108,6 +108,8 @@ GEM
     date (3.3.3)
     debug (1.7.1)
     debug_inspector (1.1.0)
+    dockerfile-rails (1.2.5)
+      rails
     enum_help (0.0.19)
       activesupport (>= 3.0.0)
     erubi (1.12.0)
@@ -353,6 +355,7 @@ DEPENDENCIES
   country_select
   cssbundling-rails
   debug
+  dockerfile-rails (>= 1.2)
   enum_help
   figaro
   high_voltage
