@@ -3,7 +3,7 @@
 class ZonesController < ApplicationController
   def show
     @locations = Location.all
-    @location = @locations.find { |x| x["code"] == default_zone }
+    @location = Location.zone(default_zone)
     prayer_times = PrayerTime.monthly(zone: default_zone)
     @monthly = prayer_times.fetch("prayerTime")
     today = Date.current.strftime "%d-%b-%Y"

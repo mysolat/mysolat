@@ -50,7 +50,7 @@ html lang="ms"
 
         input#my-modal.modal-toggle type="checkbox" /
         .modal
-          .modal-box
+          .modal-box data-controller="filter"
             = yield :modal if content_for?(:modal)
             .modal-action
               label.btn for="my-modal" Close
