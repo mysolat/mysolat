@@ -8,7 +8,7 @@
         span.mx-3 -
         == @today["bearing"]
       h2.mt-5.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
-        = @location["zone"].upcase
+        = @location["location"].upcase
       p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan  #{l @today["hijri"].to_date, locale: :hijri}H
 
       .flex.flex-wrap.justify-center.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
@@ -71,4 +71,4 @@
     ul.menu.bg-base-100.rounded-box.p-2
       - @locations.each do |location|
         li
-          = link_to location["zone"], zone_path(id: location["code"].downcase)
+          = link_to location["location"], zone_path(id: location["code"].downcase)

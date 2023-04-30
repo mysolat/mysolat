@@ -5,13 +5,13 @@ module PrayerTime
   JAKIM_BASE_URL = "https://www.e-solat.gov.my/index.php?r=esolatApi/TakwimSolat&period=:period&zone=:zone"
 
   def self.daily(zone: "SGR01")
-    Rails.cache.fetch("daily_#{Date.today}_#{zone}") do
+    Rails.cache.fetch("daily_#{Time.zone.today}_#{zone}") do
       get_data("today", zone)
     end
   end
 
   def self.monthly(zone: "SGR01")
-    Rails.cache.fetch("monthly_#{Date.today.month}_#{zone}") do
+    Rails.cache.fetch("monthly_#{Time.zone.today.month}_#{zone}") do
       get_data("month", zone)
     end
   end
