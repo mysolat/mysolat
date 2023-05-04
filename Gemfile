@@ -107,3 +107,4 @@ gem "show_for"
 gem "simple_form"
 gem "simple-navigation"
 gem "slim-rails"
+gem 'rack-cors'
