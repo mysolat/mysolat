@@ -4,12 +4,14 @@ class Api::PrayerTimesController < ApiController
   def daily
     zone = params[:zone] || "SGR01"
     data = PrayerTime.daily(zone: zone)
-    render json: data.merge({ serverTime: Time.current })
+    locations = Location.all.select { |l| l["code"] == zone.upcase }
+    render json: data.merge({ serverTime: Time.current, locations: locations })
   end
 
   def monthly
     zone = params[:zone] || "SGR01"
     data = PrayerTime.monthly(zone: zone)
-    render json: data.merge({ serverTime: Time.current })
+    locations = Location.all.select { |l| l["code"] == zone.upcase }
+    render json: data.merge({ serverTime: Time.current, locations: locations })
   end
 end
