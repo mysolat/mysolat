@@ -3,11 +3,11 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.1"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.4"
-gem "rails-i18n", "~> 7.0.4"
+gem "rails", "~> 7.0.8"
+gem "rails-i18n", "~> 7.0.8"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -82,7 +82,7 @@ group :development do
   gem "binding_of_caller"
   gem "bullet"
   gem "colorize"
-  gem "dockerfile-rails", ">= 1.2"
+  gem "dockerfile-rails"
   gem "overcommit", require: false
   gem "rails_best_practices", require: false
   gem "rails-erd", require: false
@@ -97,7 +97,8 @@ end
 
 gem "country_select"
 gem "enum_help"
-gem "figaro"
+gem "figjam"
+gem "hijri"
 gem "high_voltage"
 gem "inline_svg"
 gem "local_time"

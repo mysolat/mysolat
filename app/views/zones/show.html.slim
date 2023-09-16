@@ -9,7 +9,7 @@
         == @today["bearing"]
       h2.mt-5.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
         = @location["location"]&.upcase
-      p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan  #{l @today["hijri"].to_date, locale: :hijri}H
+      p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan #{ hijri_date @today["hijri"]} H
 
       .flex.flex-wrap.justify-center.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
         .p-4.imsak
@@ -54,7 +54,7 @@
         tr
           td
             .font-medium = l date, format: :long
-            .font-italic = l month["hijri"].to_date, locale: :hijri rescue month["hijri"]
+            .font-italic = hijri_date month["hijri"]
           td = l date, format: :day
           td = l month["imsak"].to_time, format: "%I:%M %p"
           td = l month["fajr"].to_time, format: "%I:%M %p"
