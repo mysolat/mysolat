@@ -9,7 +9,7 @@
         == @today["bearing"]
       h2.mt-5.font-bold.sm:text-xl.md:text-3xl.lg:text-4xl.text-center.bg-transparent
         = @location["location"]&.upcase
-      p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan #{ hijri_date @today["hijri"]} H
+      p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan #{hijri_date @today["hijri"]} H
 
       .flex.flex-wrap.justify-center.font-bold.md:text-3xl.lg:text-5xl.text-2xl.text-center.h-auto
         .p-4.imsak
@@ -34,35 +34,39 @@
           h4 ISYAK
           = l @today["isha"].to_time, format: "%I:%M %p"
 
-.w-full.overflow-x-auto.rounded-lg.opacity-100
-  table.table.w-full
-    thead.text-center
-      tr
-        th.md:text-xl Tarikh
-        th.md:text-xl Hari
-        th.md:text-xl Imsak
-        th.md:text-xl Subuh
-        th.md:text-xl Syuruk
-        th.md:text-xl Zohor
-        th.md:text-xl Asar
-        th.md:text-xl Maghrib
-        th.md:text-xl Isyak
-
-    tbody.text-center.font-medium.md:text-xl
-      - @monthly.each do |month|
-        - date = month["date"].to_date
-        tr
-          td
-            .font-medium = l date, format: :long
+.w-full
+  - @monthly.each do |month|
+    - date = month["date"].to_date
+    - klass = "bg-primary text-primary-content" if date == Date.current
+    .card.shadow-md.mt-1 class=klass
+      .card-body.p-2.grow.md:flex-row
+        .flex-none
+          .flex.w-100.justify-center.md:block
+            .span.title.mr-2 = l date, format: :day
+            .font-medium.mr-2 = l date, format: :long
             .font-italic = hijri_date month["hijri"]
-          td = l date, format: :day
-          td = l month["imsak"].to_time, format: "%I:%M %p"
-          td = l month["fajr"].to_time, format: "%I:%M %p"
-          td = l month["syuruk"].to_time, format: "%I:%M %p"
-          td = l month["dhuhr"].to_time, format: "%I:%M %p"
-          td = l month["asr"].to_time, format: "%I:%M %p"
-          td = l month["maghrib"].to_time, format: "%I:%M %p"
-          td = l month["isha"].to_time, format: "%I:%M %p"
+        .flex-auto.grid.grid-cols-7.justify-items-center.content-center.items-center
+          .grid-col.text-center
+            .span.title Imsak
+            = l month["imsak"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Subuh
+            = l month["fajr"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Syuruk
+            = l month["syuruk"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Zohor
+            = l month["dhuhr"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Asar
+            = l month["asr"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Maghrib
+            = l month["maghrib"].to_time, format: "%I:%M %p"
+          .grid-col.text-center
+            .span.title Isyak
+            = l month["isha"].to_time, format: "%I:%M %p"
 
 = content_for :modal do
   .modal-header

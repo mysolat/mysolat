@@ -15,7 +15,12 @@ module Mysolat
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-    config.i18n.default_locale = :ms
+
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -23,13 +28,13 @@ module Mysolat
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.i18n.default_locale = :ms
     config.responders.redirect_status = :see_other
 
     # Allowed all host by default
     config.hosts.clear
 
-
-    config.time_zone = 'Kuala Lumpur'
-
+    config.time_zone = "Kuala Lumpur"
   end
 end
