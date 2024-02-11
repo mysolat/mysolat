@@ -1339,6 +1339,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@domchristie/turn@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@domchristie/turn@npm:3.1.1"
+  peerDependencies:
+    "@hotwired/turbo": ^7
+  checksum: d659ed1af216e456efc4041c6716d29ebb7885e561b7e3e8c3981b8daa181e9d7c6333b923d3f368a2743517259687485d2e3f84477f2e961f2f36e9fc691df3
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.19.12":
   version: 0.19.12
   resolution: "@esbuild/aix-ppc64@npm:0.19.12"
@@ -1985,6 +1994,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:."
   dependencies:
+    "@domchristie/turn": "npm:^3.1.1"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.2"
     "@rails/actiontext": "npm:^7.1.3"
