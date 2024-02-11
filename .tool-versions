@@ -1,3 +1,6 @@
 ruby 3.2.2
-yarn 1.22.19
-nodejs 18.16.0
+nodejs 20.11.0
+
+#corepack enable
+#corepack use yarn@4.0.2
+#yarn set version 4.0.2

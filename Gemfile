@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.2"
+gem "rails", "~> 7.1.3"
 
 # Centralization of locale data collection for Ruby on Rails.
 gem "rails-i18n", "~> 7.0.8"
@@ -77,19 +77,19 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "bullet"
+  gem "bundler-audit", require: false
   gem "colorize"
-  gem "dockerfile-rails"
+  gem "fasterer", require: false
+  gem "letter_opener_web"
   gem "overcommit", require: false
-  gem "rails_best_practices", require: false
   gem "rails-erd", require: false
   gem "standard", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "standard-rails", require: false
+  gem "rubocop-slim", require: false
   gem "rubocop-rspec", require: false
-  gem "ruby-lsp", require: false
-  gem "slim_lint", require: false
+  gem "rubocop-capybara", require: false
   gem "slimcop", require: false
+  gem "ruby-lsp-rails", require: false
 end
 
 gem "country_select"
