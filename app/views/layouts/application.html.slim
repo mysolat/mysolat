@@ -25,7 +25,7 @@ html lang="ms"
     = yield :head
   body.bg-base-100.text-base-content.from-primary.to-secondary  data-controller="application service-worker geolocation"
     .absolute.inset-0.h-96.pt-16.box-content.-z-1.w-full
-      = image_tag "https://source.unsplash.com/collection/72065378?t=#{Time.current.to_i}", class: "absolute inset-0 w-full h-full bg-top bg-cover object-cover opacity-90 max-w-full ", alt: "Testimonials"
+      = image_tag random_bg, class: "absolute inset-0 w-full h-full bg-top bg-cover object-cover opacity-90 max-w-full ", alt: "Testimonials"
       .absolute.inset-0.bg-gradient-to-t.from-base-100.to-transparent.w-full aria-hidden="true"
     .drawer
       input#drawer.drawer-toggle type="checkbox" /
