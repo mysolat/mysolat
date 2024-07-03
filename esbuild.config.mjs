@@ -1,68 +1,29 @@
 #!/usr/bin/env node
 
 import * as esbuild from 'esbuild'
-import { copy } from 'esbuild-plugin-copy'
 import rails from 'esbuild-rails'
 import path from 'path'
 import { exec } from 'child_process'
+import { copy } from 'esbuild-plugin-copy'
 
-const noStyle = {
-  name: 'empty-css-imports',
-  setup (build) {
-    build.onLoad({ filter: /\.css$/ }, () => ({ contents: '' }))
-  }
-}
-
-const safelistPatterns = [
-  /^alert/,
-  /^col/,
-  /^form/,
-  /^input/,
-  /^dropdown/,
-  /^accordion/,
-  /^modal/,
-  /^selectize/,
-  /^snackbar/,
-  /^carousel/,
-  /^list-timeline/,
-  /^grid/,
-  /^g-/,
-  /^w-/,
-  /^h-/,
-  /data-bs-popper/,
-  /hr-text/,
-  /fieldset/
+const entryPoints = [
+  'application.js',
+  'service-worker.js'
+]
+const watchDirectories = [
+  './app/assets/javascripts/**/*.js',
+  './app/views/**/*.html.erb',
+  './app/views/**/*.turbo_stream.erb',
+  './app/assets/builds/**/*.css'
 ]
 
 const config = {
-  entryPoints: ['javascripts/application.js', 'javascripts/service-worker.js'],
-  bundle: true,
-  sourcemap: process.argv.includes('--sourcemap'),
-  //resolveExtensions: ['.ts', '.js'],
-  logLevel: 'info',
+  absWorkingDir: path.join(process.cwd(), 'app/assets/javascripts'),
   outdir: 'builds',
-  outbase: path.join(process.cwd(), 'app/assets'),
-  absWorkingDir: path.join(process.cwd(), 'app/assets'),
-  metafile: true,
-  entryNames: '[name]',
+  bundle: true,
+  entryPoints: entryPoints,
   minify: process.env.RAILS_ENV == 'production',
-  //external: ['*.css', '*.woff', '*.png', '*.svg'],
-  loader: {
-    '.png': 'dataurl',
-    '.woff': 'dataurl',
-    '.woff2': 'dataurl',
-    '.eot': 'dataurl',
-    '.ttf': 'dataurl',
-    '.svg': 'file'
-  },
-  define: {
-    'process.env.RELEASE_STAGE': JSON.stringify(
-      process.env.RAILS_ENV || 'production'
-    ),
-    'process.env.BUILD_AT': JSON.stringify(process.env.BUILD_AT || Date.now()),
-    global: 'window'
-  },
-  // platform: 'node',
+  outdir: path.join(process.cwd(), 'app/assets/builds'),
   plugins: [
     rails(),
     copy({
@@ -75,21 +36,35 @@ const config = {
           ],
           to: ['./tinymce'],
           keepStructure: true
+        },
+        {
+          from: [
+            './node_modules/heroicons/24/**/*.svg',
+          ],
+          to: ['./icons/heroicons'],
+          keepStructure: true
         }
       ]
     })
-  ]
+  ],
+  sourcemap: process.argv.includes('--sourcemap')
 }
 
 if (process.argv.includes('--watch')) {
   let context = await esbuild.context({ ...config, logLevel: 'info' })
-  console.log('⚡ Build complete!, watching.. ⚡')
-  exec(' workbox injectManifest workbox-config.js')
   context.watch()
+  console.log('👀 Watching for changes...')
 } else {
   esbuild.build(config).catch(error => {
     console.error(error)
     process.exit(1)
   })
-  console.log('⚡ Build complete! ⚡')
 }
+console.log(`🚀 Build node esbuild complete!`)
+console.log('📱 Inject PWA workbox...')
+exec('workbox injectManifest workbox.config.js', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`)
+    return
+  }
+});
