@@ -1,26 +1,31 @@
 
 import { Controller } from '@hotwired/stimulus'
 export default class extends Controller {
-  initialize () {
+  initialize() {
     this.apply()
   }
 
-  connect () {  }
+  connect() { }
 
-  apply () {
+  apply() {
     document.documentElement.setAttribute('data-theme', this.theme)
   }
 
-  switch (event) {
+  switch(event) {
     this.theme = event.target.dataset.themeValue
+    console.log("switching" + this.theme)
     this.apply()
   }
 
-  get theme () {
-    return window.localStorage.getItem('theme')
+  get systemDefault() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
-  set theme (value) {
+  get theme() {
+    return window.localStorage.getItem('theme') || (this.theme = this.systemDefault)
+  }
+
+  set theme(value) {
     window.localStorage.setItem('theme', value)
   }
 }

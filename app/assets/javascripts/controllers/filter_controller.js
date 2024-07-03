@@ -3,12 +3,10 @@ import { Controller } from '@hotwired/stimulus'
 export default class extends Controller {
   static targets = ['listItem', 'searchTerm']
 
-  connect () {}
+  connect() { }
 
-  filterList () {
+  filterList() {
     const searchTerm = this.searchTermTarget.value.toLowerCase()
-
-    console.log(searchTerm)
 
     this.listItemTargets.forEach(item => {
       const text = item.textContent.toLowerCase()

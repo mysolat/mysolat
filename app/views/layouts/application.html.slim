@@ -1,28 +1,7 @@
 doctype html
 html lang="ms"
   head
-    title MySolat
-    meta http-equiv="content-language" content="ms"
-    meta charset="UTF-8"
-    meta http-equiv="X-UA-Compatible" content="IE=edge"
-    meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=2, user-scalable=1, shrink-to-fit=no"
-    meta name="description" content="Waktu Solat di malaysia"
-    meta name="Keywords" content="Waktu Solat Kuala Lumpur, Putrajaya, waktu solat malaysia, waktu solat jumaat, solat.my, waktu.solat.my, waktu sembahyang, waktu syuruk, data waktu solat, sembahyang, masjid, malaysia, agama, Islam, muslim, jakim, api, api waktu solat, takwim solat"
-    meta name="author" content="solat.my"
-    meta name="Copyright" content="Solat.My #{Date.current.year}"
-    meta name="Classification" content="Social, Religion, Islam, Malaysia"
-    meta name="Rating" content="General"
-    meta name="Language" content="Malay"
-    link rel="apple-touch-icon" sizes="180x180" href="icons/180.png"
-    link rel="icon" type="image/png" sizes="32x32" href="icons/32.png"
-    link rel="icon" type="image/png" sizes="16x16" href="icons/16.png"
-    link rel="manifest" crossorigin="use-credentials" href="/manifest.json"
-    = csrf_meta_tags
-    = csp_meta_tag
-    = action_cable_meta_tag
-    = stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"
-    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
-    = yield :head
+    = render "layouts/head"
   body.bg-base-100.text-base-content.from-primary.to-secondary  data-controller="application service-worker geolocation"
     .absolute.inset-0.h-96.pt-16.box-content.-z-1.w-full
       = image_tag random_bg, class: "absolute inset-0 w-full h-full bg-top bg-cover object-cover opacity-90 max-w-full ", alt: "Testimonials"

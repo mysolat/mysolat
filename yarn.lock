@@ -2248,6 +2248,7 @@ __metadata:
     esbuild: "npm:^0.23.0"
     esbuild-plugin-copy: "npm:^2.1.1"
     esbuild-rails: "npm:^1.0.7"
+    heroicons: "npm:^2.1.4"
     postcss: "npm:^8.4.39"
     snapsvg: "npm:^0.5.1"
     tailwindcss: "npm:^3.4.4"
@@ -3975,6 +3976,13 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 9e27e70e8e4204f4124c8f99950d1ba2b1f5174864fd39ff26da190f9ea6488c1b3927dcc64981c26d1f637a971783c9489d62c829d393ea509e6f1ba20370bb
+  languageName: node
+  linkType: hard
+
+"heroicons@npm:^2.1.4":
+  version: 2.1.4
+  resolution: "heroicons@npm:2.1.4"
+  checksum: 37d8db1f10766794639ea2180a697cef36a98cf4d0398b9a0c04a8de187f1b7702204c1d8a72fc9fe688902b98bc0c9751e6fa403b3e4837a0e2ac9d1ebebf57
   languageName: node
   linkType: hard
 
