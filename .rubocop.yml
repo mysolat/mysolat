@@ -1,33 +1,81 @@
 require:
   - standard
-  - rubocop-rails
-  - rubocop-rspec
+  - standard-custom
+  - standard-performance
   - rubocop-performance
+  - rubocop-rails
+  - rubocop-slim
 
 inherit_gem:
   standard: config/base.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+  standard-rails: config/base.yml
+  rubocop-slim: config/default.yml
 
 inherit_from: .rubocop_todo.yml
 
 AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 3.2
   NewCops: enable
   Exclude:
     - "bin/**/*"
+    - "db/**/*"
     - "lib/templates/**/*"
     - "node_modules/**/*"
     - "vendor/**/*"
+    - "app/views/**/*.axlsx"
+
+Rails/Output: # Don't leave puts-debugging
+  Enabled: true
+  Exclude: []
+
+Rails/FindEach: # each could severely affect the performance, use find_each
+  Enabled: true
+  Exclude: []
+
+Rails/UniqBeforePluck: # uniq.pluck and not pluck.uniq
+  Enabled: true
+  Exclude: []
+
+Rails/SaveBang:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - test
+
 Rails:
   Enabled: true # enable rubocop-rails cops
 
-RSpec:
-  Enabled: true # enable rubocop-rspec cops
-
-RSpec/DescribeClass:
-  Enabled: false # ignore missing comments on classes
-
 Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
   EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: no_space
 
 Style/FrozenStringLiteralComment:
   Enabled: true
   SafeAutoCorrect: true
+  Exclude:
+    - "config/**/*"
+    - "Rakefile"
+    - "config.ru"
+    - "Gemfile"
+    - "Gemfile.lock"
+
+Style/RescueStandardError:
+  Enabled: true
+  EnforcedStyle: explicit
+
+Layout/LineLength:
+  Exclude:
+    - "**/*.slim"

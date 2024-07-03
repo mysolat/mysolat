@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
@@ -77,32 +77,28 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "bundler-audit", require: false
   gem "colorize"
-  gem "fasterer", require: false
-  gem "letter_opener_web"
-  gem "overcommit", require: false
-  gem "rails-erd", require: false
   gem "standard", require: false
   gem "standard-rails", require: false
   gem "rubocop-slim", require: false
-  gem "rubocop-rspec", require: false
-  gem "rubocop-capybara", require: false
   gem "slimcop", require: false
   gem "ruby-lsp-rails", require: false
 end
+
+gem "slim-rails"
+
+# Heartcombo's gems
+gem "responders"
+gem "show_for"
+gem "simple_form"
+gem "simple-navigation"
 
 gem "country_select"
 gem "enum_help"
 gem "figjam"
 gem "hijri"
-gem "high_voltage"
 gem "inline_svg"
 gem "local_time"
 gem "rambulance"
-gem "responders"
-gem "show_for"
-gem "simple_form"
-gem "simple-navigation"
-gem "slim-rails"
+
 gem "rack-cors"
