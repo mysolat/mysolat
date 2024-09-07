@@ -42,5 +42,7 @@ module Mysolat
     config.hosts.clear
 
     config.time_zone = "Kuala Lumpur"
+
+    config.active_record.sqlite3_production_warning = false
   end
 end

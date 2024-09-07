@@ -7,6 +7,10 @@ module PrayerTime
   def self.daily(zone: "SGR01")
     Rails.cache.fetch("daily_#{Time.zone.today}_#{zone}") do
       get_data("today", zone)
+    rescue StandardError
+      monthly = monthly(zone: zone, year: Time.current.year, month: Time.current.month)
+      data = monthly.find { |p| p["date"] == Time.current.strftime("%d-%b-%Y") }
+      data.merge!({ "bearing" => monthly["bearing"] })
     end
   end
 
@@ -24,7 +28,7 @@ module PrayerTime
 
   def self.get_data(period, zone, params = "")
     url = JAKIM_BASE_URL.gsub(":period", period).gsub(":zone", zone) + params
-    response = URI.open(url, read_timeout: 10, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE).read
+    response = URI.open(url, read_timeout: 2, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE).read
     JSON.parse(response)
   end
 end
