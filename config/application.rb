@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative "boot"
 
 require "rails/all"
@@ -12,9 +10,8 @@ module Mysolat
   class Application < Rails::Application
     # Use the responders controller from the responders gem
     config.app_generators.scaffold_controller :responders_controller
-
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.1
+    config.load_defaults 8.0
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
@@ -34,7 +31,6 @@ module Mysolat
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
     config.i18n.default_locale = :ms
     config.responders.redirect_status = :see_other
 
@@ -42,7 +38,5 @@ module Mysolat
     config.hosts.clear
 
     config.time_zone = "Kuala Lumpur"
-
-    config.active_record.sqlite3_production_warning = false
   end
 end

@@ -1,4 +1,4 @@
-title MySolat
+title = content_for(:title) || "Mysolat"
 meta http-equiv="content-language" content="ms"
 meta charset="UTF-8"
 meta http-equiv="X-UA-Compatible" content="IE=edge"
@@ -10,13 +10,17 @@ meta name="Copyright" content="Solat.My #{Date.current.year}"
 meta name="Classification" content="Social, Religion, Islam, Malaysia"
 meta name="Rating" content="General"
 meta name="Language" content="Malay"
-link rel="apple-touch-icon" sizes="180x180" href="icons/180.png"
-link rel="icon" type="image/png" sizes="32x32" href="icons/32.png"
-link rel="icon" type="image/png" sizes="16x16" href="icons/16.png"
-link rel="manifest" crossorigin="use-credentials" href="/manifest.json"
+meta name="apple-mobile-web-app-capable" content="yes"
+meta name="mobile-web-app-capable" content="yes"
+link rel="icon" href="/icon.png" type="image/png"
+link rel="icon" href="/icon.svg" type="image/svg+xml"
+link rel="apple-touch-icon" href="/icon.png"
+= tag.link rel: "manifest", href: pwa_manifest_path(format: :json)
 = csrf_meta_tags
 = csp_meta_tag
 = action_cable_meta_tag
-= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"
-= javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+// Includes all stylesheet files in app/views/stylesheets
+= stylesheet_link_tag :app, "data-turbo-track": "reload"
+= javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
+= stylesheet_link_tag "application", "data-turbo-track": "reload"
 = yield :head
