@@ -1663,7 +1663,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actiontext@npm:^7.1.3":
+"@rails/actiontext@npm:^7.2.100":
   version: 7.2.100
   resolution: "@rails/actiontext@npm:7.2.100"
   dependencies:
@@ -1674,7 +1674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/activestorage@npm:>= 7.2.0-alpha, @rails/activestorage@npm:^7.1.3":
+"@rails/activestorage@npm:>= 7.2.0-alpha, @rails/activestorage@npm:^7.2.100":
   version: 7.2.100
   resolution: "@rails/activestorage@npm:7.2.100"
   dependencies:
@@ -1803,7 +1803,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tabler/icons@npm:^3.8.0":
+"@tabler/icons@npm:^3.19.0":
   version: 3.19.0
   resolution: "@tabler/icons@npm:3.19.0"
   checksum: b55371b62d86e5d74d1e3986051ff94fc896ca378331ceea48bd9acb286648f7e7ea4f7261b0e3b604e33282c9815453af17185f33e169c30e89500c6006b0c0
@@ -1819,7 +1819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.13":
+"@tailwindcss/typography@npm:^0.5.15":
   version: 0.5.15
   resolution: "@tailwindcss/typography@npm:0.5.15"
   dependencies:
@@ -2037,20 +2037,19 @@ __metadata:
     "@domchristie/turn": "npm:^3.1.1"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.10"
-    "@rails/actiontext": "npm:^7.1.3"
-    "@rails/activestorage": "npm:^7.1.3"
-    "@tabler/icons": "npm:^3.8.0"
+    "@rails/actiontext": "npm:^7.2.100"
+    "@rails/activestorage": "npm:^7.2.100"
+    "@tabler/icons": "npm:^3.19.0"
     "@tailwindcss/aspect-ratio": "npm:^0.4.2"
-    "@tailwindcss/typography": "npm:^0.5.13"
+    "@tailwindcss/typography": "npm:^0.5.15"
     autoprefixer: "npm:^10.4.20"
-    cssnano: "npm:^7.0.3"
-    daisyui: "npm:^4.12.10"
+    cssnano: "npm:^7.0.6"
+    daisyui: "npm:^4.12.13"
     esbuild: "npm:^0.24.0"
     esbuild-plugin-copy: "npm:^2.1.1"
     esbuild-rails: "npm:^1.0.7"
-    heroicons: "npm:^2.1.4"
+    heroicons: "npm:^2.1.5"
     postcss: "npm:^8.4.47"
-    snapsvg: "npm:^0.5.1"
     tailwindcss: "npm:^3.4.13"
     workbox-cli: "npm:^7.1.0"
   languageName: unknown
@@ -2749,7 +2748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^7.0.3":
+"cssnano@npm:^7.0.6":
   version: 7.0.6
   resolution: "cssnano@npm:7.0.6"
   dependencies:
@@ -2777,7 +2776,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^4.12.10":
+"daisyui@npm:^4.12.13":
   version: 4.12.13
   resolution: "daisyui@npm:4.12.13"
   dependencies:
@@ -3327,13 +3326,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eve@npm:~0.5.1":
-  version: 0.5.4
-  resolution: "eve@npm:0.5.4"
-  checksum: e3144c489d592eac0a810b2044219300cbc92ef93e88dcd76546017c20114cb07d2fb5ba4f47edc51daf2f9adced762074de1e52e58114a878dd127b19637ead
-  languageName: node
-  linkType: hard
-
 "exponential-backoff@npm:^3.1.1":
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
@@ -3813,7 +3805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"heroicons@npm:^2.1.4":
+"heroicons@npm:^2.1.5":
   version: 2.1.5
   resolution: "heroicons@npm:2.1.5"
   checksum: 2685d58ebaed6252d83090f2113423a0679f47116d59db8b636de3139f7ed8d7833304556d0560b98d55b5be91f5137a760060dbbf6ba73530022993303d9b91
@@ -6111,15 +6103,6 @@ __metadata:
   version: 1.5.0
   resolution: "smob@npm:1.5.0"
   checksum: a1067f23265812de8357ed27312101af49b89129eb973e3f26ab5856ea774f88cace13342e66e32470f933ccfa916e0e9d0f7ca8bbd4f92dfab2af45c15956c2
-  languageName: node
-  linkType: hard
-
-"snapsvg@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "snapsvg@npm:0.5.1"
-  dependencies:
-    eve: "npm:~0.5.1"
-  checksum: fbe28a7346f20c3fdb94cb7bdf9731676a22fa23be6cebbd38566b1730fda8992852682e4c5083689a3932226c3d55bfeb7f006465405696533b028935a6ec32
   languageName: node
   linkType: hard
 
