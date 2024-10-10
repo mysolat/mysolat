@@ -50,7 +50,7 @@
 
 .clock ul li {
   display: inline;
-  font-size: 10em;
+  font-size: 8em;
   text-align: center;
   font-family: "Ubuntu", Arial, Helvetica, sans-serif;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
@@ -67,7 +67,7 @@
 /* Responsive clock */
 @media (max-width: 1200px) {
   .clock ul li {
-    font-size: 8em;
+    font-size: 7em;
   }
 
   .clock #date {
@@ -97,7 +97,7 @@
 
 @media (max-width: 576px) {
   .clock ul li {
-    font-size: 3.5em;
+    font-size: 3em;
   }
 
   .clock #date {

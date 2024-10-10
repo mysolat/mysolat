@@ -4,14 +4,19 @@ export default class extends Controller {
   static targets = ["date", "sec", "min", "hours", "ampm"]
 
   connect() {
+    this.element.innerHTML = '';
     this.appendHtml();
     this.updateClock();
     setInterval(() => this.updateClock(), 1000); // Update clock every second
   }
 
+  disconnect() {
+    clearInterval(this.interval);
+  }
+
   appendHtml() {
     this.element.insertAdjacentHTML('beforeend', `
-      <div id="date" data-clock-target="date"></div>
+      <div id="date" class="mb-6" data-clock-target="date"></div>
       <ul>
         <li id="hours" data-clock-target="hours">00</li>
         <li id="point">:</li>

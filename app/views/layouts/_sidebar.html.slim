@@ -1,7 +1,6 @@
 .drawer-side.z-40
   label for="drawer" class="drawer-overlay" aria-label="Close menu"
   aside.bg-base-100.w-80.h-screen
-    - themes = ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "cmyk", "autumn", "business", "acid", "lemonade"]
     ul.menu.p-4.overflow-y-auto.w-80.bg-base-100.text-base-content data-controller="theme"
       - themes.each do |theme|
         li
