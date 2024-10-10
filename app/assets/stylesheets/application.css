@@ -5,3 +5,102 @@
 #main {
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
+/* Simple Animation */
+@keyframes blinking {
+  0% {
+    opacity: 1;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  50% {
+    opacity: 0;
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* clock */
+.clock {
+  width: auto;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.clock #date {
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.clock ul {
+  width: auto;
+  margin: 0 auto;
+  padding: 0px;
+  list-style: none;
+  text-align: center;
+}
+
+.clock ul li {
+  display: inline;
+  font-size: 10em;
+  text-align: center;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.clock #point {
+  position: relative;
+  -moz-animation: blinking 1s ease infinite;
+  -webkit-animation: blinking 1s ease infinite;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Responsive clock */
+@media (max-width: 1200px) {
+  .clock ul li {
+    font-size: 8em;
+  }
+
+  .clock #date {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .clock ul li {
+    font-size: 6em;
+  }
+
+  .clock #date {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clock ul li {
+    font-size: 4em;
+  }
+
+  .clock #date {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clock ul li {
+    font-size: 3em;
+  }
+
+  .clock #date {
+    font-size: 18px;
+  }
+}

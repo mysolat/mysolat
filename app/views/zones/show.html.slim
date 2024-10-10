@@ -1,6 +1,8 @@
 = content_for :hero do
   #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
     .flex.flex-col.items-center.justify-center.h-screen.text-white.z-0.mx-5.text-center
+      .clock data-controller="clock"
+
       h1.font-bold.text-xl.md:text-4xl.text-2xl
         span = @location["code"]
         span.mx-3 -
