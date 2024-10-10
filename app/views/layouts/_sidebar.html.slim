@@ -5,4 +5,14 @@
     ul.menu.p-4.overflow-y-auto.w-80.bg-base-100.text-base-content data-controller="theme"
       - themes.each do |theme|
         li
-          a data-action="click->theme#switch" data-theme-value="#{theme}" tabindex="0" = theme.humanize
+          a.after:absolute.after:inset-0 tabindex="0" data-action="click->theme#switch" data-theme-value="#{theme}"
+            = theme.humanize
+            .flex.flex-wrap.gap-1.ms-auto.p-1 data-theme=theme
+              .bg-primary.flex.aspect-square.w-5.items-center.justify-center.rounded.lg:w-6
+                .text-primary-content.text-sm.font-bold A
+              .bg-secondary.flex.aspect-square.w-5.items-center.justify-center.rounded.lg:w-6
+                .text-secondary-content.text-sm.font-bold A
+              .bg-accent.flex.aspect-square.w-5.items-center.justify-center.rounded.lg:w-6
+                .text-accent-content.text-sm.font-bold  A
+              .bg-neutral.flex.aspect-square.w-5.items-center.justify-center.rounded.lg:w-6
+                .text-neutral-content.text-sm.font-bold A
