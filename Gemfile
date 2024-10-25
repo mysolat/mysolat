@@ -37,13 +37,16 @@ gem "solid_cable"
 gem "bootsnap", require: false
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", ">= 2.0.0.rc2", require: false
+# gem "kamal", require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
+# gem "rack-cors"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -74,10 +77,10 @@ group :development do
   gem "standard", require: false
   gem "standard-rails", require: false
   gem "rubocop-slim", require: false
-  gem "slimcop", require: false
   gem "ruby-lsp-rails", require: false
 end
 
+# Template engines
 gem "slim-rails"
 
 # Heartcombo's gems
@@ -86,10 +89,11 @@ gem "show_for"
 gem "simple_form"
 gem "simple-navigation"
 
+# Other gems
 gem "country_select"
 gem "enum_help"
 gem "figjam"
-gem "hijri"
 gem "inline_svg"
 gem "local_time"
 gem "rambulance"
+gem "hijri"
