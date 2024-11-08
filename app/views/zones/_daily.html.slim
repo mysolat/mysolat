@@ -1,0 +1,34 @@
+.flex.flex-col.items-center.justify-center.h-screen.text-base-content.z-0.mx-5.text-center
+  .clock.font-title.font-black.leading-none class="text-[clamp(1rem,4vw,1rem)]"  data-controller="clock"
+  h1.font-bold.text-xl.md:text-4xl.text-2xl
+    span = @location["code"]
+    span.mx-3 -
+    span = @location["state"]&.upcase
+    span.mx-3 -
+    == @today["bearing"]
+  h2.mt-5.font-title.font-black.leading-none class="text-[clamp(0.1rem,4vw,2rem)]"
+    = @location["location"]&.upcase
+  p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan #{hijri_date @today["hijri"]} H
+
+  .flex.flex-wrap.justify-center.text-center.h-auto.font-title.font-black.leading-none class="text-[clamp(1.5rem,6vw,3rem)]"
+    .p-4.imsak
+      h4 IMSAK
+      = l @today["imsak"].to_time, format: "%I:%M %p"
+    .p-4.subuh
+      h4 SUBUH
+      = l @today["fajr"].to_time, format: "%I:%M %p"
+    .p-4.syuruk
+      h4 SYURUK
+      = l @today["syuruk"].to_time, format: "%I:%M %p"
+    .p-4.zohor
+      h4 ZOHOR
+      = l @today["dhuhr"].to_time, format: "%I:%M %p"
+    .p-4.asar
+      h4 ASAR
+      = l @today["asr"].to_time, format: "%I:%M %p"
+    .p-4.maghrib
+      h4 MAGHRIB
+      = l @today["maghrib"].to_time, format: "%I:%M %p"
+    .p-4.isyak
+      h4 ISYAK
+      = l @today["isha"].to_time, format: "%I:%M %p"

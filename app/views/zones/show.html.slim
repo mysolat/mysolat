@@ -1,73 +1,8 @@
 = content_for :hero do
   #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-100
-    .flex.flex-col.items-center.justify-center.h-screen.text-base-content.z-0.mx-5.text-center
-      .clock.font-title.font-black.leading-none class="text-[clamp(1rem,4vw,1rem)]"  data-controller="clock"
-      h1.font-bold.text-xl.md:text-4xl.text-2xl
-        span = @location["code"]
-        span.mx-3 -
-        span = @location["state"]&.upcase
-        span.mx-3 -
-        == @today["bearing"]
-      h2.mt-5.font-title.font-black.leading-none class="text-[clamp(0.1rem,4vw,2rem)]"
-        = @location["location"]&.upcase
-      p.my-5.font-bold.md:text-2xl #{l @today["date"].to_date, format: :extra} bersamaan dengan #{hijri_date @today["hijri"]} H
-
-      .flex.flex-wrap.justify-center.text-center.h-auto.font-title.font-black.leading-none class="text-[clamp(1.5rem,6vw,3rem)]"
-        .p-4.imsak
-          h4 IMSAK
-          = l @today["imsak"].to_time, format: "%I:%M %p"
-        .p-4.subuh
-          h4 SUBUH
-          = l @today["fajr"].to_time, format: "%I:%M %p"
-        .p-4.syuruk
-          h4 SYURUK
-          = l @today["syuruk"].to_time, format: "%I:%M %p"
-        .p-4.zohor
-          h4 ZOHOR
-          = l @today["dhuhr"].to_time, format: "%I:%M %p"
-        .p-4.asar
-          h4 ASAR
-          = l @today["asr"].to_time, format: "%I:%M %p"
-        .p-4.maghrib
-          h4 MAGHRIB
-          = l @today["maghrib"].to_time, format: "%I:%M %p"
-        .p-4.isyak
-          h4 ISYAK
-          = l @today["isha"].to_time, format: "%I:%M %p"
+    = render "daily"
 
 .px-2.pb-16  class="xl:pr-2 max-w-[100vw]"
-  - @monthly.each do |month|
-    - date = month["date"].to_date
-    - klass = "bg-primary text-primary-content" if date == Date.current
-    .card.shadow-md.mt-1 class=klass
-      .card-body.p-2.grow.md:flex-row
-        .flex-none
-          .flex.w-100.justify-center.md:block
-            .span.title.mr-2 = l date, format: :day
-            .font-medium.mr-2 = l date, format: :long
-            .font-italic = hijri_date month["hijri"]
-        .flex-auto.grid.grid-cols-7.justify-items-center.content-center.items-center
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Imsak
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["imsak"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Subuh
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["fajr"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Syuruk
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["syuruk"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Zohor
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["dhuhr"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Asar
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["asr"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Maghrib
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["maghrib"].to_time, format: "%I:%M %p"
-          .grid-col.text-center.mx-1
-            .span.title.text-xs Isyak
-            .span class="text-[clamp(0.2rem,2.5vw,1rem)]" = l month["isha"].to_time, format: "%I:%M %p"
-
+  = render "monthly"
 = content_for :modal do
   = render "filter"

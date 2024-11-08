@@ -1,0 +1,20 @@
+doctype html
+html lang="ms"
+  head
+    = render "layouts/head"
+    body.h-screen.drawer.drawer-end.max-h-screen.overflow-hidden
+      input#my-drawer.drawer-toggle[type="checkbox"]
+      img.absolute.inset-0.w-screen.h-screen.bg-top.bg-cover.object-cover.opacity-95.max-w-screen.-z-10 src="#{random_bg}" alt=""
+      .absolute.inset-0.bg-gradient-to-t.from-base-100.to-transparent.w-screen aria-hidden="true"
+      .drawer-content
+        .absolute.top-2.right-2[title="Change Theme"]
+          label.btn.btn-square.btn-ghost.drawer-button.text-primary[for="my-drawer"]
+            = icon :swatch
+
+        = yield :hero if content_for?(:hero)
+        = yield
+
+
+      .drawer-side
+        = render "layouts/sidebar"
+      = render "layouts/analytics"
