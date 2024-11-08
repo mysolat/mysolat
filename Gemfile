@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.0.rc1"
+gem "rails", "~> 8.0.0.rc2"
 # Centralization of locale data collection for Ruby on Rails.
 gem "rails-i18n", "~> 7.0.9"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
