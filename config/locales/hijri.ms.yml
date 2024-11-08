@@ -1,0 +1,36 @@
+hijri:
+  date:
+    formats:
+      default: "%d %B %Y"
+      short: "%b %d"
+      long: "%d %B %Y"
+    day_names:
+    - Ahad
+    - Isnin
+    - Selasa
+    - Rabu
+    - Khamis
+    - Jumaat
+    - Sabtu
+    abbr_day_names:
+    - Ahd
+    - Isn
+    - Sel
+    - Rab
+    - Kha
+    - Jum
+    - Sab
+    month_names:
+    -
+    - Muharram
+    - Safar
+    - Rabi'ulawal
+    - Rabi'ulakhir
+    - Jamadilawwal
+    - Jamadilakhir
+    - Rejab
+    - Sya'aban
+    - Ramadhan
+    - Shawwal
+    - Zulkaedah
+    - ZulHijjah

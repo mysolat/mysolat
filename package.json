@@ -14,17 +14,17 @@
     "@domchristie/turn": "^3.1.1",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
-    "@rails/actiontext": "8.0.0-rc1",
-    "@rails/activestorage": "8.0.0-rc1",
-    "@tabler/icons": "^3.20.0",
+    "@rails/actiontext": "8.0.0",
+    "@rails/activestorage": "8.0.0",
+    "@tabler/icons": "^3.21.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "daisyui": "^4.12.13",
+    "daisyui": "^4.12.14",
     "heroicons": "^2.1.5",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
-    "workbox-cli": "^7.1.0"
+    "workbox-cli": "^7.3.0"
   }
 }
