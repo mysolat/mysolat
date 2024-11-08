@@ -1,0 +1,20 @@
+.modal-header
+  form.sticky
+    label.mb-2.text-sm.font-medium.sr-only for="default-search" Cari
+    .relative
+      .absolute.inset-y-0.left-0.flex.items-center.pl-3.pointer-events-none
+        = icon("magnifying-glass", class: "h-5 w-5 ")
+      input#default-search.block.w-full.p-4.pl-10[
+        type="search"
+        placeholder="Cari lokasi"
+        data-action="input->filter#filterList"
+        data-filter-target="searchTerm"
+      ]
+  .modal-body
+    ul.menu.bg-base-100.rounded-box.p-2
+      - @locations.group_by { |l| l["state"] }.each do |state, locations|
+        li.font-bold.text-lg data-filter-target="parentListItem"
+          a href="#{zone_path(locations.first["code"])}" = state
+          - locations.each do |location|
+            li data-filter-target="listItem"
+              a href="#{zone_path(location["code"])}" = location["location"]

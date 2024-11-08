@@ -13,10 +13,10 @@
   "dependencies": {
     "@domchristie/turn": "^3.1.1",
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.10",
-    "@rails/actiontext": "^7.2.100",
-    "@rails/activestorage": "^7.2.100",
-    "@tabler/icons": "^3.19.0",
+    "@hotwired/turbo-rails": "^8.0.12",
+    "@rails/actiontext": "8.0.0-rc1",
+    "@rails/activestorage": "8.0.0-rc1",
+    "@tabler/icons": "^3.20.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
@@ -24,7 +24,7 @@
     "daisyui": "^4.12.13",
     "heroicons": "^2.1.5",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
+    "tailwindcss": "^3.4.14",
     "workbox-cli": "^7.1.0"
   }
 }
