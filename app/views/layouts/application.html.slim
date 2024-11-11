@@ -11,7 +11,7 @@ html lang="ms"
       .drawer-content
         = render "layouts/header"
         = yield :hero if content_for?(:hero)
-        section#pages.flex.flex-col.min-h-screen.p-8
+        section#pages.flex.flex-col.min-h-screen.mx-5
           = yield
         input#my-modal.modal-toggle type="checkbox" /
         .modal

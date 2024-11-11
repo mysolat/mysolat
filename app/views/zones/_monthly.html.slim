@@ -1,7 +1,7 @@
 - @monthly.each do |month|
   - date = month["date"].to_date
   - klass = "bg-primary text-primary-content" if date == Date.current
-  .card.shadow-md.mt-1 class=klass
+  .card.shadow-md.my-2 class=klass
     .card-body.p-2.grow.md:flex-row
       .flex-none
         .flex.w-100.justify-center.md:block
@@ -10,23 +10,23 @@
           .font-italic = hijri_date month["hijri"]
       .flex-auto.grid.grid-cols-7.justify-items-center.content-center.items-center
         .grid-col.text-center
-          .span.title Imsak
-          = l month["imsak"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Imsak
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["imsak"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Subuh
-          = l month["fajr"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Subuh
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["fajr"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Syuruk
-          = l month["syuruk"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Syuruk
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["syuruk"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Zohor
-          = l month["dhuhr"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Zohor
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["dhuhr"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Asar
-          = l month["asr"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Asar
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["asr"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Maghrib
-          = l month["maghrib"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Maghrib
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["maghrib"].to_time, format: "%I:%M %p"
         .grid-col.text-center
-          .span.title Isyak
-          = l month["isha"].to_time, format: "%I:%M %p"
+          .span.title.text-xs.md:text-sm Isyak
+          .time.mx-1.text-sm.md:text-xl.lg:text-2xl = l month["isha"].to_time, format: "%I:%M %p"
