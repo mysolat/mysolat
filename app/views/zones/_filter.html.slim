@@ -10,7 +10,7 @@
         data-action="input->filter#filterList"
         data-filter-target="searchTerm"
       ]
-  .modal-body
+  .modal-body.overflow-y-auto.mt-3 class="h-[calc(100vh-20rem)]"
     ul.menu.bg-base-100.rounded-box.p-2
       - @locations.group_by { |l| l["state"] }.each do |state, locations|
         li.font-bold.text-lg data-filter-target="parentListItem"

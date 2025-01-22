@@ -2,7 +2,7 @@ doctype html
 html lang="ms"
   head
     = render "layouts/head"
-  body.bg-base-100.text-base-content.from-primary.to-secondary  data-controller="application service-worker geolocation"
+  body.text-base-content data-controller="application service-worker geolocation"
     .absolute.inset-0.h-96.pt-16.box-content.-z-1.w-full
       = image_tag random_bg, class: "absolute inset-0 w-full h-screen bg-top bg-cover object-cover opacity-90 max-w-full ", alt: ""
       .absolute.inset-0.bg-gradient-to-t.from-base-100.to-transparent.w-full.h-screen aria-hidden="true"
@@ -11,7 +11,7 @@ html lang="ms"
       .drawer-content
         = render "layouts/header"
         = yield :hero if content_for?(:hero)
-        section#pages.flex.flex-col.min-h-screen.mx-5
+        section#pages.flex.flex-col.min-h-screen.p-8.bg-base-100.from-primary.to-secondary
           = yield
         input#my-modal.modal-toggle type="checkbox" /
         .modal
