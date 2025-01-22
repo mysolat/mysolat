@@ -1,30 +1,33 @@
 {
   "name": "app",
   "private": true,
-  "devDependencies": {
-    "esbuild": "^0.24.0",
-    "esbuild-plugin-copy": "^2.1.1",
-    "esbuild-rails": "^1.0.7"
-  },
   "scripts": {
     "build": "node esbuild.config.mjs",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css --minify"
+    "build:css": "npx @tailwindcss/cli -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.24.2",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-rails": "^1.0.7",
+    "esbuild-sass-plugin": "^3.3.1",
+    "postcss": "^8.4.47",
+    "workbox-cli": "7.3.0"
   },
   "dependencies": {
-    "@domchristie/turn": "^3.1.1",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
     "@rails/actiontext": "8.0.0",
     "@rails/activestorage": "8.0.0",
     "@tabler/icons": "^3.21.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "daisyui": "^4.12.14",
+    "daisyui": "^5.0.0-beta.1",
     "heroicons": "^2.1.5",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "workbox-cli": "^7.3.0"
+    "mapbox-gl": "^3.9.3",
+    "tailwindcss": "^4.0.0",
+    "tailwindcss-displaymodes": "^1.0.8"
   }
 }

@@ -22,7 +22,7 @@ export default class extends Controller {
       const listItems = parent.querySelectorAll('[data-filter-target="listItem"]')
       const anyVisible = Array.from(listItems).some(item => item.style.display === 'block')
 
-      if (anyVisible) {
+      if (searchTerm === '' || anyVisible) {
         parent.style.display = 'block'
       } else {
         parent.style.display = 'none'

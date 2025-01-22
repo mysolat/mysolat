@@ -5,7 +5,6 @@
       - themes.each do |theme|
         li
           a.after:absolute.after:inset-0 tabindex="0" data-action="click->theme#switch" data-theme-value="#{theme}"
-            = theme.humanize
             .flex.flex-wrap.gap-1.ms-auto.p-1 data-theme=theme
               .bg-primary.flex.aspect-square.w-5.items-center.justify-center.rounded.lg:w-6
                 .text-primary-content.text-sm.font-bold A
