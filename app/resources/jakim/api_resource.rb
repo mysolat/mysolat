@@ -31,7 +31,7 @@ class Jakim::ApiResource < ApplicationResource
     end
   end
 
-   def set_cache_header(name, response)
+  def set_cache_header(name, response)
     response.response_headers["Expires"] = cache_expiry.iso8601
   end
 end

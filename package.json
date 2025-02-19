@@ -5,29 +5,37 @@
     "build": "node esbuild.config.mjs",
     "build:css": "npx @tailwindcss/cli -i ./app/assets/stylesheets/application.css -o ./app/assets/builds/application.css --minify"
   },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0",
-    "cssnano": "^7.0.6",
-    "esbuild": "^0.24.2",
-    "esbuild-plugin-copy": "^2.1.1",
-    "esbuild-rails": "^1.0.7",
-    "esbuild-sass-plugin": "^3.3.1",
-    "postcss": "^8.4.47",
-    "workbox-cli": "7.3.0"
-  },
   "dependencies": {
+    "@codewithkyle/notifyjs": "^4.1.0",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
-    "@rails/actiontext": "8.0.0",
-    "@rails/activestorage": "8.0.0",
-    "@tabler/icons": "^3.21.0",
+    "@rails/actioncable": "^8.0.100",
+    "@rails/activestorage": "^8.0.100",
+    "@rails/request.js": "^0.0.11",
+    "@selectize/selectize": "^0.15.2",
+    "@tabler/icons": "^3.30.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^5.0.0-beta.1",
-    "heroicons": "^2.1.5",
-    "mapbox-gl": "^3.9.3",
-    "tailwindcss": "^4.0.0",
+    "daisyui": "^5.0.0-beta.8",
+    "heroicons": "^2.2.0",
+    "mapbox-gl": "^3.10.0",
+    "tailwind-scrollbar": "^4.0.0",
+    "tailwindcss": "^4.0.6",
     "tailwindcss-displaymodes": "^1.0.8"
-  }
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@tailwindcss/cli": "^4.0.7",
+    "cssnano": "^7.0.6",
+    "esbuild": "^0.25.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "esbuild-rails": "^1.0.7",
+    "esbuild-sass-plugin": "^3.3.1",
+    "intl-tel-input": "^25.3.0",
+    "postcss": "^8.5.3",
+    "sass": "^1.85.0",
+    "workbox-cli": "7.3.0"
+  },
+  "packageManager": "yarn@4.6.0"
 }
