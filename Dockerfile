@@ -8,7 +8,7 @@
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version
-ARG RUBY_VERSION=3.3.4
+ARG RUBY_VERSION=3.4.2
 FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 LABEL fly_launch_runtime="rails"
 
@@ -35,8 +35,8 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install JavaScript dependencies
-ARG NODE_VERSION=20.17.0
-ARG YARN_VERSION=4.0.2
+ARG NODE_VERSION=20.13.1
+ARG YARN_VERSION=4.16.0
 ENV PATH=/usr/local/node/bin:$PATH
 RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz -C /tmp/ && \
     /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
@@ -67,7 +67,7 @@ RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 
 RUN rm -rf node_modules
-
+RUN rm -rf .git
 
 # Final stage for app image
 FROM base
