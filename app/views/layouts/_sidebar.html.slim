@@ -1,7 +1,7 @@
 .drawer-side.z-40
   label for="drawer" class="drawer-overlay" aria-label="Close menu"
   aside.bg-base-100.w-80.h-screen
-    ul.menu.p-4.overflow-y-auto.w-80.bg-base-100.text-base-content data-controller="theme"
+    ul.menu.p-4.overflow-y-auto.w-80.bg-base-100.text-base-content
       - themes.each do |theme|
         li
           a.after:absolute.after:inset-0 tabindex="0" data-action="click->theme#switch" data-theme-value="#{theme}"

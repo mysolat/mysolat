@@ -11,6 +11,32 @@
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.navbar-scrolled {
+  @apply shadow-xs bg-base-100/90 backdrop-blur;
+}
+
+.scrollable-area {
+  height: 100%;
+  max-height: 100dvh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scrollbar-rounded {
+  @apply scrollbar-thin scrollbar-thumb-primary hover:scrollbar-thumb-primary active:scrollbar-thumb-primary scrollbar-track-base-200
+}
+
+@media screen and (max-width: 768px) {
+  .scrollbar-rounded {
+    ::-webkit-scrollbar { display: none; }
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  }
+}
+
+
 /* Simple Animation */
 @keyframes blinking {
   0% {

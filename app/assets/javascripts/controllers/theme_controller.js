@@ -1,14 +1,23 @@
 
 import { Controller } from '@hotwired/stimulus'
 export default class extends Controller {
+  static targets = ["navbar"];
+
   initialize() {
     this.apply()
   }
 
-  connect() { }
+  connect() {
+    this.toggleNavbar(); // Ensure the correct class is set on page load
+    window.addEventListener("scroll", this.toggleNavbar.bind(this));
+   }
 
   apply() {
     document.documentElement.setAttribute('data-theme', this.theme)
+  }
+
+  disconnect() {
+    window.removeEventListener("scroll", this.toggleNavbar.bind(this));
   }
 
   switch(event) {
@@ -17,9 +26,16 @@ export default class extends Controller {
     this.apply()
   }
 
+  toggleNavbar() {
+    if (window.scrollY > 50) {
+      this.navbarTarget.classList.add("navbar-scrolled");
+    } else {
+      this.navbarTarget.classList.remove("navbar-scrolled");
+    }
+  }
+
   get systemDefault() {
-    //return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'emerald'
-    'dark'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'emerald'
   }
 
   get theme() {
