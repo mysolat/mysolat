@@ -17,16 +17,16 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^5.0.0-beta.8",
+    "daisyui": "^5.0.0-beta.9",
     "heroicons": "^2.2.0",
     "mapbox-gl": "^3.10.0",
-    "tailwind-scrollbar": "^4.0.0",
-    "tailwindcss": "^4.0.6",
+    "tailwind-scrollbar": "^4.0.1",
+    "tailwindcss": "^4.0.9",
     "tailwindcss-displaymodes": "^1.0.8"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
-    "@tailwindcss/cli": "^4.0.7",
+    "@tailwindcss/cli": "^4.0.9",
     "cssnano": "^7.0.6",
     "esbuild": "^0.25.0",
     "esbuild-plugin-copy": "^2.1.1",
@@ -34,7 +34,7 @@
     "esbuild-sass-plugin": "^3.3.1",
     "intl-tel-input": "^25.3.0",
     "postcss": "^8.5.3",
-    "sass": "^1.85.0",
+    "sass": "^1.85.1",
     "workbox-cli": "7.3.0"
   },
   "packageManager": "yarn@4.6.0"

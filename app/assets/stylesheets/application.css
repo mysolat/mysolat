@@ -12,7 +12,7 @@
 }
 
 .navbar-scrolled {
-  @apply shadow-xs bg-base-100/90 backdrop-blur;
+  @apply shadow-xs bg-base-100/20 backdrop-blur;
 }
 
 .scrollable-area {
