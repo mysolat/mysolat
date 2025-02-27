@@ -1,5 +1,5 @@
-.modal-header
-  form.sticky
+.modal-header.sticky.relative
+  form
     label.mb-2.text-sm.font-medium.sr-only for="default-search" Cari
     .relative
       .absolute.inset-y-0.left-0.flex.items-center.pl-3.pointer-events-none
@@ -10,11 +10,14 @@
         data-action="input->filter#filterList"
         data-filter-target="searchTerm"
       ]
-  .modal-body.overflow-y-auto.mt-3 class="h-[calc(100vh-20rem)]"
-    ul.menu.bg-base-100.rounded-box.p-2
+  .modal-body
+    .bg-base-100.p-2 class="columns-2 md:columns-4 lg:columns-8 gap-4 space-y-4 w-full"
       - @locations.group_by { |l| l["state"] }.each do |state, locations|
-        li.font-bold.text-lg data-filter-target="parentListItem"
-          a href="#{zone_path(locations.first["code"])}" = state
-          - locations.each do |location|
-            li data-filter-target="listItem"
-              a href="#{zone_path(location["code"])}" = location["location"]
+        .shadow.w-auto data-filter-target="parentListItem" style="break-inside: avoid;"
+          a.btn.btn-ghost.btn-lg.w-full.text-lg href="#{zone_path(locations.first["code"])}"
+            = state
+          ul
+            - locations.each do |location|
+              li data-filter-target="listItem"
+                a.btn.btn-ghost.w-full href="#{zone_path(location["code"])}"
+                  = location["location"]
