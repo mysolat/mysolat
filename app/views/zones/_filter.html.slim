@@ -1,23 +1,20 @@
 .modal-header.sticky.relative
   form
     label.mb-2.text-sm.font-medium.sr-only for="default-search" Cari
-    .relative
+    .relative.max-w-xl.mx-auto.flex.mb-5
       .absolute.inset-y-0.left-0.flex.items-center.pl-3.pointer-events-none
         = icon("magnifying-glass", class: "h-5 w-5 ")
-      input#default-search.block.w-full.p-4.pl-10[
+      input#default-search.block.w-full.p-4.pl-10.bg-base-300.rounded-xl.4.text-center.text-3xl[
         type="search"
         placeholder="Cari lokasi"
         data-action="input->filter#filterList"
         data-filter-target="searchTerm"
       ]
   .modal-body
-    .bg-base-100.p-2 class="columns-2 md:columns-4 lg:columns-8 gap-4 space-y-4 w-full"
+    .bg-base-100.p-2 class="masonry sm:masonry-sm md:masonry-md text-center flex justify-center flex-wrap gap-2"
       - @locations.group_by { |l| l["state"] }.each do |state, locations|
-        .shadow.w-auto data-filter-target="parentListItem" style="break-inside: avoid;"
-          a.btn.btn-ghost.btn-lg.w-full.text-lg href="#{zone_path(locations.first["code"])}"
+          a.rounded-lg.break-inside.text-5xl.btn.btn-ghost href="#{zone_path(locations.first["code"])}" data-filter-target="parentListItem"
             = state
-          ul
-            - locations.each do |location|
-              li data-filter-target="listItem"
-                a.btn.btn-ghost.w-full href="#{zone_path(location["code"])}"
-                  = location["location"]
+          - locations.each do |location|
+              a.rounded-lg.break-inside.btn.btn-ghost href="#{zone_path(location["code"])}" data-filter-target="listItem" class="text-#{["s", "md", "xl", "2xl", "3xl"].sample} font-bold"
+                = location["location"]
