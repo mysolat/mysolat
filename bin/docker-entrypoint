@@ -6,9 +6,15 @@ if [ -z "${LD_PRELOAD+x}" ]; then
     export LD_PRELOAD
 fi
 
-# If running the rails server then create or migrate existing database
-if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
-  ./bin/rails db:prepare
+# Run db:prepare if rails server is part of the command
+if [[ "$*" == *"rails server"* ]]; then
+  if [ ! -f storage/production.sqlite3 ]; then
+    echo "Database file not found"
+    ./bin/rails db:setup
+  else
+    echo "Running db:prepare in $RAILS_ENV"
+    ./bin/rails db:prepare
+  fi
 fi
 
 exec "${@}"

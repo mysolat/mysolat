@@ -1,0 +1,22 @@
+services:
+  rails:
+    container_name: "mysolat"
+    hostname: "mysolat"
+    env_file:
+      - ".env"
+    image: "dockerhub.labs.my/mysolat:latest"
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - storage:/rails/storage
+      - storage:/rails/tmp
+      - storage:/rails/log
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  storage: {}

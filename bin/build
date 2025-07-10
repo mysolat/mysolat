@@ -1,0 +1,53 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# Config
+REGISTRY="dockerhub.labs.my"
+IMAGE_NAME="mysolat"
+PLATFORM="linux/amd64"
+AUTHOR="Khairi Adnan <khairi@labs.my>"
+
+# Metadata
+GIT_HASH=$(git rev-parse --short HEAD)
+TIMESTAMP=$(date +%s)
+IMAGE_TAG="${REGISTRY}/${IMAGE_NAME}:${TIMESTAMP}"
+LATEST_TAG="${REGISTRY}/${IMAGE_NAME}:latest"
+
+# Default: no-cache off
+NO_CACHE=""
+
+# Parse optional arguments
+for arg in "$@"; do
+  case "$arg" in
+    --no-cache)
+      NO_CACHE="--no-cache"
+      ;;
+    *)
+      echo "❌ Unknown option: $arg"
+      echo "✅ Usage: $0 [--no-cache]"
+      exit 1
+      ;;
+  esac
+done
+
+echo "🛠 Building Docker image for $PLATFORM"
+docker build \
+  $NO_CACHE \
+  --platform "$PLATFORM" \
+  --label "maintainer=${AUTHOR}" \
+  --label "org.opencontainers.image.authors=${AUTHOR}" \
+  --label "org.opencontainers.image.revision=${GIT_HASH}" \
+  --label "org.opencontainers.image.created=${TIMESTAMP}" \
+  -t "$IMAGE_TAG" .
+
+echo "🔖 Tagging as latest"
+docker tag "$IMAGE_TAG" "$LATEST_TAG"
+
+echo "📤 Pushing $IMAGE_TAG and $LATEST_TAG"
+docker push "$IMAGE_TAG"
+docker push "$LATEST_TAG"
+
+echo "✅ Build complete:"
+echo " - $IMAGE_TAG"
+echo " - $LATEST_TAG"
