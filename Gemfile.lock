@@ -132,7 +132,7 @@ GEM
       logger
     faraday-net_http (3.4.1)
       net-http (>= 0.5.0)
-    figjam (2.0.1)
+    figjam (2.2.0)
       thor (>= 0.14.0, < 2)
     flexirest (1.12.5)
       actionpack
