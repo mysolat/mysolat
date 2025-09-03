@@ -4,7 +4,7 @@ html.scrollable-area.scrollbar-rounded.scroll-smooth.md:scroll-auto lang="ms"
     = render "layouts/head"
   body.text-base-content data-controller="application theme service-worker geolocation"
     .absolute.inset-0.h-96.pt-16.box-content.-z-1.w-full
-      = image_tag random_bg, class: "absolute inset-0 w-full h-screen bg-top bg-cover object-cover opacity-90 max-w-full ", alt: ""
+      = image_tag random_bg, class: "absolute inset-0 w-full h-screen bg-top bg-cover object-cover object-[85%_15%] opacity-90 max-w-full ", alt: ""
       .absolute.inset-0.bg-gradient-to-t.from-base-100.to-transparent.w-full.h-screen aria-hidden="true"
     .drawer
       input#drawer.drawer-toggle type="checkbox" /
@@ -16,10 +16,9 @@ html.scrollable-area.scrollbar-rounded.scroll-smooth.md:scroll-auto lang="ms"
         - if content_for?(:modal)
           input#filter-modal.modal-toggle type="checkbox" /
           .modal
-            .modal-box.h-svh.w-screen.max-w-screen.pt-0 data-controller="filter"
+            .modal-box.h-svh.w-screen.max-w-screen.p-0 data-controller="filter"
               = yield :modal
               .modal-action
-
 
         = render "layouts/footer"
       = render "layouts/sidebar"

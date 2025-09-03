@@ -1,6 +1,6 @@
 .modal-header.sticky.relative.top-0.p-2 class="print:hidden text-base-content z-30 flex w-full justify-center transition-shadow duration-100 [transform:translate3d(0,0,0)] navbar-scrolled"
   .flex.justify-between.w-full
-    label.drawer-button.flex.items-center.flex-no-shrink for="drawer"
+    label.btn.btn-ghost.drawer-button.flex.items-center.flex-no-shrink for="drawer"
       = icon("swatch", class: "h-6 w-6")
     form.my-2
       label.text-sm.font-medium.sr-only for="default-search" Cari
@@ -13,9 +13,9 @@
           data-action="input->filter#filterList"
           data-filter-target="searchTerm"
         ]
-    label.modal-button.flex.items-center.flex-no-shrink for="filter-modal"
+    label.btn.btn-ghost.modal-button.flex.items-center.flex-no-shrink for="filter-modal"
       = icon("x-mark", class: "h-6 w-6")
-.modal-body
+.modal-body.p-2
   .bg-base-100.p-2 class="masonry sm:masonry-sm md:masonry-md text-center flex justify-center flex-wrap gap-2"
     - @locations.group_by { |l| l["state"] }.each do |state, locations|
         a.rounded-lg.break-inside.text-5xl.btn.btn-ghost href="#{zone_path(locations.first["code"])}" data-filter-target="parentListItem"
