@@ -6,6 +6,19 @@ module ApplicationHelper
     I18n.l hijri, locale: :hijri
   end
 
+  def prayers
+    [
+      { key: "imsak", label: "Imsak" },
+      { key: "fajr", label: "Subuh" },
+      { key: "syuruk", label: "Syuruk" },
+      { key: "dhuha", label: "Dhuha" },
+      { key: "dhuhr", label: "Dhuhr" },
+      { key: "asr", label: "Asar" },
+      { key: "maghrib", label: "Maghrib" },
+      { key: "isha", label: "Isyak" }
+    ]
+  end
+
   def random_bg
     photo_ids = [
       "1650201958331-be519823aa2d",

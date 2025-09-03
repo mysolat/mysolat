@@ -14,12 +14,12 @@ html.scrollable-area.scrollbar-rounded.scroll-smooth.md:scroll-auto lang="ms"
         section#pages.flex.flex-col.min-h-screen.p-2.bg-base-100.from-primary.to-secondary
           = yield
         - if content_for?(:modal)
-          input#my-modal.modal-toggle type="checkbox" /
+          input#filter-modal.modal-toggle type="checkbox" /
           .modal
-            .modal-box.h-svh.w-screen.max-w-screen data-controller="filter"
+            .modal-box.h-svh.w-screen.max-w-screen.pt-0 data-controller="filter"
               = yield :modal
               .modal-action
-                label.btn for="my-modal" Close
+
 
         = render "layouts/footer"
       = render "layouts/sidebar"
