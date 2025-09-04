@@ -1,6 +1,20 @@
+= content_for(:title) do
+  | Waktu Solat dan Imsak bagi kawasan #{@location["location"]}, #{@location["state"]}
+
+= content_for :description do
+  | Jadual waktu solat bagi kawasan #{@location["location"]}, #{@location["state"]} dan kawasan² yang sewaktu dengannya.
+  |  Waktu imsak dan berbuka puasa bagi kawasan #{@location["location"]}, #{@location["state"]}.
+  |  Muat turun jadual waktu solat dan jadual waktu berbuka puasa bagi kawasan #{@location["location"]},#{@location["state"]} dan kawasan² yang sewaktu dengannya.
+
+= content_for :ogdescription do
+  = "#{@location["location"]}, #{@location["state"]}, #{l @today["date"].to_date, format: :extra} bersamaan dengan #{hijri_date @today["hijri"]} H -- "
+  - prayers.each do |prayer|
+    = " #{prayer[:label]} :- #{l @today[prayer[:key]].to_time, format: "%I:%M%p "}"
+
 = content_for :hero do
   #main.bg-no-repeat.bg-cover.bg-fixed.bg-center.h-screen.w-full
     = render "daily"
+
 .pb-16.grid.gap-4  class="max-w-[100vw]"
   = render "monthly"
 

@@ -1,27 +1,33 @@
 # frozen_string_literal: true
 
 class Api::PrayerTimesController < ApiController
+  before_action :set_zone
+
   def daily
-    zone = params[:zone] || "SGR01"
-    data = PrayerTime.daily(zone: zone)
-    locations = Location.all.select { |l| l["code"] == zone.upcase }
+    data = PrayerTime.daily(zone: @zone)
     render json: data.merge({ serverTime: Time.current, locations: locations })
   end
 
   def monthly
-    zone = params[:zone] || "SGR01"
     year = params[:year] || Time.current.year
     month = params[:month] || Time.current.month
-    data = PrayerTime.monthly(zone: zone, year: year, month: month)
-    locations = Location.all.select { |l| l["code"] == zone.upcase }
+    data = PrayerTime.monthly(zone: @zone, year: year, month: month)
     render json: data.merge({ serverTime: Time.current, locations: locations })
   end
 
   def yearly
-    zone = params[:zone] || "SGR01"
     year = params[:year] || Time.current.year
-    data = PrayerTime.yearly(zone: zone, year: year)
-    locations = Location.all.select { |l| l["code"] == zone.upcase }
+    data = PrayerTime.yearly(zone: @zone, year: year)
     render json: data.merge({ serverTime: Time.current, locations: locations })
+  end
+
+  private
+
+  def set_zone
+    @zone = (params[:zone] || "SGR01").upcase
+  end
+
+  def locations
+    Location.all.select { |l| l["code"] == @zone }
   end
 end

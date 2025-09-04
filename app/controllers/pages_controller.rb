@@ -5,6 +5,13 @@ class PagesController < ApplicationController
   end
 
   def show
-    render params[:id]
+    render available_page(params[:id])
   end
+
+  private
+
+  def available_page(page)
+    %w[api].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+  end
+
 end
