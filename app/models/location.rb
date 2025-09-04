@@ -7,7 +7,7 @@ module Location
 
   def self.zone(code)
     locations = Location.all.select { |l| l["code"] == code }.pluck("location").join(", ")
-    location = Location.all.find { |l| l["code"] == code }
+    location = Location.all.find { |l| l["code"] == code } || {}
     location["location"] = locations
     location
   end
