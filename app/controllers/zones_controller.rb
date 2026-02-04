@@ -11,6 +11,13 @@ class ZonesController < ApplicationController
     @today.merge!({ "bearing" => prayer_times["bearing"] })
   end
 
+  def monthly
+    @locations = Location.all
+    @location = Location.zone(default_zone)
+    prayer_times = PrayerTime.monthly(zone: default_zone)
+    @monthly = prayer_times.fetch("prayerTime")
+  end
+
   private
 
   def default_zone

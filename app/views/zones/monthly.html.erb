@@ -1,0 +1,90 @@
+<% content_for(:title) do %>
+  Jadual Waktu Solat Bulanan - <%= @location["location"] %>, <%= @location["state"] %>
+<% end %>
+
+<% content_for :description do %>
+  Jadual waktu solat bulanan bagi kawasan <%= @location["location"] %>, <%= @location["state"] %> dan kawasan² yang sewaktu dengannya.
+<% end %>
+
+<% content_for :modal do %>
+  <%= render "filter" %>
+<% end %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-6 md:p-10 border border-white/20 shadow-2xl">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold">Jadual Bulanan</h1>
+        <p class="text-base-content/70"><%= @location["location"] %>, <%= @location["state"] %></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <div class="badge badge-primary badge-lg"><%= @monthly.count %> hari</div>
+      </div>
+    </div>
+
+    <!-- Table Header - Desktop -->
+    <div class="hidden md:grid md:grid-cols-9 gap-2 p-3 backdrop-blur-sm bg-white/10 rounded-xl text-xs font-semibold uppercase tracking-wider text-base-content/60 mb-2 border border-white/10">
+      <div class="col-span-1">Tarikh</div>
+      <% prayers.each do |prayer| %>
+        <div class="text-center"><%= prayer[:label] %></div>
+      <% end %>
+    </div>
+
+    <!-- Prayer Times List -->
+    <div class="space-y-2">
+      <% @monthly.each do |month| %>
+        <% date = month["date"].to_date %>
+        <% is_today = date == Date.current %>
+        <% is_friday = date.friday? %>
+
+        <div class="group rounded-xl p-3 transition-all duration-200 border backdrop-blur-sm <%= is_today ? 'bg-primary text-primary-content border-primary shadow-lg scale-[1.02]' : 'bg-white/10 border-white/10 hover:bg-white/20' %>">
+          <!-- Mobile View -->
+          <div class="md:hidden">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center gap-2">
+                <% if is_today %>
+                  <div class="badge badge-secondary badge-sm">Hari Ini</div>
+                <% elsif is_friday %>
+                  <div class="badge badge-accent badge-sm badge-outline">Jumaat</div>
+                <% end %>
+                <div class="font-bold"><%= l date, format: :day %></div>
+                <span class="text-sm"><%= l date, format: :long %></span>
+              </div>
+              <div class="text-xs opacity-70"><%= hijri_date month["hijri"] %></div>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center">
+              <% prayers.each do |prayer| %>
+                <div class="rounded-lg p-2 <%= is_today ? 'bg-primary-content/10' : 'bg-white/10' %> <%= prayer[:key] %>">
+                  <div class="text-xs opacity-60"><%= prayer[:label] %></div>
+                  <div class="text-sm font-bold tabular-nums"><%= l month[prayer[:key]].to_time, format: "%I:%M" %></div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+          <!-- Desktop View -->
+          <div class="hidden md:grid md:grid-cols-9 gap-2 items-center">
+            <div class="col-span-1">
+              <div class="flex items-center gap-2">
+                <% if is_today %>
+                  <div class="badge badge-secondary badge-sm">Hari Ini</div>
+                <% elsif is_friday %>
+                  <div class="badge badge-accent badge-sm badge-outline">Jumaat</div>
+                <% end %>
+              </div>
+              <div class="font-bold"><%= l date, format: :day %></div>
+              <div class="text-sm opacity-80"><%= l date, format: :long %></div>
+              <div class="text-xs opacity-60"><%= hijri_date month["hijri"] %></div>
+            </div>
+            <% prayers.each do |prayer| %>
+              <div class="text-center font-semibold tabular-nums <%= prayer[:key] %>">
+                <%= l month[prayer[:key]].to_time, format: "%I:%M %p" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

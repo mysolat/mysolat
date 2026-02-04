@@ -24,39 +24,39 @@
 }
 
 .scrollbar-rounded {
-  @apply scrollbar-thin scrollbar-thumb-primary hover:scrollbar-thumb-primary active:scrollbar-thumb-primary scrollbar-track-base-200
+  @apply scrollbar-thin scrollbar-thumb-primary hover:scrollbar-thumb-primary active:scrollbar-thumb-primary scrollbar-track-base-200;
 }
 
 @media screen and (max-width: 768px) {
   .scrollbar-rounded {
-    ::-webkit-scrollbar { display: none; }
+    ::-webkit-scrollbar {
+      display: none;
+    }
     ::-webkit-scrollbar {
       -webkit-appearance: none;
-  }
+    }
   }
 }
 
 @layer utilities {
-    @variants responsive {
-        .masonry {
-            column-gap: 1.5em;
-            column-count: 1;
-        }
-        .masonry-sm {
-            column-gap: 1.5em;
-            column-count: 2;
-        }
-        .masonry-md {
-            column-gap: 1.5em;
-            column-count: 3;
-        }
-        .break-inside {
-            break-inside: avoid;
-        }
-
+  @variants responsive {
+    .masonry {
+      column-gap: 1.5em;
+      column-count: 1;
     }
+    .masonry-sm {
+      column-gap: 1.5em;
+      column-count: 2;
+    }
+    .masonry-md {
+      column-gap: 1.5em;
+      column-count: 3;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
 }
-
 
 /* Simple Animation */
 @keyframes blinking {
@@ -155,4 +155,50 @@
   .clock #date {
     font-size: 18px;
   }
+}
+
+/* Prayer card current state enhancement */
+.prayer-current {
+  @apply ring-2 ring-primary ring-offset-2 ring-offset-base-100/50 bg-primary/10;
+}
+
+/* Tabular numbers for countdown */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Mini clock styling */
+.mini-clock {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile dock safe area for iOS */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Add bottom padding on mobile to account for dock */
+@media (max-width: 767px) {
+  #pages {
+    padding-bottom: 6rem;
+  }
+}
+
+/* Mobile dock item styles */
+.dock-item {
+  @apply flex flex-col items-center justify-center px-4 py-2 rounded-2xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
+}
+
+.dock-item-active {
+  @apply bg-white/30 text-primary;
+}
+
+/* Desktop mini sidebar styles */
+.sidebar-item {
+  @apply p-3 rounded-xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
+}
+
+.sidebar-active {
+  @apply bg-white/30 text-primary;
 }

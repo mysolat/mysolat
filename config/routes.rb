@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :zones
+  get "/monthly", to: "zones#monthly", as: :monthly
 
   get "/pages/*id", to: "pages#show", as: :page
   get "/manifest", to: "application#manifest", formats: [:json]

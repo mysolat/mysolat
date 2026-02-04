@@ -1,0 +1,271 @@
+<% content_for :title, "API Dokumentasi" %>
+<% content_for :description, "Dokumentasi API Waktu Solat Malaysia" %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+    <div class="prose prose-lg max-w-none">
+      <h1 class="text-3xl font-bold mb-2">API Waktu Solat</h1>
+      <p class="text-base-content/70 mb-8">API percuma untuk mendapatkan waktu solat di Malaysia. Data disediakan oleh JAKIM.</p>
+
+      <!-- Base URL -->
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-6 mb-8 border border-white/10">
+        <h2 class="text-lg font-semibold mb-3">Base URL</h2>
+        <div class="mockup-code bg-base-300/50">
+          <pre><code>https://solat.my/api</code></pre>
+        </div>
+      </div>
+
+      <!-- Endpoints -->
+      <h2 class="text-2xl font-semibold mb-4">Endpoints</h2>
+
+      <!-- Locations -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" checked />
+        <div class="collapse-title font-medium">
+          <span class="badge badge-primary badge-sm mr-2">GET</span>
+          /api/locations
+        </div>
+        <div class="collapse-content">
+          <p class="mb-4">Senarai semua zon waktu solat di Malaysia.</p>
+          <div class="mockup-code mb-4 bg-base-300/50">
+            <pre data-prefix="$"><code>curl https://solat.my/api/locations</code></pre>
+          </div>
+          <h4 class="font-semibold mb-2">Response</h4>
+          <div class="mockup-code text-sm bg-base-300/50">
+            <pre><code>[
+  {
+    "state": "Selangor",
+    "code": "SGR01",
+    "location": "Gombak",
+    "latitude": "3.253502",
+    "longitude": "101.653326"
+  },
+  ...
+]</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" checked />
+        <div class="collapse-title font-medium">
+          <span class="badge badge-primary badge-sm mr-2">GET</span>
+          /api/daily/:zone
+        </div>
+        <div class="collapse-content">
+          <p class="mb-4">Waktu solat untuk hari ini berdasarkan zon.</p>
+
+          <h4 class="font-semibold mb-2">Parameter</h4>
+          <div class="overflow-x-auto mb-4">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Jenis</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>zone</code></td>
+                  <td>string</td>
+                  <td>Kod zon (cth: SGR01, JHR02, KTN01)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mockup-code mb-4 bg-base-300/50">
+            <pre data-prefix="$"><code>curl https://solat.my/api/daily/SGR01</code></pre>
+          </div>
+
+          <h4 class="font-semibold mb-2">Response</h4>
+          <div class="mockup-code text-sm bg-base-300/50">
+            <pre><code>{
+  "zone": "SGR01",
+  "year": 2024,
+  "month": 1,
+  "day": 15,
+  "date": "15-Jan-2024",
+  "hijri": "3-Rejab-1445",
+  "imsak": "05:58",
+  "subuh": "06:08",
+  "syuruk": "07:24",
+  "dhuha": "07:51",
+  "zohor": "13:19",
+  "asar": "16:41",
+  "maghrib": "19:24",
+  "isyak": "20:36",
+  "serverTime": "2024-01-15T12:30:00.000+08:00",
+  "locations": [...]
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monthly -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" />
+        <div class="collapse-title font-medium">
+          <span class="badge badge-primary badge-sm mr-2">GET</span>
+          /api/monthly/:zone/:month
+        </div>
+        <div class="collapse-content">
+          <p class="mb-4">Waktu solat untuk sebulan berdasarkan zon.</p>
+
+          <h4 class="font-semibold mb-2">Parameter</h4>
+          <div class="overflow-x-auto mb-4">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Jenis</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>zone</code></td>
+                  <td>string</td>
+                  <td>Kod zon (cth: SGR01, JHR02)</td>
+                </tr>
+                <tr>
+                  <td><code>month</code></td>
+                  <td>integer</td>
+                  <td>Bulan (1-12), pilihan - default bulan semasa</td>
+                </tr>
+                <tr>
+                  <td><code>year</code></td>
+                  <td>integer</td>
+                  <td>Tahun (query param), pilihan - default tahun semasa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mockup-code mb-4 bg-base-300/50">
+            <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01/1</code></pre>
+            <pre data-prefix="$"><code>curl "https://solat.my/api/monthly/SGR01/1?year=2024"</code></pre>
+          </div>
+
+          <h4 class="font-semibold mb-2">Response</h4>
+          <div class="mockup-code text-sm bg-base-300/50">
+            <pre><code>{
+  "zone": "SGR01",
+  "year": 2024,
+  "month": 1,
+  "prayers": [
+    {
+      "day": 1,
+      "date": "01-Jan-2024",
+      "hijri": "19-Jamadilakhir-1445",
+      "imsak": "05:54",
+      "subuh": "06:04",
+      "syuruk": "07:21",
+      ...
+    },
+    ...
+  ],
+  "serverTime": "...",
+  "locations": [...]
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yearly -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" />
+        <div class="collapse-title font-medium">
+          <span class="badge badge-primary badge-sm mr-2">GET</span>
+          /api/yearly/:zone/:year
+        </div>
+        <div class="collapse-content">
+          <p class="mb-4">Waktu solat untuk setahun berdasarkan zon.</p>
+
+          <h4 class="font-semibold mb-2">Parameter</h4>
+          <div class="overflow-x-auto mb-4">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Jenis</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>zone</code></td>
+                  <td>string</td>
+                  <td>Kod zon (cth: SGR01, JHR02)</td>
+                </tr>
+                <tr>
+                  <td><code>year</code></td>
+                  <td>integer</td>
+                  <td>Tahun, pilihan - default tahun semasa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mockup-code mb-4 bg-base-300/50">
+            <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01</code></pre>
+            <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01/2024</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone Codes -->
+      <h2 class="text-2xl font-semibold mb-4 mt-8">Kod Zon</h2>
+      <p class="mb-4">Senarai kod zon mengikut negeri:</p>
+
+      <div class="overflow-x-auto backdrop-blur-sm bg-white/10 rounded-2xl border border-white/10">
+        <table class="table table-sm bg-transparent">
+          <thead>
+            <tr>
+              <th>Negeri</th>
+              <th>Kod</th>
+              <th>Kawasan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Wilayah Persekutuan</td><td><code>WLY01</code></td><td>Kuala Lumpur, Putrajaya</td></tr>
+            <tr><td>Wilayah Persekutuan</td><td><code>WLY02</code></td><td>Labuan</td></tr>
+            <tr><td>Selangor</td><td><code>SGR01</code></td><td>Gombak, Petaling, Sepang, Hulu Langat, Hulu Selangor</td></tr>
+            <tr><td>Selangor</td><td><code>SGR02</code></td><td>Kuala Selangor, Sabak Bernam</td></tr>
+            <tr><td>Selangor</td><td><code>SGR03</code></td><td>Klang, Kuala Langat</td></tr>
+            <tr><td>Johor</td><td><code>JHR01</code></td><td>Pulau Aur, Pemanggil</td></tr>
+            <tr><td>Johor</td><td><code>JHR02</code></td><td>Johor Bahru, Kota Tinggi, Mersing</td></tr>
+            <tr><td>Johor</td><td><code>JHR03</code></td><td>Kluang, Pontian</td></tr>
+            <tr><td>Johor</td><td><code>JHR04</code></td><td>Batu Pahat, Muar, Segamat, Gemas</td></tr>
+            <tr><td>Kedah</td><td><code>KDH01</code> - <code>KDH07</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Kelantan</td><td><code>KTN01</code> - <code>KTN02</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Melaka</td><td><code>MLK01</code></td><td>Seluruh Melaka</td></tr>
+            <tr><td>Negeri Sembilan</td><td><code>NGS01</code> - <code>NGS02</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Pahang</td><td><code>PHG01</code> - <code>PHG06</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Perak</td><td><code>PRK01</code> - <code>PRK07</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Perlis</td><td><code>PLS01</code></td><td>Seluruh Perlis</td></tr>
+            <tr><td>Pulau Pinang</td><td><code>PNG01</code></td><td>Seluruh Pulau Pinang</td></tr>
+            <tr><td>Sabah</td><td><code>SBH01</code> - <code>SBH09</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Sarawak</td><td><code>SWK01</code> - <code>SWK09</code></td><td>Pelbagai kawasan</td></tr>
+            <tr><td>Terengganu</td><td><code>TRG01</code> - <code>TRG04</code></td><td>Pelbagai kawasan</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="backdrop-blur-sm bg-info/20 rounded-2xl p-4 mt-8 border border-info/30 flex gap-3 items-start">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <p class="text-sm">Untuk senarai penuh kawasan dan koordinat, gunakan endpoint <code class="bg-white/20 px-1 rounded">/api/locations</code>.</p>
+      </div>
+
+      <!-- Attribution -->
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-4 mt-6 border border-white/10">
+        <p class="text-sm text-base-content/70">
+          Data waktu solat disediakan oleh <a href="https://www.e-solat.gov.my" target="_blank" class="link link-primary">JAKIM e-Solat</a>.
+          API ini adalah percuma untuk kegunaan peribadi dan komersial.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

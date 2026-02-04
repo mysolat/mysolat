@@ -1,19 +1,18 @@
-
-import { Controller } from '@hotwired/stimulus'
+import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["navbar"];
 
   initialize() {
-    this.apply()
+    this.apply();
   }
 
   connect() {
-    this.toggleNavbar(); // Ensure the correct class is set on page load
-    window.addEventListener("scroll", this.toggleNavbar.bind(this));
-   }
+    // this.toggleNavbar(); // Ensure the correct class is set on page load
+    // window.addEventListener("scroll", this.toggleNavbar.bind(this));
+  }
 
   apply() {
-    document.documentElement.setAttribute('data-theme', this.theme)
+    document.documentElement.setAttribute("data-theme", this.theme);
   }
 
   disconnect() {
@@ -21,9 +20,9 @@ export default class extends Controller {
   }
 
   switch(event) {
-    this.theme = event.target.dataset.themeValue
-    console.log("switching" + this.theme)
-    this.apply()
+    this.theme = event.target.dataset.themeValue;
+    console.log("switching" + this.theme);
+    this.apply();
   }
 
   toggleNavbar() {
@@ -35,14 +34,18 @@ export default class extends Controller {
   }
 
   get systemDefault() {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'emerald'
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "emerald";
   }
 
   get theme() {
-    return window.localStorage.getItem('theme') || (this.theme = this.systemDefault)
+    return (
+      window.localStorage.getItem("theme") || (this.theme = this.systemDefault)
+    );
   }
 
   set theme(value) {
-    window.localStorage.setItem('theme', value)
+    window.localStorage.setItem("theme", value);
   }
 }

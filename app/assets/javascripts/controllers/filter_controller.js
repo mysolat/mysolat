@@ -10,23 +10,13 @@ export default class extends Controller {
 
     this.listItemTargets.forEach(item => {
       const text = item.textContent.toLowerCase()
-
-      if (text.includes(searchTerm)) {
-        item.style.display = 'block'
-      } else {
-        item.style.display = 'none'
-      }
+      item.classList.toggle('hidden', !text.includes(searchTerm))
     })
 
     this.parentListItemTargets.forEach(parent => {
       const listItems = parent.querySelectorAll('[data-filter-target="listItem"]')
-      const anyVisible = Array.from(listItems).some(item => item.style.display === 'block')
-
-      if (searchTerm === '' || anyVisible) {
-        parent.style.display = 'block'
-      } else {
-        parent.style.display = 'none'
-      }
+      const anyVisible = Array.from(listItems).some(item => !item.classList.contains('hidden'))
+      parent.classList.toggle('hidden', searchTerm !== '' && !anyVisible)
     })
   }
 }

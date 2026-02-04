@@ -1,7 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["nextPrayer", "countdown"]
+  static targets = ["nextPrayer", "countdown", "progressBar", "progressStart", "progressEnd",
+                   "syurukMarker", "dhuhaMarker", "syurukTime", "dhuhaTime",
+                   "syurukLabel", "dhuhaLabel"]
   static values = { prayers: Object }
 
   connect() {
@@ -59,14 +61,14 @@ export default class extends Controller {
 
     // Remove previous highlights
     document.querySelectorAll('.prayer-current').forEach(el => {
-      el.classList.remove('prayer-current', 'bg-accent', 'text-accent-content', 'scale-105', 'shadow-lg')
+      el.classList.remove('prayer-current', 'scale-105')
     })
 
     // Highlight current prayer
     if (currentPrayer) {
       const prayerElement = document.querySelector(`.${currentPrayer}`)
       if (prayerElement) {
-        prayerElement.classList.add('prayer-current', 'bg-accent', 'text-accent-content', 'scale-105', 'shadow-lg')
+        prayerElement.classList.add('prayer-current', 'scale-105')
       }
     }
   }
@@ -178,5 +180,162 @@ export default class extends Controller {
         this.countdownTarget.textContent = "00:00:00"
       }
     }
+
+    // Update progress bar
+    this.updateProgressBar(nextPrayer, now)
+  }
+
+  updateProgressBar(nextPrayer, now) {
+    const currentTime = now.getTime()
+    const nextPrayerTime = nextPrayer.time.getTime()
+
+    // Find the previous prayer time to calculate progress
+    const previousPrayer = this.findPreviousPrayer(nextPrayer.key, now)
+
+    if (previousPrayer && this.hasProgressBarTarget) {
+      const previousPrayerTime = previousPrayer.time.getTime()
+      const totalDuration = nextPrayerTime - previousPrayerTime
+      const elapsed = currentTime - previousPrayerTime
+
+      // Calculate progress percentage (0-100)
+      let progressPercentage = (elapsed / totalDuration) * 100
+
+      // Ensure progress is between 0 and 100
+      progressPercentage = Math.max(0, Math.min(100, progressPercentage))
+
+      // Update progress bar width
+      this.progressBarTarget.style.width = `${progressPercentage}%`
+
+      // Update progress start and end times
+      if (this.hasProgressStartTarget) {
+        this.progressStartTarget.textContent = this.formatTime(previousPrayer.time)
+      }
+      if (this.hasProgressEndTarget) {
+        this.progressEndTarget.textContent = this.formatTime(nextPrayer.time)
+      }
+
+      // Show intermediate prayers (Syuruk and Dhuha) if between Fajr and Dhuhr
+      this.updateIntermediatePrayers(previousPrayer, nextPrayer, previousPrayerTime, nextPrayerTime, totalDuration)
+    } else {
+      // Reset progress bar if no previous prayer found
+      if (this.hasProgressBarTarget) {
+        this.progressBarTarget.style.width = '0%'
+      }
+      if (this.hasProgressStartTarget) {
+        this.progressStartTarget.textContent = '--:--'
+      }
+      if (this.hasProgressEndTarget) {
+        this.progressEndTarget.textContent = this.formatTime(nextPrayer.time)
+      }
+      this.hideIntermediatePrayers()
+    }
+  }
+
+  updateIntermediatePrayers(previousPrayer, nextPrayer, previousPrayerTime, nextPrayerTime, totalDuration) {
+    const prayers = this.prayersValue
+
+    // Check if we're between Fajr and Dhuhr
+    if (previousPrayer.key === "fajr" && nextPrayer.key === "dhuhr") {
+      // Show Syuruk marker and time
+      if (prayers["syuruk"] && this.hasSyurukMarkerTarget) {
+        const syurukTime = this.parseTime(prayers["syuruk"]).getTime()
+        const syurukPosition = ((syurukTime - previousPrayerTime) / totalDuration) * 100
+
+        this.syurukMarkerTarget.style.left = `${Math.max(0, Math.min(100, syurukPosition))}%`
+        this.syurukMarkerTarget.style.display = 'flex'
+
+        // Position the label at the same position as the marker
+        if (this.hasSyurukLabelTarget) {
+          this.syurukLabelTarget.style.left = `${Math.max(0, Math.min(100, syurukPosition))}%`
+          this.syurukLabelTarget.style.display = 'inline'
+        }
+
+        if (this.hasSyurukTimeTarget) {
+          this.syurukTimeTarget.textContent = this.formatTime(this.parseTime(prayers["syuruk"]))
+        }
+      }
+
+      // Show Dhuha marker and time
+      if (prayers["dhuha"] && this.hasDhuhaMarkerTarget) {
+        const dhuhaTime = this.parseTime(prayers["dhuha"]).getTime()
+        const dhuhaPosition = ((dhuhaTime - previousPrayerTime) / totalDuration) * 100
+
+        this.dhuhaMarkerTarget.style.left = `${Math.max(0, Math.min(100, dhuhaPosition))}%`
+        this.dhuhaMarkerTarget.style.display = 'flex'
+
+        // Position the label at the same position as the marker
+        if (this.hasDhuhaLabelTarget) {
+          this.dhuhaLabelTarget.style.left = `${Math.max(0, Math.min(100, dhuhaPosition))}%`
+          this.dhuhaLabelTarget.style.display = 'inline'
+        }
+
+        if (this.hasDhuhaTimeTarget) {
+          this.dhuhaTimeTarget.textContent = this.formatTime(this.parseTime(prayers["dhuha"]))
+        }
+      }
+    } else {
+      this.hideIntermediatePrayers()
+    }
+  }
+
+  hideIntermediatePrayers() {
+    if (this.hasSyurukMarkerTarget) {
+      this.syurukMarkerTarget.style.display = 'none'
+    }
+    if (this.hasDhuhaMarkerTarget) {
+      this.dhuhaMarkerTarget.style.display = 'none'
+    }
+    if (this.hasSyurukLabelTarget) {
+      this.syurukLabelTarget.style.display = 'none'
+    }
+    if (this.hasDhuhaLabelTarget) {
+      this.dhuhaLabelTarget.style.display = 'none'
+    }
+  }
+
+  findPreviousPrayer(nextPrayerKey, now) {
+    const prayerOrder = ["fajr", "dhuhr", "asr", "maghrib", "isha"]
+    const prayers = this.prayersValue
+
+    const nextIndex = prayerOrder.indexOf(nextPrayerKey)
+
+    // If it's the first prayer (fajr), check if we're past yesterday's isha
+    if (nextIndex === 0) {
+      // Use yesterday's isha as previous prayer
+      if (prayers["isha"]) {
+        const yesterdayIsha = this.parseTime(prayers["isha"])
+        yesterdayIsha.setDate(yesterdayIsha.getDate() - 1)
+        return {
+          key: "isha",
+          time: yesterdayIsha,
+          label: this.getPrayerLabel("isha")
+        }
+      }
+    } else {
+      // Find the previous prayer in the order
+      for (let i = nextIndex - 1; i >= 0; i--) {
+        const prayerKey = prayerOrder[i]
+        if (prayers[prayerKey]) {
+          const prayerTime = this.parseTime(prayers[prayerKey])
+          if (prayerTime <= now) {
+            return {
+              key: prayerKey,
+              time: prayerTime,
+              label: this.getPrayerLabel(prayerKey)
+            }
+          }
+        }
+      }
+    }
+
+    return null
+  }
+
+  formatTime(date) {
+    return date.toLocaleTimeString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: true
+    })
   }
 }
