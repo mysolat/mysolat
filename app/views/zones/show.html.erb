@@ -9,10 +9,7 @@
 <% end %>
 
 <% content_for :ogdescription do %>
-  <%= "#{@location["location"]}, #{@location["state"]}, #{l @today["date"].to_date, format: :extra} bersamaan dengan #{hijri_date @today["hijri"]} H -- " %>
-  <% prayers.each do |prayer| %>
-    <%= " #{prayer[:label]} :- #{l @today[prayer[:key]].to_time, format: "%I:%M%p "}" %>
-  <% end %>
+  <%= "#{@location["location"]}, #{@location["state"]}, #{l Date.current, format: :extra} bersamaan dengan #{hijri_date(Date.current.strftime("%Y-%m-%d"))} H" %>
 <% end %>
 
 <% content_for :hero do %>

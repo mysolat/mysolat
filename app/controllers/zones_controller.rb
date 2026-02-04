@@ -4,18 +4,30 @@ class ZonesController < ApplicationController
   def show
     @locations = Location.all
     @location = Location.zone(default_zone)
-    prayer_times = PrayerTime.monthly(zone: default_zone)
-    @monthly = prayer_times.fetch("prayerTime")
-    today = Date.current.strftime "%d-%b-%Y"
-    @today = @monthly.find { |p| p["date"] == today }
-    @today.merge!({ "bearing" => prayer_times["bearing"] })
+    @zone = default_zone
+    # Prayer times are now loaded client-side from IndexedDB
+    # No need to call PrayerTime.monthly here
   end
 
   def monthly
     @locations = Location.all
     @location = Location.zone(default_zone)
-    prayer_times = PrayerTime.monthly(zone: default_zone)
-    @monthly = prayer_times.fetch("prayerTime")
+    @zone = default_zone
+
+    # Parse month and year from params, default to current
+    @year = (params[:year] || Date.current.year).to_i
+    @month = (params[:month] || Date.current.month).to_i
+
+    # Ensure valid month range
+    @month = @month.clamp(1, 12)
+
+    @current_date = Date.new(@year, @month, 1)
+
+    # Calculate prev/next month dates
+    @prev_date = @current_date.prev_month
+    @next_date = @current_date.next_month
+
+    # Prayer times are now loaded client-side from IndexedDB
   end
 
   private

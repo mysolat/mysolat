@@ -73,6 +73,26 @@
         </div>
       </section>
 
+      <!-- Time Format Section -->
+      <section data-controller="time-format">
+        <div class="flex items-center gap-2 mb-3">
+          <svg class="w-5 h-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+          </svg>
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-base-content/70">Format Masa</h2>
+        </div>
+
+        <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/10">
+          <label class="flex items-center justify-between cursor-pointer">
+            <div class="flex items-center gap-3">
+              <span class="font-medium" data-time-format-target="label">12 jam</span>
+            </div>
+            <input type="checkbox" class="toggle toggle-primary" data-time-format-target="toggle" data-action="change->time-format#toggle">
+          </label>
+          <p class="text-xs text-base-content/50 mt-2">Tukar antara format 12 jam (AM/PM) dan 24 jam</p>
+        </div>
+      </section>
+
       <!-- Quick Actions -->
       <section>
         <div class="flex items-center gap-2 mb-3">

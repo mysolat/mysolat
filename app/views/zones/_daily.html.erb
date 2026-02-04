@@ -1,4 +1,7 @@
-<div class="flex flex-col items-center justify-center text-base-content z-0 text-center w-full my-auto px-4 md:px-8 lg:px-12 py-8 md:pt-16" data-controller="prayer-times" data-prayer-times-prayers-value="<%= prayers.map { |p| [p[:key], l(@today[p[:key]].to_time, format: '%I:%M %p')] }.to_h.to_json %>">
+<div class="flex flex-col items-center justify-center text-base-content z-0 text-center w-full my-auto px-4 md:px-8 lg:px-12 py-8 md:pt-16"
+     data-controller="prayer-times"
+     data-prayer-times-zone-value="<%= @zone %>"
+     data-prayer-times-prayers-value="{}">
 
   <!-- Main Clock & Date Section -->
   <div class="mb-6">
@@ -7,11 +10,11 @@
 
     <!-- Date Display -->
     <div class="mt-4 flex flex-col items-center gap-1">
-      <div class="text-xl md:text-2xl lg:text-3xl font-medium text-base-content/80">
-        <%= l @today["date"].to_date, format: :extra %>
+      <div class="text-xl md:text-2xl lg:text-3xl font-medium text-base-content/80" data-prayer-times-target="dateDisplay">
+        <%= l Date.current, format: :extra %>
       </div>
-      <div class="text-lg md:text-xl text-primary font-semibold">
-        <%= hijri_date @today["hijri"] %> H
+      <div class="text-lg md:text-xl text-primary font-semibold" data-prayer-times-target="hijriDisplay">
+        <%= hijri_date(Date.current.strftime("%Y-%m-%d")) %> H
       </div>
     </div>
 
@@ -39,7 +42,7 @@
 
       <!-- Countdown Timer -->
       <div class="text-4xl md:text-5xl font-black tabular-nums text-center text-primary" data-prayer-times-target="countdown">
-        00:00:00
+        --:--:--
       </div>
 
       <!-- Progress Bar -->
@@ -57,18 +60,13 @@
 
   <!-- Prayer Times Grid - 2 rows x 4 columns -->
   <div class="w-full max-w-2xl">
-    <div class="grid grid-cols-4 gap-3 md:gap-4">
-      <% prayers.each do |prayer| %>
-        <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 transition-all hover:bg-white/20 <%= prayer[:key] %>">
-          <div class="text-xs md:text-sm font-semibold text-base-content/50 uppercase tracking-wide mb-1">
-            <%= prayer[:label] %>
-          </div>
-          <div class="text-2xl md:text-3xl font-bold tabular-nums">
-            <%= l @today[prayer[:key]].to_time, format: "%I:%M" %>
-          </div>
-          <div class="text-xs text-base-content/40 font-medium">
-            <%= l @today[prayer[:key]].to_time, format: "%p" %>
-          </div>
+    <div class="grid grid-cols-4 gap-3 md:gap-4" data-prayer-times-target="prayerGrid">
+      <!-- Loading skeleton -->
+      <% 8.times do %>
+        <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 animate-pulse">
+          <div class="h-3 w-12 bg-base-content/20 rounded mb-2"></div>
+          <div class="h-8 w-16 bg-base-content/20 rounded mb-1"></div>
+          <div class="h-2 w-8 bg-base-content/20 rounded"></div>
         </div>
       <% end %>
     </div>

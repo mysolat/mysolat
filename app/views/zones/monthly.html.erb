@@ -1,5 +1,5 @@
 <% content_for(:title) do %>
-  Jadual Waktu Solat Bulanan - <%= @location["location"] %>, <%= @location["state"] %>
+  Jadual Waktu Solat Bulanan <%= l @current_date, format: "%B %Y" %> - <%= @location["location"] %>, <%= @location["state"] %>
 <% end %>
 
 <% content_for :description do %>
@@ -10,7 +10,11 @@
   <%= render "filter" %>
 <% end %>
 
-<div class="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-6xl"
+     data-controller="monthly"
+     data-monthly-zone-value="<%= @zone %>"
+     data-monthly-month-value="<%= @month %>"
+     data-monthly-year-value="<%= @year %>">
   <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-6 md:p-10 border border-white/20 shadow-2xl">
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
@@ -18,9 +22,44 @@
         <h1 class="text-2xl md:text-3xl font-bold">Jadual Bulanan</h1>
         <p class="text-base-content/70"><%= @location["location"] %>, <%= @location["state"] %></p>
       </div>
-      <div class="flex items-center gap-2">
-        <div class="badge badge-primary badge-lg"><%= @monthly.count %> hari</div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <!-- Today Button -->
+        <button class="btn btn-outline btn-primary btn-sm gap-2 hidden" data-monthly-target="todayBtn" data-action="click->monthly#goToToday">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+          </svg>
+          Bulan Ini
+        </button>
+        <!-- Calendar Mode Toggle -->
+        <label class="flex items-center gap-2 cursor-pointer backdrop-blur-sm bg-white/10 rounded-xl px-3 py-2 border border-white/10">
+          <span class="text-sm font-medium" data-monthly-target="calendarLabel">Masihi</span>
+          <input type="checkbox" class="toggle toggle-primary toggle-sm" data-monthly-target="calendarToggle" data-action="change->monthly#toggleCalendar">
+        </label>
+        <div class="badge badge-primary badge-lg" data-monthly-target="count">-- hari</div>
       </div>
+    </div>
+
+    <!-- Month Navigation -->
+    <div class="flex items-center justify-between mb-6 backdrop-blur-sm bg-white/10 rounded-2xl p-4 border border-white/10">
+      <!-- Previous Month -->
+      <button class="btn btn-ghost btn-circle hover:bg-white/20" data-action="click->monthly#prevMonth">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+        </svg>
+      </button>
+
+      <!-- Current Month Display -->
+      <div class="text-center">
+        <div class="text-xl md:text-2xl font-bold" data-monthly-target="monthLabel"><%= l @current_date, format: "%B" %></div>
+        <div class="text-sm text-base-content/60" data-monthly-target="yearLabel"><%= @current_date.year %></div>
+      </div>
+
+      <!-- Next Month -->
+      <button class="btn btn-ghost btn-circle hover:bg-white/20" data-action="click->monthly#nextMonth">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Table Header - Desktop -->
@@ -32,56 +71,29 @@
     </div>
 
     <!-- Prayer Times List -->
-    <div class="space-y-2">
-      <% @monthly.each do |month| %>
-        <% date = month["date"].to_date %>
-        <% is_today = date == Date.current %>
-        <% is_friday = date.friday? %>
-
-        <div class="group rounded-xl p-3 transition-all duration-200 border backdrop-blur-sm <%= is_today ? 'bg-primary text-primary-content border-primary shadow-lg scale-[1.02]' : 'bg-white/10 border-white/10 hover:bg-white/20' %>">
-          <!-- Mobile View -->
-          <div class="md:hidden">
-            <div class="flex items-center justify-between mb-3">
-              <div class="flex items-center gap-2">
-                <% if is_today %>
-                  <div class="badge badge-secondary badge-sm">Hari Ini</div>
-                <% elsif is_friday %>
-                  <div class="badge badge-accent badge-sm badge-outline">Jumaat</div>
-                <% end %>
-                <div class="font-bold"><%= l date, format: :day %></div>
-                <span class="text-sm"><%= l date, format: :long %></span>
-              </div>
-              <div class="text-xs opacity-70"><%= hijri_date month["hijri"] %></div>
-            </div>
-            <div class="grid grid-cols-4 gap-2 text-center">
-              <% prayers.each do |prayer| %>
-                <div class="rounded-lg p-2 <%= is_today ? 'bg-primary-content/10' : 'bg-white/10' %> <%= prayer[:key] %>">
-                  <div class="text-xs opacity-60"><%= prayer[:label] %></div>
-                  <div class="text-sm font-bold tabular-nums"><%= l month[prayer[:key]].to_time, format: "%I:%M" %></div>
-                </div>
-              <% end %>
-            </div>
-          </div>
-
-          <!-- Desktop View -->
+    <div class="space-y-2" data-monthly-target="list">
+      <!-- Loading skeleton -->
+      <% 5.times do %>
+        <div class="rounded-xl p-3 backdrop-blur-sm bg-white/10 border border-white/10 animate-pulse">
           <div class="hidden md:grid md:grid-cols-9 gap-2 items-center">
             <div class="col-span-1">
-              <div class="flex items-center gap-2">
-                <% if is_today %>
-                  <div class="badge badge-secondary badge-sm">Hari Ini</div>
-                <% elsif is_friday %>
-                  <div class="badge badge-accent badge-sm badge-outline">Jumaat</div>
-                <% end %>
-              </div>
-              <div class="font-bold"><%= l date, format: :day %></div>
-              <div class="text-sm opacity-80"><%= l date, format: :long %></div>
-              <div class="text-xs opacity-60"><%= hijri_date month["hijri"] %></div>
+              <div class="h-4 w-16 bg-base-content/20 rounded mb-2"></div>
+              <div class="h-3 w-20 bg-base-content/20 rounded"></div>
             </div>
-            <% prayers.each do |prayer| %>
-              <div class="text-center font-semibold tabular-nums <%= prayer[:key] %>">
-                <%= l month[prayer[:key]].to_time, format: "%I:%M %p" %>
-              </div>
+            <% 8.times do %>
+              <div class="h-4 w-16 bg-base-content/20 rounded mx-auto"></div>
             <% end %>
+          </div>
+          <div class="md:hidden">
+            <div class="flex justify-between mb-3">
+              <div class="h-4 w-24 bg-base-content/20 rounded"></div>
+              <div class="h-3 w-16 bg-base-content/20 rounded"></div>
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+              <% 8.times do %>
+                <div class="h-12 bg-base-content/10 rounded-lg"></div>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
