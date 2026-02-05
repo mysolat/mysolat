@@ -20,8 +20,8 @@ export default class extends Controller {
   }
 
   switch(event) {
-    this.theme = event.target.dataset.themeValue;
-    console.log("switching" + this.theme);
+    // Use currentTarget to get the button element, not the clicked child element
+    this.theme = event.currentTarget.dataset.themeValue;
     this.apply();
   }
 

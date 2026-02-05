@@ -61,7 +61,7 @@
         <!-- Theme Grid -->
         <div class="grid grid-cols-4 gap-2">
           <% themes.each do |theme| %>
-            <button class="group relative rounded-xl p-2 border-2 border-white/10 backdrop-blur-sm bg-white/5 transition-all hover:border-primary hover:bg-white/20 focus:border-primary focus:outline-none" data-action="click->theme#switch" data-theme-value="<%= theme %>" data-theme="<%= theme %>" title="<%= theme.capitalize %>">
+            <button class="group relative rounded-xl p-2 border-2 border-white/10 backdrop-blur-sm bg-base-100/5 transition-all hover:border-primary hover:bg-base-100/20 focus:border-primary focus:outline-none" data-theme="<%= theme %>" data-action="click->theme#switch" data-theme-value="<%= theme %>" data-theme="<%= theme %>" title="<%= theme.capitalize %>">
               <div class="flex gap-0.5 justify-center">
                 <div class="w-3 h-6 rounded-l-md bg-primary"></div>
                 <div class="w-3 h-6 bg-secondary"></div>

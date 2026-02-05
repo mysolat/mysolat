@@ -8,14 +8,39 @@
     <!-- Large Clock -->
     <div class="text-6xl md:text-7xl lg:text-8xl font-black tabular-nums tracking-tight leading-none" data-controller="clock" data-clock-mode="hero"></div>
 
-    <!-- Date Display -->
-    <div class="mt-4 flex flex-col items-center gap-1">
-      <div class="text-xl md:text-2xl lg:text-3xl font-medium text-base-content/80" data-prayer-times-target="dateDisplay">
-        <%= l Date.current, format: :extra %>
+    <!-- Date Display with Navigation -->
+    <div class="mt-4 flex items-center justify-center gap-4">
+      <!-- Previous Day Button -->
+      <button type="button"
+              class="p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
+              data-action="click->prayer-times#previousDay"
+              data-prayer-times-target="prevButton"
+              aria-label="Hari sebelumnya">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+        </svg>
+      </button>
+
+      <!-- Date Display -->
+      <div class="flex flex-col items-center gap-1">
+        <div class="text-xl md:text-2xl lg:text-3xl font-medium text-base-content/80" data-prayer-times-target="dateDisplay">
+          <%= l Date.current, format: :extra %>
+        </div>
+        <div class="text-lg md:text-xl text-primary font-semibold" data-prayer-times-target="hijriDisplay">
+          <%= hijri_date(Date.current.strftime("%Y-%m-%d")) %> H
+        </div>
       </div>
-      <div class="text-lg md:text-xl text-primary font-semibold" data-prayer-times-target="hijriDisplay">
-        <%= hijri_date(Date.current.strftime("%Y-%m-%d")) %> H
-      </div>
+
+      <!-- Next Day Button -->
+      <button type="button"
+              class="p-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
+              data-action="click->prayer-times#nextDay"
+              data-prayer-times-target="nextButton"
+              aria-label="Hari seterusnya">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Location Badge -->
@@ -32,7 +57,7 @@
   </div>
 
   <!-- Next Prayer Card -->
-  <div class="w-full max-w-md mb-8">
+  <div class="w-full max-w-2xl mb-8">
     <div class="backdrop-blur-md bg-white/10 rounded-3xl p-6 border border-white/20 shadow-2xl">
       <!-- Next Prayer Label -->
       <div class="flex items-center justify-center gap-2 mb-3">
