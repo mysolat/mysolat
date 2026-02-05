@@ -1,30 +1,85 @@
-<title><%= content_for(:title) || "Waktu Solat | My Solat | Portal e-Solat" %></title>
-<meta http-equiv="content-language" content="ms">
-<meta name="googlebot" content="notranslate">
-<meta name="robots" content="index, follow">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=1, shrink-to-fit=no, viewport-fit=cover">
-<meta name="description" content="<%= content_for(:description) %>, Waktu Solat di malaysia">
-<meta property="og:description" content="<%= content_for(:ogdescription) || content_for(:description) %>">
-<meta property="og:title" content="<%= content_for(:title) %>, Waktu Solat | My Solat | Portal e-Solat">
-<meta name="keywords" content="Waktu solat, waktu solat malaysia, e-solat, jakim, solat.my, waktu.solat.my, waktu sembahyang, waktu syuruk, data waktu solat, waktu solat jakim, api waktu solat, takwim solat, Takwim Solat, API Waktu Solat zohor, asar, maghrib, isyak, imsak, syuruk, dhuha">
-<meta name="aAuthor" content="solat.my">
-<meta name="copyright" content="solat.my <%= Date.current.year %>">
-<meta name="classification" content="Social, Religion, Islam, Malaysia">
-<meta name="rating" content="General">
+
+<%# Primary Meta Tags %>
+<title><%= content_for(:title) || "Waktu Solat Malaysia | My Solat | Portal e-Solat JAKIM" %></title>
+<meta name="title" content="<%= content_for(:title) || "Waktu Solat Malaysia | My Solat | Portal e-Solat JAKIM" %>">
+<meta name="description" content="<%= content_for(:description).presence || "Semak waktu solat terkini di Malaysia. Jadual waktu solat Subuh, Zohor, Asar, Maghrib, Isyak, Imsak dan Syuruk dari JAKIM untuk semua negeri." %>">
+
+<%# Language & Locale %>
+<meta http-equiv="content-language" content="ms-MY">
 <meta name="language" content="Malay">
+<link rel="alternate" hreflang="ms-MY" href="<%= request.original_url %>">
+<link rel="alternate" hreflang="x-default" href="<%= request.original_url %>">
+
+<%# Robots & Indexing %>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, notranslate">
+
+<%# Open Graph / Facebook %>
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= request.original_url %>">
+<meta property="og:title" content="<%= content_for(:title).presence || "Waktu Solat Malaysia" %> | My Solat">
+<meta property="og:description" content="<%= content_for(:ogdescription).presence || content_for(:description).presence || "Semak waktu solat terkini di Malaysia dari JAKIM" %>">
+<meta property="og:image" content="<%= asset_url('og-image.png') rescue '/icon.png' %>">
+<meta property="og:locale" content="ms_MY">
+<meta property="og:site_name" content="My Solat">
+
+<%# Twitter %>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="<%= request.original_url %>">
+<meta name="twitter:title" content="<%= content_for(:title).presence || "Waktu Solat Malaysia" %> | My Solat">
+<meta name="twitter:description" content="<%= content_for(:ogdescription).presence || content_for(:description).presence || "Semak waktu solat terkini di Malaysia dari JAKIM" %>">
+<meta name="twitter:image" content="<%= asset_url('og-image.png') rescue '/icon.png' %>">
+
+<%# Keywords (less weight in modern SEO but still used) %>
+<meta name="keywords" content="waktu solat, waktu solat malaysia, e-solat, jakim, waktu sembahyang, jadual solat, waktu syuruk, waktu imsak, waktu berbuka, takwim solat, solat subuh, solat zohor, solat asar, solat maghrib, solat isyak">
+
+<%# Author & Copyright %>
+<meta name="author" content="solat.my">
+<meta name="copyright" content="solat.my <%= Date.current.year %>">
+
+<%# Geo Tags for Local SEO %>
+<meta name="geo.region" content="MY">
+<meta name="geo.placename" content="Malaysia">
+
+<%# Additional Meta %>
+<meta name="classification" content="Religion, Islam, Prayer Times, Malaysia">
+<meta name="rating" content="General">
+<meta name="theme-color" content="<%= current_theme_color %>">
+
+<%# Mobile App Meta %>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My Solat">
 <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="My Solat">
+<meta name="format-detection" content="telephone=no">
+
+<%# Canonical URL %>
+<link rel="canonical" href="<%= request.original_url.split('?').first %>">
+
+<%# Favicons %>
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+
+<%# PWA Manifest %>
 <%= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+<%# Rails Meta Tags %>
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <%= action_cable_meta_tag %>
-<!-- Includes all stylesheet files in app/views/stylesheets -->
+
+<%# Stylesheets %>
 <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-<%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+<%# JavaScript %>
+<%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+<%# Page-specific head content %>
 <%= yield :head %>

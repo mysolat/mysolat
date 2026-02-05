@@ -1,5 +1,5 @@
 {
-  "name": "MySolat",
+  "name": "MySolat - Waktu Solat Malaysia",
   "icons": [
     {
       "src": "/icon.png",
@@ -11,13 +11,30 @@
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32 48x48"
     }
   ],
   "short_name": "MySolat",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
   "scope": "/",
+  "version": "1.0",
   "description": "Waktu solat di malaysia",
-  "theme_color": "#00A99D",
-  "background_color": "#00A99D"
+  "theme_color": "<%= current_theme_color %>",
+  "background_color": "<%= current_theme_color %>",
+  "categories": ["religion", "health", "education"],
+  "lang": "ms-MY",
+  "dir": "ltr"
 }

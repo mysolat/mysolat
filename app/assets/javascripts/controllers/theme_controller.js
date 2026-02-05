@@ -47,5 +47,6 @@ export default class extends Controller {
 
   set theme(value) {
     window.localStorage.setItem("theme", value);
+    document.cookie = `theme=${value};path=/;max-age=31536000;SameSite=Lax`;
   }
 }
