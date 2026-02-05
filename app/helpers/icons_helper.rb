@@ -16,7 +16,8 @@ module IconsHelper
 
     tooltip = options.delete(:tooltip)
     icon = InlineSvg::TransformPipeline.generate_html_from(read_svg_icon(name.to_s, type), options)
-    icon = icon.html_safe + content_tag(:span, text, class: "ms-1") if text.blank?
+    icon = icon.html_safe
+    icon += content_tag(:span, text, class: "ms-1") if text.present?
 
     return icon unless tooltip
 

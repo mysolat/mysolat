@@ -21,7 +21,7 @@
         <% if content_for?(:modal) %>
           <input id="filter-modal" class="modal-toggle" type="checkbox" />
           <div class="modal">
-            <div class="modal-box h-svh w-screen max-w-screen p-0" data-controller="filter">
+            <div class="modal-box h-svh w-screen max-w-screen p-0 rounded-3xl backdrop-blur-md bg-white/20" data-controller="filter">
               <%= yield :modal %>
               <div class="modal-action"></div>
             </div>

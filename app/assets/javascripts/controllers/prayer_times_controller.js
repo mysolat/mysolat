@@ -699,6 +699,15 @@ export default class extends Controller {
     }
 
     formatTime(date) {
+        // Format based on time format setting
+        if (this.timeFormat === "24") {
+            return date.toLocaleTimeString("en-US", {
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: false,
+            });
+        }
+
         // 12-hour format with AM/PM, no seconds
         return date.toLocaleTimeString("en-US", {
             hour: "numeric",
