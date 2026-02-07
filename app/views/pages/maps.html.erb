@@ -1,0 +1,92 @@
+<% content_for :title, "Peta Masjid & Surau" %>
+<% content_for :description, "Cari lokasi masjid dan surau berdekatan di seluruh Malaysia" %>
+
+<div class="fixed inset-0 md:left-24 z-10"
+     data-controller="maps"
+     data-maps-center-lat-value="<%= @location['latitude'] %>"
+     data-maps-center-lng-value="<%= @location['longitude'] %>">
+
+  <!-- Map Container -->
+  <div id="map" class="w-full h-full"
+       data-maps-target="map"></div>
+
+  <!-- Controls Overlay -->
+  <div class="absolute bottom-4 left-4 right-4 z-[1000] flex flex-wrap items-center justify-center gap-2 pb-24 md:pb-0 select-none">
+    <!-- Filter Controls -->
+    <label class="label cursor-pointer gap-2 backdrop-blur-md bg-base-100/80 rounded-lg px-3 py-2 shadow-lg border border-white/20">
+      <input type="checkbox" class="checkbox checkbox-primary checkbox-sm"
+             data-maps-target="masjidToggle"
+             data-action="change->maps#toggleMarkers"
+             checked />
+      <span class="label-text flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-primary"></span>
+        Masjid
+        <span class="badge badge-primary badge-sm" data-maps-target="masjidCount">0</span>
+      </span>
+    </label>
+    <label class="label cursor-pointer gap-2 backdrop-blur-md bg-base-100/80 rounded-lg px-3 py-2 shadow-lg border border-white/20">
+      <input type="checkbox" class="checkbox checkbox-accent checkbox-sm"
+             data-maps-target="surauToggle"
+             data-action="change->maps#toggleMarkers"
+             checked />
+      <span class="label-text flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-accent"></span>
+        Surau
+        <span class="badge badge-accent badge-sm" data-maps-target="surauCount">0</span>
+      </span>
+    </label>
+    <button class="btn btn-sm backdrop-blur-md bg-base-100/80 border border-white/20 shadow-lg"
+            data-action="click->maps#locateUser"
+            data-maps-target="locateBtn">
+      <%= icon "map-pin", class: "size-4" %>
+      Lokasi Saya
+    </button>
+  </div>
+
+  <!-- Loading State -->
+  <div class="absolute inset-0 flex items-center justify-center bg-base-100/50 hidden z-[1000]"
+       data-maps-target="loading">
+    <span class="loading loading-spinner loading-lg text-primary"></span>
+  </div>
+</div>
+
+<!-- Leaflet CSS -->
+<% content_for :head do %>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <style>
+    .masjid-marker {
+      background-color: var(--color-primary) !important;
+      border: 3px solid white !important;
+      border-radius: 50% !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+      width: 24px !important;
+      height: 24px !important;
+    }
+    .surau-marker {
+      background-color: var(--color-accent) !important;
+      border: 3px solid white !important;
+      border-radius: 50% !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+      width: 24px !important;
+      height: 24px !important;
+    }
+    .leaflet-popup-content-wrapper {
+      border-radius: var(--radius-box);
+    }
+    .leaflet-popup-content {
+      margin: 0.75rem;
+    }
+    .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large {
+      background-color: color-mix(in oklch, var(--color-primary) 60%, transparent) !important;
+    }
+    .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div {
+      background-color: var(--color-primary) !important;
+      color: var(--color-primary-content) !important;
+      font-weight: bold;
+    }
+  </style>
+<% end %>

@@ -24,11 +24,11 @@
       <span class="text-xs mt-1">Kiblat</span>
     </a>
 
-    <!-- Location Filter -->
-    <label for="filter-modal" class="dock-item cursor-pointer">
-      <%= icon "map-pin", class: "size-6" %>
-      <span class="text-xs mt-1">Lokasi</span>
-    </label>
+    <!-- Maps -->
+    <a href="/pages/maps" class="dock-item <%= 'dock-item-active' if current_page?('/pages/maps') %>">
+      <%= icon "map", class: "size-6" %>
+      <span class="text-xs mt-1">Peta</span>
+    </a>
 
     <!-- Menu/Sidebar -->
     <label for="drawer" class="dock-item cursor-pointer">
@@ -63,6 +63,11 @@
         <!-- Qibla -->
         <a href="/pages/qibla" class="sidebar-item <%= 'sidebar-active' if current_page?('/pages/qibla') %>" title="Arah Kiblat">
           <%= icon "cube-transparent", class: "size-6" %>
+        </a>
+
+        <!-- Maps -->
+        <a href="/pages/maps" class="sidebar-item <%= 'sidebar-active' if current_page?('/pages/maps') %>" title="Peta Masjid & Surau">
+          <%= icon "map", class: "size-6" %>
         </a>
 
         <!-- Location Filter -->

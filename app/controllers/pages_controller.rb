@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   private
 
   def available_page(page)
-    %w[api qibla].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+    %w[api qibla maps].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
   end
 
 end
