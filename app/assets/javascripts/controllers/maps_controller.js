@@ -5,6 +5,7 @@ export default class extends Controller {
         "map",
         "masjidToggle",
         "surauToggle",
+        "zonToggle",
         "masjidCount",
         "surauCount",
         "locateBtn",
@@ -20,6 +21,7 @@ export default class extends Controller {
         this.map = null;
         this.masjidLayer = null;
         this.surauLayer = null;
+        this.zonLayer = null;
         this.masjidData = [];
         this.surauData = [];
         this.userMarker = null;
@@ -214,26 +216,35 @@ export default class extends Controller {
     `;
 
         if (item.alamat) {
-            content += `<p class="text-xs text-base-content/70 mb-1">${item.alamat}</p>`;
+            content += `<p class="text-xs opacity-60 mb-1">${item.alamat}</p>`;
         }
 
         if (item.tel) {
             content += `<p class="text-xs"><a href="tel:${item.tel}" class="link link-primary">${item.tel}</a></p>`;
         }
 
-        // Add directions link
+        // Add direction buttons
         const lat = parseFloat(item.latitud);
         const lng = parseFloat(item.longitud);
         content += `
-      <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}"
-         target="_blank"
-         class="btn btn-xs btn-primary mt-2 gap-1">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        Arah
-      </a>
+      <div class="flex gap-1 mt-2">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}"
+           target="_blank"
+           class="btn btn-xs btn-success gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C7.589 2 4 5.589 4 9.995 3.971 16.44 11.696 21.784 12 22c0 0 8.029-5.56 8-12C20 5.589 16.411 2 12 2zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+          </svg>
+          Google Maps
+        </a>
+        <a href="https://waze.com/ul?ll=${lat},${lng}&navigate=yes"
+           target="_blank"
+           class="btn btn-xs btn-info gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.54 6.63c-1.62-4.15-6.38-5.8-9.95-5.56C6.04 1.36 1.64 5.5 1.5 10.16c-.08 2.6.98 4.83 2.8 6.37-.34 1.62-.98 2.62-1.7 3.27-.25.23-.05.63.25.57 1.63-.31 3.55-1.1 4.93-2.39 1.02.33 2.12.5 3.27.45 5.87-.31 10.55-5.87 9.49-11.8zM8.5 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+          </svg>
+          Waze
+        </a>
+      </div>
     `;
 
         content += "</div>";
@@ -261,6 +272,58 @@ export default class extends Controller {
             if (this.map.hasLayer(this.surauLayer)) {
                 this.map.removeLayer(this.surauLayer);
             }
+        }
+
+        // Toggle zon JAKIM layer
+        if (this.hasZonToggleTarget) {
+            if (this.zonToggleTarget.checked) {
+                if (!this.zonLayer) {
+                    this.loadZonData();
+                } else if (!this.map.hasLayer(this.zonLayer)) {
+                    this.map.addLayer(this.zonLayer);
+                }
+            } else {
+                if (this.zonLayer && this.map.hasLayer(this.zonLayer)) {
+                    this.map.removeLayer(this.zonLayer);
+                }
+            }
+        }
+    }
+
+    async loadZonData() {
+        try {
+            const response = await fetch("/jakim.geojson");
+            const geojson = await response.json();
+
+            this.zonLayer = L.geoJSON(geojson, {
+                style: () => ({
+                    color: "var(--color-secondary)",
+                    weight: 2,
+                    opacity: 0.8,
+                    fillColor: "var(--color-secondary)",
+                    fillOpacity: 0.1,
+                }),
+                onEachFeature: (feature, layer) => {
+                    const props = feature.properties;
+                    layer.bindPopup(`
+                        <div class="min-w-[150px]">
+                            <div class="badge badge-secondary badge-sm mb-2">Zon JAKIM</div>
+                            <h3 class="font-bold text-sm">${props.name}</h3>
+                            <p class="text-xs opacity-60 mb-2">${props.jakim_code}</p>
+                            <a href="/zones/${props.jakim_code}" class="btn btn-xs btn-secondary gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                </svg>
+                                Waktu Solat
+                            </a>
+                        </div>
+                    `);
+                },
+            });
+
+            this.map.addLayer(this.zonLayer);
+        } catch (error) {
+            console.error("Error loading zon JAKIM data:", error);
         }
     }
 
