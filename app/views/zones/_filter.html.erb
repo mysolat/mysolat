@@ -29,6 +29,26 @@
   <!-- Location List -->
   <div class="flex-1 overflow-y-auto p-4">
     <div class="space-y-6">
+      <!-- Auto-detect Location Button -->
+      <button type="button"
+              class="flex items-center gap-3 w-full p-4 rounded-xl bg-primary/10 hover:bg-primary hover:text-primary-content transition-all duration-200 group"
+              data-action="click->geolocation#detect"
+              aria-label="Kesan lokasi secara automatik">
+        <div class="bg-primary text-primary-content group-hover:bg-primary-content group-hover:text-primary rounded-lg p-2 transition-all">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12m-3 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v3m0 14v3m10-10h-3M5 12H2"/>
+            <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="flex-1 text-left">
+          <div class="font-semibold">Kesan Lokasi Automatik</div>
+          <div class="text-xs opacity-60 group-hover:opacity-80">Gunakan GPS untuk mengesan zon solat anda</div>
+        </div>
+        <svg class="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </button>
       <% @locations.group_by { |l| l["state"] }.each do |state, locations| %>
         <section data-filter-target="parentListItem">
           <!-- State Header -->

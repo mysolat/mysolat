@@ -34,6 +34,15 @@ class ZonesController < ApplicationController
 
   def default_zone
     params[:id] ||= cookies["zone"]
-    cookies["zone"] = params[:id].try(:upcase) || "SGR01"
+    zone_code = params[:id].try(:upcase) || "WLY01"
+    cookies["zone"] = zone_code
+
+    if params[:source] == "auto"
+      cookies["zone_source"] = "auto"
+    elsif params[:id].present?
+      cookies["zone_source"] = "manual"
+    end
+
+    zone_code
   end
 end

@@ -44,16 +44,30 @@
     </div>
 
     <!-- Location Badge -->
-    <label class="inline-flex items-center gap-2 cursor-pointer mt-4 backdrop-blur-md bg-white/10 rounded-full px-5 py-2.5 border border-white/20 hover:bg-white/20 transition-all" for="filter-modal">
-      <svg class="w-4 h-4 opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
-      </svg>
-      <span class="text-sm font-semibold"><%= @location["location"] %></span>
-      <svg class="w-4 h-4 opacity-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-      </svg>
-    </label>
+    <div class="flex items-center gap-2 mt-4">
+      <div class="tooltip tooltip-bottom" data-tip="Kesan lokasi automatik">
+        <button type="button"
+                class="btn btn-circle btn-sm backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
+                data-action="click->geolocation#detect"
+                aria-label="Kesan lokasi secara automatik">
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 12m-3 0a3 3 0 1 0 6 0 3 3 0 1 0-6 0"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v3m0 14v3m10-10h-3M5 12H2"/>
+            <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <label class="flex-1 inline-flex items-center justify-center gap-2 cursor-pointer backdrop-blur-md bg-white/10 rounded-full px-5 py-2.5 border border-white/20 hover:bg-white/20 transition-all" for="filter-modal">
+        <svg class="w-4 h-4 opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+        </svg>
+        <span class="text-sm font-semibold"><%= @location["location"] %></span>
+        <svg class="w-4 h-4 opacity-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+        </svg>
+      </label>
+    </div>
   </div>
 
   <!-- Prayer Cards Carousel -->

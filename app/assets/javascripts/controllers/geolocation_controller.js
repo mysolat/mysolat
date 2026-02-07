@@ -1,78 +1,85 @@
-import { Controller } from '@hotwired/stimulus'
+import { Controller } from "@hotwired/stimulus";
+import { detectZone } from "../services/zone_detector";
 
 export default class extends Controller {
-  static targets = ['link']
-
-  connect () {
-    this.getPosition()
-    this.watchPosition()
-  }
-
-  getPosition () {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        this.setCurrentPosition.bind(this),
-        this.positionError.bind(this),
-        this.positionOption()
-      )
-    } else {
-      console.log('Geolocation is not supported in this browser.')
+    connect() {
+        // Only auto-detect on first visit (no zone cookie set yet)
+        if (!this.getCookie("zone")) {
+            this.autoDetect();
+        }
     }
-  }
 
-  positionOption () {
-    return {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
+    // Stimulus action: triggered by GPS button click
+    detect(event) {
+        this.detectButton = event?.currentTarget;
+        if (this.detectButton) {
+            this.detectButton.classList.add("loading");
+        }
+        this.autoDetect();
     }
-  }
 
-  setCurrentPosition (position) {
-    const crd = position.coords
-    console.log('Your current position is:')
-    console.log(`Latitude : ${crd.latitude}`)
-    console.log(`Longitude: ${crd.longitude}`)
-    console.log(`More or less ${crd.accuracy} meters.`)
-  }
+    autoDetect() {
+        if (!navigator.geolocation) {
+            this.clearLoading();
+            return;
+        }
 
-  positionError (error) {
-    switch (error.code) {
-      case error.PERMISSION_DENIED:
-        console.error('User denied the request for Geolocation.')
-        break
-
-      case error.POSITION_UNAVAILABLE:
-        console.error('Location information is unavailable.')
-        break
-
-      case error.TIMEOUT:
-        console.error('The request to get user location timed out.')
-        break
-
-      case error.UNKNOWN_ERROR:
-        console.error('An unknown error occurred.')
-        break
+        navigator.geolocation.getCurrentPosition(
+            this.onPositionSuccess.bind(this),
+            this.onPositionError.bind(this),
+            { enableHighAccuracy: true, timeout: 8000, maximumAge: 300000 },
+        );
     }
-  }
 
-  watchPosition () {
-    if (!this.geoWatch) {
-      if (
-        'geolocation' in navigator &&
-        'watchPosition' in navigator.geolocation
-      ) {
-        this.geoWatch = navigator.geolocation.watchPosition(
-          this.setCurrentPosition.bind(this),
-          this.positionError.bind(this),
-          this.positionOption()
-        )
-      }
+    async onPositionSuccess(position) {
+        const { latitude, longitude } = position.coords;
+
+        try {
+            const zone = await detectZone(latitude, longitude);
+            if (zone) {
+                const currentZone = this.getCookie("zone");
+                if (currentZone !== zone.code) {
+                    this.setCookie("zone", zone.code);
+                    this.setCookie("zone_source", "auto");
+                    window.Turbo.visit(`/zones/${zone.code}?source=auto`);
+                    return;
+                }
+            } else {
+                // Outside Malaysia - fall back to default if no cookie
+                if (!this.getCookie("zone")) {
+                    this.setCookie("zone", "SGR01");
+                }
+            }
+        } catch (error) {
+            console.error("Zone detection failed:", error);
+        }
+
+        this.clearLoading();
     }
-  }
 
-  stopWatchPosition () {
-    navigator.geolocation.clearWatch(this.geoWatch)
-    this.geoWatch = undefined
-  }
+    onPositionError(error) {
+        console.warn("Geolocation error:", error.message);
+        if (!this.getCookie("zone")) {
+            this.setCookie("zone", "SGR01");
+        }
+        this.clearLoading();
+    }
+
+    clearLoading() {
+        if (this.detectButton) {
+            this.detectButton.classList.remove("loading");
+            this.detectButton = null;
+        }
+    }
+
+    getCookie(name) {
+        const match = document.cookie.match(
+            new RegExp(`(?:^|; )${name}=([^;]*)`),
+        );
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    setCookie(name, value) {
+        document.cookie = `${name}=${value};path=/;max-age=31536000;SameSite=Lax`;
+    }
 }
