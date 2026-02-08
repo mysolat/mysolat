@@ -11,7 +11,7 @@
     <!-- Year Selector -->
     <div class="flex items-center justify-center gap-2 mb-8">
       <% @years.each do |year| %>
-        <a href="/pages/calendar?year=<%= year %>"
+        <a href="/calendar?year=<%= year %>"
            class="btn btn-sm <%= year == @selected_year ? 'btn-primary' : 'backdrop-blur-md bg-white/10 border border-white/20 hover:bg-white/20' %>">
           <%= year %>
         </a>

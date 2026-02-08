@@ -56,7 +56,7 @@
 
     <!-- Links -->
     <div class="backdrop-blur-sm bg-white/10 rounded-2xl overflow-hidden divide-y divide-white/10 border border-white/10 mb-6">
-      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/pages/maps">
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/maps">
         <div class="bg-primary/20 text-primary rounded-lg p-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
@@ -68,7 +68,7 @@
         </svg>
       </a>
 
-      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/pages/api">
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/api">
         <div class="bg-info/20 text-info rounded-lg p-2">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
@@ -128,9 +128,54 @@
       </ul>
     </div>
 
-    <!-- Developer -->
+    <!-- Penafian -->
     <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
-      <h2 class="font-bold mb-4">Pembangun</h2>
+      <h2 class="font-bold mb-4">Penafian</h2>
+      <div class="space-y-3 text-sm text-base-content/70 leading-relaxed">
+        <p>
+          Aplikasi ini memaparkan waktu solat berdasarkan data yang diperolehi daripada
+          API e-Solat JAKIM. Sekiranya terdapat sebarang keraguan, pengguna digalakkan
+          untuk menyemak terus di portal rasmi
+          <a href="https://www.e-solat.gov.my/" target="_blank" class="text-primary hover:underline">e-Solat JAKIM</a>.
+        </p>
+        <p>
+          Maklumat lokasi masjid dan surau diperoleh daripada
+          <a href="https://masjid.islam.gov.my/" target="_blank" class="text-primary hover:underline">Sistem Maklumat Masjid, JAKIM</a>
+          dan mungkin tidak lengkap atau mengandungi ketidaktepatan. Sila hubungi kami
+          jika terdapat pembetulan yang perlu dilakukan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Polisi Privasi -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Polisi Privasi</h2>
+      <div class="space-y-3 text-sm text-base-content/70 leading-relaxed">
+        <p>
+          <strong>Data lokasi</strong> &mdash; Aplikasi ini menggunakan GPS peranti anda untuk
+          mengesan zon waktu solat secara automatik. Data lokasi hanya diproses di dalam
+          pelayar anda dan <strong>tidak dihantar atau disimpan</strong> di mana-mana pelayan.
+        </p>
+        <p>
+          <strong>Kuki (Cookies)</strong> &mdash; Kami menggunakan kuki untuk menyimpan pilihan zon,
+          tema dan format masa anda. Kuki ini hanya berfungsi di peranti anda dan tidak
+          mengandungi maklumat peribadi.
+        </p>
+        <p>
+          <strong>Storan tempatan</strong> &mdash; Data waktu solat tahunan disimpan dalam
+          IndexedDB pelayar anda untuk membolehkan akses luar talian. Data ini kekal dalam
+          peranti anda sahaja.
+        </p>
+        <p>
+          Aplikasi ini <strong>tidak mengumpul, menyimpan atau berkongsi</strong> sebarang
+          maklumat peribadi pengguna.
+        </p>
+      </div>
+    </div>
+
+    <!-- Hubungi -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Hubungi</h2>
       <a href="https://khairi.my" target="_blank" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
         <div class="bg-primary/20 text-primary rounded-full p-2">
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
@@ -140,6 +185,20 @@
         <div>
           <div class="font-semibold text-sm">khairi.my</div>
           <div class="text-xs text-base-content/50">khairi@labs.my</div>
+        </div>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+        </svg>
+      </a>
+      <a href="https://github.com/mysolat/mysolat/issues" target="_blank" class="flex items-center gap-3 hover:opacity-80 transition-opacity mt-3 pt-3 border-t border-white/10">
+        <div class="bg-warning/20 text-warning rounded-full p-2">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-sm">Lapor Isu</div>
+          <div class="text-xs text-base-content/50">GitHub Issues</div>
         </div>
         <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>

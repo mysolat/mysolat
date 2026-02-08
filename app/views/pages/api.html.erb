@@ -5,13 +5,13 @@
   <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
     <div class="prose prose-lg max-w-none">
       <h1 class="text-3xl font-bold mb-2">API Waktu Solat</h1>
-      <p class="text-base-content/70 mb-8">API percuma untuk mendapatkan waktu solat di Malaysia. Data disediakan oleh JAKIM.</p>
+      <p class="text-base-content/70 mb-8">API percuma untuk mendapatkan waktu solat di Malaysia. Data waktu solat diperoleh secara terus daripada portal e-solat JAKIM.</p>
 
       <!-- Base URL -->
       <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-6 mb-8 border border-white/10">
         <h2 class="text-lg font-semibold mb-3">Base URL</h2>
-        <div class="mockup-code bg-base-300/50">
-          <pre><code>https://solat.my/api</code></pre>
+        <div class="mockup-code w-full">
+          <pre data-prefix=">"><code>https://solat.my/api</code></pre>
         </div>
       </div>
 
@@ -27,21 +27,8 @@
         </div>
         <div class="collapse-content">
           <p class="mb-4">Senarai semua zon waktu solat di Malaysia.</p>
-          <div class="mockup-code mb-4 bg-base-300/50">
+          <div class="mockup-code w-full">
             <pre data-prefix="$"><code>curl https://solat.my/api/locations</code></pre>
-          </div>
-          <h4 class="font-semibold mb-2">Response</h4>
-          <div class="mockup-code text-sm bg-base-300/50">
-            <pre><code>[
-  {
-    "state": "Selangor",
-    "code": "SGR01",
-    "location": "Gombak",
-    "latitude": "3.253502",
-    "longitude": "101.653326"
-  },
-  ...
-]</code></pre>
           </div>
         </div>
       </div>
@@ -76,30 +63,8 @@
             </table>
           </div>
 
-          <div class="mockup-code mb-4 bg-base-300/50">
+          <div class="mockup-code w-full">
             <pre data-prefix="$"><code>curl https://solat.my/api/daily/SGR01</code></pre>
-          </div>
-
-          <h4 class="font-semibold mb-2">Response</h4>
-          <div class="mockup-code text-sm bg-base-300/50">
-            <pre><code>{
-  "zone": "SGR01",
-  "year": 2024,
-  "month": 1,
-  "day": 15,
-  "date": "15-Jan-2024",
-  "hijri": "3-Rejab-1445",
-  "imsak": "05:58",
-  "subuh": "06:08",
-  "syuruk": "07:24",
-  "dhuha": "07:51",
-  "zohor": "13:19",
-  "asar": "16:41",
-  "maghrib": "19:24",
-  "isyak": "20:36",
-  "serverTime": "2024-01-15T12:30:00.000+08:00",
-  "locations": [...]
-}</code></pre>
           </div>
         </div>
       </div>
@@ -144,32 +109,8 @@
             </table>
           </div>
 
-          <div class="mockup-code mb-4 bg-base-300/50">
+          <div class="mockup-code w-full">
             <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01/1</code></pre>
-            <pre data-prefix="$"><code>curl "https://solat.my/api/monthly/SGR01/1?year=2024"</code></pre>
-          </div>
-
-          <h4 class="font-semibold mb-2">Response</h4>
-          <div class="mockup-code text-sm bg-base-300/50">
-            <pre><code>{
-  "zone": "SGR01",
-  "year": 2024,
-  "month": 1,
-  "prayers": [
-    {
-      "day": 1,
-      "date": "01-Jan-2024",
-      "hijri": "19-Jamadilakhir-1445",
-      "imsak": "05:54",
-      "subuh": "06:04",
-      "syuruk": "07:21",
-      ...
-    },
-    ...
-  ],
-  "serverTime": "...",
-  "locations": [...]
-}</code></pre>
           </div>
         </div>
       </div>
@@ -209,7 +150,7 @@
             </table>
           </div>
 
-          <div class="mockup-code mb-4 bg-base-300/50">
+          <div class="mockup-code mb-4 w-full">
             <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01</code></pre>
             <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01/2024</code></pre>
           </div>
@@ -259,12 +200,24 @@
         <p class="text-sm">Untuk senarai penuh kawasan dan koordinat, gunakan endpoint <code class="bg-white/20 px-1 rounded">/api/locations</code>.</p>
       </div>
 
-      <!-- Attribution -->
-      <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-4 mt-6 border border-white/10">
-        <p class="text-sm text-base-content/70">
-          Data waktu solat disediakan oleh <a href="https://www.e-solat.gov.my" target="_blank" class="link link-primary">JAKIM e-Solat</a>.
-          API ini adalah percuma untuk kegunaan peribadi dan komersial.
-        </p>
+      <!-- Penafian -->
+      <div class="backdrop-blur-sm bg-warning/10 rounded-2xl p-4 mt-6 border border-warning/20">
+        <div class="flex gap-3 items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-warning shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"></path></svg>
+          <div class="text-sm text-base-content/70 space-y-2">
+            <p>
+              Data waktu solat yang dipaparkan melalui API ini diperoleh secara terus daripada portal rasmi
+              <a href="https://www.e-solat.gov.my" target="_blank" class="link link-primary">e-Solat JAKIM</a>
+              dan disajikan semula dalam format yang sama.
+            </p>
+            <p>
+              API ini adalah percuma untuk kegunaan peribadi dan komersial. Sekiranya terdapat sebarang
+              percanggahan data, sila rujuk terus ke portal rasmi
+              <a href="https://www.e-solat.gov.my" target="_blank" class="link link-primary">e-Solat JAKIM</a> dan laporkan sebarang masalah
+              dan isu <a href="https://github.com/mysolat/mysolat/issues" target="_blank" class="link link-primary">di sini</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
