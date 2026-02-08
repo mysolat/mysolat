@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   private
 
   def available_page(page)
-    %w[api qibla maps calendar].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+    %w[api qibla maps calendar about].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
   end
 
   def setup_calendar

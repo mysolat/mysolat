@@ -230,6 +230,21 @@
     #pages {
         padding-bottom: 6rem;
     }
+
+    /* Slide-up drawer on mobile */
+    .drawer-side {
+        inset: auto 0 0 0;
+        top: 0;
+    }
+
+    .drawer-side > *:not(.drawer-overlay) {
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+        transform: translateY(0);
+    }
 }
 
 /* Mobile dock item styles */
