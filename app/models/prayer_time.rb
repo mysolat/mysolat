@@ -12,4 +12,8 @@ module PrayerTime
   def self.yearly(zone: "SGR01", year: Time.zone.today.year)
     Jakim::ApiResource.yearly(zone: zone, year: year).as_json
   end
+
+  def self.islamic_events
+    Jakim::ApiResource.islamic_events.as_json
+  end
 end
