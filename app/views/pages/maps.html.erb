@@ -1,17 +1,17 @@
 <% content_for :title, "Peta Masjid & Surau" %>
 <% content_for :description, "Cari lokasi masjid dan surau berdekatan di seluruh Malaysia" %>
 
-<div class="fixed inset-0 md:left-24 z-10"
+<div class="fixed inset-0 md:left-24 z-10 md:py-4 md:pr-4 md:w-[calc(100%-6rem)]"
      data-controller="maps"
      data-maps-center-lat-value="<%= @location['latitude'] %>"
      data-maps-center-lng-value="<%= @location['longitude'] %>">
 
   <!-- Map Container -->
-  <div id="map" class="w-full h-full"
+  <div id="map" class="w-full h-full md:rounded-3xl"
        data-maps-target="map"></div>
 
   <!-- Controls Overlay -->
-  <div class="absolute bottom-4 left-4 right-4 z-[1000] flex flex-wrap items-center justify-center gap-2 pb-24 md:pb-0 select-none">
+  <div class="absolute bottom-4 left-4 right-4 z-[1000] flex flex-wrap items-center justify-center gap-2 pb-24 md:pb-2 select-none">
     <!-- Filter Controls -->
     <label class="label cursor-pointer gap-2 backdrop-blur-md bg-base-100/80 rounded-lg px-3 py-2 shadow-lg border border-white/20">
       <input type="checkbox" class="checkbox checkbox-primary checkbox-sm"
@@ -44,7 +44,7 @@
         Zon JAKIM
       </span>
     </label>
-    <button class="btn btn-sm backdrop-blur-md bg-base-100/80 border border-white/20 shadow-lg"
+    <button class="btn btn-md backdrop-blur-md rounded-lg bg-base-100/80 border border-white/20 px-3 py-2 shadow-lg"
             data-action="click->maps#locateUser"
             data-maps-target="locateBtn">
       <%= icon "map-pin", class: "size-4" %>

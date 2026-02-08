@@ -7,6 +7,7 @@ class Jakim::ApiResource < ApplicationResource
   get :daily, "", defaults: { r: "esolatApi/TakwimSolat", period: "today", zone: "SGR01" }
   get :monthly, "", defaults: { r: "esolatApi/TakwimSolat", period: "month", zone: "SGR01", month: Time.current.month }
   get :yearly, "", defaults: { r: "esolatApi/TakwimSolat", period: "year", zone: "SGR01", year: Time.current.year }
+  get :islamic_events, "", defaults: { r: "esolatApi/islamicevent", type: "all" }
 
   cattr_accessor :cache_expiry
 
@@ -17,6 +18,8 @@ class Jakim::ApiResource < ApplicationResource
   private
 
   def upcase_zone(name, request)
+    return unless request.get_params[:zone]
+
     request.get_params[:zone] = request.get_params[:zone].upcase
   end
 
@@ -28,6 +31,8 @@ class Jakim::ApiResource < ApplicationResource
       Date.new(Date.current.year, request.get_params[:month].to_i, 1).to_time.end_of_month
     when :yearly
       Date.new(request.get_params[:year].to_i, 12, 31).to_time.end_of_year
+    when :islamic_events
+      Time.current.end_of_year
     end
   end
 
