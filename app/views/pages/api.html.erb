@@ -20,7 +20,7 @@
 
       <!-- Locations -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" checked />
+        <input type="checkbox" />
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/locations
@@ -35,7 +35,7 @@
 
       <!-- Daily -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" checked />
+        <input type="checkbox" />
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/daily/:zone
@@ -74,7 +74,7 @@
         <input type="checkbox" />
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
-          /api/monthly/:zone/:month
+          /api/monthly/:zone(/:month)
         </div>
         <div class="collapse-content">
           <p class="mb-4">Waktu solat untuk sebulan berdasarkan zon.</p>
@@ -100,16 +100,12 @@
                   <td>integer</td>
                   <td>Bulan (1-12), pilihan - default bulan semasa</td>
                 </tr>
-                <tr>
-                  <td><code>year</code></td>
-                  <td>integer</td>
-                  <td>Tahun (query param), pilihan - default tahun semasa</td>
-                </tr>
               </tbody>
             </table>
           </div>
 
           <div class="mockup-code w-full">
+              <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01</code></pre>
             <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01/1</code></pre>
           </div>
         </div>
