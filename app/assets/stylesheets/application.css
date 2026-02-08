@@ -4,201 +4,248 @@
 @plugin "tailwindcss-displaymodes";
 @plugin 'tailwind-scrollbar';
 @plugin "daisyui" {
-  themes: all;
+    themes: all;
 }
 
 #main {
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-scrolled {
-  @apply shadow-xs bg-base-100/20 backdrop-blur;
+    @apply shadow-xs bg-base-100/20 backdrop-blur;
 }
 
 .scrollable-area {
-  height: 100%;
-  max-height: 100dvh;
-  min-height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
+    height: 100%;
+    max-height: 100dvh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .scrollbar-rounded {
-  @apply scrollbar-thin scrollbar-thumb-primary hover:scrollbar-thumb-primary active:scrollbar-thumb-primary scrollbar-track-base-200;
+    @apply scrollbar-thin scrollbar-thumb-primary hover:scrollbar-thumb-primary active:scrollbar-thumb-primary scrollbar-track-base-200;
 }
 
 @media screen and (max-width: 768px) {
-  .scrollbar-rounded {
-    ::-webkit-scrollbar {
-      display: none;
+    .scrollbar-rounded {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
     }
-    ::-webkit-scrollbar {
-      -webkit-appearance: none;
-    }
-  }
 }
 
 @layer utilities {
-  @variants responsive {
-    .masonry {
-      column-gap: 1.5em;
-      column-count: 1;
+    @variants responsive {
+        .masonry {
+            column-gap: 1.5em;
+            column-count: 1;
+        }
+        .masonry-sm {
+            column-gap: 1.5em;
+            column-count: 2;
+        }
+        .masonry-md {
+            column-gap: 1.5em;
+            column-count: 3;
+        }
+        .break-inside {
+            break-inside: avoid;
+        }
     }
-    .masonry-sm {
-      column-gap: 1.5em;
-      column-count: 2;
-    }
-    .masonry-md {
-      column-gap: 1.5em;
-      column-count: 3;
-    }
-    .break-inside {
-      break-inside: avoid;
-    }
-  }
 }
 
 /* Simple Animation */
 @keyframes blinking {
-  0% {
-    opacity: 1;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  }
+    0% {
+        opacity: 1;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    }
 
-  50% {
-    opacity: 0;
-    text-shadow: none;
-  }
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
 
-  100% {
-    opacity: 1;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  }
+    100% {
+        opacity: 1;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    }
 }
 
 /* clock */
 .clock {
-  width: auto;
-  margin: 0 auto;
-  padding: 30px;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    width: auto;
+    margin: 0 auto;
+    padding: 30px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .clock #date {
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  font-size: 36px;
-  text-align: center;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 1rem;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
 }
 
 .clock ul {
-  width: auto;
-  margin: 0 auto;
-  padding: 0px;
-  list-style: none;
-  text-align: center;
+    width: auto;
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
 }
 
 .clock ul li {
-  display: inline;
-  font-size: 8em;
-  text-align: center;
-  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+    display: inline;
+    font-size: 8em;
+    text-align: center;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .clock #point {
-  position: relative;
-  -moz-animation: blinking 1s ease infinite;
-  -webkit-animation: blinking 1s ease infinite;
-  padding-left: 10px;
-  padding-right: 10px;
+    position: relative;
+    -moz-animation: blinking 1s ease infinite;
+    -webkit-animation: blinking 1s ease infinite;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Responsive clock */
 @media (max-width: 1200px) {
-  .clock ul li {
-    font-size: 7em;
-  }
+    .clock ul li {
+        font-size: 7em;
+    }
 
-  .clock #date {
-    font-size: 30px;
-  }
+    .clock #date {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 992px) {
-  .clock ul li {
-    font-size: 6em;
-  }
+    .clock ul li {
+        font-size: 6em;
+    }
 
-  .clock #date {
-    font-size: 24px;
-  }
+    .clock #date {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 768px) {
-  .clock ul li {
-    font-size: 4em;
-  }
+    .clock ul li {
+        font-size: 4em;
+    }
 
-  .clock #date {
-    font-size: 20px;
-  }
+    .clock #date {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 576px) {
-  .clock ul li {
-    font-size: 3em;
-  }
+    .clock ul li {
+        font-size: 3em;
+    }
 
-  .clock #date {
-    font-size: 18px;
-  }
+    .clock #date {
+        font-size: 18px;
+    }
+}
+
+/* Prayer icons using CSS mask */
+.prayer-icon {
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.prayer-icon-imsak {
+    -webkit-mask-image: url("imsak.svg");
+    mask-image: url("imsak.svg");
+}
+
+.prayer-icon-fajr,
+.prayer-icon-syuruk {
+    -webkit-mask-image: url("subuh.svg");
+    mask-image: url("subuh.svg");
+}
+
+.prayer-icon-dhuha {
+    -webkit-mask-image: url("dhuha.svg");
+    mask-image: url("dhuha.svg");
+}
+
+.prayer-icon-dhuhr {
+    -webkit-mask-image: url("zohor.svg");
+    mask-image: url("zohor.svg");
+}
+
+.prayer-icon-asr {
+    -webkit-mask-image: url("asar.svg");
+    mask-image: url("asar.svg");
+}
+
+.prayer-icon-maghrib {
+    -webkit-mask-image: url("maghrib.svg");
+    mask-image: url("maghrib.svg");
+}
+
+.prayer-icon-isha {
+    -webkit-mask-image: url("isyak.svg");
+    mask-image: url("isyak.svg");
 }
 
 /* Prayer card current state enhancement */
 .prayer-current {
-  @apply ring-2 ring-primary ring-offset-2 ring-offset-base-100/50 bg-primary/10;
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-base-100/50 bg-primary/10;
 }
 
 /* Tabular numbers for countdown */
 .tabular-nums {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
 }
 
 /* Mini clock styling */
 .mini-clock {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Mobile dock safe area for iOS */
 .safe-bottom {
-  padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Add bottom padding on mobile to account for dock */
 @media (max-width: 767px) {
-  #pages {
-    padding-bottom: 6rem;
-  }
+    #pages {
+        padding-bottom: 6rem;
+    }
 }
 
 /* Mobile dock item styles */
 .dock-item {
-  @apply flex flex-col items-center justify-center px-4 py-2 rounded-2xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
+    @apply flex flex-col items-center justify-center px-4 py-2 rounded-2xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
 }
 
 .dock-item-active {
-  @apply bg-white/30 text-primary;
+    @apply bg-white/30 text-primary;
 }
 
 /* Desktop mini sidebar styles */
 .sidebar-item {
-  @apply p-3 rounded-xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
+    @apply p-3 rounded-xl text-base-content/70 hover:bg-white/20 hover:text-base-content transition-colors;
 }
 
 .sidebar-active {
-  @apply bg-white/30 text-primary;
+    @apply bg-white/30 text-primary;
 }

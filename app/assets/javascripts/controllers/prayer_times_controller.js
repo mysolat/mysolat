@@ -34,7 +34,11 @@ export default class extends Controller {
         "indicatorPuasa",
         "indicatorPrayer",
     ];
-    static values = { prayers: Object, zone: String, selectedDate: String };
+    static values = {
+        prayers: Object,
+        zone: String,
+        selectedDate: String,
+    };
 
     async connect() {
         this.zone = this.zoneValue || this.getZoneFromCookie() || "SGR01";
@@ -282,6 +286,7 @@ export default class extends Controller {
                 const period = this.formatPeriodForGrid(todayData[key]);
                 html += `
           <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 transition-all hover:bg-white/20 ${key}">
+            <div class="prayer-icon prayer-icon-${key} w-6 h-6 md:w-7 md:h-7 opacity-70 mb-1 mx-auto"></div>
             <div class="text-xs md:text-sm font-semibold text-base-content/50 uppercase tracking-wide mb-1">
               ${labels[key]}
             </div>
