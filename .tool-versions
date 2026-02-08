@@ -1,6 +1,6 @@
-ruby 3.4.2
-nodejs 22.13.1
+ruby 4.0.1
+nodejs 24.13.0
 
 #corepack enable
-#corepack use yarn@4.5.3
-#yarn set version 4.5.3
+#corepack use yarn@4.6.0
+#yarn set version 4.6.0
