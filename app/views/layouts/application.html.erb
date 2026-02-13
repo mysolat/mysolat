@@ -3,13 +3,16 @@
   <head>
     <%= render "layouts/head" %>
   </head>
-  <body class="text-base-content select-none" data-controller="application theme service-worker geolocation">
+  <body class="text-base-content select-none"
+        data-controller="application theme service-worker geolocation turbo-navigation"
+        data-action="turbo:before-visit@document->turbo-navigation#rememberLocation">
     <div class="absolute inset-0 h-96 pt-16 box-content -z-1 w-full md:pl-24">
-      <%= image_tag random_bg, class: "absolute inset-0 w-full h-screen bg-top bg-cover object-cover object-[85%_15%] opacity-90 max-w-full ", alt: "" %>
-      <div class="absolute inset-0 bg-gradient-to-t from-base-100 to-transparent w-full h-screen" aria-hidden="true"></div>
+      <%= image_tag random_bg, class: "absolute inset-0 w-full h-screen bg-top bg-cover object-cover object-[85%_15%] opacity-90 max-w-full ", alt: "", loading: "lazy", decoding: "async" %>
+      <div class="absolute inset-0 bg-linear-to-b from-base-100 to-transparent w-full h-60" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-linear-to-t from-base-100 to-transparent w-full h-screen" aria-hidden="true"></div>
     </div>
     <div class="drawer md:pl-24">
-      <input id="drawer" class="drawer-toggle" type="checkbox" />
+      <input id="drawer" class="drawer-toggle" type="checkbox">
       <div class="drawer-content">
         <%= render "layouts/header" %>
         <% if content_for?(:hero) %>
@@ -19,7 +22,7 @@
           <%= yield %>
         </section>
         <% if content_for?(:modal) %>
-          <input id="filter-modal" class="modal-toggle" type="checkbox" />
+          <input id="filter-modal" class="modal-toggle" type="checkbox">
           <div class="modal">
             <div class="modal-box h-svh w-screen max-w-screen p-0 rounded-3xl backdrop-blur-md bg-white/20" data-controller="filter">
               <%= yield :modal %>
@@ -30,7 +33,7 @@
 
       </div>
       <%= render "layouts/sidebar" %>
-      <%= render "layouts/analytics" %>
+      <%= render "layouts/analytics" if Rails.env.production? %>
     </div>
     <%= render "layouts/dock" %>
   </body>

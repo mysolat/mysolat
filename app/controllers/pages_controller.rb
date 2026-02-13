@@ -7,6 +7,8 @@ class PagesController < ApplicationController
   def show
     send("setup_#{params[:id]}") if respond_to?("setup_#{params[:id]}", true)
     render available_page(params[:id])
+  rescue ActionController::RoutingError
+    render file: Rails.root.join("public/404.html"), status: :not_found, layout: false
   end
 
   private

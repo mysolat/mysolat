@@ -1,9 +1,9 @@
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5P07XF90L"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<%= ENV['GOOGLE_TAG_ID'] %>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-H5P07XF90L');
+  gtag("config", "<%= ENV['GOOGLE_TAG_ID'] %>");
 </script>

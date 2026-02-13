@@ -4,8 +4,8 @@
     <%= render "layouts/head" %>
   </head>
   <body class="h-screen drawer drawer-end max-h-screen overflow-hidden">
-    <input id="my-drawer" class="drawer-toggle" type="checkbox" />
-    <img class="absolute inset-0 w-screen h-screen bg-top bg-cover object-cover opacity-95 max-w-screen -z-10" src="<%= random_bg %>" alt="" />
+    <input id="my-drawer" class="drawer-toggle" type="checkbox">
+    <img class="absolute inset-0 w-screen h-screen bg-top bg-cover object-cover opacity-95 max-w-screen -z-10" src="<%= random_bg %>" alt="" loading="lazy" decoding="async">
     <div class="absolute inset-0 bg-gradient-to-t from-base-100 to-transparent w-screen" aria-hidden="true"></div>
     <div class="drawer-content">
       <div class="absolute top-2 right-2" title="Change Theme">

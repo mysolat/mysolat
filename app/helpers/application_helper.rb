@@ -86,6 +86,6 @@ module ApplicationHelper
       "1572880420415-4ec18a1f0db5"
     ].sample
 
-    "https://images.unsplash.com/photo-#{photo_ids}"
+    "https://images.unsplash.com/photo-#{photo_ids}?w=1080&q=50&fit=crop&auto=format"
   end
 end

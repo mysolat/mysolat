@@ -115,9 +115,13 @@ export default class extends Controller {
             },
         });
 
-        // Load data
-        this.loadMasjidData();
-        this.loadSurauData();
+        // Lazy-load data only for toggles that are checked by default
+        if (this.masjidToggleTarget.checked) {
+            this.loadMasjidData();
+        }
+        if (this.surauToggleTarget.checked) {
+            this.loadSurauData();
+        }
     }
 
     async loadMasjidData() {
@@ -252,9 +256,11 @@ export default class extends Controller {
     }
 
     toggleMarkers() {
-        // Toggle masjid layer
+        // Toggle masjid layer (lazy-load on first toggle)
         if (this.masjidToggleTarget.checked) {
-            if (!this.map.hasLayer(this.masjidLayer)) {
+            if (this.masjidData.length === 0) {
+                this.loadMasjidData();
+            } else if (!this.map.hasLayer(this.masjidLayer)) {
                 this.map.addLayer(this.masjidLayer);
             }
         } else {
@@ -263,9 +269,11 @@ export default class extends Controller {
             }
         }
 
-        // Toggle surau layer
+        // Toggle surau layer (lazy-load on first toggle)
         if (this.surauToggleTarget.checked) {
-            if (!this.map.hasLayer(this.surauLayer)) {
+            if (this.surauData.length === 0) {
+                this.loadSurauData();
+            } else if (!this.map.hasLayer(this.surauLayer)) {
                 this.map.addLayer(this.surauLayer);
             }
         } else {

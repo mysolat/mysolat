@@ -35,6 +35,7 @@ class ZonesController < ApplicationController
   def default_zone
     params[:id] ||= cookies["zone"]
     zone_code = params[:id].try(:upcase) || "WLY01"
+    zone_code = "WLY01" unless PrayerTime.valid_zone?(zone_code)
     cookies["zone"] = zone_code
 
     if params[:source] == "auto"

@@ -125,6 +125,8 @@ registerRoute(
 
 // Offline fallback for navigation requests
 self.addEventListener("fetch", (event) => {
+    if (event.request.method !== "GET") return;
+
     if (event.request.mode === "navigate") {
         event.respondWith(
             fetch(event.request).catch(() => {
@@ -134,4 +136,43 @@ self.addEventListener("fetch", (event) => {
             }),
         );
     }
+
+    if (event.request.destination === "document") {
+        event.respondWith(
+            fetch(event.request, { cache: "no-cache" }).catch(() =>
+                caches.match(event.request),
+            ),
+        );
+    }
 });
+
+self.addEventListener("push", (event) => {
+    const data = event.data.json();
+    event.waitUntil(showNotification(data));
+});
+
+async function showNotification({ title, options }) {
+    await self.registration.showNotification(title, options);
+    if (navigator.setAppBadge && options?.data?.badge) {
+        await navigator.setAppBadge(options.data.badge);
+    }
+}
+
+self.addEventListener("notificationclick", (event) => {
+    event.notification.close();
+
+    const url = new URL(event.notification.data.path, self.location.origin)
+        .href;
+    event.waitUntil(openURL(url));
+});
+
+async function openURL(url) {
+    const clients = await self.clients.matchAll({ type: "window" });
+    const focused = clients.find((client) => client.focused);
+
+    if (focused) {
+        await focused.navigate(url);
+    } else {
+        await self.clients.openWindow(url);
+    }
+}

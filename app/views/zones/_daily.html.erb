@@ -70,8 +70,24 @@
     </div>
   </div>
 
+  <!-- Prayer Times Grid - 2 rows x 4 columns -->
+  <div class="w-full max-w-2xl">
+    <div class="grid grid-cols-4 gap-3 md:gap-4" data-prayer-times-target="prayerGrid">
+      <!-- Loading skeleton -->
+      <% 8.times do %>
+        <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 animate-pulse">
+          <div class="h-6 w-6 md:h-7 md:w-7 bg-base-content/20 rounded mb-1"></div>
+          <div class="h-3 w-12 bg-base-content/20 rounded mb-2"></div>
+          <div class="h-8 w-16 bg-base-content/20 rounded mb-1"></div>
+          <div class="h-2 w-8 bg-base-content/20 rounded"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
   <!-- Prayer Cards Carousel -->
-  <div class="w-full max-w-2xl mb-4">
+  <div class="w-full max-w-2xl mt-4">
     <div class="carousel w-full" data-prayer-times-target="carousel">
       <!-- Slide 1: Next Prayer Card -->
       <div id="solat" class="carousel-item w-full">
@@ -155,18 +171,4 @@
     </div>
   </div>
 
-  <!-- Prayer Times Grid - 2 rows x 4 columns -->
-  <div class="w-full max-w-2xl">
-    <div class="grid grid-cols-4 gap-3 md:gap-4" data-prayer-times-target="prayerGrid">
-      <!-- Loading skeleton -->
-      <% 8.times do %>
-        <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 animate-pulse">
-          <div class="h-6 w-6 md:h-7 md:w-7 bg-base-content/20 rounded mb-1"></div>
-          <div class="h-3 w-12 bg-base-content/20 rounded mb-2"></div>
-          <div class="h-8 w-16 bg-base-content/20 rounded mb-1"></div>
-          <div class="h-2 w-8 bg-base-content/20 rounded"></div>
-        </div>
-      <% end %>
-    </div>
-  </div>
 </div>
