@@ -68,8 +68,8 @@ group :test do
 end
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  # gem "better_errors"
+  # gem "binding_of_caller"
   gem "colorize"
   gem "standard", require: false
   gem "standard-rails", require: false
@@ -96,3 +96,5 @@ gem "rambulance"
 gem "hijri"
 gem "flexirest"
 gem "bugsnag"
+gem "web-push"
+gem "net-http-persistent"
