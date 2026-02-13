@@ -34,9 +34,16 @@ module Mysolat
     config.i18n.default_locale = :ms
     config.responders.redirect_status = :see_other
 
-    # Allowed all host by default
-    config.hosts.clear
+    # Allowed hosts
+    config.hosts << "solat.my"
+    config.hosts << "www.solat.my"
+    config.hosts << "waktu.solat.my"
+    config.hosts << "api.solat.my"
+    config.hosts << "solat.test"
 
     config.time_zone = "Kuala Lumpur"
+
+    config.active_job.queue_adapter = :solid_queue
+    config.solid_queue.connects_to = { database: { writing: :queue } }
   end
 end
