@@ -12,6 +12,16 @@ module Location
     location
   end
 
+  def self.find_by_name(slug)
+    name = slug.to_s.tr("-", " ").downcase
+    data.find { |l| l[:location].downcase == name }&.dig(:code) ||
+      data.find { |l| l[:state].downcase == name }&.dig(:code)
+  end
+
+  def self.valid_name?(slug)
+    find_by_name(slug).present?
+  end
+
   def self.data
     [
       { state: "Johor", code: "JHR01", location: "Pulau Aur", latitude: "2.444152", longitude: "104.524746" },

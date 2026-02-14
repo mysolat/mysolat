@@ -3,6 +3,8 @@ import "@khmyznikov/pwa-install";
 
 export default class extends Controller {
     connect() {
+        if (this.#isInstalled()) return;
+
         this.pwaInstall = document.querySelector("pwa-install");
 
         if (!this.pwaInstall) {
@@ -16,5 +18,12 @@ export default class extends Controller {
         if (this.pwaInstall) {
             this.pwaInstall.showDialog();
         }
+    }
+
+    #isInstalled() {
+        return (
+            window.matchMedia("(display-mode: standalone)").matches ||
+            window.navigator.standalone === true
+        );
     }
 }

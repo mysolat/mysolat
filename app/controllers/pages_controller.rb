@@ -14,10 +14,10 @@ class PagesController < ApplicationController
   private
 
   def available_page(page)
-    %w[api qibla maps calendar about].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+    %w[api kiblat masjid kalendar tentang].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
   end
 
-  def setup_calendar
+  def setup_kalendar
     data = PrayerTime.islamic_events
     all_events = (data["event"] || []).sort_by { |e| e["tarikh_miladi"] }
 

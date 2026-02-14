@@ -33,6 +33,7 @@ class ZonesController < ApplicationController
   private
 
   def default_zone
+    params[:id] ||= Location.find_by_name(params[:location_name]) if params[:location_name].present?
     params[:id] ||= cookies["zone"]
     zone_code = params[:id].try(:upcase) || "WLY01"
     zone_code = "WLY01" unless PrayerTime.valid_zone?(zone_code)
