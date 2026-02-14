@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc><%= root_url %></loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <% %w[takwim kiblat masjid kalendar tentang api].each do |page| %>
+  <url>
+    <loc><%= root_url %><%= page %></loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <% end %>
+
+  <% @states.each do |state| %>
+  <url>
+    <loc><%= location_url(state) %></loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <% end %>
+
+  <% @locations.each do |location| %>
+  <url>
+    <loc><%= location_url(location) %></loc>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <% end %>
+</urlset>

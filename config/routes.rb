@@ -19,9 +19,10 @@ Rails.application.routes.draw do
     get "yearly/:zone(/:year)", to: "prayer_times#yearly"
   end
 
+  get "sitemap", to: "sitemaps#index", defaults: { format: :xml }, as: :sitemap
+
   resources :zones
 
-  get "/monthly", to: "zones#monthly", as: :monthly
   get "/takwim", to: "zones#monthly", as: :takwim
 
 
