@@ -1,0 +1,214 @@
+<% content_for :title, "Tentang" %>
+<% content_for :description, "Maklumat mengenai aplikasi MySolat - Waktu Solat Malaysia" %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-2xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-6 md:p-8 border border-white/20 shadow-2xl">
+
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-8">
+      <svg class="w-16 h-16 text-primary fill-current mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+        <path d="M400 0C405 0 409.8 2.371 412.8 6.4C447.5 52.7 490.9 81.34 546.3 117.9C551.5 121.4 556.9 124.9 562.3 128.5C591.3 147.7 608 180.2 608 214.6C608 243.1 596.7 269 578.2 288H221.8C203.3 269 192 243.1 192 214.6C192 180.2 208.7 147.7 237.7 128.5C243.1 124.9 248.5 121.4 253.7 117.9C309.1 81.34 352.5 52.7 387.2 6.4C390.2 2.371 394.1 0 400 0V0zM288 440C288 426.7 277.3 416 264 416C250.7 416 240 426.7 240 440V512H192C174.3 512 160 497.7 160 480V352C160 334.3 174.3 320 192 320H608C625.7 320 640 334.3 640 352V480C640 497.7 625.7 512 608 512H560V440C560 426.7 549.3 416 536 416C522.7 416 512 426.7 512 440V512H448V453.1C448 434.1 439.6 416.1 424.1 404.8L400 384L375 404.8C360.4 416.1 352 434.1 352 453.1V512H288V440zM70.4 5.2C76.09 .9334 83.91 .9334 89.6 5.2L105.6 17.2C139.8 42.88 160 83.19 160 126V128H0V126C0 83.19 20.15 42.88 54.4 17.2L70.4 5.2zM0 160H160V296.6C140.9 307.6 128 328.3 128 352V480C128 489.6 130.1 498.6 133.8 506.8C127.3 510.1 119.9 512 112 512H48C21.49 512 0 490.5 0 464V160z"/>
+      </svg>
+      <h1 class="text-3xl font-bold mb-2">Solat.my</h1>
+      <p class="text-base-content/60">Waktu Solat Malaysia</p>
+    </div>
+
+    <!-- Description -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <p class="leading-relaxed text-base-content/80">
+        Solat.my memaparkan jadual waktu solat bagi seluruh negeri di Malaysia berdasarkan data rasmi
+        daripada <strong>Jabatan Kemajuan Islam Malaysia (JAKIM)</strong> melalui API e-Solat.
+        Aplikasi ini turut menyediakan arah kiblat, peta masjid dan surau, kalendar Islam, serta
+        sokongan aplikasi melalui PWA.
+      </p>
+    </div>
+
+    <!-- Features -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Ciri-ciri</h2>
+      <ul class="space-y-3 text-sm text-base-content/80">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          <span>Waktu solat harian, bulanan dan tahunan untuk 60+ zon di Malaysia</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          <span>Pengesanan zon automatik melalui GPS</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64"/></svg>
+          <span>Arah kiblat menggunakan kompas peranti</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>
+          <span>Peta lokasi masjid dan surau seluruh Malaysia</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+          <span>Kalendar Islam dengan peristiwa penting</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+          <span>PWA - boleh dipasang sebagai aplikasi pada peranti</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Links -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl overflow-hidden divide-y divide-white/10 border border-white/10 mb-6">
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/maps">
+        <div class="bg-primary/20 text-primary rounded-lg p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
+        </div>
+        <span class="font-medium">Peta Masjid & Surau</span>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </a>
+
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="/api">
+        <div class="bg-info/20 text-info rounded-lg p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+          </svg>
+        </div>
+        <span class="font-medium">API</span>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </a>
+
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="https://github.com/mysolat/mysolat" target="_blank">
+        <div class="bg-base-content/10 text-base-content rounded-lg p-2">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path clip-rule="evenodd" fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </div>
+        <span class="font-medium">GitHub</span>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </a>
+
+      <a class="flex items-center gap-3 p-4 hover:bg-white/20 transition-colors" href="https://unsplash.com/collections/72065378/masjid-malaysia" target="_blank">
+        <div class="bg-success/20 text-success rounded-lg p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <span class="font-medium">Galeri Foto</span>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Credits -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Penghargaan</h2>
+      <ul class="space-y-3 text-sm text-base-content/80">
+        <li class="flex items-start gap-3">
+          <div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+          <span>Data waktu solat oleh <a href="https://www.e-solat.gov.my" target="_blank" class="text-primary hover:underline">JAKIM e-Solat</a></span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+          <span>Peta oleh <a href="https://leafletjs.com" target="_blank" class="text-primary hover:underline">Leaflet</a> dan <a href="https://carto.com" target="_blank" class="text-primary hover:underline">CARTO</a></span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+          <span>Foto latar belakang daripada <a href="https://unsplash.com/collections/72065378/masjid-malaysia" target="_blank" class="text-primary hover:underline">Unsplash</a></span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></div>
+          <span>Dibina dengan <a href="https://rubyonrails.org" target="_blank" class="text-primary hover:underline">Ruby on Rails</a>, <a href="https://tailwindcss.com" target="_blank" class="text-primary hover:underline">Tailwind CSS</a> dan <a href="https://daisyui.com" target="_blank" class="text-primary hover:underline">DaisyUI</a></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Penafian -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Penafian</h2>
+      <div class="space-y-3 text-sm text-base-content/70 leading-relaxed">
+        <p>
+          Aplikasi ini memaparkan waktu solat berdasarkan data yang diperolehi daripada
+          Postal Rasmi e-Solat JAKIM. Sekiranya terdapat sebarang keraguan, pengguna digalakkan
+          untuk menyemak terus di portal rasmi
+          <a href="https://www.e-solat.gov.my/" target="_blank" class="text-primary hover:underline">e-Solat JAKIM</a>.
+        </p>
+        <p>
+          Maklumat lokasi masjid dan surau diperoleh daripada
+          <a href="https://masjid.islam.gov.my/" target="_blank" class="text-primary hover:underline">Sistem Maklumat Masjid, JAKIM</a>
+          secara tidak langsung. dan mungkin tidak lengkap atau mengandungi ketidaktepatan. Senarai ini akan dikemaskini dari semasa ke semasa.
+        </p>
+      </div>
+    </div>
+
+    <!-- Polisi Privasi -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Polisi Privasi</h2>
+      <div class="space-y-3 text-sm text-base-content/70 leading-relaxed">
+        <p>
+          <strong>Data lokasi</strong> &mdash; Aplikasi ini menggunakan GPS peranti anda untuk
+          mengesan zon waktu solat secara automatik. Data lokasi hanya diproses di dalam
+          pelayar anda dan <strong>tidak dihantar atau disimpan</strong> di mana-mana pelayan.
+        </p>
+        <p>
+          <strong>Kuki (Cookies)</strong> &mdash; Kami menggunakan kuki untuk menyimpan pilihan zon,
+          tema dan format masa anda. Kuki ini hanya berfungsi di peranti anda dan tidak
+          mengandungi maklumat peribadi.
+        </p>
+        <p>
+          <strong>Storan tempatan</strong> &mdash; Data waktu solat tahunan disimpan dalam
+          IndexedDB pelayar anda untuk membolehkan akses luar talian. Data ini kekal dalam
+          peranti anda sahaja.
+        </p>
+        <p>
+          Aplikasi ini <strong>tidak mengumpul, menyimpan atau berkongsi</strong> sebarang
+          maklumat peribadi pengguna.
+        </p>
+      </div>
+    </div>
+
+    <!-- Hubungi -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-5 border border-white/10 mb-6">
+      <h2 class="font-bold mb-4">Hubungi</h2>
+      <a href="https://khairi.my" target="_blank" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <div class="bg-primary/20 text-primary rounded-full p-2">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-sm">khairi.my</div>
+          <div class="text-xs text-base-content/50">khairi@labs.my</div>
+        </div>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+        </svg>
+      </a>
+      <a href="https://github.com/mysolat/mysolat/issues" target="_blank" class="flex items-center gap-3 hover:opacity-80 transition-opacity mt-3 pt-3 border-t border-white/10">
+        <div class="bg-warning/20 text-warning rounded-full p-2">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-sm">Lapor Isu & Cadangan</div>
+          <div class="text-xs text-base-content/50">GitHub Issues</div>
+        </div>
+        <svg class="w-4 h-4 ml-auto text-base-content/40" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-sm text-base-content/50">
+      <p>&copy; <%= Date.current.year %> Solat.my</p>
+    </div>
+
+  </div>
+</div>

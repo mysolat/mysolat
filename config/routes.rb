@@ -20,7 +20,18 @@ Rails.application.routes.draw do
   end
 
   resources :zones
+
   get "/monthly", to: "zones#monthly", as: :monthly
+  get "/takwim", to: "zones#monthly", as: :takwim
+
+
+
+  get "/:location_name", to: "zones#show", as: :location,
+    constraints: ->(req) { Location.valid_name?(req.params[:location_name]) }
+
+  namespace :push do
+    resources :subscriptions, only: [:create, :destroy]
+  end
 
   get "/*id", to: "pages#show", as: :page
   get "/manifest", to: "application#manifest", formats: [:json]
