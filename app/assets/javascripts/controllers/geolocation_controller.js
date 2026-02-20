@@ -20,7 +20,7 @@ export default class extends Controller {
 
     autoDetect() {
         if (!navigator.geolocation) {
-            this.clearLoading();
+            this.detectByGeoIP();
             return;
         }
 
@@ -59,6 +59,30 @@ export default class extends Controller {
 
     onPositionError(error) {
         console.warn("Geolocation error:", error.message);
+        this.detectByGeoIP();
+    }
+
+    async detectByGeoIP() {
+        try {
+            const response = await fetch("https://freeipapi.com/api/json/");
+            const data = await response.json();
+
+            if (data.latitude && data.longitude) {
+                const zone = await detectZone(data.latitude, data.longitude);
+                if (zone) {
+                    const currentZone = this.getCookie("zone");
+                    if (currentZone !== zone.code) {
+                        this.setCookie("zone", zone.code);
+                        this.setCookie("zone_source", "auto");
+                        window.Turbo.visit(`/zones/${zone.code}?source=auto`);
+                        return;
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn("GeoIP fallback failed:", error.message);
+        }
+
         if (!this.getCookie("zone")) {
             this.setCookie("zone", "SGR01");
         }
