@@ -1,6 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="view-transition" content="same-origin">
 
 <%# Primary Meta Tags %>
 <title><%= content_for(:title) || "Waktu Solat Malaysia | My Solat | Portal e-Solat JAKIM" %></title>
@@ -10,6 +11,7 @@
 <%# Language & Locale %>
 <meta http-equiv="content-language" content="ms-MY">
 <meta name="language" content="Malay">
+<meta name="google" content="notranslate">
 <link rel="alternate" hreflang="ms-MY" href="<%= request.original_url %>">
 <link rel="alternate" hreflang="x-default" href="<%= request.original_url %>">
 
@@ -73,6 +75,10 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <%= action_cable_meta_tag %>
+<% turbo_refreshes_with method: :morph, scroll: :preserve %>
+
+<%= tag.meta name: "current-user-id", content: Current.user.id if Current.user %>
+<%= tag.meta name: "vapid-public-key", content: Rails.configuration.x.vapid.public_key %>
 
 <%# Stylesheets %>
 <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>

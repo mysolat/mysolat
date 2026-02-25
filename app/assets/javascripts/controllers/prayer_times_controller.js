@@ -285,17 +285,27 @@ export default class extends Controller {
                 const time = this.formatTimeForGrid(todayData[key]);
                 const period = this.formatPeriodForGrid(todayData[key]);
                 html += `
-          <div class="backdrop-blur-md bg-white/10 rounded-2xl p-4 md:p-5 border border-white/10 transition-all hover:bg-white/20 ${key}">
-            <div class="prayer-icon prayer-icon-${key} w-6 h-6 md:w-7 md:h-7 opacity-70 mb-1 mx-auto"></div>
-            <div class="text-xs md:text-sm font-semibold text-base-content/50 uppercase tracking-wide mb-1">
-              ${labels[key]}
+          <div class="hover-3d">
+            <div class="backdrop-blur-md bg-white/10 rounded-2xl p-3 md:p-4 lg:p-5 border border-white/10 transition-all hover:bg-white/20 overflow-hidden ${key}">
+              <div class="prayer-icon prayer-icon-${key} w-6 h-6 md:w-7 md:h-7 opacity-70 mb-1 mx-auto"></div>
+              <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-1 truncate">
+                ${labels[key]}
+              </div>
+              <div class="text-lg md:text-2xl lg:text-3xl font-bold tabular-nums leading-tight">
+                ${time}
+              </div>
+              <div class="text-xs text-base-content/40 font-medium">
+                ${period}
+              </div>
             </div>
-            <div class="text-2xl md:text-3xl font-bold tabular-nums">
-              ${time}
-            </div>
-            <div class="text-xs text-base-content/40 font-medium">
-              ${period}
-            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         `;
             }
@@ -462,6 +472,20 @@ export default class extends Controller {
         this.highlightCurrentPrayer();
         this.updatePuasaCountdown();
         this.interval = setInterval(() => {
+            // Check for midnight rollover — if the real calendar date has
+            // advanced past the date we loaded, reload for the new day.
+            const now = new Date();
+            if (
+                now.getDate() !== this.currentDate.getDate() ||
+                now.getMonth() !== this.currentDate.getMonth() ||
+                now.getFullYear() !== this.currentDate.getFullYear()
+            ) {
+                this.currentDate = now;
+                this.stopUpdates(); // clear this interval before reloading
+                this.loadPrayerTimes(); // will call startUpdates() for new day
+                return;
+            }
+
             this.updateNextPrayer();
             this.highlightCurrentPrayer();
             this.updatePuasaCountdown();
@@ -807,7 +831,7 @@ export default class extends Controller {
 
         // Remove previous highlights
         document.querySelectorAll(".prayer-current").forEach((el) => {
-            el.classList.remove("prayer-current", "scale-105");
+            el.classList.remove("prayer-current", "scale-105", "prayer-soon");
         });
 
         // Highlight current prayer
@@ -815,6 +839,16 @@ export default class extends Controller {
             const prayerElement = document.querySelector(`.${currentPrayer}`);
             if (prayerElement) {
                 prayerElement.classList.add("prayer-current", "scale-105");
+
+                // Blink if the next prayer is within 15 minutes
+                const nextPrayer = this.findNextPrayer(now);
+                if (nextPrayer) {
+                    const minutesUntilNext =
+                        (nextPrayer.time - now) / (1000 * 60);
+                    if (minutesUntilNext <= 15) {
+                        prayerElement.classList.add("prayer-soon");
+                    }
+                }
             }
         }
     }
