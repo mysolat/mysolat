@@ -17,15 +17,15 @@
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "@tailwindcss/typography": "^0.5.19",
         "autoprefixer": "^10.4.24",
-        "daisyui": "^5.5.18",
+        "daisyui": "^5.5.19",
         "heroicons": "^2.2.0",
         "lit": "^3.3.2",
         "tailwind-scrollbar": "^4.0.2",
-        "tailwindcss": "^4.1.18",
+        "tailwindcss": "^4.2.1",
         "tailwindcss-displaymodes": "^1.0.8"
     },
     "devDependencies": {
-        "@tailwindcss/cli": "^4.1.18",
+        "@tailwindcss/cli": "^4.2.1",
         "@types/dom-chromium-installation-events": "^101.0.4",
         "@types/web-app-manifest": "^1.0.9",
         "cssnano": "^7.1.2",
