@@ -10,8 +10,9 @@
       <!-- Base URL -->
       <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-6 mb-8 border border-white/10">
         <h2 class="text-lg font-semibold mb-3">Base URL</h2>
-        <div class="mockup-code w-full">
+        <div data-controller="clipboard" class="mockup-code w-full relative">
           <pre data-prefix=">"><code>https://solat.my/api</code></pre>
+          <%= render "pages/api_copy_button" %>
         </div>
       </div>
 
@@ -20,22 +21,95 @@
 
       <!-- Locations -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" />
+        <input type="checkbox">
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/locations
         </div>
         <div class="collapse-content">
           <p class="mb-4">Senarai semua zon waktu solat di Malaysia.</p>
-          <div class="mockup-code w-full">
+          <div data-controller="clipboard" class="mockup-code w-full relative">
             <pre data-prefix="$"><code>curl https://solat.my/api/locations</code></pre>
+            <%= render "pages/api_copy_button" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detect -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox">
+        <div class="collapse-title font-medium">
+          <span class="badge badge-primary badge-sm mr-2">GET</span>
+          /api/detect
+        </div>
+        <div class="collapse-content">
+          <p class="mb-4">Kesan zon waktu solat secara automatik berdasarkan koordinat GPS. Mengembalikan waktu solat hari ini bagi zon yang paling hampir.</p>
+
+          <h4 class="font-semibold mb-2">Parameter</h4>
+          <div class="overflow-x-auto mb-4">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Jenis</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>latitude</code></td>
+                  <td>float</td>
+                  <td>Latitud GPS (cth: 3.1390)</td>
+                </tr>
+                <tr>
+                  <td><code>longitude</code></td>
+                  <td>float</td>
+                  <td>Longitud GPS (cth: 101.6869)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div data-controller="clipboard" class="mockup-code w-full mb-4 relative">
+            <pre data-prefix="$"><code>curl "https://solat.my/api/detect?latitude=3.1390&longitude=101.6869"</code></pre>
+            <%= render "pages/api_copy_button" %>
+          </div>
+
+          <h4 class="font-semibold mb-2">Medan Tambahan dalam Respons</h4>
+          <div class="overflow-x-auto mb-2">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>Medan</th>
+                  <th>Jenis</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>detectedZone</code></td>
+                  <td>string</td>
+                  <td>Kod zon yang dikesan (cth: <code>WLY01</code>)</td>
+                </tr>
+                <tr>
+                  <td><code>distanceKm</code></td>
+                  <td>float</td>
+                  <td>Jarak dalam km antara koordinat dan pusat zon</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="backdrop-blur-sm bg-warning/10 rounded-xl p-3 border border-warning/20 flex gap-2 items-start text-sm mt-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-warning shrink-0 w-5 h-5 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"></path></svg>
+            <p class="text-base-content/70">Mengembalikan ralat <code class="bg-white/20 px-1 rounded">422</code> sekiranya koordinat berada di luar Malaysia (jarak &gt; 500 km dari zon terdekat).</p>
           </div>
         </div>
       </div>
 
       <!-- Daily -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" />
+        <input type="checkbox">
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/daily/:zone
@@ -63,15 +137,16 @@
             </table>
           </div>
 
-          <div class="mockup-code w-full">
+          <div data-controller="clipboard" class="mockup-code w-full relative">
             <pre data-prefix="$"><code>curl https://solat.my/api/daily/SGR01</code></pre>
+            <%= render "pages/api_copy_button" %>
           </div>
         </div>
       </div>
 
       <!-- Monthly -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" />
+        <input type="checkbox">
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/monthly/:zone(/:month)
@@ -104,16 +179,17 @@
             </table>
           </div>
 
-          <div class="mockup-code w-full">
-              <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01</code></pre>
+          <div data-controller="clipboard" class="mockup-code w-full relative">
+            <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01</code></pre>
             <pre data-prefix="$"><code>curl https://solat.my/api/monthly/SGR01/1</code></pre>
+            <%= render "pages/api_copy_button" %>
           </div>
         </div>
       </div>
 
       <!-- Yearly -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
-        <input type="checkbox" />
+        <input type="checkbox">
         <div class="collapse-title font-medium">
           <span class="badge badge-primary badge-sm mr-2">GET</span>
           /api/yearly/:zone(/:year)
@@ -146,9 +222,10 @@
             </table>
           </div>
 
-          <div class="mockup-code mb-4 w-full">
+          <div data-controller="clipboard" class="mockup-code w-full relative">
             <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01</code></pre>
             <pre data-prefix="$"><code>curl https://solat.my/api/yearly/SGR01/2024</code></pre>
+            <%= render "pages/api_copy_button" %>
           </div>
         </div>
       </div>

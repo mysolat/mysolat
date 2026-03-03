@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     get "locations", to: "locations#index"
+    get "detect", to: "prayer_times#detect"
     get "daily/:zone", to: "prayer_times#daily"
     get "monthly/:zone(/:month)", to: "prayer_times#monthly"
     get "yearly/:zone(/:year)", to: "prayer_times#yearly"
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
 
   get "sitemap", to: "sitemaps#index", defaults: { format: :xml }, as: :sitemap
 
+  resources :mosques, only: [:index, :show]
   resources :zones
 
   get "/takwim", to: "zones#monthly", as: :takwim

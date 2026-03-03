@@ -1,66 +1,52 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ['source']
+    static targets = ["button"];
 
-  initialize () {
-    //console.log('clipboard initialize')
-  }
+    copy(event) {
+        const button = event.currentTarget;
 
-  connect () {
-    //console.log('clipboard connect')
-    if (document.queryCommandSupported('copy')) {
-      this.element.classList.add('clipboard--supported')
-    }
-  }
+        // Collect text from every <code> inside this mockup-code block
+        const codeEls = this.element.querySelectorAll("pre code");
+        const text = Array.from(codeEls)
+            .map((el) => el.textContent.trim())
+            .join("\n");
 
-  copy (event) {
-    event.preventDefault()
-    $.snackbar({
-      content: 'Copied to clipboard'
-    })
-    this.selectText(this.sourceTarget)
-    document.execCommand('copy')
-    this.deselectAll()
-  }
-
-  selectText (element) {
-    if (/INPUT|TEXTAREA/i.test(element.tagName)) {
-      element.focus()
-      if (element.setSelectionRange) {
-        element.setSelectionRange(0, element.value.length)
-      } else {
-        element.select()
-      }
-      return
+        navigator.clipboard
+            .writeText(text)
+            .then(() => {
+                this.#showFeedback(button);
+            })
+            .catch(() => {
+                // Fallback for older/restricted environments
+                const ta = document.createElement("textarea");
+                ta.value = text;
+                ta.style.cssText = "position:fixed;opacity:0";
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                document.body.removeChild(ta);
+                this.#showFeedback(button);
+            });
     }
 
-    if (window.getSelection) {
-      // All browsers, except IE <=8
-      window.getSelection().selectAllChildren(element)
-    } else if (document.body.createTextRange) {
-      // IE <=8
-      var range = document.body.createTextRange()
-      range.moveToElementText(element)
-      range.select()
-    }
-  }
+    #showFeedback(button) {
+        const iconCopy = button.querySelector("[data-clipboard-icon='copy']");
+        const iconCheck = button.querySelector("[data-clipboard-icon='check']");
+        const tipBefore = button.dataset.tip;
 
-  deselectAll () {
-    var element = document.activeElement
-    if (element && /INPUT|TEXTAREA/i.test(element.tagName)) {
-      if ('selectionStart' in element) {
-        element.selectionEnd = element.selectionStart
-      }
-      element.blur()
-    }
+        // Swap icon to checkmark
+        iconCopy?.classList.add("hidden");
+        iconCheck?.classList.remove("hidden");
 
-    if (window.getSelection) {
-      // All browsers, except IE <=8
-      window.getSelection().removeAllRanges()
-    } else if (document.selection) {
-      // IE <=8
-      document.selection.empty()
+        // Swap tooltip text
+        button.dataset.tip = "Disalin!";
+
+        clearTimeout(this._resetTimer);
+        this._resetTimer = setTimeout(() => {
+            iconCopy?.classList.remove("hidden");
+            iconCheck?.classList.add("hidden");
+            button.dataset.tip = tipBefore;
+        }, 2000);
     }
-  }
 }

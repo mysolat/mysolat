@@ -22,6 +22,59 @@ module Location
     find_by_name(slug).present?
   end
 
+  # Returns the zone code whose centroid is geographically closest to the
+  # given coordinates, along with the distance in kilometres.
+  #
+  #   zone, dist = Location.nearest_zone(3.139, 101.686)
+  #   # => ["WLY01", 0.82]
+  #
+  # Returns nil if the data is empty or coordinates are invalid.
+  def self.nearest_zone(latitude, longitude)
+    lat = Float(latitude)
+    lon = Float(longitude)
+
+    # Build per-zone centroid from all sub-locations that share the same code.
+    centroids = data
+      .group_by { |l| l[:code] }
+      .transform_values do |locs|
+        avg_lat = locs.sum { |l| l[:latitude].to_f } / locs.size
+        avg_lon = locs.sum { |l| l[:longitude].to_f } / locs.size
+        [ avg_lat, avg_lon ]
+      end
+
+    best_code = nil
+    best_dist = Float::INFINITY
+
+    centroids.each do |code, (clat, clon)|
+      d = haversine(lat, lon, clat, clon)
+      if d < best_dist
+        best_dist = d
+        best_code = code
+      end
+    end
+
+    [ best_code, best_dist.round(2) ]
+  rescue ArgumentError, TypeError
+    nil
+  end
+
+  # ------------------------------------------------------------------
+  # Private helpers
+  # ------------------------------------------------------------------
+
+  # Haversine great-circle distance in kilometres between two GPS points.
+  def self.haversine(lat1, lon1, lat2, lon2)
+    r     = 6371.0
+    phi1  = lat1 * Math::PI / 180
+    phi2  = lat2 * Math::PI / 180
+    dphi  = (lat2 - lat1) * Math::PI / 180
+    dlam  = (lon2 - lon1) * Math::PI / 180
+    a     = Math.sin(dphi / 2)**2 + Math.cos(phi1) * Math.cos(phi2) * Math.sin(dlam / 2)**2
+    r * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+  end
+  private_class_method :haversine
+
+
   def self.data
     [
       { state: "Johor", code: "JHR01", location: "Pulau Aur", latitude: "2.444152", longitude: "104.524746" },
