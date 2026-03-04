@@ -1,8 +1,8 @@
-<div class="drawer-side z-40">
+<div class="drawer-side z-50">
   <label class="drawer-overlay backdrop-blur-sm bg-black/20" for="drawer" aria-label="Close menu"></label>
   <aside class="w-full md:w-80 min-h-screen flex flex-col md:m-4 md:ml-24 md:rounded-3xl backdrop-blur-md bg-white/20 md:border border-white/30 shadow-2xl overflow-hidden">
     <!-- Header -->
-    <div class="sticky top-0 z-10 border-b border-white/20">
+    <div class="sticky top-0 z-10 border-b border-white/20 safe-top">
       <div class="flex items-center justify-between p-4">
         <div class="flex items-center gap-3">
           <svg class="w-8 h-8 text-primary fill-currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -146,7 +146,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="p-4 border-t border-white/20 text-center">
+    <div class="p-4 border-t border-white/20 text-center safe-bottom">
       <p class="text-xs text-base-content/50">&copy; <%= Date.current.year %> Solat.my</p>
     </div>
   </aside>

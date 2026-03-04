@@ -254,6 +254,11 @@
     padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
+/* iOS Dynamic Island / notch safe area */
+.safe-top {
+    padding-top: env(safe-area-inset-top, 0);
+}
+
 /* Add bottom padding on mobile to account for dock */
 @media (max-width: 767px) {
     #pages {
