@@ -62,6 +62,36 @@
     }
 }
 
+/* Modal slide-up animation */
+@keyframes modal-slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.modal-toggle:checked ~ .modal .modal-box {
+    animation: modal-slide-up 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Card entrance animation */
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.card-in {
+    animation: card-in 0.4s ease-out both;
+}
+
 /* Simple Animation */
 @keyframes blinking {
     0% {
@@ -210,7 +240,7 @@
 
 /* Prayer card current state enhancement */
 .prayer-current {
-    @apply ring-2 ring-inset ring-primary bg-primary/10;
+    @apply ring-2 ring-inset ring-primary bg-primary/25;
 }
 
 /* Prayer card 15-min warning: blink the inset ring and background */

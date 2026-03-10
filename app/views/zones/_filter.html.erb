@@ -2,15 +2,18 @@
 <div class="h-full flex flex-col bg-base-100/10" data-controller="filter">
   <!-- Header -->
   <div class="sticky top-0 bg-base-100/20 z-10">
+    <!-- Mobile drag handle -->
+    <label for="filter-modal" class="flex md:hidden justify-center pt-3 pb-1 cursor-pointer">
+      <div class="w-10 h-1.5 rounded-full bg-base-content/30"></div>
+    </label>
+
     <div class="flex items-center justify-between p-4">
-      <label class="btn btn-ghost btn-circle btn-sm" for="filter-modal">
+      <h2 class="text-lg font-bold">Pilih Lokasi</h2>
+      <label class="hidden md:flex btn btn-ghost btn-circle btn-sm" for="filter-modal">
         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
         </svg>
       </label>
-      <h2 class="text-lg font-bold">Pilih Lokasi</h2>
-      <!-- Spacer for centering -->
-      <div class="w-10"></div>
     </div>
 
     <!-- Search Bar -->
