@@ -1,0 +1,382 @@
+<% content_for :title, "Home Assistant — Waktu Solat Malaysia" %>
+<% content_for :description, "Panduan pemasangan integrasi Waktu Solat Malaysia untuk Home Assistant" %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+    <div class=" max-w-none">
+
+      <!-- Header -->
+      <div class="flex items-center gap-4 mb-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-primary shrink-0">
+          <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+          <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+        </svg>
+        <div>
+          <h1 class="text-3xl font-bold mb-1">Home Assistant</h1>
+          <p class="text-base-content/70 text-base m-0">Integrasi Waktu Solat Malaysia untuk Home Assistant</p>
+        </div>
+      </div>
+
+      <p class="text-base-content/70 mb-8">
+        Integrasi custom component ini membolehkan anda mendapatkan waktu solat Malaysia terus dalam Home Assistant,
+        dengan sokongan automasi azan, papan pemuka, dan pertukaran zon secara langsung.
+      </p>
+
+      <!-- Features -->
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-6 mb-8 border border-white/10">
+        <h2 class="text-lg font-semibold mb-4 mt-0">Ciri-ciri</h2>
+        <ul class="space-y-2 m-0 list-none pl-0">
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span><strong>16 entiti</strong> dicipta secara automatik — sensor waktu solat, tarikh Hijri, zon, pemain media azan, dan lain-lain</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span>Sokong <strong>59 zon JAKIM</strong> di seluruh Malaysia</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span>Pertukaran zon secara langsung — semua sensor dikemas kini serta-merta tanpa restart</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span>Sokongan berbilang peranti (cth: "Rumah" dan "Pejabat")</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span>Persediaan melalui UI — tanpa perlu edit YAML</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Installation -->
+      <h2 class="text-2xl font-semibold mb-4">Pemasangan</h2>
+
+      <!-- Via HACS -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" checked>
+        <div class="collapse-title font-medium">
+          <span class="badge badge-success badge-sm mr-2">Disyorkan</span>
+          Melalui HACS
+        </div>
+        <div class="collapse-content">
+          <ol class="space-y-3 mt-2 pl-0 list-none">
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">1</span>
+              <span>Dalam HACS, pergi ke <strong>Integrations</strong> → klik menu tiga titik → <strong>Custom repositories</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">2</span>
+              <div>
+                <span>Tambah URL repositori berikut dan pilih kategori <strong>Integration</strong>:</span>
+                <div data-controller="clipboard" class="mockup-code w-full mt-2 relative">
+                  <pre data-prefix=">"><code>https://github.com/mysolat/homeassistant</code></pre>
+                  <%= render "pages/api_copy_button" %>
+                </div>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">3</span>
+              <span>Cari <strong>"Waktu Solat Malaysia"</strong> dalam HACS dan klik <strong>Download</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">4</span>
+              <span>Restart Home Assistant</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Manual -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-8 border border-white/10">
+        <input type="checkbox">
+        <div class="collapse-title font-medium">
+          Pemasangan Manual
+        </div>
+        <div class="collapse-content">
+          <ol class="space-y-3 mt-2 pl-0 list-none">
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">1</span>
+              <span>Muat turun atau klon repositori dari <a href="https://github.com/mysolat/homeassistant" target="_blank" class="link link-primary">GitHub</a></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">2</span>
+              <span>Salin folder <code>custom_components/solat_my/</code> ke dalam direktori <code>config/custom_components/</code> Home Assistant anda</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="badge badge-primary badge-sm shrink-0 mt-1">3</span>
+              <span>Restart Home Assistant</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Configuration -->
+      <h2 class="text-2xl font-semibold mb-4">Konfigurasi</h2>
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl p-6 mb-8 border border-white/10">
+        <ol class="space-y-3 m-0 pl-0 list-none">
+          <li class="flex gap-3">
+            <span class="badge badge-primary badge-sm shrink-0 mt-1">1</span>
+            <span>Pergi ke <strong>Settings → Devices & Services → Add Integration</strong></span>
+          </li>
+          <li class="flex gap-3">
+            <span class="badge badge-primary badge-sm shrink-0 mt-1">2</span>
+            <span>Cari <strong>"Waktu Solat Malaysia"</strong></span>
+          </li>
+          <li class="flex gap-3">
+            <span class="badge badge-primary badge-sm shrink-0 mt-1">3</span>
+            <span>Masukkan <strong>Nama Peranti</strong> (cth: <code>Waktu Solat</code>) — ini menjadi prefix ID entiti</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="badge badge-primary badge-sm shrink-0 mt-1">4</span>
+            <span>Pilih <strong>zon permulaan</strong> (cth: <code>SGR01 — Selangor</code>)</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="badge badge-primary badge-sm shrink-0 mt-1">5</span>
+            <span>Klik <strong>Submit</strong> — semua 16 entiti akan muncul serta-merta</span>
+          </li>
+        </ol>
+
+        <div class="backdrop-blur-sm bg-info/20 rounded-xl p-3 border border-info/30 flex gap-2 items-start text-sm mt-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-5 h-5 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <p class="m-0 text-base-content/70">Untuk menukar zon kemudian, pergi ke halaman peranti dan tukar entiti <strong>Zon</strong>. Semua sensor dikemas kini serta-merta tanpa restart.</p>
+        </div>
+      </div>
+
+      <!-- Entities -->
+      <h2 class="text-2xl font-semibold mb-4">Entiti yang Dicipta</h2>
+      <p class="mb-4">16 entiti dicipta secara automatik di bawah peranti <strong>"Waktu Solat"</strong>:</p>
+
+      <!-- Sensors -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox" checked>
+        <div class="collapse-title font-medium">Sensor Waktu Solat</div>
+        <div class="collapse-content">
+          <div class="overflow-x-auto">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>ID Entiti</th>
+                  <th>Nama</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>sensor.waktu_solat_imsak</code></td><td>Imsak</td><td>Waktu Imsak (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_subuh</code></td><td>Subuh</td><td>Waktu Subuh (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_syuruk</code></td><td>Syuruk</td><td>Waktu Syuruk (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_dhuha</code></td><td>Dhuha</td><td>Waktu Dhuha (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_zohor</code></td><td>Zohor</td><td>Waktu Zohor (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_asar</code></td><td>Asar</td><td>Waktu Asar (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_maghrib</code></td><td>Maghrib</td><td>Waktu Maghrib (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_isyak</code></td><td>Isyak</td><td>Waktu Isyak (timestamp)</td></tr>
+                <tr><td><code>sensor.waktu_solat_tarikh_hijri</code></td><td>Tarikh Hijri</td><td>Tarikh Hijri berformat dengan nama bulan dalam Bahasa Melayu</td></tr>
+                <tr><td><code>sensor.waktu_solat_waktu_solat_seterusnya</code></td><td>Waktu Solat Seterusnya</td><td>Waktu solat berikutnya dengan kiraan detik</td></tr>
+                <tr><td><code>sensor.waktu_solat_waktu_solat_semasa</code></td><td>Waktu Solat Semasa</td><td>Tempoh waktu solat semasa</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Config entities -->
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-8 border border-white/10">
+        <input type="checkbox" checked>
+        <div class="collapse-title font-medium">Entiti Konfigurasi</div>
+        <div class="collapse-content">
+          <div class="overflow-x-auto">
+            <table class="table table-sm bg-transparent">
+              <thead>
+                <tr>
+                  <th>ID Entiti</th>
+                  <th>Nama</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>select.waktu_solat_zon</code></td><td>Zon</td><td>Zon aktif — tukar untuk kemas kini semua sensor serta-merta</td></tr>
+                <tr><td><code>select.waktu_solat_pemain_media_azan</code></td><td>Pemain Media Azan</td><td>Pemain media untuk main balik azan</td></tr>
+                <tr><td><code>number.waktu_solat_kelantangan_azan</code></td><td>Kelantangan Azan</td><td>Kelantangan azan (0.0–1.0)</td></tr>
+                <tr><td><code>text.waktu_solat_fail_audio_azan</code></td><td>Fail Audio Azan</td><td>Nama fail azan (dipisahkan koma)</td></tr>
+                <tr><td><code>text.waktu_solat_fail_audio_azan_subuh</code></td><td>Fail Audio Azan Subuh</td><td>Nama fail azan Subuh (dipisahkan koma)</td></tr>
+                <tr><td><code>text.waktu_solat_fail_doa_selepas_azan</code></td><td>Fail Doa Selepas Azan</td><td>Nama fail audio doa selepas azan</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Example -->
+      <h2 class="text-2xl font-semibold mb-4">Contoh Papan Pemuka</h2>
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
+        <input type="checkbox">
+        <div class="collapse-title font-medium">Kad Entiti Waktu Solat (YAML)</div>
+        <div class="collapse-content">
+          <div data-controller="clipboard" class="mockup-code w-full relative mt-2">
+            <pre data-prefix=" "><code>type: entities</code></pre>
+            <pre data-prefix=" "><code>title: Waktu Solat</code></pre>
+            <pre data-prefix=" "><code>entities:</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_waktu_solat_semasa</code></pre>
+            <pre data-prefix=" "><code>    name: Waktu Semasa</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_waktu_solat_seterusnya</code></pre>
+            <pre data-prefix=" "><code>    name: Waktu Seterusnya</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_imsak</code></pre>
+            <pre data-prefix=" "><code>    name: Imsak</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_subuh</code></pre>
+            <pre data-prefix=" "><code>    name: Subuh</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_zohor</code></pre>
+            <pre data-prefix=" "><code>    name: Zohor</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_asar</code></pre>
+            <pre data-prefix=" "><code>    name: Asar</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_maghrib</code></pre>
+            <pre data-prefix=" "><code>    name: Maghrib</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_isyak</code></pre>
+            <pre data-prefix=" "><code>    name: Isyak</code></pre>
+            <pre data-prefix=" "><code>    format: time</code></pre>
+            <pre data-prefix=" "><code>  - entity: sensor.waktu_solat_tarikh_hijri</code></pre>
+            <pre data-prefix=" "><code>    name: Tarikh Hijri</code></pre>
+            <%= render "pages/api_copy_button" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Automation Example -->
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold m-0">Contoh Automasi Azan</h2>
+        <a href="https://github.com/mysolat/homeassistant/blob/main/AUTOMATION.md" target="_blank" class="btn btn-ghost btn-sm gap-2 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
+          Panduan Lengkap
+        </a>
+      </div>
+      <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-8 border border-white/10">
+        <input type="checkbox">
+        <div class="collapse-title font-medium">Azan Harian (YAML)</div>
+        <div class="collapse-content">
+          <div data-controller="clipboard" class="mockup-code w-full relative mt-2 overflow-x-auto">
+            <pre data-prefix=" "><code>alias: Azan Harian</code></pre>
+            <pre data-prefix=" "><code>description: Play azan for all prayer times via solat.my integration</code></pre>
+            <pre data-prefix=" "><code>triggers:</code></pre>
+            <pre data-prefix=" "><code>  - trigger: time</code></pre>
+            <pre data-prefix=" "><code>    at: sensor.waktu_solat_subuh</code></pre>
+            <pre data-prefix=" "><code>    id: subuh</code></pre>
+            <pre data-prefix=" "><code>  - trigger: time</code></pre>
+            <pre data-prefix=" "><code>    at: sensor.waktu_solat_zohor</code></pre>
+            <pre data-prefix=" "><code>    id: zohor</code></pre>
+            <pre data-prefix=" "><code>  - trigger: time</code></pre>
+            <pre data-prefix=" "><code>    at: sensor.waktu_solat_asar</code></pre>
+            <pre data-prefix=" "><code>    id: asar</code></pre>
+            <pre data-prefix=" "><code>  - trigger: time</code></pre>
+            <pre data-prefix=" "><code>    at: sensor.waktu_solat_maghrib</code></pre>
+            <pre data-prefix=" "><code>    id: maghrib</code></pre>
+            <pre data-prefix=" "><code>  - trigger: time</code></pre>
+            <pre data-prefix=" "><code>    at: sensor.waktu_solat_isyak</code></pre>
+            <pre data-prefix=" "><code>    id: isyak</code></pre>
+            <pre data-prefix=" "><code>conditions: []</code></pre>
+            <pre data-prefix=" "><code>actions:</code></pre>
+            <pre data-prefix=" "><code>  - action: persistent_notification.create</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      notification_id: solat_azan</code></pre>
+            <pre data-prefix=" "><code>      title: ></code></pre>
+            <pre data-prefix=" "><code>        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',</code></pre>
+            <pre data-prefix=" "><code>        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ names[trigger.id] }}</code></pre>
+            <pre data-prefix=" "><code>      message: ></code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
+            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M %p') }}</code></pre>
+            <pre data-prefix=" "><code>        — Sekarang telah masuk waktu {{ names[trigger.id] }}.</code></pre>
+            <pre data-prefix=" "><code>  - action: notify.notify</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      title: ></code></pre>
+            <pre data-prefix=" "><code>        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',</code></pre>
+            <pre data-prefix=" "><code>        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ names[trigger.id] }}</code></pre>
+            <pre data-prefix=" "><code>      message: ></code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
+            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M %p') }}</code></pre>
+            <pre data-prefix=" "><code>        — Sekarang telah masuk waktu {{ names[trigger.id] }}.</code></pre>
+            <pre data-prefix=" "><code>  - action: media_player.volume_set</code></pre>
+            <pre data-prefix=" "><code>    target:</code></pre>
+            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      volume_level: "{{ states('number.waktu_solat_kelantangan_azan') | float }}"</code></pre>
+            <pre data-prefix=" "><code>  - action: tts.google_translate_say</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>      language: id</code></pre>
+            <pre data-prefix=" "><code>      message: ></code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
+            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Sekarang telah masuk waktu</code></pre>
+            <pre data-prefix=" "><code>        {{ names[trigger.id] }} bagi kawasan ini dan kawasan yang sama waktu dengannya.</code></pre>
+            <pre data-prefix=" "><code>  - delay: "00:00:10"</code></pre>
+            <pre data-prefix=" "><code>  - action: media_player.play_media</code></pre>
+            <pre data-prefix=" "><code>    target:</code></pre>
+            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      extra:</code></pre>
+            <pre data-prefix=" "><code>        title: ></code></pre>
+            <pre data-prefix=" "><code>          {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
+            <pre data-prefix=" "><code>          'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Azan {{ names[trigger.id] }}</code></pre>
+            <pre data-prefix=" "><code>        thumb: https://solat.my/icon.png</code></pre>
+            <pre data-prefix=" "><code>      media:</code></pre>
+            <pre data-prefix=" "><code>        media_content_type: audio/mp3</code></pre>
+            <pre data-prefix=" "><code>        media_content_id: |</code></pre>
+            <pre data-prefix=" "><code>          {% if trigger.id == 'subuh' %}</code></pre>
+            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~</code></pre>
+            <pre data-prefix=" "><code>               states('text.waktu_solat_fail_audio_azan_subuh').split(', ') | random }}</code></pre>
+            <pre data-prefix=" "><code>          {% else %}</code></pre>
+            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~</code></pre>
+            <pre data-prefix=" "><code>               states('text.waktu_solat_fail_audio_azan').split(', ') | random }}</code></pre>
+            <pre data-prefix=" "><code>          {% endif %}</code></pre>
+            <pre data-prefix=" "><code>  - choose:</code></pre>
+            <pre data-prefix=" "><code>      - conditions:</code></pre>
+            <pre data-prefix=" "><code>          - condition: trigger</code></pre>
+            <pre data-prefix=" "><code>            id: subuh</code></pre>
+            <pre data-prefix=" "><code>        sequence:</code></pre>
+            <pre data-prefix=" "><code>          - delay:</code></pre>
+            <pre data-prefix=" "><code>              minutes: 4</code></pre>
+            <pre data-prefix=" "><code>              seconds: 30</code></pre>
+            <pre data-prefix=" "><code>      - conditions:</code></pre>
+            <pre data-prefix=" "><code>          - condition: not</code></pre>
+            <pre data-prefix=" "><code>            conditions:</code></pre>
+            <pre data-prefix=" "><code>              - condition: trigger</code></pre>
+            <pre data-prefix=" "><code>                id: subuh</code></pre>
+            <pre data-prefix=" "><code>        sequence:</code></pre>
+            <pre data-prefix=" "><code>          - delay:</code></pre>
+            <pre data-prefix=" "><code>              minutes: 2</code></pre>
+            <pre data-prefix=" "><code>              seconds: 47</code></pre>
+            <pre data-prefix=" "><code>  - action: media_player.play_media</code></pre>
+            <pre data-prefix=" "><code>    alias: Doa Selepas Azan</code></pre>
+            <pre data-prefix=" "><code>    target:</code></pre>
+            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>    data:</code></pre>
+            <pre data-prefix=" "><code>      media:</code></pre>
+            <pre data-prefix=" "><code>        media_content_id: media-source://media_source/local/azan/doa_selepas_azan.mp3</code></pre>
+            <pre data-prefix=" "><code>        media_content_type: audio/mpeg</code></pre>
+            <pre data-prefix=" "><code>        metadata:</code></pre>
+            <pre data-prefix=" "><code>          title: doa_selepas_azan.mp3</code></pre>
+            <pre data-prefix=" "><code>          media_class: music</code></pre>
+            <pre data-prefix=" "><code>mode: single</code></pre>
+            <%= render "pages/api_copy_button" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link to repo -->
+      <div class="backdrop-blur-sm bg-info/20 rounded-2xl p-4 mb-4 border border-info/30 flex gap-3 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 shrink-0 text-info">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+        <div>
+          <p class="m-0 text-sm">Kod sumber tersedia di GitHub. Laporkan isu atau sumbangkan penambahbaikan.</p>
+          <a href="https://github.com/mysolat/homeassistant" target="_blank" class="link link-primary text-sm font-medium">github.com/mysolat/homeassistant →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -33,6 +33,7 @@ export default class extends Controller {
         "berbukaIcon",
         "indicatorPuasa",
         "indicatorPrayer",
+        "puasaCarousel",
     ];
     static values = {
         prayers: Object,
@@ -253,6 +254,9 @@ export default class extends Controller {
     updatePrayerGrid(todayData) {
         if (!this.hasPrayerGridTarget) return;
 
+        // Check if today is a forbidden fasting day and hide/show puasa carousel
+        this.updatePuasaCarouselVisibility(todayData);
+
         // Update date displays if available
         if (todayData.date) {
             this.updateDateDisplays(todayData.date, todayData.hijri);
@@ -280,13 +284,16 @@ export default class extends Controller {
         };
 
         let html = "";
+        let cardIndex = 0;
         prayerKeys.forEach((key) => {
             if (todayData[key]) {
                 const time = this.formatTimeForGrid(todayData[key]);
                 const period = this.formatPeriodForGrid(todayData[key]);
+                const delay = cardIndex * 60;
+                cardIndex++;
                 html += `
-          <div class="hover-3d">
-            <div class="backdrop-blur-md bg-white/10 rounded-2xl p-3 md:p-4 lg:p-5 border border-white/10 transition-all hover:bg-white/20 overflow-hidden ${key}">
+          <div class="hover-3d card-in" style="animation-delay: ${delay}ms">
+            <div class="backdrop-blur-md bg-white/20 rounded-2xl p-3 md:p-4 lg:p-5 border border-white/20 transition-all hover:bg-white/30 overflow-hidden ${key}">
               <div class="prayer-icon prayer-icon-${key} w-6 h-6 md:w-7 md:h-7 opacity-70 mb-1 mx-auto"></div>
               <div class="text-xs font-semibold text-base-content/50 uppercase tracking-wide mb-1 truncate">
                 ${labels[key]}
@@ -396,6 +403,47 @@ export default class extends Controller {
 
         const monthName = hijriMonths[month - 1] || "";
         return `${day} ${monthName} ${year}`;
+    }
+
+    isForbiddenFastingDay(hijriStr) {
+        // Check if the date is a forbidden fasting day (tarik hari diharamkan berpuasa)
+        // Format: YYYY-MM-DD (Hijri)
+        const parts = hijriStr.split("-");
+        if (parts.length !== 3) return false;
+
+        const month = parseInt(parts[1], 10);
+        const day = parseInt(parts[2], 10);
+
+        // Forbidden fasting days in Hijri calendar:
+        // 1. Hari Raya Aidilfitri: 1 Syawal (month 10)
+        if (month === 10 && day === 1) return true;
+
+        // 2. Hari Raya Aidiladha: 10 Zulhijjah (month 12)
+        if (month === 12 && day === 10) return true;
+
+        // 3. Hari-hari Tasyrik: 11, 12, 13 Zulhijjah (month 12)
+        if (month === 12 && (day === 11 || day === 12 || day === 13)) return true;
+
+        return false;
+    }
+
+    updatePuasaCarouselVisibility(todayData) {
+        // Hide puasa carousel on forbidden fasting days
+        const isForbidden = todayData.hijri && this.isForbiddenFastingDay(todayData.hijri);
+
+        if (this.hasPuasaCarouselTarget) {
+            if (isForbidden) {
+                this.puasaCarouselTarget.setAttribute("hidden", "");
+                if (this.hasIndicatorPuasaTarget) {
+                    this.indicatorPuasaTarget.setAttribute("hidden", "");
+                }
+            } else {
+                this.puasaCarouselTarget.removeAttribute("hidden");
+                if (this.hasIndicatorPuasaTarget) {
+                    this.indicatorPuasaTarget.removeAttribute("hidden");
+                }
+            }
+        }
     }
 
     formatTimeForGrid(timeStr) {

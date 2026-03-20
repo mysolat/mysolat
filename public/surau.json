@@ -1,0 +1,1447 @@
+{
+    "status": "success",
+    "masjid": [
+        {
+            "nama_masjid": "MASJID KAMPONG BATU 4",
+            "latitud": "3.068053",
+            "longitud": "101.426851",
+            "alamat": "LOT 3911, KAMPUNG BATU 4 1\/2 JALAN KAPAR, RANTAU PANJANG, 42100 KLANG",
+            "tel": "013-4899921"
+        },
+        {
+            "nama_masjid": "ABDUL RAHMAN PUTRA keladi",
+            "latitud": "5.393480",
+            "longitud": "100.540870",
+            "alamat": "KELADI MUKIM KELADI\r\n09000 KULIM\r\nKEDAH",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MASJID DIRAJA UBUDIAH",
+            "latitud": "476432",
+            "longitud": "10095082",
+            "alamat": "JALAN BUKIT KERAJAAN 33000 BUKIT CHANDAN",
+            "tel": "057776103"
+        },
+        {
+            "nama_masjid": "MASJID DIRAJA UBUDIAH",
+            "latitud": "476432",
+            "longitud": "10095082",
+            "alamat": "JALAN BUKIT KERAJAAN 33000 BUKIT CHANDAN",
+            "tel": "057776103"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT MAAHAD TAHFIZ AL QURAN WALQIRAAT",
+            "latitud": "4.4676657175999335",
+            "longitud": "100.9252944587844",
+            "alamat": "NO 25, KG BATU 7 JALAN SIPUTEH, 32800, PARIT,PERAK.",
+            "tel": "017-5896693"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT MAAHAD TAHFIZ AL QURAN WALQIRAAT",
+            "latitud": "4.4676657175999335",
+            "longitud": "100.9252944587844",
+            "alamat": "NO 25, KG BATU 7 JALAN SIPUTEH, 32800, PARIT,PERAK.",
+            "tel": "017-5896693"
+        },
+        {
+            "nama_masjid": "SURAU SEK MEN TUN TUAH",
+            "latitud": "2.211962",
+            "longitud": "102.236484",
+            "alamat": "KM 4, BALAI PANJANG ",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUHAJIRIN",
+            "latitud": "2.947059",
+            "longitud": "101.684057",
+            "alamat": "JALAN P9G1, PRESINT 9, 62250 PUTRAJAYA",
+            "tel": "0126260272"
+        },
+        {
+            "nama_masjid": "SURAU AL-HIDAYAH",
+            "latitud": "3.054655",
+            "longitud": "101.690864",
+            "alamat": "KOMPLEKS SUKAN NEGARA,BUKIT JALIL",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU NURUL EHSAN KAMPUNG BANDA KABA",
+            "latitud": "2.202216",
+            "longitud": "102.266235",
+            "alamat": "MELAKA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-HIDAYAH",
+            "latitud": "3.247386",
+            "longitud": "101.662438",
+            "alamat": "TINGKAT 0 BLOK 7\r\nJALAN 20-2A TAMAN WILAYAH SELAYANG FASA 4\r\nKUALA LUMPUR",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUKHLASIN",
+            "latitud": "6.3270",
+            "longitud": "99.8029",
+            "alamat": "BUKIT TEKOH, SG. MENGHULU, MK. KUAH,\r\nLANGKAWI",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU SRI PETALING",
+            "latitud": "3.069831",
+            "longitud": "101.702199",
+            "alamat": "JALAN PASAI, TAMAN SRI PETALING",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AT-TAQWA",
+            "latitud": "3.196135",
+            "longitud": "101.698401",
+            "alamat": "SENTUL, BLOK24-0-7 JALAN DATO' SENU 26, TAMAN SENTUL UTAMA",
+            "tel": "0193593274"
+        },
+        {
+            "nama_masjid": "MADRASATUL ISLAMIAH",
+            "latitud": "3.166872",
+            "longitud": "101.617103",
+            "alamat": "NO 48 KAMPUNG PALEMBAYAN TANAH 60\r\nKG SUNGAI PENCHALA\r\nJALAN DAMANSARA\r\n\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUBARAK TMN POKOK MANGGA",
+            "latitud": "2.227946",
+            "longitud": "102.215574",
+            "alamat": "TMN POKOK MANGGA, MELAKA",
+            "tel": "0196672548"
+        },
+        {
+            "nama_masjid": "SURAU NURHIDAYAH",
+            "latitud": "3.232192",
+            "longitud": "101.641881",
+            "alamat": "LOT 9828 JALAN 2\/1\r\nKG. MELAYU, KEPONG\r\nKUALA LUMPUR",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU TENAGA NASIONAL",
+            "latitud": "3.120429",
+            "longitud": "101.671372",
+            "alamat": "129 JALAN BANGSAR PETI SURAT 11003",
+            "tel": null
+        },
+        {
+            "nama_masjid": "MADRASAH BUSTANUL ULUM",
+            "latitud": "3.155205",
+            "longitud": "101.685421",
+            "alamat": "JALAN SULTAN SALAHUDDIN,",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU BALAI ISLAM",
+            "latitud": "3.174858",
+            "longitud": "101.698260",
+            "alamat": "JALAN TUN RAZAK,",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH AL-KHAIRIAH",
+            "latitud": "3.0958872713872343,",
+            "longitud": "101.70972965314667",
+            "alamat": "TAMAN SALAK JAYA",
+            "tel": null
+        },
+        {
+            "nama_masjid": "MADRASAH AS-SAADAH",
+            "latitud": "3.203617",
+            "longitud": "101.730984",
+            "alamat": "SEKSYEN 1, WANGSA MAJU, SETAPAK",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU MUHAMMADI ANGKASAPURI",
+            "latitud": "3.113276",
+            "longitud": "101.673569",
+            "alamat": "D\/A PEJABAT PENERANGAN, \r\nKEM PENERANGAN MALAYSIA ANGKASAPURI",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU DARUL HUDA",
+            "latitud": "3.188528",
+            "longitud": "101.737434",
+            "alamat": "SEKSYEN 10 WANGSA MAJU",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AKADEMI PENGAJIAN ISLAM",
+            "latitud": "3.133695",
+            "longitud": "101.657450",
+            "alamat": "UNIVERSITI MALAYA",
+            "tel": "03-79676010"
+        },
+        {
+            "nama_masjid": "SURAU AR-RAUDHAH",
+            "latitud": "3.148133",
+            "longitud": "101.643029",
+            "alamat": "INSTITUT TADBIRAN AWAM NEGARA (INTAN),JALAN BUKIT KIARA,",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU TAMAN SETAPAK JAYA",
+            "latitud": "3.189562",
+            "longitud": "101.728256",
+            "alamat": "JALAN REJANG 4, TAMAN SETAPAK JAYA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-SYAKIRIN",
+            "latitud": "3.179245",
+            "longitud": "101.748621",
+            "alamat": "JALAN 30\/56, KERAMAT WANGSA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU IBNU SINA",
+            "latitud": "3.1023523808137385,",
+            "longitud": "101.7247151393265",
+            "alamat": "HOSPITAL UKM JALAN YAACOB LATIF, BANDAR TUN RAZAK, CHERAS",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AT-TAQWA (IPGM)",
+            "latitud": "3.117659",
+            "longitud": "101.667044",
+            "alamat": "INSTITUT PERGURUAN BAHASA MELAYU MALAYSIA,JALAN PANTAI BARU",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU MUHAJIRIN",
+            "latitud": "3.193426",
+            "longitud": "101.737447",
+            "alamat": "DESA REJANG, PERUMAHAN AWAM DBKL DESA REJANG, PERSIARAN REJANG, SETAPAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-HUKAMA",
+            "latitud": "3.135095",
+            "longitud": "101.703851",
+            "alamat": "DEWAN BAHASA DAN PUSTAKA, PETI SURAT 10803",
+            "tel": "019-2858575"
+        },
+        {
+            "nama_masjid": "SURAU AL-HIDAYAH KG TERIANG KECIL",
+            "latitud": "2.6334842623418693",
+            "longitud": "103.70780363861745",
+            "alamat": "JLN PENYABONG,KG TERIANG KECIL,86900 ENDAU, MERSING",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL-MAKMUR KG. SG. BEBUTA TRIANG",
+            "latitud": "2.6285834324511117",
+            "longitud": "103.733602825123",
+            "alamat": "KG. SG. BEBUTA TRIANG",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU FELCRA SRI MAHKOTA",
+            "latitud": "2.6019354507083343",
+            "longitud": "103.64390769628784",
+            "alamat": "FELCRA SRI MAHKOTAENDAUMERSING",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU KG, AIR TAWAR",
+            "latitud": "2.6349450372927548",
+            "longitud": "103.6575428674526",
+            "alamat": "BATU 3 JLN MERSINGENDAU JOHOR",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU PERUMAHAN NELAYAN",
+            "latitud": "2.6371580660908043",
+            "longitud": "103.75447554381529",
+            "alamat": "PERUMAHAN NELAYAN KG. PENYABONG ENDAU MERSING",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL AZIM PERINGKAT 01\/02",
+            "latitud": "2.072430441553011",
+            "longitud": "103.93765999628882",
+            "alamat": "FELDA TENGGAROH 2",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT",
+            "latitud": "4445018",
+            "longitud": "101130691",
+            "alamat": "KOLEJ MATRIKULASI GOPENG , 31600 GOPENG , PK",
+            "tel": "05-3594949"
+        },
+        {
+            "nama_masjid": "MADRASAH IKHLASIAH",
+            "latitud": "3.19891",
+            "longitud": "101.69566",
+            "alamat": "KAWASAN A KG. CHUBADAK TAMBAHAN\r\nSENTUL PASAR\r\nKUALA LUMPUR",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU BUNGA RAYA",
+            "latitud": "3.213215",
+            "longitud": "101.729633",
+            "alamat": "JALAN MALINJA 1, TAMAN BUNGA RAYA, SETAPAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AMIRUL MUKMININ",
+            "latitud": "3.173512",
+            "longitud": "101.725142",
+            "alamat": "91 REJ. SEMBOYAN DIRAJA\r\nJALAN PADANG TEMBAK\r\n",
+            "tel": "03-20714773"
+        },
+        {
+            "nama_masjid": "SURAU AD-DEENIAH",
+            "latitud": "3.113311",
+            "longitud": "101.654348",
+            "alamat": "PUSAT PERUBATAN UNIVERSITI MALAYA,LEMBAH PANTAI,",
+            "tel": "03-79494422"
+        },
+        {
+            "nama_masjid": "MADRASAH AS-SYUKRIAH",
+            "latitud": "3.0736384",
+            "longitud": "101.7053184",
+            "alamat": "KG.PASIR BARU PETALING",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU MENARA TELEKOM",
+            "latitud": "3.116454",
+            "longitud": "101.664886",
+            "alamat": "MENARA TELEKOM, JALAN PANTAI BARU",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AR-RAHMAN",
+            "latitud": "2.932202",
+            "longitud": "101.707291",
+            "alamat": "JALAN P16D, PRESINT 16, PUTRAJAYA.",
+            "tel": "012-3290253"
+        },
+        {
+            "nama_masjid": "SURAU AL-MIZAN",
+            "latitud": "2.942398,",
+            "longitud": " 101.680669",
+            "alamat": "FASA 4A, JALAN P8\/2, PRESINT 8, 62250 PUTRAJAYA",
+            "tel": "010-9585050"
+        },
+        {
+            "nama_masjid": "SURAU AL-FURQAN",
+            "latitud": "2.955501",
+            "longitud": "101.685114",
+            "alamat": "JALAN P11 A5\/8, PRESINT 11, PUTRAJAYA.",
+            "tel": "0192233756"
+        },
+        {
+            "nama_masjid": "SURAU PUTRA AL-AMIN (SPAA)",
+            "latitud": "2.933325, ",
+            "longitud": "101.679305",
+            "alamat": "KUARTERS KEDIAMAN KERAJAAN, FASA 4C, PRESINT 8, 62250 PUTRAJAYA",
+            "tel": "01123007874"
+        },
+        {
+            "nama_masjid": "SURAU ALAM SHAH",
+            "latitud": "2.946362",
+            "longitud": "101.711011",
+            "alamat": "SEKOLAH SULTAN ALAM SHAH, PARCEL G, PPRESINT 1, 62520 PUTRAJAYA",
+            "tel": "0133627546"
+        },
+        {
+            "nama_masjid": "SURAU PUTRA (KOMUNITI)",
+            "latitud": "2.944731",
+            "longitud": "101.681063",
+            "alamat": "BLOK 1B, APARTMENT FASA 1, JALAN P9G, PRESINT 9, 62250 PUTRAJAYA.",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AR-RAUDHAH (KOMUNITI)",
+            "latitud": "2.934938",
+            "longitud": "101.723763",
+            "alamat": "JALAN P16J, PRESINT 16, \r\n62200 PUTRAJAYA.",
+            "tel": "03-88883864"
+        },
+        {
+            "nama_masjid": "SURAU AL-INSANIAH (KOMUNITI)",
+            "latitud": "2.946168",
+            "longitud": "101.682578",
+            "alamat": "BLOK 2C, FASA 2, \r\nPRESINT 9, \r\n62250 PUTRAJAYA.",
+            "tel": "03-88880590"
+        },
+        {
+            "nama_masjid": "SURAU AL-FALAH (KOMUNITI)",
+            "latitud": "2.944367",
+            "longitud": "101.68204",
+            "alamat": "PUTRA COURT 3, JALAN P9G, \r\nPRESINT 9, \r\n62502 PUTRAJAYA.",
+            "tel": "019-2663240"
+        },
+        {
+            "nama_masjid": "SURAU AL-GHAZALI (KOMUNITI)",
+            "latitud": "2.932535",
+            "longitud": "101.680183",
+            "alamat": "FASA 4B, P D\/A TINGKAT 7, UNIT 6 BLOK D, FASA 4B, PRESINT 8\r\n62250 PUTRAJAYA",
+            "tel": "03-88891259"
+        },
+        {
+            "nama_masjid": "SURAU AL-HIDAYAH (KOMUNITI)",
+            "latitud": "2.937967",
+            "longitud": "101.671788",
+            "alamat": "RUMAH MAMPU MILIK, C1-01, JALAN P9B\/2\r\nPRESINT 9, \r\n62250 PUTRAJAYA.",
+            "tel": "03-88894613"
+        },
+        {
+            "nama_masjid": "SURAU AL-ITTIFAQIYYAH (KOMUNITI)",
+            "latitud": "2.975233",
+            "longitud": "101.768975",
+            "alamat": "NO 16, JALAN P8E\/4, PRESINT 8, 62200 PUTRAJAYA.",
+            "tel": "0193219994"
+        },
+        {
+            "nama_masjid": "SURAU ABDUL RAHMAN AUF (KOMUNITI)",
+            "latitud": "2.956902",
+            "longitud": "101.674639",
+            "alamat": "BLOK C, D & E, JALAN P11\/B1, \r\nPRESINT 11, PUTRAJAYA",
+            "tel": "019-9739498"
+        },
+        {
+            "nama_masjid": "SURAU SAIDINA ALI (KOMUNITI)",
+            "latitud": "2.940215",
+            "longitud": "101.680382",
+            "alamat": "FASA 11, JALAN P9F,\r\nPRESINT 9, \r\n62250 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUSTAQIM (KOMUNITI)",
+            "latitud": "2.953518",
+            "longitud": "101.726955",
+            "alamat": "BLOK E T-U12, PANGSAPURI KERAJAAN, \r\nPRESINT 14, \r\n62050 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AR-RIDHUAN (KOMUNITI)",
+            "latitud": "2.943853",
+            "longitud": "101.680499",
+            "alamat": "KUARTERS KERAJAAN BLOK 8, PARCEL 8, PRESINT 9, PUTRAJAYA.",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU MAHABBAH (KEMENTERIAN)",
+            "latitud": "2.943666",
+            "longitud": "101.713376",
+            "alamat": "ARAS 2, BLOK E2, PUSAT PENTADBIRAN KERAJAAN PERSEKUTUAN\r\n62604 PUTRAJAYA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AN NUR (KEMENTERIAN)",
+            "latitud": "2.914622",
+            "longitud": "101.685168",
+            "alamat": "KEMENTERIAN PERALIHAN TENAGA DAN TRANSFORMASI AIR (PETRA), PRESINT 4",
+            "tel": null
+        },
+        {
+            "nama_masjid": "MADRASAH NURUL YAKIN",
+            "latitud": "3.080723930214088",
+            "longitud": "101.71409626510236",
+            "alamat": "PUSAT SERENTI, JALAN SUNGAI BESI",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU NURUL IMAN",
+            "latitud": "4.179054,",
+            "longitud": "100.655578",
+            "alamat": "FASA 3A SRI MANJUNG",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SDJ PONDOK AR RIDZUAN",
+            "latitud": "463083",
+            "longitud": "10088566",
+            "alamat": "KAMPUNG JALAN BADAK JELIANG 33800 MANONG, PERAK.",
+            "tel": "0195131396"
+        },
+        {
+            "nama_masjid": "MADRASAH KAMPUNG KLINIK",
+            "latitud": "3.784975",
+            "longitud": "101.459167",
+            "alamat": "KAMPUNG KLINIK, FELDA SUNGAI BEHRANG, 35820 SLIM RIVER, PERAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH FELCRA AB",
+            "latitud": "3.835022,",
+            "longitud": "101.401797",
+            "alamat": "FELCRA AB, KUALA SLIM, 35820 SLIM RIVER, PERAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH KAMPUNG BANTANG",
+            "latitud": "3.855107",
+            "longitud": "101.484834",
+            "alamat": "KAMPUNG BANTANG, 35800 SLIM RIVER, PERAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH KAMPUNG BATU 4",
+            "latitud": "3.855897",
+            "longitud": " 101.388786",
+            "alamat": "KAMPUNG BATU 4, 35700 TROLAK, PERAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU NURUL HAQ",
+            "latitud": "3.171034",
+            "longitud": "101.620033",
+            "alamat": "BATU 9 \u00c2\u00be KAMPUNG BUKIT LANJAN \r\nJALAN DAMANSARA \r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AL-BUKHARI TAMAN BUNGA RAYA",
+            "latitud": "3.21309119639532,",
+            "longitud": "101.72963513798226",
+            "alamat": "KAMPUNG TALANG SIMPANG TIGA",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU SINAR ISLAM ",
+            "latitud": "4.420079",
+            "longitud": "113.995010",
+            "alamat": "LOT 1708 KPG. PULAU MELAYU, \r\n98000 MIRI",
+            "tel": "0198249517"
+        },
+        {
+            "nama_masjid": "SURAU AT-TAQWA ",
+            "latitud": "4.229417",
+            "longitud": "113.916857",
+            "alamat": "KPG.SIWAK, BAKAM, MIRI",
+            "tel": "0198450539"
+        },
+        {
+            "nama_masjid": "SURAU NURUL JAMILUN SUBHI ",
+            "latitud": "4.426507",
+            "longitud": "114.023221",
+            "alamat": "KPG. PUJUT SG. ADONG,",
+            "tel": "0128749735"
+        },
+        {
+            "nama_masjid": "SURAU AL JARIAH ",
+            "latitud": "4.460619",
+            "longitud": "114.015610",
+            "alamat": "JALAN PUJUT 9, MIRI",
+            "tel": "016-8624746"
+        },
+        {
+            "nama_masjid": "SURAU DARUL HIJRAH ",
+            "latitud": "4.444269",
+            "longitud": "114.005930",
+            "alamat": "LOT 364 KPG. PIASAU UTARA, MIRI",
+            "tel": "019-8482877"
+        },
+        {
+            "nama_masjid": "SURAU DARUL RAHMAN ",
+            "latitud": "4.452382",
+            "longitud": "114.009670",
+            "alamat": "RPR BATU 6, JALAN PUJUT LUTONG\r\n98000 MIRI",
+            "tel": "013-8955247"
+        },
+        {
+            "nama_masjid": "SURAU DARUL HIDAYAT ",
+            "latitud": "4.494129",
+            "longitud": "113.997411",
+            "alamat": "KPG. BATU 1, BARAM, MIRI",
+            "tel": "019-8749360"
+        },
+        {
+            "nama_masjid": "SURAU DARUL NAIM,",
+            "latitud": "3.790935",
+            "longitud": "113.632670",
+            "alamat": "KPG. IRAN, SUAI, NIAH",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-INSYIRAH",
+            "latitud": "4.323383",
+            "longitud": "113.968362",
+            "alamat": "MAKTAB PERGURUAN SARAWAK, JLN. BAKAM",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH MUSTAQIMAH",
+            "latitud": "3.0736384",
+            "longitud": "101.7053184",
+            "alamat": "TAMAN JAYA JALAN RAYA,BANDAR TUN RAZAK",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AS-SOBIRIN",
+            "latitud": "3.0611154461574297",
+            "longitud": "101.70562852957876",
+            "alamat": "A-06-14 PPR RAYA PERMAI JALAN SUNGAI BESI",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AN-NUR (KOMUNITI)",
+            "latitud": "2.947510",
+            "longitud": "101.678516",
+            "alamat": "NO.1 JALAN P11 K\/1, PRESINT 11, 62300 PUTRAJAYA.",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU ISTANA NEGARA",
+            "latitud": "3.131095",
+            "longitud": "101.694968",
+            "alamat": "JALAN ISTANA NEGARA",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AN-NUR",
+            "latitud": "3.205970",
+            "longitud": "101.724380",
+            "alamat": "PEJABAT AGAMA MARKAS 12 BRIGED, KEM WARDIBURN SETAPAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AN-NUR",
+            "latitud": "6.180398658605593",
+            "longitud": "116.23213722487493",
+            "alamat": "KG. BARU SELAUD",
+            "tel": "0198714355"
+        },
+        {
+            "nama_masjid": "SURAU AN-NAIM",
+            "latitud": "3.198135",
+            "longitud": " 101.748089",
+            "alamat": "SURAU AN-NAIM\r\n101 JALAN 11\/27A\r\nSEKSYEN 5 WANGSA MAJU\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AT-TAQWA",
+            "latitud": "3.195199",
+            "longitud": "101.718386",
+            "alamat": "SURAU PPR BLOK B \r\nKAMPUNG BARU AIR PANAS",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASAH NURUL HUDA",
+            "latitud": "3.122117",
+            "longitud": "101.675997",
+            "alamat": "APARTMENT HJ ABDULLAH HUKUM\r\nJALAN BANGSAR\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-BAITI BPP (KEMENTERIAN)",
+            "latitud": "2.926786",
+            "longitud": "101.689160",
+            "alamat": "KEMENTERIAN KEWANGAN MALAYSIA, BAHAGIAN PNJAMAN PERUMAHAN,\r\nNO.9, PERSIARAN PERDANA,\r\nPRESINT 2, \r\n62592 PUTRAJAYA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-ISTIQLAL",
+            "latitud": "2.951617",
+            "longitud": "101.726125",
+            "alamat": "JALAN P14H, APARTMENT , PRESINT 14, 62050 PUTRAJAYA.",
+            "tel": "0133410730"
+        },
+        {
+            "nama_masjid": "SURAU SEKOLAH AISYAH HUMAIRA'",
+            "latitud": "2.942839",
+            "longitud": "101.677886",
+            "alamat": "SMK PRESINT 9(1) NO.2 JALAN P9F,\r\nPRESINT 9,\r\n62250 PUTRAJAYA.",
+            "tel": "03-8888 5150"
+        },
+        {
+            "nama_masjid": "SURAU AL-ILLIYIIN (KEMENTERIAN)",
+            "latitud": "2.926414",
+            "longitud": "101.692902",
+            "alamat": "KEMENTERIAN LUAR NEGERI MALAYSIA,\r\nWISMA PUTRA,\r\nNO.1, JALAN WISMA PUTRA 2,\r\nPRESINT 2, \r\n62600 PUTRAJAYA.",
+            "tel": "03-88874000"
+        },
+        {
+            "nama_masjid": "SURAU AL-ISLAH (KOMUNITI)",
+            "latitud": "2.889360",
+            "longitud": "101.674497",
+            "alamat": "FASA 7, PRESINT 9,\r\n62250 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-KAUTHAR",
+            "latitud": "3.203313",
+            "longitud": "101.747090",
+            "alamat": "JLN. WANGSA MELAWATI 4\r\nWANGSA MELAWATI\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU NURUL HIDAYAH",
+            "latitud": "3.0874806013365417",
+            "longitud": "101.69111784986498",
+            "alamat": "3016 JALAN 7\/116B KUCHAI ENTERPRENEURS PARK OFF JALAN KLANG LAMA",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL-AMIN",
+            "latitud": "3.0860997429448203",
+            "longitud": "101.71620716510225",
+            "alamat": "JALAN IKHLAS 7BANDAR TUN RAZAK",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AT-TAQWA",
+            "latitud": "3.064255",
+            "longitud": "101.738929",
+            "alamat": "NO.22 JLN. DAMAI MURNI 7\r\nALAM DAMAI, CHERAS\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASATUL GOUTHIYYAH",
+            "latitud": "3.130231",
+            "longitud": "101.687109",
+            "alamat": "LOT 627 JLN SULTAN ABDUL SAMAD BRICKFIELDS",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU IBADURRAHMAN",
+            "latitud": "3.108940",
+            "longitud": "101.674937",
+            "alamat": "LOT PT 8, PPR KAMPUNG LIMAU96-05-17 PPR KG. LIMAU JLN. PANTAI DALAM",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL IMRAN KG. PATIKANG LAUT",
+            "latitud": "05 20 10.1",
+            "longitud": "116 08 22.3",
+            "alamat": "PETI SURAT 184",
+            "tel": "087331352"
+        },
+        {
+            "nama_masjid": "SURAU BAITUL IZZAH",
+            "latitud": "114.9061 E",
+            "longitud": "4.7789 N",
+            "alamat": "SK TIGA KAMPONG, \nD\/A PEJABAT PENDIDIKAN DAERAH LIMBANG, \nLIMBANG",
+            "tel": "085-666 220"
+        },
+        {
+            "nama_masjid": "SURAU AL-JAWAHIR IKBN MIRI",
+            "latitud": "4.457225",
+            "longitud": "114.043859",
+            "alamat": "IKBN PERMYJAYA\r\nMIRI",
+            "tel": "085660714"
+        },
+        {
+            "nama_masjid": "SURAU NURUL HIDAYAH",
+            "latitud": "4.402287",
+            "longitud": "114.004587",
+            "alamat": "KPG HAJI WAHID\r\n98000 MIRI",
+            "tel": "016-8301029"
+        },
+        {
+            "nama_masjid": "SURAU AL-MUSTAQIM",
+            "latitud": "1115452 E",
+            "longitud": "021744 N",
+            "alamat": "TAMAN BOUGENVILLA, JALAN ULU OYA, BATU 8, SIBU",
+            "tel": "NIL"
+        },
+        {
+            "nama_masjid": "SURAU DARUSSALAM",
+            "latitud": "4.078225",
+            "longitud": "113.822879",
+            "alamat": "SURAU DARUSSALAM,\r\nKAMPUNG ANGUS,\r\n98150 BEKENU, MIRI,\r\nSARAWAK.",
+            "tel": "019-8466357"
+        },
+        {
+            "nama_masjid": "SURAU NURUL HUDA",
+            "latitud": "3.201312",
+            "longitud": "101.735117",
+            "alamat": "GROUND FLOOR, ALPHA VILLA APARTMENT\r\nJALAN 2\/27A, WANGSA MAJU",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU WISMA FELDA",
+            "latitud": "3.169221",
+            "longitud": "101.717843",
+            "alamat": "TIGKAT 1 WISMA FELDA\r\nJALAN PERUMAHAN GURNEY",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU JKR MENARA PJD",
+            "latitud": "3.173035",
+            "longitud": "101.694564",
+            "alamat": "ARAS G, MENARA PJD\r\nNO. 50 JALAN TUN RAZAK",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT AR RAYYAN",
+            "latitud": "5.54407618879827",
+            "longitud": "101.33117433282627",
+            "alamat": "MARKAS TAKTIKAL KEM SERI BANDING,MUKIM GERIK 33300 GERIK PERAK",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AL-AZIM ",
+            "latitud": "4.231108 ",
+            "longitud": "100.691953",
+            "alamat": "KOMPLEKS KASTAM LUMUT\r\nJALAN HAJI MOHAMAD ALI\r\n32000 SITIAWAN\r\nPERAK DARUL RIDZUAN ",
+            "tel": "019-7534007"
+        },
+        {
+            "nama_masjid": "SURAU AL-BARAKAH",
+            "latitud": "3.131116",
+            "longitud": "101.682619",
+            "alamat": "MENARA 1,MENARA KEMBAR BANK RAKYAT, NO. 33 JALAN TRAVERS",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU ISTAC",
+            "latitud": "3.166735",
+            "longitud": "101.674212",
+            "alamat": "KAMPUS INSTITUT ANTARABANGSA PEMIKIRAN DAN TAMADUN ISLAM,UNIVERSITI ISLAM ANTARABANGSA MALAYSIA,NO 24 PERSIARAN DUTA,OFF JALAN DUTA,",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL-SOBAH",
+            "latitud": "2.9476372523745353",
+            "longitud": "101.77862653307612",
+            "alamat": "JALAN 3\/4 SEKSYEN 3  43650 BDR BARU BANGI SELANGOR\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT MUHAMMADIAH",
+            "latitud": "5.201959581439446",
+            "longitud": "101.41209986198442",
+            "alamat": "RPS KEMAR KAMPUNG AKEI GERIK PERAK",
+            "tel": "01140663402"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT JABATAN PENJARA ",
+            "latitud": "4.6057792",
+            "longitud": "101.0788441",
+            "alamat": "PENJARA BATU GAJAH\r\n31000 BATU GAJAH",
+            "tel": "0135989570"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT JABATAN PENJARA ",
+            "latitud": "4.6057792",
+            "longitud": "101.0788441",
+            "alamat": "PENJARA BATU GAJAH\r\n31000 BATU GAJAH",
+            "tel": "0135989570"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AL ITTIFAQIYYAH",
+            "latitud": "4.467295",
+            "longitud": "101.011993",
+            "alamat": "TAMAN BEMBAN RAYA\r\nBATU GAJAH",
+            "tel": "0195116205"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AL ITTIFAQIYYAH",
+            "latitud": "4.467295",
+            "longitud": "101.011993",
+            "alamat": "TAMAN BEMBAN RAYA\r\nBATU GAJAH",
+            "tel": "0195116205"
+        },
+        {
+            "nama_masjid": "SDJ BAITUR RAHMAN",
+            "latitud": "485156",
+            "longitud": "10118591",
+            "alamat": "KG KENANG BARU JALONG TINGGI 31100 SG (U) PERAK",
+            "tel": "0175826824"
+        },
+        {
+            "nama_masjid": "SDJ BAITUR RAHMAN",
+            "latitud": "485156",
+            "longitud": "10118591",
+            "alamat": "KG KENANG BARU JALONG TINGGI 31100 SG (U) PERAK",
+            "tel": "0175826824"
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT AL-FATAH",
+            "latitud": "5.558322166041268",
+            "longitud": "101.41512862493252",
+            "alamat": "KAMPUNG SUNGAI RABA RPS BANUN",
+            "tel": "0132601238"
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT AL-FATAH",
+            "latitud": "5.558322166041268",
+            "longitud": "101.41512862493252",
+            "alamat": "KAMPUNG SUNGAI RABA RPS BANUN",
+            "tel": "0132601238"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT WAN NONG",
+            "latitud": "5.4487152410270765",
+            "longitud": "101.15419148997944",
+            "alamat": "TAMAN DESA PERMATA GERIK PERAK",
+            "tel": "01139860793"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT WAN NONG",
+            "latitud": "5.4487152410270765",
+            "longitud": "101.15419148997944",
+            "alamat": "TAMAN DESA PERMATA GERIK PERAK",
+            "tel": "01139860793"
+        },
+        {
+            "nama_masjid": "SURAU AL-SYAKIRIN",
+            "latitud": "2.954807, ",
+            "longitud": "101.722637",
+            "alamat": "SEKOLAH MENENGAH KEBANGSAAN PUTRAJAYA PRESINT 14 (1), 62300 PUTRAJAYA",
+            "tel": "0192896571"
+        },
+        {
+            "nama_masjid": "SURAU AL-SYAKIRIN",
+            "latitud": "2.954807, ",
+            "longitud": "101.722637",
+            "alamat": "SEKOLAH MENENGAH KEBANGSAAN PUTRAJAYA PRESINT 14 (1), 62300 PUTRAJAYA",
+            "tel": "0192896571"
+        },
+        {
+            "nama_masjid": "SURAU AN-NAJAH",
+            "latitud": "2.939067",
+            "longitud": "101.674397",
+            "alamat": "JALAN P9A, PRESINT 9, 62250 PUTRAJAYA",
+            "tel": "0132382476"
+        },
+        {
+            "nama_masjid": "SURAU AN-NAJAH",
+            "latitud": "2.939067",
+            "longitud": "101.674397",
+            "alamat": "JALAN P9A, PRESINT 9, 62250 PUTRAJAYA",
+            "tel": "0132382476"
+        },
+        {
+            "nama_masjid": "SURAU AL-MUNAWWARAH",
+            "latitud": "2.895962",
+            "longitud": "101.663417",
+            "alamat": "JALAN P5\/7, PARCEL 5R3, PRESINT 5, 62200 PUTRAJAYA",
+            "tel": "0176032716"
+        },
+        {
+            "nama_masjid": "SURAU AL-MUNAWWARAH",
+            "latitud": "2.895962",
+            "longitud": "101.663417",
+            "alamat": "JALAN P5\/7, PARCEL 5R3, PRESINT 5, 62200 PUTRAJAYA",
+            "tel": "0176032716"
+        },
+        {
+            "nama_masjid": "SURAU AL-MANAR",
+            "latitud": "2.948794",
+            "longitud": "101.725121",
+            "alamat": "JALAN P14A, PRESINT 14, 62050 PUTRAJAYA",
+            "tel": "0122197557"
+        },
+        {
+            "nama_masjid": "SURAU AL-MANAR",
+            "latitud": "2.948794",
+            "longitud": "101.725121",
+            "alamat": "JALAN P14A, PRESINT 14, 62050 PUTRAJAYA",
+            "tel": "0122197557"
+        },
+        {
+            "nama_masjid": "SURAU AL-MUTTAQIN",
+            "latitud": "2.890020, ",
+            "longitud": "101.690197",
+            "alamat": "NO.1 JALAN P5A PARCEL 5R6, PRESINT 5, 62200 PUTRAJAYA",
+            "tel": "0193051984"
+        },
+        {
+            "nama_masjid": "SURAU AL-MUTTAQIN",
+            "latitud": "2.890020, ",
+            "longitud": "101.690197",
+            "alamat": "NO.1 JALAN P5A PARCEL 5R6, PRESINT 5, 62200 PUTRAJAYA",
+            "tel": "0193051984"
+        },
+        {
+            "nama_masjid": "SURAU AL-IMAN",
+            "latitud": "2.942615",
+            "longitud": "101.671169",
+            "alamat": "JALAN P9B1\/4, PRESINT 9, 62250 PUTRAJAYA",
+            "tel": "01112120353"
+        },
+        {
+            "nama_masjid": "SURAU AL-IMAN",
+            "latitud": "2.942615",
+            "longitud": "101.671169",
+            "alamat": "JALAN P9B1\/4, PRESINT 9, 62250 PUTRAJAYA",
+            "tel": "01112120353"
+        },
+        {
+            "nama_masjid": "SURAU AL-KAUTHAR (KOMUNITI)",
+            "latitud": "2.921618",
+            "longitud": "101.694259",
+            "alamat": "JALAN P18\/B, PARCEL 18R13\r\nPRESINT 18, FASA 2, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-KAUTHAR (KOMUNITI)",
+            "latitud": "2.921618",
+            "longitud": "101.694259",
+            "alamat": "JALAN P18\/B, PARCEL 18R13\r\nPRESINT 18, FASA 2, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-ANSAR (JABATAN)",
+            "latitud": "2.963639",
+            "longitud": "101.678943",
+            "alamat": "BALAI POLIS PRESINT 11\r\n62300 PUTRAJAYA",
+            "tel": "0123928756"
+        },
+        {
+            "nama_masjid": "SURAU AL-ANSAR (JABATAN)",
+            "latitud": "2.963639",
+            "longitud": "101.678943",
+            "alamat": "BALAI POLIS PRESINT 11\r\n62300 PUTRAJAYA",
+            "tel": "0123928756"
+        },
+        {
+            "nama_masjid": "SURAU AL-HUDA (KOMUNITI)",
+            "latitud": "2.889371",
+            "longitud": "101.674798",
+            "alamat": "PARCEL 5R4\r\nNO.1 JALAN P5A\/5\r\nPRESINT 5, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-HUDA (KOMUNITI)",
+            "latitud": "2.889371",
+            "longitud": "101.674798",
+            "alamat": "PARCEL 5R4\r\nNO.1 JALAN P5A\/5\r\nPRESINT 5, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUKHLISIN (KOMUNITI)",
+            "latitud": "2.922646",
+            "longitud": "101.697125",
+            "alamat": "PARCEL 18R4\r\nPRESINT 18, \r\n62100 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-MUKHLISIN (KOMUNITI)",
+            "latitud": "2.922646",
+            "longitud": "101.697125",
+            "alamat": "PARCEL 18R4\r\nPRESINT 18, \r\n62100 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU SILATURRAHIM (KOMUNITI)",
+            "latitud": "2.957261",
+            "longitud": "101.684516",
+            "alamat": "BLOK 3A JALAN P11A2\/2\r\nPRESINT 11, \r\n62300 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU SILATURRAHIM (KOMUNITI)",
+            "latitud": "2.957261",
+            "longitud": "101.684516",
+            "alamat": "BLOK 3A JALAN P11A2\/2\r\nPRESINT 11, \r\n62300 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AS-SALAM (KOMUNITI)",
+            "latitud": "2.938527",
+            "longitud": "101.675761",
+            "alamat": "PANGSAPURI FASA 10, JALAN P9C,\r\nPRESINT 9, \r\n62250 PUTRAJAYA.",
+            "tel": "012-6954239"
+        },
+        {
+            "nama_masjid": "SURAU AS-SALAM (KOMUNITI)",
+            "latitud": "2.938527",
+            "longitud": "101.675761",
+            "alamat": "PANGSAPURI FASA 10, JALAN P9C,\r\nPRESINT 9, \r\n62250 PUTRAJAYA.",
+            "tel": "012-6954239"
+        },
+        {
+            "nama_masjid": "SURAU AL-FATIH (KOMUNITI)",
+            "latitud": "2.942837",
+            "longitud": "101.721467",
+            "alamat": "PARCEL 15-12A\r\nPRESINT 15, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-FATIH (KOMUNITI)",
+            "latitud": "2.942837",
+            "longitud": "101.721467",
+            "alamat": "PARCEL 15-12A\r\nPRESINT 15, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AT-TAUFIQ (KOMUNITI)",
+            "latitud": "2.928693",
+            "longitud": "101.680037",
+            "alamat": "NO.1 JALAN 6 BLOK A PARCEL 5R1\r\nPRESINT 5, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AT-TAUFIQ (KOMUNITI)",
+            "latitud": "2.928693",
+            "longitud": "101.680037",
+            "alamat": "NO.1 JALAN 6 BLOK A PARCEL 5R1\r\nPRESINT 5, \r\n62200 PUTRAJAYA.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-FARABI (KOMUNITI)",
+            "latitud": "2.927777",
+            "longitud": "101.705166",
+            "alamat": "NO.1 JALAN P17 PARCEL 17RK2\r\nPRESINT 17, \r\n62150 PUTRAJAYA.",
+            "tel": "019-2978032"
+        },
+        {
+            "nama_masjid": "SURAU AL-FARABI (KOMUNITI)",
+            "latitud": "2.927777",
+            "longitud": "101.705166",
+            "alamat": "NO.1 JALAN P17 PARCEL 17RK2\r\nPRESINT 17, \r\n62150 PUTRAJAYA.",
+            "tel": "019-2978032"
+        },
+        {
+            "nama_masjid": "SURAU INTISAR (KOMUNITI)",
+            "latitud": "2.953457",
+            "longitud": "101.677268",
+            "alamat": "ZON 6B, JALAN P11J\r\nPRESINT 11, \r\n62300 PUTRAJAYA\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU INTISAR (KOMUNITI)",
+            "latitud": "2.953457",
+            "longitud": "101.677268",
+            "alamat": "ZON 6B, JALAN P11J\r\nPRESINT 11, \r\n62300 PUTRAJAYA\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU SAIDINA UMAR AL-KHATTAB (KOMUNITI)",
+            "latitud": "2.928757",
+            "longitud": "101.679965",
+            "alamat": "PARCEL 8R2, PRESINT 8,\r\n62250 PUTRAJAYA\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU SAIDINA UMAR AL-KHATTAB (KOMUNITI)",
+            "latitud": "2.928757",
+            "longitud": "101.679965",
+            "alamat": "PARCEL 8R2, PRESINT 8,\r\n62250 PUTRAJAYA\r\n",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU BLOK C7 (JABATAN)",
+            "latitud": "2.938502",
+            "longitud": "101.714281",
+            "alamat": "JABATAN PERANGKAAN MALAYSIA\r\nARAS 3, BLOK C7 KOMPLEKS C\r\n62250 PUTRAJAYA \r\n",
+            "tel": "03-88856879"
+        },
+        {
+            "nama_masjid": "SURAU BLOK C7 (JABATAN)",
+            "latitud": "2.938502",
+            "longitud": "101.714281",
+            "alamat": "JABATAN PERANGKAAN MALAYSIA\r\nARAS 3, BLOK C7 KOMPLEKS C\r\n62250 PUTRAJAYA \r\n",
+            "tel": "03-88856879"
+        },
+        {
+            "nama_masjid": "SURAU AS-SOLIHIN (KOMUNITI)",
+            "latitud": "2.904107",
+            "longitud": "101.692880",
+            "alamat": "LOJI PEMBERSIHAN AIR, SUNGAI SEMENYIHPRESINT 19PUTRAJAYA.",
+            "tel": "03-88892020"
+        },
+        {
+            "nama_masjid": "SURAU AS-SOLIHIN (KOMUNITI)",
+            "latitud": "2.904107",
+            "longitud": "101.692880",
+            "alamat": "LOJI PEMBERSIHAN AIR, SUNGAI SEMENYIHPRESINT 19PUTRAJAYA.",
+            "tel": "03-88892020"
+        },
+        {
+            "nama_masjid": "SURAU AL-FIRDAUS (JABATAN)",
+            "latitud": "2.913674",
+            "longitud": "101.684732",
+            "alamat": "JABATAN PENERBANGAN AWAM (DCA),\r\nPRESINT 4,\r\n62250 PUTRAJAYA.\r\n",
+            "tel": "03-88714005"
+        },
+        {
+            "nama_masjid": "SURAU AL-FIRDAUS (JABATAN)",
+            "latitud": "2.913674",
+            "longitud": "101.684732",
+            "alamat": "JABATAN PENERBANGAN AWAM (DCA),\r\nPRESINT 4,\r\n62250 PUTRAJAYA.\r\n",
+            "tel": "03-88714005"
+        },
+        {
+            "nama_masjid": "SURAU AL-FALAH",
+            "latitud": "4.41031",
+            "longitud": "100.633",
+            "alamat": "KAMPUNG TEBUK YAN 1\r\nPANTAI REMIS\r\nPERAK DARUL RIDZUAN",
+            "tel": "011-40202525"
+        },
+        {
+            "nama_masjid": "SURAU AL-FALAH",
+            "latitud": "4.41031",
+            "longitud": "100.633",
+            "alamat": "KAMPUNG TEBUK YAN 1\r\nPANTAI REMIS\r\nPERAK DARUL RIDZUAN",
+            "tel": "011-40202525"
+        },
+        {
+            "nama_masjid": "SURAU AL-HASANAH (KEMENTERIAN)",
+            "latitud": "2.901755",
+            "longitud": "101.688347",
+            "alamat": "SURAU AL HASANAH, \r\nKEMENTERIAN PEMBANGUNAN WANITA, KELUARGA DAN MASYARAKAT, ARAS 2, NO.55, PERSIARAN PERDANA, PRESINT 4, 62100 PUTRAJAYA ",
+            "tel": "03-83231004"
+        },
+        {
+            "nama_masjid": "SURAU AL-HASANAH (KEMENTERIAN)",
+            "latitud": "2.901755",
+            "longitud": "101.688347",
+            "alamat": "SURAU AL HASANAH, \r\nKEMENTERIAN PEMBANGUNAN WANITA, KELUARGA DAN MASYARAKAT, ARAS 2, NO.55, PERSIARAN PERDANA, PRESINT 4, 62100 PUTRAJAYA ",
+            "tel": "03-83231004"
+        },
+        {
+            "nama_masjid": "SURAU AL-EHSAN (KEMENTERIAN)",
+            "latitud": "2.930608",
+            "longitud": "101.689141",
+            "alamat": "MENARA SERI WILAYAH, ARAS 2, BLOK 1,\r\nKEMENTERIAN WILAYAH PERSEKUTUAN,\r\n62100 PUTRAJAYA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AL-EHSAN (KEMENTERIAN)",
+            "latitud": "2.930608",
+            "longitud": "101.689141",
+            "alamat": "MENARA SERI WILAYAH, ARAS 2, BLOK 1,\r\nKEMENTERIAN WILAYAH PERSEKUTUAN,\r\n62100 PUTRAJAYA",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU ISTIQAMAH",
+            "latitud": "2.912910",
+            "longitud": "101.689528",
+            "alamat": "PRESINT 18R8, PRESINT 18, 62100 PUTRAJAYA",
+            "tel": "0187873383"
+        },
+        {
+            "nama_masjid": "SURAU ISTIQAMAH",
+            "latitud": "2.912910",
+            "longitud": "101.689528",
+            "alamat": "PRESINT 18R8, PRESINT 18, 62100 PUTRAJAYA",
+            "tel": "0187873383"
+        },
+        {
+            "nama_masjid": "SURAU AN-NUR DWI PUTRA (KOMUNITI)",
+            "latitud": "2.942344",
+            "longitud": "101.718281",
+            "alamat": "BLOK A2, \r\nPANGSAPURI DWI PUTRA PRESINT 15,\r\n62502 PUTRAJAYA ",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU AN-NUR DWI PUTRA (KOMUNITI)",
+            "latitud": "2.942344",
+            "longitud": "101.718281",
+            "alamat": "BLOK A2, \r\nPANGSAPURI DWI PUTRA PRESINT 15,\r\n62502 PUTRAJAYA ",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "SURAU MUHAMMAD AL-FATEH (KEMENTERIAN)",
+            "latitud": "2.926783",
+            "longitud": "101.689042",
+            "alamat": "ARAS G, BLOK TENGAH PERBENDAHARAAN KOMPLEKS KEM.KEWANGAN NO.5, PERSIARAN PERDANA, PUTRAJAYA",
+            "tel": "0126571564"
+        },
+        {
+            "nama_masjid": "SURAU MUHAMMAD AL-FATEH (KEMENTERIAN)",
+            "latitud": "2.926783",
+            "longitud": "101.689042",
+            "alamat": "ARAS G, BLOK TENGAH PERBENDAHARAAN KOMPLEKS KEM.KEWANGAN NO.5, PERSIARAN PERDANA, PUTRAJAYA",
+            "tel": "0126571564"
+        },
+        {
+            "nama_masjid": "SDJ NURUL HIDAYAH",
+            "latitud": "495547",
+            "longitud": "10127000",
+            "alamat": "KG KEEB,RPS LEGAP,LASAH 31110 SG SIPUT (U),PERAK",
+            "tel": "0195094893"
+        },
+        {
+            "nama_masjid": "SDJ NURUL HIDAYAH",
+            "latitud": "495547",
+            "longitud": "10127000",
+            "alamat": "KG KEEB,RPS LEGAP,LASAH 31110 SG SIPUT (U),PERAK",
+            "tel": "0195094893"
+        },
+        {
+            "nama_masjid": "surau darus salam",
+            "latitud": "3.8679",
+            "longitud": "113.7322",
+            "alamat": "kampung padang\r\n98200 niah,\r\nmiri sarawak.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "surau darus salam",
+            "latitud": "3.8679",
+            "longitud": "113.7322",
+            "alamat": "kampung padang\r\n98200 niah,\r\nmiri sarawak.",
+            "tel": ""
+        },
+        {
+            "nama_masjid": "surau darul hidayah",
+            "latitud": "4.2389",
+            "longitud": "113.9578",
+            "alamat": "Lot 30,kampung Damai Sungai Rait,Bakam\r\n98000 miri",
+            "tel": "0139408526"
+        },
+        {
+            "nama_masjid": "surau darul hidayah",
+            "latitud": "4.2389",
+            "longitud": "113.9578",
+            "alamat": "Lot 30,kampung Damai Sungai Rait,Bakam\r\n98000 miri",
+            "tel": "0139408526"
+        },
+        {
+            "nama_masjid": "surau al-anbiyaa",
+            "latitud": "4.3181",
+            "longitud": "114.0037",
+            "alamat": "kampung wawasan lusut jaya,\r\nlambir, 98000 miri",
+            "tel": "014-6998978"
+        },
+        {
+            "nama_masjid": "surau al-anbiyaa",
+            "latitud": "4.3181",
+            "longitud": "114.0037",
+            "alamat": "kampung wawasan lusut jaya,\r\nlambir, 98000 miri",
+            "tel": "014-6998978"
+        },
+        {
+            "nama_masjid": "SURAU AR-RAHIM",
+            "latitud": "2.937325",
+            "longitud": "101.715117",
+            "alamat": "LOT PT10786, JALAN P15H1, PRESINT 15, 62050 PUTRAJAYA",
+            "tel": "0193385637"
+        },
+        {
+            "nama_masjid": "SURAU AR-RAHIM",
+            "latitud": "2.937325",
+            "longitud": "101.715117",
+            "alamat": "LOT PT10786, JALAN P15H1, PRESINT 15, 62050 PUTRAJAYA",
+            "tel": "0193385637"
+        },
+        {
+            "nama_masjid": "SURAU AS-SYIFA'",
+            "latitud": "495342",
+            "longitud": "10113622",
+            "alamat": "CURE AND CARE REHABILITATION CENTER (CCRC) PERLOP AGENSI ANTI DADAH KEBANGSAAN (KEMENTERIAN DALAM NEGERI) SG SIPUT (U) PERAK DARUL RDIZUAN",
+            "tel": "01115382844"
+        },
+        {
+            "nama_masjid": "SURAU AS-SYIFA'",
+            "latitud": "495342",
+            "longitud": "10113622",
+            "alamat": "CURE AND CARE REHABILITATION CENTER (CCRC) PERLOP AGENSI ANTI DADAH KEBANGSAAN (KEMENTERIAN DALAM NEGERI) SG SIPUT (U) PERAK DARUL RDIZUAN",
+            "tel": "01115382844"
+        },
+        {
+            "nama_masjid": "SDJ NURUL HIDAYAH POS POI",
+            "latitud": "509687",
+            "longitud": "10119167",
+            "alamat": "KAMPUNG LALANG POS POI 31110 ,POS POI , LASAH",
+            "tel": "0134189963"
+        },
+        {
+            "nama_masjid": "SDJ NURUL HIDAYAH POS POI",
+            "latitud": "509687",
+            "longitud": "10119167",
+            "alamat": "KAMPUNG LALANG POS POI 31110 ,POS POI , LASAH",
+            "tel": "0134189963"
+        },
+        {
+            "nama_masjid": "SURAU TAMAN CENDERAWASIH, MATA AIR",
+            "latitud": "6.321315",
+            "longitud": "99.784808",
+            "alamat": "JALAN BAYAS,\r\nMUKIM ULU MELAKA",
+            "tel": "0124752880"
+        },
+        {
+            "nama_masjid": "SURAU TAMAN CENDERAWASIH, MATA AIR",
+            "latitud": "6.321315",
+            "longitud": "99.784808",
+            "alamat": "JALAN BAYAS,\r\nMUKIM ULU MELAKA",
+            "tel": "0124752880"
+        },
+        {
+            "nama_masjid": "SDJ SURAU AL-BUKHARI",
+            "latitud": "482667",
+            "longitud": "10105265",
+            "alamat": "NO. 1A, TAMAN MAKMUR, 31100 SUNGAI SIPUT (U), PERAK DARUL RIDZUAN",
+            "tel": "0164454353"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AS SAJIDIN",
+            "latitud": "4.502247",
+            "longitud": "101.025326",
+            "alamat": "SURAU DIRI JUMAAT, AS SAJIDIN, BATU GAJAH PERDANA, PERAK",
+            "tel": "0125155704"
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AS SAJIDIN",
+            "latitud": "4.502247",
+            "longitud": "101.025326",
+            "alamat": "SURAU DIRI JUMAAT, AS SAJIDIN, BATU GAJAH PERDANA, PERAK",
+            "tel": "0125155704"
+        },
+        {
+            "nama_masjid": "SURAU AL ISLAH",
+            "latitud": "3.1069506036496466",
+            "longitud": "101.72640583437929",
+            "alamat": "HOSPITAL REHABILITASI CHERAS. JALAN YAACOB LATIF, BANDAR TUN RAZAK,",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT IHSANIAH RPA 4",
+            "latitud": "4.745573704640362",
+            "longitud": "100.92271652311301",
+            "alamat": "JALAN SULTAN ISKANDAR SHAH, 33000 KUALA KANGSAR, PERAK",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU DIRI JUMAAT AS SIRAJ, TAMAN SEROJA",
+            "latitud": "4.785431196504192",
+            "longitud": "100.90061008688886",
+            "alamat": "TAMAN SEROJA 33000 KUALA KANGSAR",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AL-FALAH S.M TEKNIK KUALA LUMPUR",
+            "latitud": "3.103672688573805,",
+            "longitud": "101.7229982172274",
+            "alamat": "JALAN  YAACOB LATIF,  BANDAR TUN RAZAK  56000 KUALA LUMPUR",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU AS-SOBIRIN",
+            "latitud": "3.0725523042536946,",
+            "longitud": "101.74073817615778",
+            "alamat": "No 4, Jalan Damai Rasa 18, Alam Damai 56000, Cheras Kuala Lumpur",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU INSTITUT LATIHAN PERINDUSTRIAN",
+            "latitud": "3.0921867588595497",
+            "longitud": "101.68752518780254",
+            "alamat": "JALAN KUCHAI LAMA 58200 KUALA LUMPUR",
+            "tel": null
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT MISBAH AL FALAH",
+            "latitud": "5.574080044105716",
+            "longitud": "101.01518169605848",
+            "alamat": "KAMPUNG ORANG ASLI BUKIT ASU",
+            "tel": "011-29926324"
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT NURUL ISLAH",
+            "latitud": "5.528835541558934",
+            "longitud": "101.43291055743713",
+            "alamat": "KAMPUNG SEMELOR RPS BANUN",
+            "tel": "0174401468"
+        },
+        {
+            "nama_masjid": "SURAU TAADUD JUMAAT AL-FATAH",
+            "latitud": "5.252705052359857",
+            "longitud": "101.17919018626063",
+            "alamat": "KAMPUNG SUNGAI URAT RPS DALA",
+            "tel": "0194640745"
+        }
+    ]
+}

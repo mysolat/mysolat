@@ -1,0 +1,71 @@
+<% content_for :title, "Senarai Masjid" %>
+<% content_for :description, "Senarai masjid berdaftar di seluruh Malaysia" %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-6 md:p-8 border border-white/20 shadow-2xl">
+
+    <h1 class="text-2xl font-bold text-center mb-2">Senarai Masjid</h1>
+    <p class="text-center opacity-60 text-sm mb-6">Masjid berdaftar di seluruh Malaysia</p>
+
+    <%= turbo_frame_tag "mosques" do %>
+      <!-- Filters -->
+      <%= form_with url: mosques_path, method: :get, data: { turbo_frame: "mosques", turbo_action: "advance" }, class: "flex flex-wrap gap-3 mb-6" do %>
+        <input type="text" name="search" value="<%= params[:search] %>" placeholder="Cari nama masjid..."
+               class="input input-bordered bg-white/10 border-white/20 w-full sm:flex-1" />
+        <select name="state" class="select select-bordered bg-white/10 border-white/20 w-full sm:w-auto">
+          <option value="">Semua Negeri</option>
+          <% Mosque::STATES.sort_by(&:last).each do |id, name| %>
+            <option value="<%= id %>" <%= "selected" if params[:state] == id %>><%= name %></option>
+          <% end %>
+        </select>
+        <select name="type" class="select select-bordered bg-white/10 border-white/20 w-full sm:w-auto">
+          <option value="">Semua Jenis</option>
+          <% Mosque::CATEGORIES.each do |id, name| %>
+            <option value="<%= id %>" <%= "selected" if params[:type] == id %>><%= name.titleize %></option>
+          <% end %>
+        </select>
+        <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+        <% if params[:search].present? || params[:state].present? || params[:type].present? %>
+          <%= link_to "Reset", mosques_path, class: "btn btn-ghost btn-sm" %>
+        <% end %>
+      <% end %>
+
+      <!-- Results count -->
+      <p class="text-sm opacity-60 mb-4"><%= @pagy.count %> masjid ditemui</p>
+
+      <!-- Table -->
+      <div class="overflow-x-auto backdrop-blur-sm bg-white/10 rounded-2xl border border-white/10">
+        <table class="table">
+          <thead>
+            <tr class="border-white/10">
+              <th class="text-base-content/50">#</th>
+              <th>Nama</th>
+              <th class="hidden sm:table-cell">Alamat</th>
+              <th>Negeri</th>
+              <th class="hidden sm:table-cell">Poskod</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @mosques.each_with_index do |mosque, i| %>
+              <tr class="border-white/10 hover:bg-white/10 cursor-pointer transition-colors" onclick="Turbo.visit('<%= mosque_path(mosque) %>')">
+                <td class="text-base-content/50"><%= @pagy.from + i %></td>
+                <td class="font-medium"><%= mosque.name.titleize %></td>
+                <td class="text-sm max-w-xs truncate hidden sm:table-cell opacity-60"><%= mosque.address %></td>
+                <td class="text-sm"><%= mosque.state_name %></td>
+                <td class="hidden sm:table-cell"><%= mosque.postcode %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <% if @pagy.pages > 1 %>
+        <div class="flex justify-center mt-6">
+          <%== @pagy.series_nav %>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>

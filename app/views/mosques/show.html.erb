@@ -1,0 +1,121 @@
+<% content_for(:title) { @mosque.name.titleize } %>
+<% content_for :description, "Maklumat #{@mosque.name.titleize}, #{@mosque.state_name}" %>
+
+<div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+  <div class="backdrop-blur-md bg-base-100/30 rounded-3xl p-6 md:p-8 border border-white/20 shadow-2xl">
+
+    <!-- Back link -->
+    <div class="mb-6">
+      <%= link_to mosques_path, class: "btn btn-ghost btn-sm gap-2 backdrop-blur-sm bg-white/10 border border-white/20 hover:bg-white/20" do %>
+        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/>
+        </svg>
+        Kembali
+      <% end %>
+    </div>
+
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-2xl font-bold mb-2"><%= @mosque.name.titleize %></h1>
+      <% if @mosque.registration_number.present? %>
+        <span class="badge backdrop-blur-sm bg-white/10 border-white/20"><%= @mosque.registration_number %></span>
+      <% end %>
+    </div>
+
+    <!-- Details -->
+    <div class="backdrop-blur-sm bg-white/10 rounded-2xl divide-y divide-white/10 border border-white/10">
+      <% if @mosque.address.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Alamat</span>
+          <span class="whitespace-pre-line"><%= @mosque.address %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.postcode.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Poskod</span>
+          <span><%= @mosque.postcode %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.state_name.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Negeri</span>
+          <span><%= @mosque.state_name %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.phone.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Telefon</span>
+          <span><%= link_to @mosque.phone, "tel:#{@mosque.phone}", class: "link link-primary" %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.email.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Emel</span>
+          <span><%= mail_to @mosque.email, @mosque.email, class: "link link-primary" %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.website.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Laman Web</span>
+          <span><%= link_to @mosque.website, @mosque.website, target: "_blank", rel: "noopener", class: "link link-primary" %></span>
+        </div>
+      <% end %>
+
+      <% if @mosque.capacity.present? && @mosque.capacity > 0 %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Kapasiti</span>
+          <span><%= number_with_delimiter(@mosque.capacity) %> orang</span>
+        </div>
+      <% end %>
+
+      <% if @mosque.latitude.present? && @mosque.longitude.present? %>
+        <div class="flex gap-4 p-4">
+          <span class="opacity-50 w-28 shrink-0 text-sm">Koordinat</span>
+          <span><%= @mosque.latitude %>, <%= @mosque.longitude %></span>
+        </div>
+      <% end %>
+    </div>
+
+    <%# About section (markdown) %>
+    <% if @mosque.about.present? %>
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl border border-white/10 mt-6 p-5">
+        <div class="prose prose-sm max-w-none prose-headings:text-base-content prose-p:text-base-content/80">
+          <%= sanitize @mosque.about.gsub(/^## (.+)/, '<h2 class="text-lg font-semibold mt-4 first:mt-0 mb-2">\1</h2>').gsub(/\n\n(?!<h2)/, '<br/>') %>
+        </div>
+      </div>
+    <% end %>
+
+    <%# Extra metadata %>
+    <% metadata = @mosque.metadata || {} %>
+    <% has_extra = %w[rasmi luas_tanah].any? { |k| metadata[k].present? && metadata[k].to_s.strip.present? } %>
+
+    <% if has_extra %>
+      <div class="backdrop-blur-sm bg-white/10 rounded-2xl divide-y divide-white/10 border border-white/10 mt-6">
+        <% if metadata["rasmi"].present? && metadata["rasmi"].strip.present? %>
+          <div class="flex gap-4 p-4">
+            <span class="opacity-50 w-28 shrink-0 text-sm">Dirasmikan</span>
+            <span>
+              <%= metadata["rasmi"].strip %>
+              <% if metadata["dt_rasmi"].present? && metadata["dt_rasmi"] != "0000-00-00" %>
+                <span class="opacity-50">(<%= metadata["dt_rasmi"] %>)</span>
+              <% end %>
+            </span>
+          </div>
+        <% end %>
+
+        <% if metadata["luas_tanah"].present? && metadata["luas_tanah"].to_f > 0 %>
+          <div class="flex gap-4 p-4">
+            <span class="opacity-50 w-28 shrink-0 text-sm">Luas Tanah</span>
+            <span><%= metadata["luas_tanah"] %> ekar</span>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

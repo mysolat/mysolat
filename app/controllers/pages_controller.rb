@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   private
 
   def available_page(page)
-    %w[api kiblat masjid kalendar tentang].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+    %w[api kiblat masjid kalendar tentang homeassistant].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
   end
 
   def setup_kalendar

@@ -1,0 +1,107 @@
+alias: Azan Harian
+description: Play azan for all prayer times via solat.my integration
+triggers:
+  - trigger: time
+    at: sensor.waktu_solat_subuh
+    id: subuh
+  - trigger: time
+    at: sensor.waktu_solat_zohor
+    id: zohor
+  - trigger: time
+    at: sensor.waktu_solat_asar
+    id: asar
+  - trigger: time
+    at: sensor.waktu_solat_maghrib
+    id: maghrib
+  - trigger: time
+    at: sensor.waktu_solat_isyak
+    id: isyak
+conditions: []
+actions:
+  - action: persistent_notification.create
+    data:
+      notification_id: solat_azan
+      title: >
+        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',
+        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{
+        names[trigger.id] }}
+      message: >
+        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',
+        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M
+        %p') }} — Sekarang telah masuk waktu {{ names[trigger.id] }} bagi
+        kawasan ini dan kawasan yang sama waktu dengannya.
+  - action: notify.notify
+    data:
+      title: >
+        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',
+        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{
+        names[trigger.id] }}
+      message: >
+        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',
+        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M
+        %p') }} — Sekarang telah masuk waktu {{ names[trigger.id] }}.
+  - action: media_player.volume_set
+    target:
+      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"
+    data:
+      volume_level: "{{ states('number.waktu_solat_kelantangan_azan') | float }}"
+  - action: tts.google_translate_say
+    data:
+      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"
+      language: id
+      message: >
+        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',
+        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Sekarang telah masuk waktu {{
+        names[trigger.id] }} bagi kawasan ini dan kawasan yang sama waktu
+        dengannya.
+  - delay: "00:00:10"
+  - action: media_player.play_media
+    target:
+      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"
+    data:
+      extra:
+        title: >
+          {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',
+          'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Azan {{ names[trigger.id]
+          }}
+        thumb: https://solat.my/icon.png
+      media:
+        media_content_type: audio/mp3
+        media_content_id: |
+          {% if trigger.id == 'subuh' %}
+            {{ "media-source://media_source/local/azan/" ~
+               states('text.waktu_solat_fail_audio_azan_subuh').split(', ') | random }}
+          {% else %}
+            {{ "media-source://media_source/local/azan/" ~
+               states('text.waktu_solat_fail_audio_azan').split(', ') | random }}
+          {% endif %}
+        metadata: {}
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: subuh
+        sequence:
+          - delay:
+              minutes: 4
+              seconds: 30
+      - conditions:
+          - condition: not
+            conditions:
+              - condition: trigger
+                id: subuh
+        sequence:
+          - delay:
+              minutes: 2
+              seconds: 47
+  - action: media_player.play_media
+    alias: Doa Selepas Azan
+    target:
+      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"
+    data:
+      media:
+        media_content_id: media-source://media_source/local/azan/doa_selepas_azan.mp3
+        media_content_type: audio/mpeg
+        metadata:
+          title: doa_selepas_azan.mp3
+          media_class: music
+mode: single
