@@ -5,8 +5,9 @@ class PagesController < ApplicationController
   end
 
   def show
-    send("setup_#{params[:id]}") if respond_to?("setup_#{params[:id]}", true)
-    render available_page(params[:id])
+    page = available_page(params[:id])
+    setup_page(page)
+    render page
   rescue ActionController::RoutingError
     render file: Rails.public_path.join("404.html"), status: :not_found, layout: false
   end
@@ -15,6 +16,13 @@ class PagesController < ApplicationController
 
   def available_page(page)
     %w[api kiblat masjid kalendar tentang homeassistant].include?(page) ? page : raise(ActionController::RoutingError, "Not Found")
+  end
+
+  def setup_page(page)
+    case page
+    when "kalendar"
+      setup_kalendar
+    end
   end
 
   def setup_kalendar

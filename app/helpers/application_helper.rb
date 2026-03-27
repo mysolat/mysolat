@@ -88,4 +88,13 @@ module ApplicationHelper
 
     "https://images.unsplash.com/photo-#{photo_ids}?w=1080&q=50&fit=crop&auto=format"
   end
+
+  def safe_external_url(url)
+    uri = URI.parse(url.to_s.strip)
+    return unless uri.is_a?(URI::HTTP) && uri.host.present?
+
+    uri.to_s
+  rescue URI::InvalidURIError
+    nil
+  end
 end
