@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Current < ActiveSupport::CurrentAttributes
   attribute :session, :user, :identity, :account
   attribute :http_method, :request_id, :user_agent, :ip_address, :referrer
 
   def session=(value)
-    super(value)
+    super
 
     if value.present?
       self.identity = session.identity
@@ -11,7 +13,7 @@ class Current < ActiveSupport::CurrentAttributes
   end
 
   def identity=(identity)
-    super(identity)
+    super
 
     if identity.present?
       self.user = identity.users.find_by(account: account)

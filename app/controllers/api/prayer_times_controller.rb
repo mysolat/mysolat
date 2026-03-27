@@ -11,13 +11,13 @@ class Api::PrayerTimesController < ApiController
 
     result = Location.nearest_zone(lat, lon)
 
-    return render json: { error: "Invalid coordinates" }, status: :unprocessable_entity if result.nil?
+    return render json: { error: "Invalid coordinates" }, status: :unprocessable_content if result.nil?
 
     zone_code, distance_km = result
 
     # Treat as outside Malaysia if nearest zone centroid is more than 500 km away
     if distance_km > 500
-      return render json: { error: "Location is outside Malaysia", latitude: lat.to_f, longitude: lon.to_f }, status: :unprocessable_entity
+      return render json: { error: "Location is outside Malaysia", latitude: lat.to_f, longitude: lon.to_f }, status: :unprocessable_content
     end
 
     @zone = zone_code

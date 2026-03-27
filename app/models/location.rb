@@ -39,7 +39,7 @@ module Location
       .transform_values do |locs|
         avg_lat = locs.sum { |l| l[:latitude].to_f } / locs.size
         avg_lon = locs.sum { |l| l[:longitude].to_f } / locs.size
-        [ avg_lat, avg_lon ]
+        [avg_lat, avg_lon]
       end
 
     best_code = nil
@@ -53,7 +53,7 @@ module Location
       end
     end
 
-    [ best_code, best_dist.round(2) ]
+    [best_code, best_dist.round(2)]
   rescue ArgumentError, TypeError
     nil
   end
@@ -64,16 +64,15 @@ module Location
 
   # Haversine great-circle distance in kilometres between two GPS points.
   def self.haversine(lat1, lon1, lat2, lon2)
-    r     = 6371.0
-    phi1  = lat1 * Math::PI / 180
-    phi2  = lat2 * Math::PI / 180
-    dphi  = (lat2 - lat1) * Math::PI / 180
-    dlam  = (lon2 - lon1) * Math::PI / 180
-    a     = Math.sin(dphi / 2)**2 + Math.cos(phi1) * Math.cos(phi2) * Math.sin(dlam / 2)**2
+    r = 6371.0
+    phi1 = lat1 * Math::PI / 180
+    phi2 = lat2 * Math::PI / 180
+    dphi = (lat2 - lat1) * Math::PI / 180
+    dlam = (lon2 - lon1) * Math::PI / 180
+    a = Math.sin(dphi / 2)**2 + Math.cos(phi1) * Math.cos(phi2) * Math.sin(dlam / 2)**2
     r * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
   end
   private_class_method :haversine
-
 
   def self.data
     [

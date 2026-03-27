@@ -27,8 +27,6 @@ Rails.application.routes.draw do
 
   get "/takwim", to: "zones#monthly", as: :takwim
 
-
-
   get "/:location_name", to: "zones#show", as: :location,
     constraints: ->(req) { Location.valid_name?(req.params[:location_name]) }
 

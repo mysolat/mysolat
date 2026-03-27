@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def random_bg
-    photo_ids =[
+    photo_ids = [
       "1650201958331-be519823aa2d",
       "1651241644596-424291a3e2d1",
       "1597925147405-2d5b1122c79a",

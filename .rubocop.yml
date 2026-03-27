@@ -1,17 +1,17 @@
 require:
   - standard
+
+plugins:
   - standard-custom
   - standard-performance
   - rubocop-performance
   - rubocop-rails
-  - rubocop-slim
 
 inherit_gem:
   standard: config/base.yml
   standard-performance: config/base.yml
   standard-custom: config/base.yml
   standard-rails: config/base.yml
-  rubocop-slim: config/default.yml
 
 inherit_from: .rubocop_todo.yml
 
@@ -75,7 +75,3 @@ Style/FrozenStringLiteralComment:
 Style/RescueStandardError:
   Enabled: true
   EnforcedStyle: explicit
-
-Layout/LineLength:
-  Exclude:
-    - "**/*.slim"

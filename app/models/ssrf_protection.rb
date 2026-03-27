@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SsrfProtection
   extend self
 
@@ -17,7 +19,7 @@ module SsrfProtection
   def resolve_public_ip(hostname)
     ip_addresses = resolve_dns(hostname)
     public_ips = ip_addresses.reject { |ip| blocked_address?(ip) }
-    public_ips.sort_by { |ipaddr| ipaddr.ipv4? ? 0 : 1 }.first&.to_s
+    public_ips.min_by { |ipaddr| ipaddr.ipv4? ? 0 : 1 }&.to_s
   end
 
   def blocked_address?(ip)

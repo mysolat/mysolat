@@ -4,11 +4,11 @@ class Push::SchedulePrayerNotificationsJob < ApplicationJob
   queue_as :default
 
   NOTIFIABLE_PRAYERS = {
-    "fajr"    => "Subuh",
-    "dhuhr"   => "Zohor",
-    "asr"     => "Asar",
+    "fajr" => "Subuh",
+    "dhuhr" => "Zohor",
+    "asr" => "Asar",
     "maghrib" => "Maghrib",
-    "isha"    => "Isyak"
+    "isha" => "Isyak"
   }.freeze
 
   def perform
@@ -16,7 +16,7 @@ class Push::SchedulePrayerNotificationsJob < ApplicationJob
 
     active_zones.each do |zone|
       schedule_for_zone(zone)
-    rescue => e
+    rescue StandardError => e
       Rails.logger.error "Failed to schedule notifications for zone #{zone}: #{e.message}"
     end
   end

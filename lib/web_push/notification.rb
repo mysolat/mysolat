@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WebPush::Notification
   def initialize(title:, body:, path:, badge:, endpoint:, endpoint_ip:, p256dh_key:, auth_key:)
     @title, @body, @path, @badge = title, body, path, badge

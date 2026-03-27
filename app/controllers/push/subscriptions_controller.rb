@@ -16,7 +16,7 @@ class Push::SubscriptionsController < ApplicationController
     if @subscription.save
       head :created
     else
-      head :unprocessable_entity
+      head :unprocessable_content
     end
   end
 

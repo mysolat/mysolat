@@ -40,7 +40,7 @@ module WebPush::PersistentRequest
     req.body = body
 
     if http.is_a?(Net::HTTP::Persistent)
-      response = http.request uri, req
+      http.request uri, req
     else
       resp = http.request(req)
       verify_response(resp)

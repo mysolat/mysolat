@@ -8,13 +8,13 @@ class PagesController < ApplicationController
     send("setup_#{params[:id]}") if respond_to?("setup_#{params[:id]}", true)
     render available_page(params[:id])
   rescue ActionController::RoutingError
-    render file: Rails.root.join("public/404.html"), status: :not_found, layout: false
+    render file: Rails.public_path.join("404.html"), status: :not_found, layout: false
   end
 
   private
 
   def available_page(page)
-    %w[api kiblat masjid kalendar tentang homeassistant].include?(page) ? page : raise(ActionController::RoutingError, 'Not Found')
+    %w[api kiblat masjid kalendar tentang homeassistant].include?(page) ? page : raise(ActionController::RoutingError, "Not Found")
   end
 
   def setup_kalendar
@@ -24,12 +24,11 @@ class PagesController < ApplicationController
     # Show 1 year back and 1 year ahead, filterable by year
     range_events = all_events.select { |e|
       date = Date.parse(e["tarikh_miladi"])
-      date >= 1.year.ago.to_date && date <= 1.year.from_now.to_date
+      date.between?(1.year.ago.to_date, 1.year.from_now.to_date)
     }
 
     @years = range_events.map { |e| Date.parse(e["tarikh_miladi"]).year }.uniq.sort
     @selected_year = params[:year] ? params[:year].to_i : Date.current.year
     @events = range_events.select { |e| Date.parse(e["tarikh_miladi"]).year == @selected_year }
   end
-
 end
