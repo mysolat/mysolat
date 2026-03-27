@@ -63,6 +63,21 @@ export default class extends Controller {
         }
     }
 
+    async sendTest() {
+        const response = await fetch("/push/test", {
+            method: "POST",
+            headers: {
+                "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+            },
+        });
+        const data = await response.json();
+        if (response.ok) {
+            console.info(`[Notification] Test sent to ${data.count} subscription(s) for zone ${data.zone}`);
+        } else {
+            console.warn("[Notification] Test failed:", data.error);
+        }
+    }
+
     async #unsubscribe() {
         const registration = await this.#getServiceWorkerRegistration();
         const subscription = await registration?.pushManager?.getSubscription();

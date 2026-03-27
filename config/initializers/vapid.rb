@@ -1,4 +1,4 @@
 Rails.application.configure do
-  config.x.vapid.private_key = ENV["VAPID_PRIVATE_KEY"]
-  config.x.vapid.public_key = ENV["VAPID_PUBLIC_KEY"]
+  config.x.vapid.private_key = Rails.application.credentials.dig(:vapid, :private_key)
+  config.x.vapid.public_key = Rails.application.credentials.dig(:vapid, :public_key)
 end

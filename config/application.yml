@@ -2,8 +2,7 @@
 default: &default
   SOLID_QUEUE_IN_PUMA: true
   GOOGLE_TAG_ID: "G-H5P07XF90L"
-  VAPID_PUBLIC_KEY: "BA5xB2la9k-Cdb9WoxMzdJUVwZL-84GwBj1V_cWB_sU0-83aERN1_bPYbuU7vkLCUuFPcSNlbl9CcFtpYDa1bks="
-  VAPID_PRIVATE_KEY: "6dpzqbOeLyA4r6DJ9sLu7KJ3k8rwyBSLEUcJ_1p3FUs="
+
 
 development:
   <<: *default

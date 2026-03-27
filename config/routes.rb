@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
   namespace :push do
     resources :subscriptions, only: [:create, :destroy]
+    post "test", to: "test_notifications#create" if Rails.env.development?
   end
 
   get "/*id", to: "pages#show", as: :page
