@@ -9,6 +9,13 @@
             "tel": "013-4899921"
         },
         {
+            "nama_masjid": "MASJID JAMEK AL-KHADIJIAH",
+            "latitud": "3.09777",
+            "longitud": "101.66994",
+            "alamat": "JALAN PANTAI DALAM, PANTAI DALAM,",
+            "tel": "03-22834592"
+        },
+        {
             "nama_masjid": "ABDUL RAHMAN PUTRA keladi",
             "latitud": "5.393480",
             "longitud": "100.540870",
@@ -58,13 +65,6 @@
             "tel": "0126260272"
         },
         {
-            "nama_masjid": "SURAU AL-HIDAYAH",
-            "latitud": "3.054655",
-            "longitud": "101.690864",
-            "alamat": "KOMPLEKS SUKAN NEGARA,BUKIT JALIL",
-            "tel": ""
-        },
-        {
             "nama_masjid": "SURAU NURUL EHSAN KAMPUNG BANDA KABA",
             "latitud": "2.202216",
             "longitud": "102.266235",
@@ -83,13 +83,6 @@
             "latitud": "6.3270",
             "longitud": "99.8029",
             "alamat": "BUKIT TEKOH, SG. MENGHULU, MK. KUAH,\r\nLANGKAWI",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "SURAU SRI PETALING",
-            "latitud": "3.069831",
-            "longitud": "101.702199",
-            "alamat": "JALAN PASAI, TAMAN SRI PETALING",
             "tel": ""
         },
         {
@@ -114,13 +107,6 @@
             "tel": "0196672548"
         },
         {
-            "nama_masjid": "SURAU NURHIDAYAH",
-            "latitud": "3.232192",
-            "longitud": "101.641881",
-            "alamat": "LOT 9828 JALAN 2\/1\r\nKG. MELAYU, KEPONG\r\nKUALA LUMPUR",
-            "tel": ""
-        },
-        {
             "nama_masjid": "SURAU TENAGA NASIONAL",
             "latitud": "3.120429",
             "longitud": "101.671372",
@@ -135,11 +121,32 @@
             "tel": null
         },
         {
+            "nama_masjid": "MADRASAH RAJAIYAH",
+            "latitud": "3.165177180931483",
+            "longitud": "101.71038641349199",
+            "alamat": "JALAN RAJA UDA, KG. BARU",
+            "tel": "019-3473749"
+        },
+        {
             "nama_masjid": "SURAU BALAI ISLAM",
             "latitud": "3.174858",
             "longitud": "101.698260",
             "alamat": "JALAN TUN RAZAK,",
             "tel": ""
+        },
+        {
+            "nama_masjid": "MADRASATUL ISLAMIAH",
+            "latitud": "3.1064069321915424",
+            "longitud": "101.73609672152723",
+            "alamat": "JALAN KUARI, KG. CHERAS BARU,",
+            "tel": "012-6532099"
+        },
+        {
+            "nama_masjid": "SURAU INSTITUT LATIHAN PERINDUSTRIAN",
+            "latitud": "3.0921388301749273,",
+            "longitud": "101.68739319089009",
+            "alamat": "JALAN KUCHAI LAMA",
+            "tel": null
         },
         {
             "nama_masjid": "MADRASAH AL-KHAIRIAH",
@@ -154,13 +161,6 @@
             "longitud": "101.730984",
             "alamat": "SEKSYEN 1, WANGSA MAJU, SETAPAK",
             "tel": null
-        },
-        {
-            "nama_masjid": "SURAU MUHAMMADI ANGKASAPURI",
-            "latitud": "3.113276",
-            "longitud": "101.673569",
-            "alamat": "D\/A PEJABAT PENERANGAN, \r\nKEM PENERANGAN MALAYSIA ANGKASAPURI",
-            "tel": ""
         },
         {
             "nama_masjid": "SURAU DARUL HUDA",
@@ -278,8 +278,8 @@
             "nama_masjid": "MADRASAH IKHLASIAH",
             "latitud": "3.19891",
             "longitud": "101.69566",
-            "alamat": "KAWASAN A KG. CHUBADAK TAMBAHAN\r\nSENTUL PASAR\r\nKUALA LUMPUR",
-            "tel": ""
+            "alamat": "KAWASAN A KG. CHUBADAK TAMBAHANSENTUL PASARKUALA LUMPUR",
+            "tel": null
         },
         {
             "nama_masjid": "SURAU BUNGA RAYA",
@@ -598,13 +598,6 @@
         },
         {
             "nama_masjid": "SURAU AN-NUR",
-            "latitud": "3.205970",
-            "longitud": "101.724380",
-            "alamat": "PEJABAT AGAMA MARKAS 12 BRIGED, KEM WARDIBURN SETAPAK",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "SURAU AN-NUR",
             "latitud": "6.180398658605593",
             "longitud": "116.23213722487493",
             "alamat": "KG. BARU SELAUD",
@@ -684,7 +677,7 @@
             "nama_masjid": "SURAU AL-AMIN",
             "latitud": "3.0860997429448203",
             "longitud": "101.71620716510225",
-            "alamat": "JALAN IKHLAS 7BANDAR TUN RAZAK",
+            "alamat": "LOT 52936, JALAN IKHLAS 7, TAMAN BANDARAYA DAMAI, BANDAR TUN RAZAK, 56000 KUALA LUMPUR",
             "tel": null
         },
         {
@@ -755,13 +748,6 @@
             "latitud": "3.201312",
             "longitud": "101.735117",
             "alamat": "GROUND FLOOR, ALPHA VILLA APARTMENT\r\nJALAN 2\/27A, WANGSA MAJU",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "SURAU WISMA FELDA",
-            "latitud": "3.169221",
-            "longitud": "101.717843",
-            "alamat": "TIGKAT 1 WISMA FELDA\r\nJALAN PERUMAHAN GURNEY",
             "tel": ""
         },
         {
@@ -1412,14 +1398,7 @@
             "nama_masjid": "SURAU AS-SOBIRIN",
             "latitud": "3.0725523042536946,",
             "longitud": "101.74073817615778",
-            "alamat": "No 4, Jalan Damai Rasa 18, Alam Damai 56000, Cheras Kuala Lumpur",
-            "tel": null
-        },
-        {
-            "nama_masjid": "SURAU INSTITUT LATIHAN PERINDUSTRIAN",
-            "latitud": "3.0921867588595497",
-            "longitud": "101.68752518780254",
-            "alamat": "JALAN KUCHAI LAMA 58200 KUALA LUMPUR",
+            "alamat": "NO 4, JALAN DAMAI RASA 18, ALAM DAMAI 56000, CHERAS KUALA LUMPUR",
             "tel": null
         },
         {
