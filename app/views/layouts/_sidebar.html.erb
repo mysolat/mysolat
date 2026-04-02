@@ -1,6 +1,27 @@
-<div class="drawer-side z-50">
-  <label class="drawer-overlay backdrop-blur-sm bg-black/20" for="drawer" aria-label="Close menu"></label>
-  <aside class="w-full md:w-80 min-h-screen flex flex-col md:m-4 md:ml-24 rounded-t-3xl md:rounded-3xl backdrop-blur-md bg-white/20 md:border border-white/30 shadow-2xl overflow-hidden">
+<!-- Tetapan (Settings) Bottom Drawer - Base UI Style -->
+<div class="fixed inset-0 z-50 hidden" data-controller="tetapan" data-tetapan-target="backdrop" data-action="click->tetapan#close">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+
+  <!-- Bottom Drawer / Modal -->
+  <aside
+    data-tetapan-target="drawer"
+    class="
+      fixed bottom-0 left-0 right-0
+      md:fixed md:inset-4 md:m-auto md:w-80 md:bottom-auto
+      z-50
+      flex flex-col
+      w-full md:max-w-md
+      rounded-t-3xl md:rounded-3xl
+      bg-white/20 backdrop-blur-md
+      border border-white/30
+      shadow-2xl
+      overflow-hidden
+      max-h-[90vh] md:max-h-[85vh]
+      transition-all duration-300
+      translate-y-full md:translate-y-0
+    "
+  >
     <!-- Header -->
     <div class="sticky top-0 z-10 border-b border-white/20 safe-top">
       <!-- Mobile drag handle -->
@@ -171,3 +192,4 @@
     </div>
   </aside>
 </div>
+<!-- End Tetapan Bottom Drawer -->
