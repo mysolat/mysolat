@@ -11,11 +11,16 @@ class Jakim::ApiResource < ApplicationResource
 
   cattr_accessor :cache_expiry
 
+  before_request :set_user_agent
   before_request :upcase_zone
   before_request :set_cache_key
   after_request :set_cache_header
 
   private
+
+  def set_user_agent(name, request)
+    request.headers["User-Agent"] = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  end
 
   def upcase_zone(name, request)
     return unless request.get_params[:zone]
