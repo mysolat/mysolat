@@ -110,19 +110,20 @@ class PrayerTimesDB {
 
   formatDate(date) {
     const day = String(date.getDate()).padStart(2, "0");
+    // JAKIM API returns dates with Malay month abbreviations
     const months = [
       "Jan",
       "Feb",
-      "Mar",
+      "Mac",
       "Apr",
-      "May",
+      "Mei",
       "Jun",
       "Jul",
-      "Aug",
+      "Ogo",
       "Sep",
-      "Oct",
+      "Okt",
       "Nov",
-      "Dec",
+      "Dis",
     ];
     const month = months[date.getMonth()];
     const year = date.getFullYear();
@@ -130,7 +131,7 @@ class PrayerTimesDB {
   }
 
   parseDate(dateStr) {
-    // Parse "01-Jan-2025" format
+    // Accept both Malay (JAKIM API) and English month abbreviations.
     const parts = dateStr.split("-");
     if (parts.length !== 3) return null;
 
@@ -138,16 +139,16 @@ class PrayerTimesDB {
     const months = {
       Jan: 0,
       Feb: 1,
-      Mar: 2,
+      Mac: 2, Mar: 2,
       Apr: 3,
-      May: 4,
+      Mei: 4, May: 4,
       Jun: 5,
       Jul: 6,
-      Aug: 7,
+      Ogo: 7, Aug: 7,
       Sep: 8,
-      Oct: 9,
+      Okt: 9, Oct: 9,
       Nov: 10,
-      Dec: 11,
+      Dis: 11, Dec: 11,
     };
     const month = months[parts[1]];
     const year = parseInt(parts[2], 10);

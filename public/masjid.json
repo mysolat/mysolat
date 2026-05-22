@@ -278,7 +278,7 @@
             "nama_masjid": "MASJID JAMEK AS SOLIHIN, KANCHONG DARAT",
             "latitud": "2.79071",
             "longitud": "101.48457",
-            "alamat": "BATU 22 1\/2 KANCHONG DARAT,42700 BANTING, KUALA LANGAT",
+            "alamat": "BATU 22 1/2 KANCHONG DARAT,42700 BANTING, KUALA LANGAT",
             "tel": null
         },
         {
@@ -404,7 +404,7 @@
             "nama_masjid": "MASJID NURUL HAYAT, PEKAN KUALA PENYU",
             "latitud": "5.495704",
             "longitud": "115.541296",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 41, 89747 KUALA PENYU.",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 41, 89747 KUALA PENYU.",
             "tel": "087-884162"
         },
         {
@@ -640,8 +640,8 @@
         },
         {
             "nama_masjid": "MASJID KG MELAYU MAJIDEE",
-            "latitud": "1",
-            "longitud": "1",
+            "latitud": "1.5130379713121704",
+            "longitud": "103.75438406015282",
             "alamat": "JALAN MASJID KG MELAYU MAJIDEE",
             "tel": null
         },
@@ -663,7 +663,7 @@
             "nama_masjid": "MASJIDUR RAHMAN",
             "latitud": "4.480561",
             "longitud": "118.610571",
-            "alamat": "BANDAR SEMPORNA, \nD\/A PETI SURAT NO.172,\nSEMPORNA",
+            "alamat": "BANDAR SEMPORNA, \nD/A PETI SURAT NO.172,\nSEMPORNA",
             "tel": "089-784051"
         },
         {
@@ -724,8 +724,8 @@
         },
         {
             "nama_masjid": "MASJID AL ISMAILIAH",
-            "latitud": "0",
-            "longitud": "0",
+            "latitud": "4.108317772193765",
+            "longitud": "100.76741739144508",
             "alamat": "KG. SG. TIRAM,\r\n32020 SITIAWAN,\r\nPERAK",
             "tel": "0135285304"
         },
@@ -891,13 +891,6 @@
             "tel": "05-7216578"
         },
         {
-            "nama_masjid": "MASJID JAMEK SUNGAI DUNGUN",
-            "latitud": "5.037155",
-            "longitud": "100.484925",
-            "alamat": "SUNGAI DUNGUN 34300 BAGAN SERAI,PERAK",
-            "tel": "05-7216578"
-        },
-        {
             "nama_masjid": "MASJID AN-NUR",
             "latitud": "4.995742",
             "longitud": "100.654925",
@@ -917,13 +910,6 @@
             "longitud": "100.630424",
             "alamat": "34400 SIMPANG EMPAT SEMANGGOL, PERAK",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AT-TAQWA",
-            "latitud": "4.949172",
-            "longitud": "100.651803",
-            "alamat": "JALAN KUBU GAJAH 34400 SIMPANG 4 SEMANGGOL PERAK DARUL RIDZUAN",
-            "tel": "019 451 5309"
         },
         {
             "nama_masjid": "MASJID AT-TAQWA",
@@ -1055,15 +1041,8 @@
             "nama_masjid": "MASJID NUR AL-HUDA",
             "latitud": "5.269221",
             "longitud": "101.065738",
-            "alamat": "KAMPUNG BELUM BARU,33320 GERIK,PERAK",
+            "alamat": "KAMPUNG BELUM BARU, 33320 GERIK,PERAK",
             "tel": "0134900405"
-        },
-        {
-            "nama_masjid": "MASJID AL-ANSARI",
-            "latitud": "5.280767580639118",
-            "longitud": "101.05725014180037",
-            "alamat": "KAMPUNG MALAU, KENERING 33300 GERIK,PERAK",
-            "tel": "017-5681046"
         },
         {
             "nama_masjid": "MASJID AL-ANSARI",
@@ -1123,7 +1102,7 @@
         },
         {
             "nama_masjid": "MASJID AT-TAQWA",
-            "latitud": "5.398182657175146 101.11321975",
+            "latitud": "5.398182657175146",
             "longitud": "101.11321975002343",
             "alamat": "KAMPUNG AIR PANAS,33300 GERIK,PERAK",
             "tel": "019-4637934"
@@ -1538,7 +1517,7 @@
             "nama_masjid": "MASJID AL - ANSAR",
             "latitud": "4.100586",
             "longitud": "101.047371",
-            "alamat": "PARIT 2\/7L,36600 CHENDERONG BALAI, PERAK",
+            "alamat": "PARIT 2/7L,36600 CHENDERONG BALAI, PERAK",
             "tel": "013 3639117"
         },
         {
@@ -1571,8 +1550,8 @@
         },
         {
             "nama_masjid": "MASJID AL - HIDAYAH",
-            "latitud": "101.034679",
-            "longitud": "101.034679",
+            "latitud": "4.115152971765573",
+            "longitud": "101.03385356076664",
             "alamat": "KAMPUNG PERMATANG PELANDUK,\r\n36600 CENDERONG BALAI, PERAK",
             "tel": "0195537332"
         },
@@ -1580,7 +1559,7 @@
             "nama_masjid": "MASJID AL - HUDA",
             "latitud": "4.111554",
             "longitud": "101.032895",
-            "alamat": "PARIT 1\/ 6 L , LABU KUBONG, 36600 CENDERONG BALAI, PERAK",
+            "alamat": "PARIT 1/ 6 L , LABU KUBONG, 36600 CENDERONG BALAI, PERAK",
             "tel": "0175676560"
         },
         {
@@ -1601,8 +1580,8 @@
             "nama_masjid": "MASJID AL - KHAIRIAH",
             "latitud": "3.906836",
             "longitud": "100.774806",
-            "alamat": "KG SELEKOH 36200 SELEKOH, PERAK( FT : MAIPK\/TI\/05\/TWM\/0053 ) ( FM : MAIPK-TI 800-1\/1\/218 )",
-            "tel": "019 2268645\/P"
+            "alamat": "KG SELEKOH 36200 SELEKOH, PERAK( FT : MAIPK/TI/05/TWM/0053 ) ( FM : MAIPK-TI 800-1/1/218 )",
+            "tel": "019 2268645/P"
         },
         {
             "nama_masjid": "MASJID AL - KHAIRIAH WATANIAH",
@@ -1762,7 +1741,7 @@
             "nama_masjid": "MASJID KG. BATAK RABIT",
             "latitud": "4.015696",
             "longitud": "101.021962",
-            "alamat": "BATU 3 1\/2 , JLN MAHARAJA LELA,36000 TELUK INTAN, PERAK",
+            "alamat": "BATU 3 1/2 , JLN MAHARAJA LELA,36000 TELUK INTAN, PERAK",
             "tel": "019 4642747"
         },
         {
@@ -1924,7 +1903,7 @@
             "latitud": "5.29270",
             "longitud": "100.78903",
             "alamat": "TANJONG LENGKONG,34140 RANTAU PANJANG, ULU SELAMA PERAK.",
-            "tel": "05-8391157\/019-"
+            "tel": "05-8391157/019-"
         },
         {
             "nama_masjid": "MASJID AL-IDRISIAH",
@@ -1952,7 +1931,7 @@
             "latitud": "5.2612",
             "longitud": "100.76264",
             "alamat": "SUNGAI RAMBUTAN,34140 RANTAU PANJANG, ULU SELAMA PERAK.",
-            "tel": "05-8394496\/019-"
+            "tel": "05-8394496/019-"
         },
         {
             "nama_masjid": "MASJID AL-SYUKRIAH",
@@ -1983,32 +1962,11 @@
             "tel": "0195759359"
         },
         {
-            "nama_masjid": "MASJID AL - AZHAR",
-            "latitud": "4.217451",
-            "longitud": "100.994831",
-            "alamat": "KG BALUN BIDAI 36800 KAMPUNG GAJAH",
-            "tel": "0195759359"
-        },
-        {
             "nama_masjid": "MASJID AL JAIZIAH",
             "latitud": "4.244896",
             "longitud": "100.915084",
             "alamat": "KG TELUK SAREH,\r\n36800 KAMPUNG GAJAH",
             "tel": "013539693"
-        },
-        {
-            "nama_masjid": "MASJID AL JAIZIAH",
-            "latitud": "4.244896",
-            "longitud": "100.915084",
-            "alamat": "KG TELUK SAREH,\r\n36800 KAMPUNG GAJAH",
-            "tel": "013539693"
-        },
-        {
-            "nama_masjid": "MASJID AL  MUHAJIRIN",
-            "latitud": "4.110620",
-            "longitud": "100.945978",
-            "alamat": "FELCRA SEBERANG PERAK,ULU DEDAP \r\n36000 TELUK INTAN, PERAK",
-            "tel": "0125705513"
         },
         {
             "nama_masjid": "MASJID AL  MUHAJIRIN",
@@ -2266,7 +2224,7 @@
             "nama_masjid": "MASJID IJTIHADIAH",
             "latitud": "4.858751",
             "longitud": "101.049157",
-            "alamat": "KAMPUNG SIMPANG\/SUAK PLANG SG SIPUT U",
+            "alamat": "KAMPUNG SIMPANG/SUAK PLANG SG SIPUT U",
             "tel": "0135185698"
         },
         {
@@ -2357,7 +2315,7 @@
             "nama_masjid": "MASJID AS SAKINAH",
             "latitud": "4.868743",
             "longitud": "100.935593",
-            "alamat": "KAMPUNG CHANGKAT CHE KAMPAR\/BERALA 33020 KATI, KUALA KANGSAR, PERAK.",
+            "alamat": "KAMPUNG CHANGKAT CHE KAMPAR/BERALA 33020 KATI, KUALA KANGSAR, PERAK.",
             "tel": "0194509138"
         },
         {
@@ -2805,7 +2763,7 @@
             "nama_masjid": "MASJID AL RIDHUAN",
             "latitud": "3.1968956354511535",
             "longitud": "101.7623233795166",
-            "alamat": "BATU 7 1\/2, HULU KLANG, 68000 AMPANG,\r\nSELANGOR",
+            "alamat": "BATU 7 1/2, HULU KLANG, 68000 AMPANG,\r\nSELANGOR",
             "tel": "03 -42516734"
         },
         {
@@ -2840,7 +2798,7 @@
             "nama_masjid": "MASJID SUNGAI CHINCHIN",
             "latitud": "3.2461552253224797",
             "longitud": "101.71609372538482",
-            "alamat": "BATU 7  3\/4, SUNGAI CHINCHIN, JALAN GOMBAK, GOMBAK, 53100 SELANGOR",
+            "alamat": "BATU 7  3/4, SUNGAI CHINCHIN, JALAN GOMBAK, GOMBAK, 53100 SELANGOR",
             "tel": ""
         },
         {
@@ -2861,14 +2819,14 @@
             "nama_masjid": "MASJID ZAKARIA",
             "latitud": "3.2515475080574268",
             "longitud": "101.72304511070251",
-            "alamat": "BATU 8 1\/2 , JALAN GOMBAK,\r\nGOMBAK UTARA, 53100 GOMBAK, SELANGOR",
+            "alamat": "BATU 8 1/2 , JALAN GOMBAK,\r\nGOMBAK UTARA, 53100 GOMBAK, SELANGOR",
             "tel": ""
         },
         {
             "nama_masjid": "MASJID AL -KHAIRIYAH",
             "latitud": "3.2467380043033454",
             "longitud": "101.7027997970581",
-            "alamat": "JALAN SG 7\/1, TMN. SERI GOMBAK, 68100 BATU CAVES, SELANGOR",
+            "alamat": "JALAN SG 7/1, TMN. SERI GOMBAK, 68100 BATU CAVES, SELANGOR",
             "tel": "03-61855033"
         },
         {
@@ -2896,7 +2854,7 @@
             "nama_masjid": "MASJID AL - MUTTAQIN",
             "latitud": "3.24301",
             "longitud": "101.65831",
-            "alamat": "LOT 62\/63, JALAN SURAU, SELAYANG PANDANG,\r\n68100 BATU CAVES,\r\nSELANGOR",
+            "alamat": "LOT 62/63, JALAN SURAU, SELAYANG PANDANG,\r\n68100 BATU CAVES,\r\nSELANGOR",
             "tel": ""
         },
         {
@@ -2924,7 +2882,7 @@
             "nama_masjid": "MASJID AS - SOBIRIN",
             "latitud": "3.20300",
             "longitud": "101.75306",
-            "alamat": "JALAN AU 5C\/5, LEMBAH KERAMAT HULU KLANG, 54200 KUALA LUMPUR",
+            "alamat": "JALAN AU 5C/5, LEMBAH KERAMAT HULU KLANG, 54200 KUALA LUMPUR",
             "tel": "0341075859"
         },
         {
@@ -2959,14 +2917,14 @@
             "nama_masjid": "MASJID AL - KHAIRIAH",
             "latitud": "3.1847587094542504",
             "longitud": "101.75810158252716",
-            "alamat": "MEDAN SRI KERAMAT, JALAN AU3\/7B, HULU KLANG",
+            "alamat": "MEDAN SRI KERAMAT, JALAN AU3/7B, HULU KLANG",
             "tel": "0341053515"
         },
         {
             "nama_masjid": "MASJID AL -ISLAHIAH",
             "latitud": "3.23079",
             "longitud": "101.53633",
-            "alamat": "BATU 17 3\/4, KUANG, 48050 RAWANG,\r\nSELANGOR",
+            "alamat": "BATU 17 3/4, KUANG, 48050 RAWANG,\r\nSELANGOR",
             "tel": "03-60383246"
         },
         {
@@ -2980,7 +2938,7 @@
             "nama_masjid": " MASJID CAHAYA IMAN",
             "latitud": "3.32926",
             "longitud": "101.52655",
-            "alamat": "NO.11, JALAN DESA 6\/9,\r\nBANDAR COUNTRY HOMES, 48000 RAWANG, SELANGOR",
+            "alamat": "NO.11, JALAN DESA 6/9,\r\nBANDAR COUNTRY HOMES, 48000 RAWANG, SELANGOR",
             "tel": "016-9950608"
         },
         {
@@ -3176,7 +3134,7 @@
             "nama_masjid": "MASJID AL  FIRDAUS, SG RAMBAI",
             "latitud": "2.886341",
             "longitud": "101.491129",
-            "alamat": "BATU 13 1\/2 KG. SUNGAI RAMBAI, JENJAROM, KUALA LANGAT",
+            "alamat": "BATU 13 1/2 KG. SUNGAI RAMBAI, JENJAROM, KUALA LANGAT",
             "tel": ""
         },
         {
@@ -3307,8 +3265,8 @@
         },
         {
             "nama_masjid": "MASJID KAMPUS UITM DUNGUN",
-            "latitud": "4\u00b042'9\"N",
-            "longitud": "103\u00b026'26\"E",
+            "latitud": "4.757059519782844",
+            "longitud": "103.40558839004211",
             "alamat": "UITM CAWANGAN DUNGUN,TERENGGANU",
             "tel": null
         },
@@ -3554,7 +3512,7 @@
             "nama_masjid": "MASJID MUHAMMADIAH",
             "latitud": "3.69904",
             "longitud": "100.96402",
-            "alamat": "BATU 4 1\/2 KAMPUNG PANCHANG BEDENA,\n45300 SUNGAI BESAR",
+            "alamat": "BATU 4 1/2 KAMPUNG PANCHANG BEDENA,\n45300 SUNGAI BESAR",
             "tel": "013-2631546"
         },
         {
@@ -3876,7 +3834,7 @@
             "nama_masjid": "MASJID KG. SEMENTA",
             "latitud": "3.09282",
             "longitud": "101.38724",
-            "alamat": "BATU 6 1\/2, JALAN KAPAR,KLANG, SELANGOR",
+            "alamat": "BATU 6 1/2, JALAN KAPAR,KLANG, SELANGOR",
             "tel": "019-6162890"
         },
         {
@@ -3975,7 +3933,7 @@
             "latitud": "3.06276",
             "longitud": "101.44082",
             "alamat": "LOT 17896, KM 2, JALAN KAPAR, SG. PINANG BANDAR, 41400 KLANG.",
-            "tel": "03-33448950\/013"
+            "tel": "03-33448950/013"
         },
         {
             "nama_masjid": "MASJID AT - TAQWA",
@@ -3996,7 +3954,7 @@
             "latitud": "3.0297910345170873",
             "longitud": "101.40333611420883",
             "alamat": "LOT 11677, KAMPUNG DELEK, 41250 KLANG",
-            "tel": "03-33732652 \/ 0"
+            "tel": "03-33732652 / 0"
         },
         {
             "nama_masjid": "MASJID NURUL IMAN",
@@ -4045,7 +4003,7 @@
             "latitud": "3.04120",
             "longitud": "101.45868",
             "alamat": "BATU 1, JALAN BUKIT KUDA, 41300 KLANG.",
-            "tel": "03-33415220 \/ 0"
+            "tel": "03-33415220 / 0"
         },
         {
             "nama_masjid": "MASJID AS - SOLIHIN",
@@ -4101,13 +4059,13 @@
             "latitud": "3.041892",
             "longitud": "101.447243",
             "alamat": "JALAN TG. KELANA, 41000 KLANG",
-            "tel": "03-33724762\/019"
+            "tel": "03-33724762/019"
         },
         {
             "nama_masjid": "MASJID KAMPUNG PENDAMAR",
             "latitud": "2.979309527790858",
             "longitud": "101.43161237239838",
-            "alamat": "LOT 3120, BATU 3 1\/2, KG. PENDAMAR, 41200 PELABUHAN KLANG",
+            "alamat": "LOT 3120, BATU 3 1/2, KG. PENDAMAR, 41200 PELABUHAN KLANG",
             "tel": "019-2233390"
         },
         {
@@ -4503,25 +4461,11 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID ACHEH",
-            "latitud": "5.410937267174949",
-            "longitud": "100.30962020158768",
-            "alamat": "10460 JALAN LANGKAWI,\r\nGEORGETOWN",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AL MALIK KHALID",
             "latitud": "5.353854",
             "longitud": "100.301854",
             "alamat": "11800 PUSAT ISLAM UNIVERSITI SAINS MALAYSIA",
             "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID JAMEK BAGAN JERMAL(TL)",
-            "latitud": "5.467688",
-            "longitud": "100.2880581",
-            "alamat": "10470 JALAN TANJONG TOKONG PULAU PINANG",
-            "tel": null
         },
         {
             "nama_masjid": "MASJID JAMEK BAGAN JERMAL(TL)",
@@ -4580,13 +4524,6 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID TUAN GURU",
-            "latitud": "5.459194891943697",
-            "longitud": "100.30606627464294",
-            "alamat": "10470 JALAN TG TOKONG LAMA PULAU PINANG",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID IBNU UMAR AL KHATTAB  BAYAN BARU",
             "latitud": "5.323846949447304",
             "longitud": "100.2857528473689",
@@ -4601,20 +4538,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID UMAR ABDUL AZIZ BATU MAUNG",
-            "latitud": "5.281164449267559",
-            "longitud": "100.28371396345226",
-            "alamat": "11950 JALAN BATU MAUNG, BALIK PULAU",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AL HIDAYAH BAYAN LEPAS",
-            "latitud": "5.296150795711444",
-            "longitud": "100.25935292243958",
-            "alamat": "11900 JALAN RELAU, BAYAN LEPAS",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AL HIDAYAH BAYAN LEPAS",
             "latitud": "5.296150795711444",
             "longitud": "100.25935292243958",
@@ -4629,31 +4552,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID KAMPONG BINJAI",
-            "latitud": "5.2844901546228895",
-            "longitud": "100.25559782981873",
-            "alamat": "11900 JALAN PTG. DAMAR LAUT, BAYAN LEPAS",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID KAMPONG SERONOK",
             "latitud": "5.29025",
             "longitud": "100.25609",
             "alamat": "11900 JALAN PTG. DAMAR LAUT, BAYAN LEPAS",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KAMPONG SERONOK",
-            "latitud": "5.29025",
-            "longitud": "100.25609",
-            "alamat": "11900 JALAN PTG. DAMAR LAUT, BAYAN LEPAS",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KAMPONG TERANG",
-            "latitud": "5.325187",
-            "longitud": " 100.212533",
-            "alamat": "11020 JALAN PULAU BETONG BALIK PULAU",
             "tel": ""
         },
         {
@@ -4692,31 +4594,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID SUNGAI PUYU",
-            "latitud": "5.448170",
-            "longitud": "100.394426",
-            "alamat": "13400 SUNGAI PUYU, BUTTERWORTH, SEBERANG PERAI UTARA",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID TELAGA AIR",
             "latitud": "5.413657",
             "longitud": "100.375182",
             "alamat": "12300 JALAN TELAGA AIR, BUTTERWORTH",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID TELAGA AIR",
-            "latitud": "5.413657",
-            "longitud": "100.375182",
-            "alamat": "12300 JALAN TELAGA AIR, BUTTERWORTH",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID TELOK AIR TAWAR",
-            "latitud": "5.488965",
-            "longitud": "100.383733",
-            "alamat": "13050 TELOK AIR TAWAR BUTTERWORTH",
             "tel": ""
         },
         {
@@ -4741,32 +4622,11 @@
             "tel": "0194708009 PENG"
         },
         {
-            "nama_masjid": "MASJID JAMEK BAKAR KAPOR",
-            "latitud": "5.539539",
-            "longitud": "100.378870",
-            "alamat": "13110 PENAGA, KEPALA BATAS, SEBERANG PERAI UTARA",
-            "tel": "0194708009 PENG"
-        },
-        {
             "nama_masjid": "MASJID AL-MUTTAQIN BAKAU TUA",
             "latitud": "5.577093",
             "longitud": "100.376515",
             "alamat": "13100 PENAGA, SEBERANG PERAI UTARA",
             "tel": "0125733600"
-        },
-        {
-            "nama_masjid": "MASJID AL-MUTTAQIN BAKAU TUA",
-            "latitud": "5.577093",
-            "longitud": "100.376515",
-            "alamat": "13100 PENAGA, SEBERANG PERAI UTARA",
-            "tel": "0125733600"
-        },
-        {
-            "nama_masjid": "MASJID JAMEK BUMBUNG LIMA",
-            "latitud": "5.556753",
-            "longitud": "100.435965",
-            "alamat": "13200 KEPALA BATAS, SEBERANG PERAI UTARA",
-            "tel": "0125797640"
         },
         {
             "nama_masjid": "MASJID JAMEK BUMBUNG LIMA",
@@ -4783,32 +4643,11 @@
             "tel": "0135331646"
         },
         {
-            "nama_masjid": "MASJID AR-RAHMANI KAMPUNG BANGGOL",
-            "latitud": "5.484912",
-            "longitud": "100.450454",
-            "alamat": "13200 KEPALA BATAS, SEBERANG PERAI UTARA",
-            "tel": "0135331646"
-        },
-        {
             "nama_masjid": "MASJID  JAMEK KAMPUNG LEMBAH",
             "latitud": "5.550960",
             "longitud": "100.395572",
             "alamat": "13110 PENAGA, SEBERANG PERAI UTARA",
             "tel": "0134072976"
-        },
-        {
-            "nama_masjid": "MASJID  JAMEK KAMPUNG LEMBAH",
-            "latitud": "5.550960",
-            "longitud": "100.395572",
-            "alamat": "13110 PENAGA, SEBERANG PERAI UTARA",
-            "tel": "0134072976"
-        },
-        {
-            "nama_masjid": "MASJID JAMEK KAMPONG PADANG",
-            "latitud": "5.537246",
-            "longitud": "100.420661",
-            "alamat": "13200 KEPALA BATAS, SEBERANG PERAI UTARA",
-            "tel": "0125765305"
         },
         {
             "nama_masjid": "MASJID JAMEK KAMPONG PADANG",
@@ -5049,13 +4888,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID JAMIK FELDA NITAR 02",
-            "latitud": "2.3943085560009214",
-            "longitud": "103.67488261169588",
-            "alamat": "FELDA NITAR 02, 86800 MERSING",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID KG SG REDAN",
             "latitud": "1.6083416694725698",
             "longitud": "103.88457298278809",
@@ -5068,13 +4900,6 @@
             "longitud": "103.637433",
             "alamat": "UNIVERSITI TEKNOLOGI MALAYSIA, 81300 SKUDAI, JOHOR",
             "tel": "0137096339"
-        },
-        {
-            "nama_masjid": "MASJID AL-KHAIRIAH",
-            "latitud": "5.316218496497901",
-            "longitud": "101.1455816193337",
-            "alamat": "KAMPUNG GANDA,TEMENGOR,33300 GERIK,PERAK",
-            "tel": "01114454439"
         },
         {
             "nama_masjid": "MASJID AL-KHAIRIAH",
@@ -5129,7 +4954,7 @@
             "nama_masjid": "MASJID AL - HIDAYAH  SIMPANG BABA",
             "latitud": "2.086619079253125",
             "longitud": "102.59799242019653",
-            "alamat": "BATU 4 1\/2, JALAN BUKIT PASIR,\r\nKG. SIMPANG BABA,\r\n84300 MUAR",
+            "alamat": "BATU 4 1/2, JALAN BUKIT PASIR,\r\nKG. SIMPANG BABA,\r\n84300 MUAR",
             "tel": "06 9857562"
         },
         {
@@ -5220,14 +5045,14 @@
             "nama_masjid": "MASJID AL-AMIN KG. BUKIT BESI BELURAN",
             "latitud": " 6.145957",
             "longitud": "117.394288",
-            "alamat": "D\/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID AL -FALAH",
             "latitud": "3.044070404776816",
             "longitud": "101.58719658851624",
-            "alamat": "JALAN USJ 9\/1,\n47620 SUBANG JAYA",
+            "alamat": "JALAN USJ 9/1,\n47620 SUBANG JAYA",
             "tel": ""
         },
         {
@@ -5276,7 +5101,7 @@
             "nama_masjid": "MASJID MUHIBBAH KG. BAKONG-BAKONG BELURAN",
             "latitud": " 6.158310",
             "longitud": "117.344506",
-            "alamat": "D\/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
@@ -5311,7 +5136,7 @@
             "nama_masjid": "MASJID AD-DINUL HAQ KG. TETABUAN BELURAN",
             "latitud": " 6.151558",
             "longitud": " 117.236169",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
             "tel": "089-511021"
         },
         {
@@ -5325,7 +5150,7 @@
             "nama_masjid": "MASJID NAHDHAH AL ISLAM",
             "latitud": "3.052330633855481",
             "longitud": "101.52204036712646",
-            "alamat": "JALAN 18\/42, SEK 18,\r\n40200 SHAH ALAM",
+            "alamat": "JALAN 18/42, SEK 18,\r\n40200 SHAH ALAM",
             "tel": "0172019246"
         },
         {
@@ -5339,7 +5164,7 @@
             "nama_masjid": "MASJID AL - HIDAYAH",
             "latitud": "3.0498170044037733",
             "longitud": "101.51617393254091",
-            "alamat": "JALAN 18 \/ 1, SEKSYEN 18,\r\n40200 SHAH ALAM",
+            "alamat": "JALAN 18 / 1, SEKSYEN 18,\r\n40200 SHAH ALAM",
             "tel": "03-54412003"
         },
         {
@@ -5353,14 +5178,14 @@
             "nama_masjid": "MASJID AL -AZHARIAH",
             "latitud": "3.0453131929698682",
             "longitud": "101.51920795440674",
-            "alamat": "JALAN 18\/ 4, SEKSYEN 18,\n40200 SHAH ALAM",
+            "alamat": "JALAN 18/ 4, SEKSYEN 18,\n40200 SHAH ALAM",
             "tel": "0193562269"
         },
         {
             "nama_masjid": "MASJID NUR SYUHADAH KG. SUNGAI NANGKA BELURAN",
             "latitud": " 5.762231",
             "longitud": "117.521596",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
@@ -5374,7 +5199,7 @@
             "nama_masjid": "MASJID AL - ISTIQAMAH",
             "latitud": "3.1480631902347334",
             "longitud": "101.51545286178589",
-            "alamat": "NO.11, JALAN MERAH SAGA,\nU9\/3, KAYANGAN HEIGHT,\n40150 SHAH ALAM",
+            "alamat": "NO.11, JALAN MERAH SAGA,\nU9/3, KAYANGAN HEIGHT,\n40150 SHAH ALAM",
             "tel": "0193332992"
         },
         {
@@ -5388,7 +5213,7 @@
             "nama_masjid": "MASJID AL - I'TISAM",
             "latitud": "3.10502",
             "longitud": "101.55816",
-            "alamat": "JALAN SASTERA U2\/1,\nSEKSYEN U2 TAMAN TTDI JAYA,\n40150 SHAH ALAM",
+            "alamat": "JALAN SASTERA U2/1,\nSEKSYEN U2 TAMAN TTDI JAYA,\n40150 SHAH ALAM",
             "tel": ""
         },
         {
@@ -5402,7 +5227,7 @@
             "nama_masjid": "MASJID RIADHUS SOLIHIN",
             "latitud": "3.045008",
             "longitud": "101.508184",
-            "alamat": "JALAN BELANAK 17 \/ 43,\r\nSEKSYEN 17,\r\n40200 SHAH ALAM",
+            "alamat": "JALAN BELANAK 17 / 43,\r\nSEKSYEN 17,\r\n40200 SHAH ALAM",
             "tel": ""
         },
         {
@@ -5416,21 +5241,21 @@
             "nama_masjid": "MASJID AL - AMIN",
             "latitud": "3.0419437337248314",
             "longitud": "101.50126934051514",
-            "alamat": "JALAN JELAWAT SATU 17\/ 1A,\r\nSEKSYEN 17, 40200 SHAH ALAM",
+            "alamat": "JALAN JELAWAT SATU 17/ 1A,\r\nSEKSYEN 17, 40200 SHAH ALAM",
             "tel": "0126996921"
         },
         {
             "nama_masjid": "MASJID AL - UBUDIAH",
             "latitud": "3.0564875085275425",
             "longitud": "101.53195381164551",
-            "alamat": "JALAN JORAN 19\/24,\nSEKSYEN 19, 40300 SHAH ALAM",
+            "alamat": "JALAN JORAN 19/24,\nSEKSYEN 19, 40300 SHAH ALAM",
             "tel": "0123031439"
         },
         {
             "nama_masjid": "MASJID AL - EHSAN",
             "latitud": "3.03510",
             "longitud": "101.52075",
-            "alamat": "JALAN JELI 24 \/25,\r\nSEKSYEN 24,\r\n40000 SHAH ALAM",
+            "alamat": "JALAN JELI 24 /25,\r\nSEKSYEN 24,\r\n40000 SHAH ALAM",
             "tel": "0129135438"
         },
         {
@@ -5458,14 +5283,14 @@
             "nama_masjid": "MASJID AL - FAIZIN",
             "latitud": "3.007108",
             "longitud": "101.560181",
-            "alamat": "JALAN 28\/21, SEKSYEN 28,\n40000 SHAH ALAM",
+            "alamat": "JALAN 28/21, SEKSYEN 28,\n40000 SHAH ALAM",
             "tel": "0163151927"
         },
         {
             "nama_masjid": "MASJID IKHWAN ULU SAPI LABUK BELURAN",
             "latitud": " 5.829904",
             "longitud": "117.426045",
-            "alamat": "D\/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
@@ -5479,21 +5304,21 @@
             "nama_masjid": "MASJID NURUL IMAN KG. TEMBIDONG-BIDONG BELURAN",
             "latitud": " 5.756755",
             "longitud": " 117.431849",
-            "alamat": "D\/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID AL - FALAH",
             "latitud": "3.158058040728122",
             "longitud": "101.47015035152435",
-            "alamat": "BATU 2 1\/2, KG. BUDIMAN,\r\n41050 MERU, KLANG",
+            "alamat": "BATU 2 1/2, KG. BUDIMAN,\r\n41050 MERU, KLANG",
             "tel": "0123258952"
         },
         {
             "nama_masjid": "MASJID AL-AMIN, KG.BALABAN JAYA BELURAN",
             "latitud": " 5.736206",
             "longitud": "117.424185",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
@@ -5514,7 +5339,7 @@
             "nama_masjid": "MASJID DARUL EHSAN",
             "latitud": "3.0804910013818305",
             "longitud": "101.58554434776306",
-            "alamat": "JALAN SS 15 \/ 2E,\r\n47500 SUBANG JAYA",
+            "alamat": "JALAN SS 15 / 2E,\r\n47500 SUBANG JAYA",
             "tel": ""
         },
         {
@@ -5528,7 +5353,7 @@
             "nama_masjid": "MASJID NUR HIDAYAH, KG.KOLAPIS BELURAN",
             "latitud": "5.885253",
             "longitud": "117.626477",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
             "tel": "089-511021"
         },
         {
@@ -5542,7 +5367,7 @@
             "nama_masjid": "MASJID MUNAWWARATUL IKHWAN, KG.PERANCANGAN BELURAN",
             "latitud": " 5.743006",
             "longitud": "117.427898",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
             "tel": "089-511021"
         },
         {
@@ -5556,84 +5381,84 @@
             "nama_masjid": "MASJID BABUS SALAM, KG. MUANAD 1 BELURAN",
             "latitud": " 5.743006",
             "longitud": "117.428177",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID ABU BAKAR AS - SIDDIQ",
             "latitud": "3.06717",
             "longitud": "101.57846",
-            "alamat": "JALAN SS 19 \/ 7A,\n47500 SUBANG JAYA",
+            "alamat": "JALAN SS 19 / 7A,\n47500 SUBANG JAYA",
             "tel": "0192166822"
         },
         {
             "nama_masjid": "MASJID DARUS SALAM, KG.SUNGAI NAPAS BELURAN",
             "latitud": " 5.743006",
             "longitud": "117.427801",
-            "alamat": "D\/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
+            "alamat": "D/A PEJABAT JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID AL - MUKMINUN",
             "latitud": "3.0598408518767424",
             "longitud": "101.58538341522217",
-            "alamat": "LOT 6 & 8, JALAN USJ 2\/ 4S,\r\n47500 SUBANG JAYA",
+            "alamat": "LOT 6 & 8, JALAN USJ 2/ 4S,\r\n47500 SUBANG JAYA",
             "tel": "0193596191"
         },
         {
             "nama_masjid": "MASJID JAMEK PEKAN BELURAN",
             "latitud": " 5.757427",
             "longitud": " 117.435804",
-            "alamat": "D\/A PEJABAT JABATAN HAL  EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, \n90107, BELURAN",
+            "alamat": "D/A PEJABAT JABATAN HAL  EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, \n90107, BELURAN",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID AN NUR",
             "latitud": "3.057205317730229",
             "longitud": "101.57662868499756",
-            "alamat": "LOT 6, JALAN USJ 4 \/ 1N,\n47600 SUBANG JAYA",
+            "alamat": "LOT 6, JALAN USJ 4 / 1N,\n47600 SUBANG JAYA",
             "tel": "0194544006"
         },
         {
             "nama_masjid": "MASJID JAMEK KENIOGAN, KG. KENIOGAN BELURAN",
             "latitud": " 5.757406",
             "longitud": "117.436147",
-            "alamat": "D\/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
+            "alamat": "D/A JABATAN HAL EHWAL AGAMA ISLAM NEGERI SABAH, PETI SURAT 35, 90107 BELURAN.",
             "tel": "089-511021"
         },
         {
             "nama_masjid": "MASJID AL -HUSNA",
             "latitud": "3.0749039834823",
             "longitud": "101.60710394382477",
-            "alamat": "BANDAR SUNWAY,\nJALAN PJS 10\/ 22,\n46000 PETALING JAYA",
+            "alamat": "BANDAR SUNWAY,\nJALAN PJS 10/ 22,\n46000 PETALING JAYA",
             "tel": "0193016394"
         },
         {
             "nama_masjid": "MASJID NURUL YAQIN",
             "latitud": "3.0917345851016433",
             "longitud": "101.60290360450745",
-            "alamat": "JALAN SS 7\/8, KELANA JAYA,\r\n47301 PETALING JAYA",
+            "alamat": "JALAN SS 7/8, KELANA JAYA,\r\n47301 PETALING JAYA",
             "tel": "0192254510"
         },
         {
             "nama_masjid": "MASJID TENGKU KELANA JAYA PETRA KELANA",
             "latitud": "3.095152096718061",
             "longitud": "101.59547924995422",
-            "alamat": "JALAN SS 7\/13 KELANA JAYA,\r\n47301 PETALING JAYA",
+            "alamat": "JALAN SS 7/13 KELANA JAYA,\r\n47301 PETALING JAYA",
             "tel": "0193810104"
         },
         {
             "nama_masjid": "MASJID AL - ISLAMIAH",
             "latitud": "3.07698",
             "longitud": "101.61766",
-            "alamat": "JALAN PJS 6\/ 4D,\r\nKG. LINDUNGAN,\r\nSG. WAY, 46000 PETALING JAYA",
+            "alamat": "JALAN PJS 6/ 4D,\r\nKG. LINDUNGAN,\r\nSG. WAY, 46000 PETALING JAYA",
             "tel": "0192753538"
         },
         {
             "nama_masjid": "MASJID AR - RAHMAH",
             "latitud": "3.086129",
             "longitud": "101.617248",
-            "alamat": "JALAN SS 9\/7, SG. WAY BARU,\nSERI SETIA, 47300 PETALING JAYA",
+            "alamat": "JALAN SS 9/7, SG. WAY BARU,\nSERI SETIA, 47300 PETALING JAYA",
             "tel": "0126676917"
         },
         {
@@ -5682,7 +5507,7 @@
             "nama_masjid": "MASJID AL - MUJAHIDEEN",
             "latitud": "3.1386145938714516",
             "longitud": "101.62061154842377",
-            "alamat": "JALAN SS 21\/ 23, DAMANSARA UTAMA,\r\n47400 PETALING JAYA",
+            "alamat": "JALAN SS 21/ 23, DAMANSARA UTAMA,\r\n47400 PETALING JAYA",
             "tel": "0377280120"
         },
         {
@@ -5703,42 +5528,42 @@
             "nama_masjid": "MASJID AL-RIDHWANI",
             "latitud": "3.090518633954888",
             "longitud": "101.61781132221222",
-            "alamat": "JALAN SS 9A \/ 88, SG. WAY BARU,\nSERI SETIA,\n47300 PETALING JAYA",
+            "alamat": "JALAN SS 9A / 88, SG. WAY BARU,\nSERI SETIA,\n47300 PETALING JAYA",
             "tel": "0192336296"
         },
         {
             "nama_masjid": "MASJID AL - HIDAYAH",
             "latitud": "3.1011485862383075",
             "longitud": "101.60795581349181",
-            "alamat": "JALAN SS 3\/ 44 KELANA JAYA,\n47300 PETALING JAYA",
+            "alamat": "JALAN SS 3/ 44 KELANA JAYA,\n47300 PETALING JAYA",
             "tel": "0123735671"
         },
         {
             "nama_masjid": "MASJID AL - EHSAN",
             "latitud": "3.108110",
             "longitud": "101.609053",
-            "alamat": "JALAN SS 4A \/ 4, KELANA JAYA,\r\n47301 PETALING JAYA",
+            "alamat": "JALAN SS 4A / 4, KELANA JAYA,\r\n47301 PETALING JAYA",
             "tel": ""
         },
         {
             "nama_masjid": "MASJID AMINAH AL - MUHAIRI",
             "latitud": "3.1124858884693136",
             "longitud": "101.61355197429657",
-            "alamat": "JALAN SS 2\/6, SEA PARK,\r\n47300 PETALING JAYA",
+            "alamat": "JALAN SS 2/6, SEA PARK,\r\n47300 PETALING JAYA",
             "tel": ""
         },
         {
             "nama_masjid": "MASJID AR -RAHMAN KG. TUNKU",
             "latitud": "3.103786888845171",
             "longitud": "101.61959767341614",
-            "alamat": "LOT 17004, JALAN SS1\/ 31,\nKAMPUNG. TUNKU\n47300 PETALING JAYA",
+            "alamat": "LOT 17004, JALAN SS1/ 31,\nKAMPUNG. TUNKU\n47300 PETALING JAYA",
             "tel": "012-4991448"
         },
         {
             "nama_masjid": "MASJID AL - MUKARRAMAH",
             "latitud": "3.191539551622258",
             "longitud": "101.61377191543579",
-            "alamat": "JALAN SAGA 8\/1, BANDAR SRI DAMANSARA, 52200 KEPONG",
+            "alamat": "JALAN SAGA 8/1, BANDAR SRI DAMANSARA, 52200 KEPONG",
             "tel": "0362723944"
         },
         {
@@ -5850,7 +5675,7 @@
             "nama_masjid": "MASJID AL - EHSAN",
             "latitud": "3.045318549812424",
             "longitud": "101.64482653141022",
-            "alamat": "BANDAR KINRARA, NO.9, JALAN BK 5\/2, BANDAR KINRARA,\n47100 PUCHONG",
+            "alamat": "BANDAR KINRARA, NO.9, JALAN BK 5/2, BANDAR KINRARA,\n47100 PUCHONG",
             "tel": "0126664952"
         },
         {
@@ -5885,14 +5710,14 @@
             "nama_masjid": "MASJID AL - ISLAH",
             "latitud": "3.043031",
             "longitud": "101.703435",
-            "alamat": "NO. 16, JALAN SR 7 \/ 7,\nSERDANG RAYA,\n43300 SERI KEMBANGAN",
+            "alamat": "NO. 16, JALAN SR 7 / 7,\nSERDANG RAYA,\n43300 SERI KEMBANGAN",
             "tel": ""
         },
         {
             "nama_masjid": "MASJID RIADHUS SOLIHIN",
             "latitud": "3.011393",
             "longitud": "101.705795",
-            "alamat": "JALAN 5\/ 4, SERDANG JAYA,\r\n43300 SERI KEMBANGAN",
+            "alamat": "JALAN 5/ 4, SERDANG JAYA,\r\n43300 SERI KEMBANGAN",
             "tel": "0132607446"
         },
         {
@@ -6172,7 +5997,7 @@
             "nama_masjid": "MASJID JAMIUL MUHAMMADIAH",
             "latitud": "3.36052",
             "longitud": "101.30136",
-            "alamat": "KG. KUANTAN \/ PASANGAN\r\n45600 BESTARI JAYA",
+            "alamat": "KG. KUANTAN / PASANGAN\r\n45600 BESTARI JAYA",
             "tel": "0176525059"
         },
         {
@@ -6543,7 +6368,7 @@
             "nama_masjid": "MASJID SAIDINA HAMZAH",
             "latitud": "3.21762",
             "longitud": "101.68829",
-            "alamat": "KG. BATU MUDA,BT. 41 1\/2 JALAN IPOH",
+            "alamat": "KG. BATU MUDA,BT. 41 1/2 JALAN IPOH",
             "tel": "03-62421954"
         },
         {
@@ -6564,7 +6389,7 @@
             "nama_masjid": "MASJID ABDUL RAHMAN BIN AUF",
             "latitud": "3.07966",
             "longitud": "101.66551",
-            "alamat": "BT 5 1\/2 JALAN PUCHONG,",
+            "alamat": "BT 5 1/2 JALAN PUCHONG,",
             "tel": "03-77701171"
         },
         {
@@ -6599,7 +6424,7 @@
             "nama_masjid": "MASJID ABU UBAIDAH AL-JARRAH",
             "latitud": "3.193414",
             "longitud": "101.728648",
-            "alamat": "JALAN 1\/26, TAMAN SRI RAMPAI,\r\nSETAPAK JAYA,",
+            "alamat": "JALAN 1/26, TAMAN SRI RAMPAI,\r\nSETAPAK JAYA,",
             "tel": "03-40315860"
         },
         {
@@ -6946,7 +6771,7 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID MUKIM KEMUBU\/SETONG",
+            "nama_masjid": "MASJID MUKIM KEMUBU/SETONG",
             "latitud": "5.356929",
             "longitud": "101.973639",
             "alamat": "DAERAH DABONG,\n18200 KUALA KRAI,\nKELANTAN.",
@@ -6974,20 +6799,6 @@
             "tel": "019-435 5308"
         },
         {
-            "nama_masjid": "MASJID BATU 3, JALAN SEMPADAN",
-            "latitud": "5.126811",
-            "longitud": "100.443853",
-            "alamat": "JALAN SEMPADAN,  14320 NIBONG TEBAL, PULAU PINANG",
-            "tel": "019-435 5308"
-        },
-        {
-            "nama_masjid": "MASJID BUKIT TAMBUN",
-            "latitud": "5.274018",
-            "longitud": "100.444454",
-            "alamat": "14110 SIMPANG EMPAT, NIBONG TEBAL",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID BUKIT TAMBUN",
             "latitud": "5.274018",
             "longitud": "100.444454",
@@ -6999,20 +6810,6 @@
             "latitud": "5.197902",
             "longitud": "100.467588",
             "alamat": "14300 KAMPONG CHANGKAT, NIBONG TEBAL",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID CHANGKAT",
-            "latitud": "5.197902",
-            "longitud": "100.467588",
-            "alamat": "14300 KAMPONG CHANGKAT, NIBONG TEBAL",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KAMPONG BATU KAWAN",
-            "latitud": "5.275407",
-            "longitud": "100.427259",
-            "alamat": "14110 SIMPANG EMPAT, NIBONG TEBAL",
             "tel": ""
         },
         {
@@ -7086,24 +6883,10 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID AR RAHMAN PULAU AMAN",
-            "latitud": "5.268566",
-            "longitud": "100.390148",
-            "alamat": "14110 SIMPANG EMPAT, NIBONG TEBAL",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID MUKIM SUNGAI SAM",
             "latitud": "5.272311",
             "longitud": "102.253371",
             "alamat": "DAERAH OLAK JERAM,\n18000 KUALA KRAI,\nKELANTAN.",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AL AMIN SIMPANG 3 PARIT TOK MANDIN",
-            "latitud": "5.14518113531268",
-            "longitud": "100.46530695397952",
-            "alamat": "14300 SIMPANG 3, PARIT TOK MANDIN, SEBERANG PERAI SELATAN",
             "tel": ""
         },
         {
@@ -7159,7 +6942,7 @@
             "nama_masjid": "MASJID BANDAR TASIK PUTERI",
             "latitud": "3.2909974240237996",
             "longitud": "101.4745706319809",
-            "alamat": "NO 47 JLN 8\/9 BANDAR TASIK PUTERI RAWANG",
+            "alamat": "NO 47 JLN 8/9 BANDAR TASIK PUTERI RAWANG",
             "tel": "0192206072"
         },
         {
@@ -7884,13 +7667,6 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID SUNGAI DURI",
-            "latitud": "5.210295291969402",
-            "longitud": "100.52730233863936",
-            "alamat": "14200 SUNGAI BAKAP, NIBONG TEBAL, SEBERANG PERAI SELATAN",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID SUNGAI KECIL",
             "latitud": "5.163108712997597",
             "longitud": "100.51548794602051",
@@ -7923,20 +7699,6 @@
             "latitud": "5.168117743043863",
             "longitud": "100.4935526269852",
             "alamat": "14300 NIBONG TEBAL, SEBERANG PERAI SELATAN",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID NURUL IMAN BUKIT PANCHOR",
-            "latitud": "5.168117743043863",
-            "longitud": "100.4935526269852",
-            "alamat": "14300 NIBONG TEBAL, SEBERANG PERAI SELATAN",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AL- MUSTAQIM ( SEK. SAINS )",
-            "latitud": "5.340272234024609",
-            "longitud": "100.47677496895285",
-            "alamat": "14000 BUKIT MERTAJAM, SEBERANG PERAI TENGAH",
             "tel": null
         },
         {
@@ -8024,31 +7786,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID SEBERANG JAYA",
-            "latitud": "5.386752",
-            "longitud": "100.404164",
-            "alamat": "14000 BUKIT MERTAJAM, SEBERANG PERAI TENGAH",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID KAWASAN SEMBILANG",
             "latitud": "5.401860",
             "longitud": "100.398631",
             "alamat": "13600 PERAI, BUKIT MERTAJAM, SEBERANG PERAI TENGAH",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KAWASAN SEMBILANG",
-            "latitud": "5.401860",
-            "longitud": "100.398631",
-            "alamat": "13600 PERAI, BUKIT MERTAJAM, SEBERANG PERAI TENGAH",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID ALMA JAYA",
-            "latitud": "5.32574",
-            "longitud": "100.480757",
-            "alamat": "14000 ALMA, BUKIT MERTAJAM, SEBERANG PERAI TENGAH",
             "tel": ""
         },
         {
@@ -8217,13 +7958,6 @@
             "latitud": "1.8240537670641783",
             "longitud": "103.72454984760967",
             "alamat": "81900 KOTA TINGGI",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID FELDA PENGELI TIMUR",
-            "latitud": "1.9137642313577394",
-            "longitud": "103.52467822277379",
-            "alamat": "81050 KOTA TINGGI.",
             "tel": null
         },
         {
@@ -8430,25 +8164,11 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID FELDA TENGGAROH TIMUR 02",
-            "latitud": "2.1319752603537996, 104.005511",
-            "longitud": "104.0055110616009",
-            "alamat": "FELDA TENGGAROH TIMUR 02, 86810 MERSING.",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID MUKIM KAMPUNG BELUKAR",
             "latitud": "5.757262",
             "longitud": "102.277479",
             "alamat": "DAERAH PULAI CHONDONG,\n16600 MACHANG,\nKELANTAN.",
             "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AL-MUBARAK, FELDA TENGGAROH 03",
-            "latitud": "2.090250047880471,",
-            "longitud": "103.9895790306517",
-            "alamat": "FELDA TENGGAROH 03, 86810 MERSING.",
-            "tel": null
         },
         {
             "nama_masjid": "MASJID AL-MUBARAK, FELDA TENGGAROH 03",
@@ -8479,13 +8199,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID  AL-AMIN, FELDA TENGGAROH 06",
-            "latitud": "2.054171606859519, 103.9879825",
-            "longitud": "103.98798253437806",
-            "alamat": "FELDA TENGGAROH 06, 86810 MERSING.",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID MUKIM KELABURAN",
             "latitud": "6.189211",
             "longitud": "102.157434",
@@ -8505,13 +8218,6 @@
             "longitud": "102.124501",
             "alamat": "DAERAH TUMPAT,\n16200 TUMPAT,\nKELANTAN.",
             "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KG TANJUNG RESANG",
-            "latitud": "2.5763105053625766,",
-            "longitud": "103.80526007749204",
-            "alamat": "KG. TANJUNG RESANG, PENYABONG, 86900 ENDAU, MERSING.",
-            "tel": null
         },
         {
             "nama_masjid": "MASJID KG TANJUNG RESANG",
@@ -8609,13 +8315,6 @@
             "latitud": "2.6428100385627804,",
             "longitud": "103.68766994950968",
             "alamat": "JALAN PENYABUNG, KG. SUNGAI MENGKUANG, 86900 ENDAU, MERSING.",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID KG. TRIANG BESAR",
-            "latitud": "2.6290753973583834,",
-            "longitud": "103.72022465106883",
-            "alamat": "JALAN MASJID KG. TRIANG BESAR, 86900 ENDAU, MERSING.",
             "tel": null
         },
         {
@@ -9123,13 +8822,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID JAMEK TUAN GURU HAJI ABD AZIZ PEKAN PENDANG",
-            "latitud": "5.9935437978027775",
-            "longitud": "100.47828129643715",
-            "alamat": "MUKIM AIR PUTIH 06700 PENDANGKEDAH",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID MUKIM JEJULUT",
             "latitud": "6.076163",
             "longitud": "102.330118",
@@ -9166,64 +8858,64 @@
         },
         {
             "nama_masjid": "MASJID PEKAN BANDAR BAHARU 9 (AL-HALIMI)",
-            "latitud": "5\u00b0 7'55.56\"N",
-            "longitud": "100\u00b029'46.22\"E",
+            "latitud": "5° 7'55.56\"N",
+            "longitud": "100°29'46.22\"E",
             "alamat": "PEKAN BANDAR BAHARU,34950 BANDAR BAHARUKEDAH",
             "tel": "019-4161516"
         },
         {
             "nama_masjid": "MASJID SUNGAI KECIL ULU (AL-HUDA)",
-            "latitud": "5\u00b0 6'30.52\"N",
-            "longitud": "100\u00b032'24.22\"E",
+            "latitud": "5° 6'30.52\"N",
+            "longitud": "100°32'24.22\"E",
             "alamat": "BATU 27,SUNGAI KECHIL ULU, 34950 BANDAR BAHARU, KEDAH.",
             "tel": "0194403529"
         },
         {
             "nama_masjid": "MASJID PERMATANG KERAT TELUNJUK (AL-ISLAH)",
-            "latitud": "5\u00b0 7'3.07\"N",
-            "longitud": "100\u00b033'42.66\"E",
+            "latitud": "5° 7'3.07\"N",
+            "longitud": "100°33'42.66\"E",
             "alamat": "KAMPUNG PERMATANG KERAT TELUNJUK",
             "tel": "013-4090278"
         },
         {
             "nama_masjid": "MASJID BUKIT APENG (AL-AFDHAL)",
-            "latitud": "5\u00b0 8'12.35\"N",
-            "longitud": "100\u00b035'7.03\"E",
+            "latitud": "5° 8'12.35\"N",
+            "longitud": "100°35'7.03\"E",
             "alamat": "KAMPUNG BUKIT APENG, MUKIM BAGAN SAMAK",
             "tel": "01112453600"
         },
         {
             "nama_masjid": "MASJID CHELONG BATU 22 (AL-RIDZUAN)",
-            "latitud": "5\u00b0 8'43.82\"N",
-            "longitud": "100\u00b035'26.28\"E",
+            "latitud": "5° 8'43.82\"N",
+            "longitud": "100°35'26.28\"E",
             "alamat": "CHELONG BATU 22, LUBUK BUNTAR,09800 SERDANG,KEDAH",
             "tel": "'0194803133"
         },
         {
             "nama_masjid": "MASJID SERDANG (AL-FATEH)",
-            "latitud": "5\u00b012'40.23\"N",
-            "longitud": "100\u00b036'28.14\"E",
+            "latitud": "5°12'40.23\"N",
+            "longitud": "100°36'28.14\"E",
             "alamat": "LOT 1459 JALAN TASIK SRI SERDANG BANDAR BAHARU SERDANG 09800 SERDANG KEDAH",
             "tel": "013-4115959"
         },
         {
             "nama_masjid": "MASJID SELAMA (AL-BARAKAH)",
-            "latitud": "5\u00b013'53.46\"N",
-            "longitud": "100\u00b041'8.24\"E",
+            "latitud": "5°13'53.46\"N",
+            "longitud": "100°41'8.24\"E",
             "alamat": "PEKAN SELAMA 09810 SELAMA KEDAH",
             "tel": "013 4584354"
         },
         {
             "nama_masjid": "MASJID SUNGAI TAKA (AT-TUQA)",
-            "latitud": "5\u00b016'39.35\"N",
-            "longitud": "100\u00b043'25.67\"E",
+            "latitud": "5°16'39.35\"N",
+            "longitud": "100°43'25.67\"E",
             "alamat": "KAMPUNG SUNGAI TAKA",
-            "tel": "012-566 2332\/01"
+            "tel": "012-566 2332/01"
         },
         {
             "nama_masjid": "MASJID SUNGAI TENGAS (AL-FALAH)",
-            "latitud": "5\u00b016'30.74\"N",
-            "longitud": "100\u00b040'47.94\"E",
+            "latitud": "5°16'30.74\"N",
+            "longitud": "100°40'47.94\"E",
             "alamat": "KAMPUNG SUNGAI TENGAS",
             "tel": "012-5498331"
         },
@@ -10610,7 +10302,7 @@
             "nama_masjid": "MASJID AL-KHASYI'IN,",
             "latitud": "3.08331",
             "longitud": "101.71014",
-            "alamat": "JALAN 2\/125 TAMAN DESA PETALING,57100 KUALA LUMPUR",
+            "alamat": "JALAN 2/125 TAMAN DESA PETALING,57100 KUALA LUMPUR",
             "tel": "03-90563851"
         },
         {
@@ -10660,7 +10352,7 @@
             "latitud": "3.19640",
             "longitud": "101.62815",
             "alamat": "BANDAR MENJALARA, KEPONG,",
-            "tel": "03-62625040\/010"
+            "tel": "03-62625040/010"
         },
         {
             "nama_masjid": "MASJID AL-MUTTAQIN,",
@@ -10729,8 +10421,8 @@
             "nama_masjid": "MASJID AL-MUHTADIN",
             "latitud": "5.435023",
             "longitud": "101.103686",
-            "alamat": "KAMPUNG TANJUNG KALA,\r\n33300 GERIK,\r\nPERAK DARUL RIDZUAN.",
-            "tel": "05-7921977"
+            "alamat": "KAMPUNG TANJUNG KALA,33300 GERIK,PERAK DARUL RIDZUAN.",
+            "tel": "010-8417320"
         },
         {
             "nama_masjid": "MASJID SHUHADA",
@@ -10755,8 +10447,8 @@
         },
         {
             "nama_masjid": "MASJID AR RAHMANIAH",
-            "latitud": "5.619504350478569",
-            "longitud": "101.09525501957941",
+            "latitud": "5.619019828798438",
+            "longitud": "101.09222940985859",
             "alamat": "KAMPUNG ALAI,33320 GERIK,PERAK",
             "tel": "013-5224345"
         },
@@ -11517,20 +11209,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID PULAU TINGGI",
-            "latitud": "2.2837938773917927,",
-            "longitud": "104.12145259339846",
-            "alamat": "PULAU TINGGI, 86800 MERSING",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID kg PULAU BESAR",
-            "latitud": "2.4305929590705793,",
-            "longitud": "103.98004537286697",
-            "alamat": "PULAU BESAR, 86800 MERSING",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID kg PULAU BESAR",
             "latitud": "2.4305929590705793,",
             "longitud": "103.98004537286697",
@@ -11604,7 +11282,7 @@
             "nama_masjid": "MASJID JAMEK KPG. BOYAN",
             "latitud": "4.848215",
             "longitud": "100.722331",
-            "alamat": "LRG TMN LONG JAAFAR , F3\/17, KG BOYAN 34000 TAIPING , PERAK",
+            "alamat": "LRG TMN LONG JAAFAR , F3/17, KG BOYAN 34000 TAIPING , PERAK",
             "tel": "012-5151569"
         },
         {
@@ -11632,7 +11310,7 @@
             "nama_masjid": "MASJID AL KHUSUSIAH",
             "latitud": "4.781251",
             "longitud": "100.699429",
-            "alamat": "KPG. PDG. BESAR 34850 C\/JERING, TPG , PK",
+            "alamat": "KPG. PDG. BESAR 34850 C/JERING, TPG , PK",
             "tel": "012-5910155(Pen"
         },
         {
@@ -11790,10 +11468,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID JAMEK KABATU\/KEBIDANG",
+            "nama_masjid": "MASJID JAMEK KABATU/KEBIDANG",
             "latitud": "5.22.00",
             "longitud": "115.44.00",
-            "alamat": "KG. KEBATU\/KEBIDANG,\r\nP\/S 163, BEAUFORT",
+            "alamat": "KG. KEBATU/KEBIDANG,\r\nP/S 163, BEAUFORT",
             "tel": "01125306634"
         },
         {
@@ -11891,7 +11569,7 @@
             "nama_masjid": "MASJID NURUL YAQIN",
             "latitud": "3.09194",
             "longitud": "101.60285",
-            "alamat": "JALAN SS 6\/1, KELANA JAYA",
+            "alamat": "JALAN SS 6/1, KELANA JAYA",
             "tel": "03-78760550"
         },
         {
@@ -11912,7 +11590,7 @@
             "nama_masjid": "MASJID AL-AMIN PEKAN PITAS",
             "latitud": "6.713993",
             "longitud": "117.050525",
-            "alamat": "MASJID AL-AMIN,\nD\/A PEJ. JHEAINS DAERAH PITAS,\nPETI SURAT 272,\n89108, KOTA MARUDU.\nPEKAN PITAS.",
+            "alamat": "MASJID AL-AMIN,\nD/A PEJ. JHEAINS DAERAH PITAS,\nPETI SURAT 272,\n89108, KOTA MARUDU.\nPEKAN PITAS.",
             "tel": "0138587095"
         },
         {
@@ -11933,7 +11611,7 @@
             "nama_masjid": "MASJID AL-ITTIFAQIAH",
             "latitud": "3.245688265471395",
             "longitud": "101.69796645641327",
-            "alamat": "JALAN SG 1\/26, TAMAN SRI GOMBAK,68100 BATU CAVES, SELANGOR",
+            "alamat": "JALAN SG 1/26, TAMAN SRI GOMBAK,68100 BATU CAVES, SELANGOR",
             "tel": ""
         },
         {
@@ -12094,7 +11772,7 @@
             "nama_masjid": "MASJID USAMAH BIN ZAID",
             "latitud": "3.20303",
             "longitud": "101.73691",
-            "alamat": "8A JALAN 2\/27A \r\nWANGSA MAJU\r\nSETAPAK",
+            "alamat": "8A JALAN 2/27A \r\nWANGSA MAJU\r\nSETAPAK",
             "tel": "03-41421653"
         },
         {
@@ -12103,13 +11781,6 @@
             "longitud": "101.071799",
             "alamat": "KAMPUNG PASIR PUTEH, \r\n31650 IPOH,\r\nPERAK",
             "tel": "01139578762"
-        },
-        {
-            "nama_masjid": "MASJID NURUS SALAM, EWA",
-            "latitud": "6.40081",
-            "longitud": "99.74967",
-            "alamat": "KG. EWA, MUKIM AYER HANGAT,LANGKAWI,KEDAH DARUL AMAN",
-            "tel": null
         },
         {
             "nama_masjid": "MASJID NURUS SALAM, EWA",
@@ -12137,7 +11808,7 @@
             "latitud": "5.641448,",
             "longitud": "100.680313",
             "alamat": "MUKIM TELOI KANAN 09300 KUALA KETIL KEDAH DARUL AMAN",
-            "tel": "019-4604491 \/01"
+            "tel": "019-4604491 /01"
         },
         {
             "nama_masjid": "MASJID AL-ITTIHAD, KG. KUMPULAN",
@@ -12213,14 +11884,14 @@
             "nama_masjid": "MASJID BUKIT AMAN",
             "latitud": "3.147626",
             "longitud": "101.688653",
-            "alamat": "JALAN BUKIT AMANNO PENDAFTARAN: JAWI\/5\/037",
+            "alamat": "JALAN BUKIT AMANNO PENDAFTARAN: JAWI/5/037",
             "tel": "03-22740525"
         },
         {
             "nama_masjid": "MASJID JAMEK ALAM SHAH",
             "latitud": "3.13500",
             "longitud": "101.71812",
-            "alamat": "JALAN TUN RAZAK\/JALAN PASARNo Pendaftaran: JAWI\/5\/005",
+            "alamat": "JALAN TUN RAZAK/JALAN PASARNo Pendaftaran: JAWI/5/005",
             "tel": "03-92848584"
         },
         {
@@ -12476,10 +12147,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID  BATU 2 1\/2 MAK CHILI",
+            "nama_masjid": "MASJID  BATU 2 1/2 MAK CHILI",
             "latitud": "4.243177",
             "longitud": "103.396792",
-            "alamat": "JALAN SRI PERMAI BATU 2 1\/2, MAK CHILICUKAI, KEMAMAN.",
+            "alamat": "JALAN SRI PERMAI BATU 2 1/2, MAK CHILICUKAI, KEMAMAN.",
             "tel": null
         },
         {
@@ -12528,7 +12199,7 @@
             "nama_masjid": "MASJID DARUSSALAM",
             "latitud": "3.0059503975386566",
             "longitud": "101.61934554576874",
-            "alamat": "BATU 13 1\/2 KAMPUNG PASIR BARU 47100 PUCHONG SELANGOR DARUL EHSAN.\n    ",
+            "alamat": "BATU 13 1/2 KAMPUNG PASIR BARU 47100 PUCHONG SELANGOR DARUL EHSAN.\n    ",
             "tel": "0192117899"
         },
         {
@@ -12598,7 +12269,7 @@
             "nama_masjid": "MASJID ASY -SYAKIRIN",
             "latitud": "2.98109",
             "longitud": "101.61088",
-            "alamat": "LOT 47473 JALAN PU 10\/13 FASA 4 TAMAN PUCHONG UTAMA 47100 PUCHONG",
+            "alamat": "LOT 47473 JALAN PU 10/13 FASA 4 TAMAN PUCHONG UTAMA 47100 PUCHONG",
             "tel": null
         },
         {
@@ -12616,13 +12287,6 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID ALWATHIQU BILLAH TUANKU MIZAN ZAINAL ABIDIN",
-            "latitud": "3.06844",
-            "longitud": "101.50303",
-            "alamat": "PUSAT ISLAM, UNIVERSITI TEKNOLOGI MARA,\r\n40450 SHAH ALAM",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID al- jannah",
             "latitud": "3.44704",
             "longitud": "101.16755",
@@ -12630,56 +12294,56 @@
             "tel": "013-2639209"
         },
         {
-            "nama_masjid": "[15] MASJID  KAMPUNG BUKIT LADA (AS-SOLIHIN)",
+            "nama_masjid": "[15] MASJID  AS-SOLIHIN, KAMPUNG BUKIT LADA",
             "latitud": "6.13396",
             "longitud": "100.55611",
             "alamat": "KG BUKIT LADA MUKIM BUKIT LADA 06400 POKOK SENA",
             "tel": "012-4261705"
         },
         {
-            "nama_masjid": "[14] MASJID KAMPUNG BUKIT (AR-RAYYAN)",
+            "nama_masjid": "[14] MASJID AR-RAYYAN, KAMPUNG BUKIT",
             "latitud": "6.14062",
             "longitud": "100.60113",
             "alamat": "KAMPUNG BUKIT MUKIM BUKIT LADA 06400 POKOK SENA",
             "tel": "0194419499"
         },
         {
-            "nama_masjid": "[17] MASJID KAMPUNG MENERONG (AT-TAQWA)",
+            "nama_masjid": "[17] MASJID AT-TAQWA, KAMPUNG MENERONG",
             "latitud": "6.139222",
             "longitud": "100.52560",
             "alamat": "KAMPUNG MENERONG MUKIM BUKIT LADA 06400 POKOK SENA",
             "tel": "0175682505"
         },
         {
-            "nama_masjid": "[25] MASJID KG. BUKIT, DERANG (RAUDHATUS SOLIHIN)",
+            "nama_masjid": "[25] MASJID RAUDHATUS SOLIHIN, KG. BUKIT, DERANG",
             "latitud": "6.21109",
             "longitud": "100.47544",
             "alamat": "KAMPUNG BUKIT MUKIM DERANG 06400 POKOK SENA",
             "tel": "017-5781442"
         },
         {
-            "nama_masjid": "[26] MASJID KAMPUNG EMPA (AR-RIDHWAN)",
+            "nama_masjid": "[26] MASJID AR-RIDHWAN, KAMPUNG EMPA",
             "latitud": "6.24543",
             "longitud": "100.48556",
             "alamat": "KAMPUNG EMPA MUKIM DERANG 06400 POKOK SENA",
             "tel": "013-4753733"
         },
         {
-            "nama_masjid": "[24] MASJID KAMPUNG KEDUNDUNG (AZ-ZAKIRIN)",
+            "nama_masjid": "[24] MASJID  AZ-ZAKIRIN, KAMPUNG KEDUNDUNG",
             "latitud": "6.095191",
             "longitud": "102.132527",
             "alamat": "KAMPUNG KEDUNDUNGMUKIM DERANG06400 POKOK SENA",
             "tel": "017-483 4345"
         },
         {
-            "nama_masjid": "[27] MASJID KAMPUNG PANCHOR (AR-RAHMAN)",
+            "nama_masjid": "[27] MASJID AR-RAHMAN, KAMPUNG PANCHOR",
             "latitud": "6.20945",
             "longitud": "100.50893",
             "alamat": "KAMPUNG PANCHOR MUKIM DERANG 06400 POKOK SENA",
             "tel": "0194212688"
         },
         {
-            "nama_masjid": "[21] MASJID KG. SUNGAI DURIAN (AR-RAUDHOH)",
+            "nama_masjid": "[21] MASJID AR-RAUDHOH, KG. SUNGAI DURIAN",
             "latitud": "6.15128",
             "longitud": "100.52430",
             "alamat": "KAMPUNG SUNGAI DURIAN MUKIM BANDAR POKOK SENA 06400 POKOK SENA",
@@ -12710,7 +12374,7 @@
             "nama_masjid": "MASJID AL-BARAKAH",
             "latitud": "2.99844",
             "longitud": "101.46409",
-            "alamat": "27, JLN. DATO\u2019 ABD HAMID 7, TAMAN SENTOSA, 41200 KLANG.",
+            "alamat": "27, JLN. DATO’ ABD HAMID 7, TAMAN SENTOSA, 41200 KLANG.",
             "tel": "018-2958369"
         },
         {
@@ -12724,7 +12388,7 @@
             "nama_masjid": "MASJID TAMAN KOSAS",
             "latitud": "3.14585",
             "longitud": "101.77414",
-            "alamat": "JALAN KOSAS 3\/6, TAMAN KOSAS, 68000 AMPANG",
+            "alamat": "JALAN KOSAS 3/6, TAMAN KOSAS, 68000 AMPANG",
             "tel": null
         },
         {
@@ -12738,7 +12402,7 @@
             "nama_masjid": "MASJID AL-HUSNA",
             "latitud": "3.03012",
             "longitud": "101.61853",
-            "alamat": "JALAN WAWASAN 5\/3,\nPUSAT BANDAR PUCHONG, \n47160 PUCHONG, SELANGOR\n",
+            "alamat": "JALAN WAWASAN 5/3,\nPUSAT BANDAR PUCHONG, \n47160 PUCHONG, SELANGOR\n",
             "tel": "0192578069"
         },
         {
@@ -12770,20 +12434,6 @@
             "tel": "013-3176388"
         },
         {
-            "nama_masjid": "MASJID AL-QAYYUM",
-            "latitud": "2.97930",
-            "longitud": "101.34437",
-            "alamat": "BANDAR ARMADA PUTERA, PULAU INDAH, 42920 PELABUHAN KLANG.",
-            "tel": "013-3176388"
-        },
-        {
-            "nama_masjid": "MASJID AL-IMAN",
-            "latitud": "3.21470",
-            "longitud": "101.76037",
-            "alamat": "PERSIMPANGAN JALAN 5, KEMENSAH HEIGHTS,\r\nAMPANG",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AL-IMAN",
             "latitud": "3.21470",
             "longitud": "101.76037",
@@ -12794,14 +12444,7 @@
             "nama_masjid": "MASJID AT-TAYYIBIN",
             "latitud": "3.24148",
             "longitud": "101.64072",
-            "alamat": "NO. 1B, JALAN BIDARA 1\/9, SELAYANG",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AT-TAYYIBIN",
-            "latitud": "3.24148",
-            "longitud": "101.64072",
-            "alamat": "NO. 1B, JALAN BIDARA 1\/9, SELAYANG",
+            "alamat": "NO. 1B, JALAN BIDARA 1/9, SELAYANG",
             "tel": ""
         },
         {
@@ -12847,13 +12490,6 @@
             "tel": "085-211 623"
         },
         {
-            "nama_masjid": "MASJID AL-KURNIA",
-            "latitud": "4.795500748746641",
-            "longitud": "114.90993902950187",
-            "alamat": "KPG. PANDAM, LIMBANG",
-            "tel": "085-211 623"
-        },
-        {
             "nama_masjid": "MASJID UMAR AL-KHATAB",
             "latitud": "6.107783894473564",
             "longitud": "116.20863676071167",
@@ -12864,7 +12500,7 @@
             "nama_masjid": "MASJID AL-JABBAR NIAH",
             "latitud": "3.8546",
             "longitud": "113.7181",
-            "alamat": "JAWATANKUASA PENGURUSAN MASJID AL-JABBAR, NIAH\r\nD\/A: PEJABAT DAERAH KECIL NIAH",
+            "alamat": "JAWATANKUASA PENGURUSAN MASJID AL-JABBAR, NIAH\r\nD/A: PEJABAT DAERAH KECIL NIAH",
             "tel": "019-8055338"
         },
         {
@@ -12927,7 +12563,7 @@
             "nama_masjid": "MASJID SEKSYEN 13",
             "latitud": "3.08660",
             "longitud": "101.54532",
-            "alamat": "JALAN LOMPAT PAGAR 13\/37, \nSEKSYEN 13, \n40100 SHAH ALAM",
+            "alamat": "JALAN LOMPAT PAGAR 13/37, \nSEKSYEN 13, \n40100 SHAH ALAM",
             "tel": ""
         },
         {
@@ -12941,21 +12577,14 @@
             "nama_masjid": "MASJID ALAM IMPIAN",
             "latitud": "3.02607",
             "longitud": "101.51787",
-            "alamat": "JALAN TUN TEJA 35\/1 ALAM IMPIAN 40300 SHAH ALAM",
+            "alamat": "JALAN TUN TEJA 35/1 ALAM IMPIAN 40300 SHAH ALAM",
             "tel": "013-9766224"
         },
         {
             "nama_masjid": "MASJID ARA DAMANSARA",
             "latitud": "3.11719",
             "longitud": "101.58339",
-            "alamat": "NO.3, JALAN PJU 1A\/37, ARA TROPIKA, ARA DAMANSARA, MUKIM DAMANSARA, DAERAH PETALING, SELANGOR.",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "SAIDINA ALI",
-            "latitud": "3.41442",
-            "longitud": "101.58744",
-            "alamat": "BUKIT SENTOSA RAWANG",
+            "alamat": "NO.3, JALAN PJU 1A/37, ARA TROPIKA, ARA DAMANSARA, MUKIM DAMANSARA, DAERAH PETALING, SELANGOR.",
             "tel": ""
         },
         {
@@ -12976,7 +12605,7 @@
             "nama_masjid": "MASJID BANDAR RICHING",
             "latitud": "2.92918",
             "longitud": "101.84532",
-            "alamat": "NO 1, JALAN 2\/5B,BANDAR RINCHING,43500 SEMENYIH",
+            "alamat": "NO 1, JALAN 2/5B,BANDAR RINCHING,43500 SEMENYIH",
             "tel": null
         },
         {
@@ -13043,20 +12672,6 @@
             "tel": "0195732874"
         },
         {
-            "nama_masjid": "MASJID AL-AHMADIAH",
-            "latitud": "4.517431",
-            "longitud": "101.086779",
-            "alamat": "KG CHANGKAT LARANG, \r\n31500 LAHAT,\r\nPERAK",
-            "tel": "0195732874"
-        },
-        {
-            "nama_masjid": "MASJID AL-IJTIMAIYYAH ",
-            "latitud": "4.623758",
-            "longitud": "101.126185",
-            "alamat": "PERSIARAN BERCHAM SELATAN 25,\r\nTAMAN SRI KURAU, \r\nBERCHAM,31400 IPOH,\r\nPERAK ",
-            "tel": "0133645120"
-        },
-        {
             "nama_masjid": "MASJID AL-IJTIMAIYYAH ",
             "latitud": "4.623758",
             "longitud": "101.126185",
@@ -13067,22 +12682,8 @@
             "nama_masjid": "MASJID AL-MUTTAQIN",
             "latitud": "4.656570",
             "longitud": "101.143474",
-            "alamat": "15A, PERSIARAN PUTERA 4\/1, BANDAR BARU PUTRA, 31400 IPOH,\r\nPERAK",
+            "alamat": "15A, PERSIARAN PUTERA 4/1, BANDAR BARU PUTRA, 31400 IPOH,\r\nPERAK",
             "tel": "019-3579049"
-        },
-        {
-            "nama_masjid": "MASJID AL-MUTTAQIN",
-            "latitud": "4.656570",
-            "longitud": "101.143474",
-            "alamat": "15A, PERSIARAN PUTERA 4\/1, BANDAR BARU PUTRA, 31400 IPOH,\r\nPERAK",
-            "tel": "019-3579049"
-        },
-        {
-            "nama_masjid": "MASJID ABDUL RAHMAN AUF",
-            "latitud": "4.569404",
-            "longitud": "101.141610",
-            "alamat": "LALUAN WIRA JAYA TIMUR 23 , TAMAN RAPAT KOPERASI 31350 IPOH, PERAK",
-            "tel": "0182904342"
         },
         {
             "nama_masjid": "MASJID ABDUL RAHMAN AUF",
@@ -13095,36 +12696,15 @@
             "nama_masjid": "MASJID AL-ITTIHADIAH",
             "latitud": "4.661096",
             "longitud": "101.145930",
-            "alamat": "NO 121, PERSIARAN PUTERA 6\/2, \r\nBANDAR BARU PUTRA, \r\n31400 IPOH, \r\nPERAK",
-            "tel": "0134719183"
-        },
-        {
-            "nama_masjid": "MASJID AL-ITTIHADIAH",
-            "latitud": "4.661096",
-            "longitud": "101.145930",
-            "alamat": "NO 121, PERSIARAN PUTERA 6\/2, \r\nBANDAR BARU PUTRA, \r\n31400 IPOH, \r\nPERAK",
+            "alamat": "NO 121, PERSIARAN PUTERA 6/2, \r\nBANDAR BARU PUTRA, \r\n31400 IPOH, \r\nPERAK",
             "tel": "0134719183"
         },
         {
             "nama_masjid": "MASJID ABDULLAH FAHIM",
-            "latitud": "100.463919",
-            "longitud": "5.520635",
+            "latitud": "5.520635",
+            "longitud": "100.463919",
             "alamat": "JALAN TUN HAMDAN SYEIKH TAHIR",
             "tel": "04-569 0012"
-        },
-        {
-            "nama_masjid": "MASJID ABDULLAH FAHIM",
-            "latitud": "100.463919",
-            "longitud": "5.520635",
-            "alamat": "JALAN TUN HAMDAN SYEIKH TAHIR",
-            "tel": "04-569 0012"
-        },
-        {
-            "nama_masjid": "MASJID ABASIAH",
-            "latitud": "3.982361",
-            "longitud": "100.741500",
-            "alamat": "SUNGAI NIPAH BAROH,BAGAN DATUK,PERAK",
-            "tel": "019 4259962"
         },
         {
             "nama_masjid": "MASJID ABASIAH",
@@ -13141,20 +12721,6 @@
             "tel": "016-4944558"
         },
         {
-            "nama_masjid": "MASJID AN NUR HIDAYATUL MUTTAQIN",
-            "latitud": "4.996913",
-            "longitud": "101.140123",
-            "alamat": "KAMPUNG BAWONG, LASAH, SG SIPUT",
-            "tel": "016-4944558"
-        },
-        {
-            "nama_masjid": "MASJID IBN ABBAS",
-            "latitud": "3.21014",
-            "longitud": "101.716976",
-            "alamat": "NO. 5 JALAN IBU KOTA 3\r\nTAMAN IBU KOTA\r\nKUALA LUMPUR",
-            "tel": "0199076955"
-        },
-        {
             "nama_masjid": "MASJID IBN ABBAS",
             "latitud": "3.21014",
             "longitud": "101.716976",
@@ -13169,31 +12735,17 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID KG BENTONG DALAM",
-            "latitud": "2.049487",
-            "longitud": "103.296798",
-            "alamat": "KG BENTONG\r\nKLUANG, JOHOR",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID BILAL BIN RABAH",
             "latitud": "3.22105",
             "longitud": "101.69537",
-            "alamat": "LOT 50965, JALAN 13\/10 TAMAN KOPERASI POLIS FASA 1, KUALA LUMPUR",
-            "tel": "0193555161"
-        },
-        {
-            "nama_masjid": "MASJID BILAL BIN RABAH",
-            "latitud": "3.22105",
-            "longitud": "101.69537",
-            "alamat": "LOT 50965, JALAN 13\/10 TAMAN KOPERASI POLIS FASA 1, KUALA LUMPUR",
-            "tel": "0193555161"
+            "alamat": "LOT 50965, JALAN 13/10 TAMAN KOPERASI POLIS FASA 1, KUALA LUMPUR",
+            "tel": null
         },
         {
             "nama_masjid": "MASJID AL IKRAM, TAMAN SRI KLUANG",
             "latitud": "2.025264",
             "longitud": "103.303250",
-            "alamat": "JALAN 1\/7 TAMAN SRI KLUANG, KLUANG JOHOR",
+            "alamat": "JALAN 1/7 TAMAN SRI KLUANG, KLUANG JOHOR",
             "tel": ""
         },
         {
@@ -13201,20 +12753,6 @@
             "latitud": "3.05447",
             "longitud": "101.66456",
             "alamat": "JALAN ALAM SUTERA, BUKIT JALIL, KUALA LUMPUR",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID TALHAH BIN UBAIDILLAH",
-            "latitud": "3.05447",
-            "longitud": "101.66456",
-            "alamat": "JALAN ALAM SUTERA, BUKIT JALIL, KUALA LUMPUR",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID ZAID BIN THABIT",
-            "latitud": "3.07802",
-            "longitud": "101.71481",
-            "alamat": "DESA TUN RAZAK , KUALA LUMPUR",
             "tel": null
         },
         {
@@ -13232,32 +12770,11 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID MUHAMMADI",
-            "latitud": "3.11174",
-            "longitud": "101.67278",
-            "alamat": "KEMENTERIAN KOMUNIKASI DAN MULTIMEDIA MALAYSIA, ANGKASAPURI, BUKIT PUTRA, KUALA LUMPUR",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID ISKANDAR, KEM ISKANDAR MERSING",
             "latitud": "2.346114558714629,",
             "longitud": "103.91249993869535",
             "alamat": "KEM GROUP KHAS, SRI PANTAI,86800 MERSING, JOHOR",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID ISKANDAR, KEM ISKANDAR MERSING",
-            "latitud": "2.346114558714629,",
-            "longitud": "103.91249993869535",
-            "alamat": "KEM GROUP KHAS, SRI PANTAI,86800 MERSING, JOHOR",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID IBN MAS`UD",
-            "latitud": "3.16336",
-            "longitud": "101.72806",
-            "alamat": "102, JALAN DAMAI\r\nOFF JALAN AMPANG",
-            "tel": "03-21484617"
         },
         {
             "nama_masjid": "MASJID IBN MAS`UD",
@@ -13274,32 +12791,11 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID UNIVERSITI TEKNOLOGI MALAYSIA",
-            "latitud": "3.17105",
-            "longitud": "101.72054",
-            "alamat": "JALAN SEMARAK",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AT-TAQWA MIRI",
             "latitud": "4.401898",
             "longitud": "113.991307",
             "alamat": "LOT 398 JALAN MERPATI\r\n98000 MIRI",
             "tel": "0128728758"
-        },
-        {
-            "nama_masjid": "MASJID AT-TAQWA MIRI",
-            "latitud": "4.401898",
-            "longitud": "113.991307",
-            "alamat": "LOT 398 JALAN MERPATI\r\n98000 MIRI",
-            "tel": "0128728758"
-        },
-        {
-            "nama_masjid": "MASJID JAMEK KARIAH BARU KG KOK",
-            "latitud": "6.38791",
-            "longitud": "99.70335",
-            "alamat": "KAMPUNG KOK,\r\nMUKIM PADANG MATSIRAT, LANGKAWI.",
-            "tel": ""
         },
         {
             "nama_masjid": "MASJID JAMEK KARIAH BARU KG KOK",
@@ -13316,32 +12812,11 @@
             "tel": "0165459964"
         },
         {
-            "nama_masjid": "MASJID AR RAHMAN INDIA MUSLIM",
-            "latitud": "4.6057783",
-            "longitud": "101.0788374",
-            "alamat": "JALAN LAHAT, PUSING",
-            "tel": "0165459964"
-        },
-        {
             "nama_masjid": "MASJID MUHAMMAD AL-FATEH",
             "latitud": "3.20568",
             "longitud": "101.72376",
             "alamat": "PEJABAT AGAMA MARKAS 12 BRIGED, KEM WARDIBURN SETAPAK",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID MUHAMMAD AL-FATEH",
-            "latitud": "3.20568",
-            "longitud": "101.72376",
-            "alamat": "PEJABAT AGAMA MARKAS 12 BRIGED, KEM WARDIBURN SETAPAK",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AN- NUR",
-            "latitud": "4.3856611415900115",
-            "longitud": "100.97375392913818",
-            "alamat": "PERSIARAN UTP UNIVERSITI TEKNOLOGI PETRONAS, BANDAR SERI ISKANDAR",
-            "tel": "0165878322"
         },
         {
             "nama_masjid": "MASJID AN- NUR",
@@ -13358,32 +12833,11 @@
             "tel": "012-4397977"
         },
         {
-            "nama_masjid": "MASJID AL-ABRAR",
-            "latitud": "4.991055",
-            "longitud": "100.624364",
-            "alamat": "ALOR SETANGGOK, SIMPANG EMPAT 34400 SEMANGGOL PERAK",
-            "tel": "012-4397977"
-        },
-        {
             "nama_masjid": "MASJID JAMEK ABDULLAH HUKUM ECO CITY",
             "latitud": "3.12093",
             "longitud": "101.67486",
             "alamat": "KL ECO CITY JALAN BANGAR",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID JAMEK ABDULLAH HUKUM ECO CITY",
-            "latitud": "3.12093",
-            "longitud": "101.67486",
-            "alamat": "KL ECO CITY JALAN BANGAR",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AL HADHARI",
-            "latitud": "4.776470",
-            "longitud": "100.844417",
-            "alamat": "JALAN BESAR, 33700, KAMPUNG PEKAN PADANG RENGAS",
-            "tel": "0125957894"
         },
         {
             "nama_masjid": "MASJID AL HADHARI",
@@ -13400,32 +12854,11 @@
             "tel": "0123242619"
         },
         {
-            "nama_masjid": "MASJID AL MUNARIAH",
-            "latitud": "4.719259936925083",
-            "longitud": "100.94777447838473",
-            "alamat": "KAMPUNG MENORA,\r\n33000 KUALA KANGSAR,\r\nPERAK DARUL RIDZUAN",
-            "tel": "0123242619"
-        },
-        {
             "nama_masjid": "MASJID AL-BADR SERIBU SELAWAT",
             "latitud": "4.195921, ",
             "longitud": "100.579507",
             "alamat": "KAMPUNG TELUK BHARUTELUK GEDUNGPULAU PANGKORPERAK DARUL RIDZUAN",
             "tel": "01116434885"
-        },
-        {
-            "nama_masjid": "MASJID AL-BADR SERIBU SELAWAT",
-            "latitud": "4.195921, ",
-            "longitud": "100.579507",
-            "alamat": "KAMPUNG TELUK BHARUTELUK GEDUNGPULAU PANGKORPERAK DARUL RIDZUAN",
-            "tel": "01116434885"
-        },
-        {
-            "nama_masjid": "MASJID AT-TAQWA MIRI",
-            "latitud": "4.401947",
-            "longitud": "113.99167",
-            "alamat": "LOT 398 jalan merpati 98000 miri",
-            "tel": "012-8728758"
         },
         {
             "nama_masjid": "MASJID AT-TAQWA MIRI",
@@ -13442,32 +12875,11 @@
             "tel": ""
         },
         {
-            "nama_masjid": "PERODUA",
-            "latitud": "3.37356",
-            "longitud": "101.57260",
-            "alamat": "LOT 6345 BANDAR SERENDAH\r\nHULU SELANGOR",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID HAJI 'ISA",
             "latitud": "4.144325",
             "longitud": "100.722407",
             "alamat": "JALAN LEKIR BATU 8 MUKIM LEKIR 32020 SITIAWANPERAK DARUL RIDZUAN",
             "tel": "014-3695995"
-        },
-        {
-            "nama_masjid": "MASJID HAJI 'ISA",
-            "latitud": "4.144325",
-            "longitud": "100.722407",
-            "alamat": "JALAN LEKIR BATU 8 MUKIM LEKIR 32020 SITIAWANPERAK DARUL RIDZUAN",
-            "tel": "014-3695995"
-        },
-        {
-            "nama_masjid": "MASJID AL-FALAH, JALAN KEBUN",
-            "latitud": "2.96171",
-            "longitud": "101.53952",
-            "alamat": "JLN HAJI YAHYA, QARIAH HAJI ABU BAKAR JALAN KEBUN, 42450 KLANG.",
-            "tel": "016-6757756"
         },
         {
             "nama_masjid": "MASJID AL-FALAH, JALAN KEBUN",
@@ -13484,32 +12896,11 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID DARUL ULUM",
-            "latitud": "3.23926",
-            "longitud": "101.56125",
-            "alamat": "JALAN MP24,KAMPUNG MATANG PAGAR",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AN-NUR GLENMARIE",
             "latitud": "3.09095",
             "longitud": "101.58158",
-            "alamat": "1-3N, JALAN PERINTIS U1\/52, KAWASAN PERINDUSTRIAN TEMASYA ",
+            "alamat": "1-3N, JALAN PERINTIS U1/52, KAWASAN PERINDUSTRIAN TEMASYA ",
             "tel": "0123425951"
-        },
-        {
-            "nama_masjid": "MASJID AN-NUR GLENMARIE",
-            "latitud": "3.09095",
-            "longitud": "101.58158",
-            "alamat": "1-3N, JALAN PERINTIS U1\/52, KAWASAN PERINDUSTRIAN TEMASYA ",
-            "tel": "0123425951"
-        },
-        {
-            "nama_masjid": "MASJID AL-QUDDUS",
-            "latitud": "2.98554",
-            "longitud": "101.67828",
-            "alamat": "JALAN PP22, TAMAN PINGGIRAN PUTRA,SERI KEMBANGAN",
-            "tel": "0192181297"
         },
         {
             "nama_masjid": "MASJID AL-QUDDUS",
@@ -13526,20 +12917,6 @@
             "tel": null
         },
         {
-            "nama_masjid": "MASJID BANDAR SERI PUTERA",
-            "latitud": "2.88753",
-            "longitud": "101.78833",
-            "alamat": "BANDAR SRI PUTRA,43000 KAJANG",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID KAMPUNG JOHAN SETIA",
-            "latitud": "2.97837",
-            "longitud": "101.48523",
-            "alamat": "KAMPUNG JOHAN SETIA, KM 8, JALAN LANGAT41200 KLANG",
-            "tel": "012-3025673"
-        },
-        {
             "nama_masjid": "MASJID KAMPUNG JOHAN SETIA",
             "latitud": "2.97837",
             "longitud": "101.48523",
@@ -13550,21 +12927,7 @@
             "nama_masjid": "MASJID AN-NUR TEMASYA GLANMARIE",
             "latitud": "3.09095",
             "longitud": "101.58157",
-            "alamat": "JALAN USAHAWAN U1\/8 GLANMARIE 40150 SHAH ALAM",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AN-NUR TEMASYA GLANMARIE",
-            "latitud": "3.09095",
-            "longitud": "101.58157",
-            "alamat": "JALAN USAHAWAN U1\/8 GLANMARIE 40150 SHAH ALAM",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID KAMPUNG SRI AMAN",
-            "latitud": "2.98642",
-            "longitud": "101.58619",
-            "alamat": "JALAN AMAN KG SRI AMAN 47100 PUCHONG",
+            "alamat": "JALAN USAHAWAN U1/8 GLANMARIE 40150 SHAH ALAM",
             "tel": ""
         },
         {
@@ -13579,34 +12942,6 @@
             "latitud": "3.02808",
             "longitud": "101.72532",
             "alamat": "TAMAN SUNGAI BESI INDAH 43300 SERI KEMBANGAN",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AS-SHARIF",
-            "latitud": "3.02808",
-            "longitud": "101.72532",
-            "alamat": "TAMAN SUNGAI BESI INDAH 43300 SERI KEMBANGAN",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID HOSPITAL SUNGAI BULOH",
-            "latitud": "3.21847",
-            "longitud": "101.59687",
-            "alamat": "MASJID HOSPITAL SUNGAI BULOH\r\nJALAN HOSPITAL, 47000 SUNGAI BULOH\r\nSELANGOR",
-            "tel": "03-61454333"
-        },
-        {
-            "nama_masjid": "MASJID HOSPITAL SUNGAI BULOH",
-            "latitud": "3.21847",
-            "longitud": "101.59687",
-            "alamat": "MASJID HOSPITAL SUNGAI BULOH\r\nJALAN HOSPITAL, 47000 SUNGAI BULOH\r\nSELANGOR",
-            "tel": "03-61454333"
-        },
-        {
-            "nama_masjid": "MASJID TUN TEJA RAWANG",
-            "latitud": "3.29581",
-            "longitud": "101.59290",
-            "alamat": "PERSIARAN TUN TEJA 2, 48000 RAWANG SELANGOR",
             "tel": ""
         },
         {
@@ -13631,32 +12966,11 @@
             "tel": "053711801"
         },
         {
-            "nama_masjid": "MASJID BANDAR UNIVERSITI SERI ISKANDAR",
-            "latitud": "4.361816209941724",
-            "longitud": "100.98186492919922",
-            "alamat": "LOT 20752, BANDAR UNIVERSITI32610 SERI ISKANDAR, PERAK.",
-            "tel": "053711801"
-        },
-        {
             "nama_masjid": "MASJID JAMEK KAMPUNG DATO' AHMAD SAID TAMBAHAN 3",
             "latitud": "4.636467",
             "longitud": "101.078434",
             "alamat": "KAMPUNG DATO' AHMAD SAID TAMBAHAN 3,\r\n30020 IPOH,\r\nPERAK",
             "tel": "0195717765"
-        },
-        {
-            "nama_masjid": "MASJID JAMEK KAMPUNG DATO' AHMAD SAID TAMBAHAN 3",
-            "latitud": "4.636467",
-            "longitud": "101.078434",
-            "alamat": "KAMPUNG DATO' AHMAD SAID TAMBAHAN 3,\r\n30020 IPOH,\r\nPERAK",
-            "tel": "0195717765"
-        },
-        {
-            "nama_masjid": "MASJID MUHAMMAD AL-FATEH",
-            "latitud": "4.659362",
-            "longitud": "101.076417",
-            "alamat": "TAMAN JATI, \r\n30020 IPOH,\r\nPERAK",
-            "tel": "0175554828"
         },
         {
             "nama_masjid": "MASJID MUHAMMAD AL-FATEH",
@@ -13673,32 +12987,11 @@
             "tel": "019-5749710"
         },
         {
-            "nama_masjid": "MASJID JAMEK AL-TAUFIQIAH",
-            "latitud": "4.673966",
-            "longitud": "101.117907",
-            "alamat": "TAMAN KLEBANG JAYA, CHEMOR, 31200 IPOH,PERAK",
-            "tel": "019-5749710"
-        },
-        {
             "nama_masjid": "MASJID AL-HUDA",
             "latitud": "4.582334",
             "longitud": "101.130949",
             "alamat": "LALUAN SRI AMPANG 10, \r\nKAMPUNG SRI AMPANG, \r\n31350 IPOH,\r\nPERAK",
             "tel": "0125190958"
-        },
-        {
-            "nama_masjid": "MASJID AL-HUDA",
-            "latitud": "4.582334",
-            "longitud": "101.130949",
-            "alamat": "LALUAN SRI AMPANG 10, \r\nKAMPUNG SRI AMPANG, \r\n31350 IPOH,\r\nPERAK",
-            "tel": "0125190958"
-        },
-        {
-            "nama_masjid": "MASJID NURUL FALAH",
-            "latitud": "4.673254",
-            "longitud": "101.108037",
-            "alamat": "KAMPUNG TERSUSUN KLEBANG SELATAN, \r\nCHEMOR, 31200 IPOH,\r\nPERAK",
-            "tel": "0195388085"
         },
         {
             "nama_masjid": "MASJID NURUL FALAH",
@@ -13715,20 +13008,6 @@
             "tel": "0127858656"
         },
         {
-            "nama_masjid": "MASJID AL-IHTIDAIYAH TAMBUN",
-            "latitud": "4.611941",
-            "longitud": "101.143829",
-            "alamat": "JALAN BESAR TAMBUN, 31400 IPOH,PERAK",
-            "tel": "0127858656"
-        },
-        {
-            "nama_masjid": "MASJID  BANDAR TASEK MUTIARA",
-            "latitud": "Address: Jln Tasek Mutiara 6, ",
-            "longitud": "Address: Jln Tasek Mutiara 6, ",
-            "alamat": "JALAN TASEK MUTIARA 6, BANDAR TASEK MUTIARA, 14120 SIMPANG AMPAT, PULAU PINANG",
-            "tel": null
-        },
-        {
             "nama_masjid": "MASJID  BANDAR TASEK MUTIARA",
             "latitud": "Address: Jln Tasek Mutiara 6, ",
             "longitud": "Address: Jln Tasek Mutiara 6, ",
@@ -13739,22 +13018,8 @@
             "nama_masjid": "MASJID NURUL ISLAM",
             "latitud": "3.15040",
             "longitud": "101.74480",
-            "alamat": "BATU 4, DESA PAHLAWAN, JALAN AMPANGKUALA LUMPURNO PENDAFTARAN:JAWI\/5\/003\/1\/82",
+            "alamat": "BATU 4, DESA PAHLAWAN, JALAN AMPANGKUALA LUMPURNO PENDAFTARAN:JAWI/5/003/1/82",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID NURUL ISLAM",
-            "latitud": "3.15040",
-            "longitud": "101.74480",
-            "alamat": "BATU 4, DESA PAHLAWAN, JALAN AMPANGKUALA LUMPURNO PENDAFTARAN:JAWI\/5\/003\/1\/82",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID MAHMOODIAH",
-            "latitud": "2.91864330492222",
-            "longitud": "101.69522523880005",
-            "alamat": "JALAN P18C, PRESINT 18, 62100 PUTRAJAYA",
-            "tel": "01114916281"
         },
         {
             "nama_masjid": "MASJID MAHMOODIAH",
@@ -13768,20 +13033,6 @@
             "latitud": "2.92924",
             "longitud": "101.77711",
             "alamat": "UNIVERSITI KEBANGSAAN MALAYSIA 43650 BANDAR BARU BANGI",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID UNIVERSITI KEBANGSAAN MALAYSIA",
-            "latitud": "2.92924",
-            "longitud": "101.77711",
-            "alamat": "UNIVERSITI KEBANGSAAN MALAYSIA 43650 BANDAR BARU BANGI",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID JABATAN PENJARA",
-            "latitud": "3.00110",
-            "longitud": "101.81093",
-            "alamat": "JABATAN PENJARA MALAYSIA PENJARA PUSAT KAJANG SG JELOK ",
             "tel": ""
         },
         {
@@ -13799,24 +13050,10 @@
             "tel": ""
         },
         {
-            "nama_masjid": "MASJID AL AZHAR",
-            "latitud": "2.89175",
-            "longitud": "101.78782",
-            "alamat": "KOLEJ UNIVERSITI ISLAM SELANGOR BANDAR SERI PUTRA ",
-            "tel": ""
-        },
-        {
             "nama_masjid": "MASJID AL UMM",
             "latitud": "2.94411",
             "longitud": "101.77078",
-            "alamat": "JALAN 1\/3K, SEKSYEN 1, 43650 BANDAR BARU BANGI",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AL UMM",
-            "latitud": "2.94411",
-            "longitud": "101.77078",
-            "alamat": "JALAN 1\/3K, SEKSYEN 1, 43650 BANDAR BARU BANGI",
+            "alamat": "JALAN 1/3K, SEKSYEN 1, 43650 BANDAR BARU BANGI",
             "tel": null
         },
         {
@@ -13824,20 +13061,6 @@
             "latitud": "2.88031",
             "longitud": "101.80955",
             "alamat": "LOT 4267 PERSIARAN MAHKOTA 2 BANDAR BUKIT MAHKOTA ",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AT TAQWA",
-            "latitud": "2.88031",
-            "longitud": "101.80955",
-            "alamat": "LOT 4267 PERSIARAN MAHKOTA 2 BANDAR BUKIT MAHKOTA ",
-            "tel": ""
-        },
-        {
-            "nama_masjid": "MASJID AT TAQWA",
-            "latitud": "3.00996",
-            "longitud": "101.73278",
-            "alamat": "JALAN DESA SERDANG 21 TAMAN DESA SERDANG",
             "tel": ""
         },
         {
@@ -13855,20 +13078,6 @@
             "tel": "0102414964"
         },
         {
-            "nama_masjid": "MASJID RAJA HAJI FI SABILILILLAH (PENGURUSAN)",
-            "latitud": "2.9325",
-            "longitud": "101.6480",
-            "alamat": "PERSIARAN SEMARAK API, CYBERJAYA, 63000 CYBERJAYA, SELANGOR",
-            "tel": "0102414964"
-        },
-        {
-            "nama_masjid": "MASJID IMAM AS-SYAFIE",
-            "latitud": "2.94665",
-            "longitud": "101.74925",
-            "alamat": "KAMPUS PENGAJIAN ISLAM BANGI, 43000 KAJANG, SELANGOR",
-            "tel": "03-89250352"
-        },
-        {
             "nama_masjid": "MASJID IMAM AS-SYAFIE",
             "latitud": "2.94665",
             "longitud": "101.74925",
@@ -13881,20 +13090,6 @@
             "longitud": "100.773699",
             "alamat": "BATU 23, KAMPUNG SELEKOH, 36200 SELEKOH, PERAK",
             "tel": "0192268645"
-        },
-        {
-            "nama_masjid": "MASJID AL-KHAIRIAH",
-            "latitud": "3.907123",
-            "longitud": "100.773699",
-            "alamat": "BATU 23, KAMPUNG SELEKOH, 36200 SELEKOH, PERAK",
-            "tel": "0192268645"
-        },
-        {
-            "nama_masjid": "MASJID INDIA MUSLIM",
-            "latitud": "4.027855",
-            "longitud": "101.016322",
-            "alamat": "JALAN AH CHEONG\r\n36000 TELUK INTAN, PERAK",
-            "tel": "0195575117"
         },
         {
             "nama_masjid": "MASJID INDIA MUSLIM",
@@ -13918,32 +13113,11 @@
             "tel": "0332805035"
         },
         {
-            "nama_masjid": "MASJID UNISEL",
-            "latitud": "3.41577",
-            "longitud": "101.43975",
-            "alamat": "UNIVERSITI INDUSTRI SELANGOR, KAMPUS BESTARI JAYA, JALAN TIMUR TAMBAHAN",
-            "tel": "0332805035"
-        },
-        {
             "nama_masjid": "MASJID PUNCAK ALAM",
             "latitud": "3.23445",
             "longitud": "101.42568",
             "alamat": "PERSIARAN PUNCAK ALAM 1, BANDAR PUNCAK ALAM",
-            "tel": "03-33922811 \/ 0"
-        },
-        {
-            "nama_masjid": "MASJID PUNCAK ALAM",
-            "latitud": "3.23445",
-            "longitud": "101.42568",
-            "alamat": "PERSIARAN PUNCAK ALAM 1, BANDAR PUNCAK ALAM",
-            "tel": "03-33922811 \/ 0"
-        },
-        {
-            "nama_masjid": "MASJID CYBERJAYA 10",
-            "latitud": "2.90088",
-            "longitud": "101.63209",
-            "alamat": "PERSIARAN RIMBA PERMAI, CYBER 10",
-            "tel": "0132903156"
+            "tel": "03-33922811 / 0"
         },
         {
             "nama_masjid": "MASJID CYBERJAYA 10",
@@ -13960,32 +13134,11 @@
             "tel": "03-89212020"
         },
         {
-            "nama_masjid": "MASJID UNITEN",
-            "latitud": "2.97198",
-            "longitud": "101.73263",
-            "alamat": "JALAN IKRAM UNIVERSITI TENAGA NASIONAL",
-            "tel": "03-89212020"
-        },
-        {
             "nama_masjid": "MASJID IKRAM",
             "latitud": "2.97647",
             "longitud": "101.73798",
             "alamat": "UNIVERSITI INFRASTRUKTUR KUALA LUMPUR, UNIPARK SURIA, JALAN IKRAM, UNITEN",
             "tel": "03-89266993"
-        },
-        {
-            "nama_masjid": "MASJID IKRAM",
-            "latitud": "2.97647",
-            "longitud": "101.73798",
-            "alamat": "UNIVERSITI INFRASTRUKTUR KUALA LUMPUR, UNIPARK SURIA, JALAN IKRAM, UNITEN",
-            "tel": "03-89266993"
-        },
-        {
-            "nama_masjid": "MASJID JAMEK PENGKALAN HULU",
-            "latitud": "5.70310",
-            "longitud": "101.00140",
-            "alamat": "JALAN BALING - KUALA KANGSAR, 33100 PENGKALAN HULU, PERAK DARL RIDZUAN.",
-            "tel": "044778222"
         },
         {
             "nama_masjid": "MASJID JAMEK PENGKALAN HULU",
@@ -14002,32 +13155,11 @@
             "tel": "0194760302"
         },
         {
-            "nama_masjid": "MASJID AL-AULA",
-            "latitud": "5.69809",
-            "longitud": "100.99334",
-            "alamat": "KAMPUNG SELARONG, 33310 PENGKALAN HULU, PERAK DARUL RIDZUAN.",
-            "tel": "0194760302"
-        },
-        {
             "nama_masjid": "MASJID KAMPUNG AIR PANAS",
             "latitud": "5.72946",
             "longitud": "101.01643",
             "alamat": "KAMPUNG AIR PANAS,33100 PENGKALAN HULU,PERAK DARUL RIDZUAN.",
             "tel": "0195705860"
-        },
-        {
-            "nama_masjid": "MASJID KAMPUNG AIR PANAS",
-            "latitud": "5.72946",
-            "longitud": "101.01643",
-            "alamat": "KAMPUNG AIR PANAS,33100 PENGKALAN HULU,PERAK DARUL RIDZUAN.",
-            "tel": "0195705860"
-        },
-        {
-            "nama_masjid": "MASJID ISKANDARIAH",
-            "latitud": "5.72253",
-            "longitud": "101.00197",
-            "alamat": "KAMPUNG KUAK LUAR,33100 PENGKALAN HULU,PERAK DARUL RIDZUAN.",
-            "tel": "0194789856"
         },
         {
             "nama_masjid": "MASJID ISKANDARIAH",
@@ -14044,20 +13176,6 @@
             "tel": "0194267016"
         },
         {
-            "nama_masjid": "MASJID AL-BAKRI",
-            "latitud": "5.73113",
-            "longitud": "100.98829",
-            "alamat": "KAMPUNG KUAK HULU, 33100 PENGKALAN HULU,PERAK DARUL RIDZUAN.",
-            "tel": "0194267016"
-        },
-        {
-            "nama_masjid": "MASJID GHUFRAN",
-            "latitud": "5.69094",
-            "longitud": "101.07860",
-            "alamat": "FELDA LEPANG NENERING,33100 PENGKALAN HULU,PERAK DARUL RIDZUAN.",
-            "tel": "0103140314"
-        },
-        {
             "nama_masjid": "MASJID GHUFRAN",
             "latitud": "5.69094",
             "longitud": "101.07860",
@@ -14072,32 +13190,11 @@
             "tel": "0196658603"
         },
         {
-            "nama_masjid": "MASJID KLIAN INTAN",
-            "latitud": "5.70534",
-            "longitud": "100.99574",
-            "alamat": "KAMPUNG KLIAN INTAN,33100 PENGKALAN HULU, PERAK DARUL RIDZUAN.",
-            "tel": "0196658603"
-        },
-        {
             "nama_masjid": "MASJID AL-MUBARAKAH",
             "latitud": "3.0715603116887333,",
             "longitud": "101.75002375345761",
             "alamat": "TAMAN BUKIT AGGERIK BATU 7 JALAN CHERAS  KUALA LUMPUR",
             "tel": null
-        },
-        {
-            "nama_masjid": "MASJID AL-MUBARAKAH",
-            "latitud": "3.0715603116887333,",
-            "longitud": "101.75002375345761",
-            "alamat": "TAMAN BUKIT AGGERIK BATU 7 JALAN CHERAS  KUALA LUMPUR",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID ABDULLAH BIN ZUBAIR",
-            "latitud": "3.1196199909265596,",
-            "longitud": "101.70383350133255",
-            "alamat": "JALAN LAPANGAN TERBANG LAMA, PENGKALAN TENTERA UDARA DIRAJA MALAYSIA, 50460 KUALA LUMPUR, WILAYAH PERSEKUTUAN KUALA LUMPUR",
-            "tel": "0392260000"
         },
         {
             "nama_masjid": "MASJID ABDULLAH BIN ZUBAIR",
@@ -14166,49 +13263,42 @@
             "nama_masjid": "MASJID KOTA KEMUNING",
             "latitud": "3.00265",
             "longitud": "101.53769",
-            "alamat": "NO 1, JALAN ANGGERIK VANILLA 31\/92, KOTA KEMUNING",
+            "alamat": "NO 1, JALAN ANGGERIK VANILLA 31/92, KOTA KEMUNING",
             "tel": null
         },
         {
             "nama_masjid": "MASJID BANDAR BUKIT RAJA",
             "latitud": "3.09000",
             "longitud": "101.42946",
-            "alamat": "LOT 53247, JALAN MAKYONG 5\/KU5, BANDAR BUKIT RAJA",
+            "alamat": "LOT 53247, JALAN MAKYONG 5/KU5, BANDAR BUKIT RAJA",
             "tel": null
         },
         {
             "nama_masjid": "MASJID KAMPUNG BATU 4",
             "latitud": "3.07960",
             "longitud": "101.40543",
-            "alamat": "KAMPUNG BATU 4 1\/2, JALAN KAPAR, 42100 KLANG",
+            "alamat": "KAMPUNG BATU 4 1/2, JALAN KAPAR, 42100 KLANG",
             "tel": null
         },
         {
             "nama_masjid": "MASJID JAMEK CINA MUSLIM",
             "latitud": "3.00010",
             "longitud": "101.44390",
-            "alamat": "LOT 157828 JALAN REMIA, 2\/KS07, AMBANG BOTANIK, KLANG",
-            "tel": null
-        },
-        {
-            "nama_masjid": "MASJID PARIT 12",
-            "latitud": "3.72896",
-            "longitud": "101.06136",
-            "alamat": "PARIT 12, SG PANJANG",
+            "alamat": "LOT 157828 JALAN REMIA, 2/KS07, AMBANG BOTANIK, KLANG",
             "tel": null
         },
         {
             "nama_masjid": "MASJID TAMAN ALAM JAYA",
             "latitud": "3.25312",
             "longitud": "101.44272",
-            "alamat": "JALAN TAJ 1\/11. TAMAN ALAM JAYA, BANDAR PUNCAK ALAM, SELANGOR",
+            "alamat": "JALAN TAJ 1/11. TAMAN ALAM JAYA, BANDAR PUNCAK ALAM, SELANGOR",
             "tel": null
         },
         {
             "nama_masjid": "MASJID TAMAN SUTERA",
             "latitud": "3.00815",
             "longitud": "101.76514",
-            "alamat": "JALAN SUTERA 2\/3B, TAMAN SUTERA 43000 KAJANG",
+            "alamat": "JALAN SUTERA 2/3B, TAMAN SUTERA 43000 KAJANG",
             "tel": null
         },
         {
@@ -14286,6 +13376,13 @@
             "latitud": "3.0584068918122482,",
             "longitud": "101.71689380802064",
             "alamat": "PANGKALAN TENTERA DARAT   KEM SUNGAI BESI   57100 KUALA LUMPUR",
+            "tel": null
+        },
+        {
+            "nama_masjid": "MASJID JAMEK ITTIFAQIYYAH",
+            "latitud": "4.466155",
+            "longitud": "101.009423",
+            "alamat": "TAMAN BEMBAN RAYA",
             "tel": null
         }
     ]

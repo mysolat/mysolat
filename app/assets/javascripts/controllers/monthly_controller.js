@@ -406,7 +406,7 @@ export default class extends Controller {
     }
 
     parseDate(dateStr) {
-        // Parse "01-Jan-2026" format
+        // JAKIM API returns Malay month abbreviations; accept English as fallback.
         const parts = dateStr.split("-");
         if (parts.length !== 3) return null;
 
@@ -414,16 +414,16 @@ export default class extends Controller {
         const months = {
             Jan: 0,
             Feb: 1,
-            Mar: 2,
+            Mac: 2, Mar: 2,
             Apr: 3,
-            May: 4,
+            Mei: 4, May: 4,
             Jun: 5,
             Jul: 6,
-            Aug: 7,
+            Ogo: 7, Aug: 7,
             Sep: 8,
-            Oct: 9,
+            Okt: 9, Oct: 9,
             Nov: 10,
-            Dec: 11,
+            Dis: 11, Dec: 11,
         };
         const month = months[parts[1]];
         const year = parseInt(parts[2], 10);
