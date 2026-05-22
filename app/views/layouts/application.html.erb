@@ -11,30 +11,26 @@
       <div class="absolute inset-0 bg-linear-to-b from-base-100 to-transparent w-full h-60" aria-hidden="true"></div>
       <div class="absolute inset-0 bg-linear-to-t from-base-100 to-transparent w-full h-screen" aria-hidden="true"></div>
     </div>
-    <div class="drawer md:pl-24">
-      <input id="drawer" class="drawer-toggle" type="checkbox">
-      <div class="drawer-content">
-        <%= render "layouts/header" %>
-        <% if content_for?(:hero) %>
-          <%= yield :hero %>
-        <% end %>
-        <section id="pages" class="flex flex-col">
-          <%= yield %>
-        </section>
-        <% if content_for?(:modal) %>
-          <input id="filter-modal" class="modal-toggle" type="checkbox">
-          <div class="modal modal-bottom">
-            <div class="modal-box h-svh w-screen max-w-screen p-0 rounded-t-3xl backdrop-blur-md bg-white/20 safe-top safe-bottom" data-controller="filter">
-              <%= yield :modal %>
-              <div class="modal-action"></div>
-            </div>
+    <div class="md:pl-24">
+      <%= render "layouts/header" %>
+      <% if content_for?(:hero) %>
+        <%= yield :hero %>
+      <% end %>
+      <section id="pages" class="flex flex-col">
+        <%= yield %>
+      </section>
+      <% if content_for?(:modal) %>
+        <input id="filter-modal" class="modal-toggle" type="checkbox">
+        <div class="modal modal-bottom justify-center z-1000">
+          <div class="modal-box  overflow-hidden h-svh w-screen max-w-screen md:max-w-[720px] p-0 rounded-t-3xl backdrop-blur-md bg-white/20 safe-top safe-bottom" data-controller="filter">
+            <%= yield :modal %>
+            <div class="modal-action"></div>
           </div>
-        <% end %>
-
-      </div>
-      <%= render "layouts/sidebar" %>
-      <%= render "layouts/analytics" if Rails.env.production? %>
+        </div>
+      <% end %>
     </div>
+    <%= render "layouts/sidebar" %>
+    <%= render "layouts/analytics" if Rails.env.production? %>
     <%= render "layouts/dock" %>
   </body>
 </html>
