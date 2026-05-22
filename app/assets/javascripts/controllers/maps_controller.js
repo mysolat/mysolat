@@ -10,6 +10,8 @@ export default class extends Controller {
         "surauCount",
         "locateBtn",
         "loading",
+        "search",
+        "results",
     ];
 
     static values = {
@@ -24,6 +26,8 @@ export default class extends Controller {
         this.zonLayer = null;
         this.masjidData = [];
         this.surauData = [];
+        this.masjidMarkers = [];
+        this.surauMarkers = [];
         this.userMarker = null;
 
         this.loadLeaflet();
@@ -122,6 +126,9 @@ export default class extends Controller {
         if (this.surauToggleTarget.checked) {
             this.loadSurauData();
         }
+        if (this.hasZonToggleTarget && this.zonToggleTarget.checked) {
+            this.loadZonData();
+        }
     }
 
     async loadMasjidData() {
@@ -156,6 +163,7 @@ export default class extends Controller {
 
     addMasjidMarkers() {
         this.masjidLayer.clearLayers();
+        this.masjidMarkers = [];
 
         this.masjidData.forEach((item) => {
             const lat = parseFloat(item.latitud);
@@ -168,6 +176,7 @@ export default class extends Controller {
 
                 marker.bindPopup(this.createPopup(item, "masjid"));
                 this.masjidLayer.addLayer(marker);
+                this.masjidMarkers.push({ item, marker, type: "masjid", lat, lng });
             }
         });
 
@@ -178,6 +187,7 @@ export default class extends Controller {
 
     addSurauMarkers() {
         this.surauLayer.clearLayers();
+        this.surauMarkers = [];
 
         this.surauData.forEach((item) => {
             const lat = parseFloat(item.latitud);
@@ -190,11 +200,130 @@ export default class extends Controller {
 
                 marker.bindPopup(this.createPopup(item, "surau"));
                 this.surauLayer.addLayer(marker);
+                this.surauMarkers.push({ item, marker, type: "surau", lat, lng });
             }
         });
 
         if (this.surauToggleTarget.checked) {
             this.map.addLayer(this.surauLayer);
+        }
+    }
+
+    search() {
+        const query = this.searchTarget.value.trim().toLowerCase();
+        if (query.length < 2) {
+            this.hideResults();
+            return;
+        }
+
+        if (this.masjidData.length === 0) this.loadMasjidData();
+        if (this.surauData.length === 0) this.loadSurauData();
+
+        const matches = [...this.masjidMarkers, ...this.surauMarkers]
+            .filter(({ item }) => {
+                const name = (item.nama_masjid || "").toLowerCase();
+                const addr = (item.alamat || "").toLowerCase();
+                return name.includes(query) || addr.includes(query);
+            })
+            .slice(0, 20);
+
+        this.renderResults(matches);
+    }
+
+    renderResults(matches) {
+        this.resultsTarget.replaceChildren();
+
+        if (matches.length === 0) {
+            const empty = document.createElement("li");
+            empty.className = "px-4 py-3 text-sm opacity-60";
+            empty.textContent = "Tiada keputusan ditemui";
+            this.resultsTarget.appendChild(empty);
+            this.resultsTarget.classList.remove("hidden");
+            return;
+        }
+
+        matches.forEach((entry, idx) => {
+            const { item, type } = entry;
+            const badgeClass = type === "masjid" ? "badge-primary" : "badge-accent";
+            const label = type === "masjid" ? "Masjid" : "Surau";
+
+            const li = document.createElement("li");
+
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.dataset.action = "click->maps#selectResult";
+            btn.dataset.index = String(idx);
+            btn.className = "w-full text-left px-4 py-3 hover:bg-base-content/5 flex items-start gap-3";
+
+            const badge = document.createElement("span");
+            badge.className = `badge ${badgeClass} badge-sm shrink-0 mt-0.5`;
+            badge.textContent = label;
+
+            const textWrap = document.createElement("span");
+            textWrap.className = "min-w-0 flex-1";
+
+            const name = document.createElement("span");
+            name.className = "block font-medium text-sm truncate";
+            name.textContent = item.nama_masjid || "Tiada Nama";
+            textWrap.appendChild(name);
+
+            if (item.alamat) {
+                const addr = document.createElement("span");
+                addr.className = "block text-xs opacity-60 truncate";
+                addr.textContent = item.alamat;
+                textWrap.appendChild(addr);
+            }
+
+            btn.appendChild(badge);
+            btn.appendChild(textWrap);
+            li.appendChild(btn);
+            this.resultsTarget.appendChild(li);
+        });
+
+        this._lastMatches = matches;
+        this.resultsTarget.classList.remove("hidden");
+    }
+
+    selectResult(event) {
+        const idx = parseInt(event.currentTarget.dataset.index, 10);
+        const entry = this._lastMatches?.[idx];
+        if (!entry) return;
+
+        const { marker, lat, lng, type } = entry;
+        const layer = type === "masjid" ? this.masjidLayer : this.surauLayer;
+        const toggle = type === "masjid" ? this.masjidToggleTarget : this.surauToggleTarget;
+
+        if (!toggle.checked) {
+            toggle.checked = true;
+            this.toggleMarkers();
+        }
+
+        this.map.flyTo([lat, lng], 17, { duration: 0.6 });
+
+        if (typeof layer.zoomToShowLayer === "function") {
+            layer.zoomToShowLayer(marker, () => marker.openPopup());
+        } else {
+            marker.openPopup();
+        }
+
+        this.hideResults();
+        this.searchTarget.blur();
+    }
+
+    clearSearch() {
+        this.searchTarget.value = "";
+        this.hideResults();
+    }
+
+    hideResults() {
+        this.resultsTarget.classList.add("hidden");
+        this.resultsTarget.replaceChildren();
+    }
+
+    handleOutsideClick(event) {
+        const wrapper = this.searchTarget.parentElement?.parentElement;
+        if (wrapper && !wrapper.contains(event.target)) {
+            this.hideResults();
         }
     }
 
