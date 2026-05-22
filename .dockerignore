@@ -45,3 +45,7 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+./playwright-mcp/*
+./claude/*
+CLAUDE.*

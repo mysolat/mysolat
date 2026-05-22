@@ -46,3 +46,7 @@ yarn-debug.log*
 .vscode
 
 /public/service-worker.*
+
+.playwright-mcp/*
+.claude/*
+CLAUDE.md

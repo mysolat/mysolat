@@ -16,24 +16,24 @@
         "@selectize/selectize": "^0.15.2",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "@tailwindcss/typography": "^0.5.19",
-        "autoprefixer": "^10.4.27",
-        "daisyui": "^5.5.19",
+        "autoprefixer": "^10.5.0",
+        "daisyui": "^5.5.20",
         "heroicons": "^2.2.0",
-        "lit": "^3.3.2",
+        "lit": "^3.3.3",
         "tailwind-scrollbar": "^4.0.2",
-        "tailwindcss": "^4.2.2",
+        "tailwindcss": "^4.3.0",
         "tailwindcss-displaymodes": "^1.0.8"
     },
     "devDependencies": {
-        "@tailwindcss/cli": "^4.2.2",
+        "@tailwindcss/cli": "^4.3.0",
         "@types/dom-chromium-installation-events": "^101.0.4",
         "@types/web-app-manifest": "^1.0.9",
-        "cssnano": "^7.1.3",
-        "esbuild": "^0.27.4",
+        "cssnano": "^8.0.1",
+        "esbuild": "^0.28.0",
         "esbuild-plugin-copy": "^2.1.1",
         "esbuild-rails": "^1.0.7",
-        "sass": "^1.98.0",
-        "workbox-cli": "7.4.0"
+        "sass": "^1.100.0",
+        "workbox-cli": "7.4.1"
     },
     "packageManager": "yarn@4.6.0"
 }
