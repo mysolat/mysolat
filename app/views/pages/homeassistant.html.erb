@@ -28,7 +28,7 @@
         <ul class="space-y-2 m-0 list-none pl-0">
           <li class="flex items-start gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
-            <span><strong>16 entiti</strong> dicipta secara automatik — sensor waktu solat, tarikh Hijri, zon, pemain media azan, dan lain-lain</span>
+            <span><strong>17 entiti</strong> dicipta secara automatik — sensor waktu solat, tarikh Hijri, zon, pemain media azan, mod pengumuman, dan lain-lain</span>
           </li>
           <li class="flex items-start gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
@@ -45,6 +45,10 @@
           <li class="flex items-start gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
             <span>Persediaan melalui UI — tanpa perlu edit YAML</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-success shrink-0 mt-0.5"><path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" /></svg>
+            <span>Mod pengumuman azan boleh dipilih — <strong>TTS</strong> Google Translate atau <strong>audio MP3 pra-rakam</strong> untuk setiap waktu solat</span>
           </li>
         </ul>
       </div>
@@ -133,7 +137,7 @@
           </li>
           <li class="flex gap-3">
             <span class="badge badge-primary badge-sm shrink-0 mt-1">5</span>
-            <span>Klik <strong>Submit</strong> — semua 16 entiti akan muncul serta-merta</span>
+            <span>Klik <strong>Submit</strong> — semua 17 entiti akan muncul serta-merta</span>
           </li>
         </ol>
 
@@ -145,7 +149,7 @@
 
       <!-- Entities -->
       <h2 class="text-2xl font-semibold mb-4">Entiti yang Dicipta</h2>
-      <p class="mb-4">16 entiti dicipta secara automatik di bawah peranti <strong>"Waktu Solat"</strong>:</p>
+      <p class="mb-4">17 entiti dicipta secara automatik di bawah peranti <strong>"Waktu Solat"</strong>:</p>
 
       <!-- Sensors -->
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
@@ -196,6 +200,7 @@
               <tbody>
                 <tr><td><code>select.waktu_solat_zon</code></td><td>Zon</td><td>Zon aktif — tukar untuk kemas kini semua sensor serta-merta</td></tr>
                 <tr><td><code>select.waktu_solat_pemain_media_azan</code></td><td>Pemain Media Azan</td><td>Pemain media untuk main balik azan</td></tr>
+                <tr><td><code>select.waktu_solat_mod_pengumuman_azan</code></td><td>Mod Pengumuman Azan</td><td>Mod pengumuman sebelum azan — <code>tts</code> (Google Translate TTS) atau <code>audio</code> (MP3 pra-rakam)</td></tr>
                 <tr><td><code>number.waktu_solat_kelantangan_azan</code></td><td>Kelantangan Azan</td><td>Kelantangan azan (0.0–1.0)</td></tr>
                 <tr><td><code>text.waktu_solat_fail_audio_azan</code></td><td>Fail Audio Azan</td><td>Nama fail azan (dipisahkan koma)</td></tr>
                 <tr><td><code>text.waktu_solat_fail_audio_azan_subuh</code></td><td>Fail Audio Azan Subuh</td><td>Nama fail azan Subuh (dipisahkan koma)</td></tr>
@@ -207,7 +212,15 @@
       </div>
 
       <!-- Dashboard Example -->
-      <h2 class="text-2xl font-semibold mb-4">Contoh Papan Pemuka</h2>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold m-0">Contoh Papan Pemuka</h2>
+        <a href="https://github.com/mysolat/homeassistant/blob/main/DASHBOARD.md" target="_blank" class="btn btn-ghost btn-sm gap-2 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
+          Panduan Lengkap
+        </a>
+      </div>
       <div class="collapse collapse-arrow backdrop-blur-sm bg-white/10 rounded-2xl mb-4 border border-white/10">
         <input type="checkbox">
         <div class="collapse-title font-medium">Kad Entiti Waktu Solat (YAML)</div>
@@ -260,8 +273,9 @@
         <div class="collapse-title font-medium">Azan Harian (YAML)</div>
         <div class="collapse-content">
           <div data-controller="clipboard" class="mockup-code w-full relative mt-2 overflow-x-auto">
-            <pre data-prefix=" "><code>alias: Azan Harian</code></pre>
-            <pre data-prefix=" "><code>description: Play azan for all prayer times via solat.my integration</code></pre>
+            <pre data-prefix=" "><code>alias: "Azan Harian"</code></pre>
+            <pre data-prefix=" "><code>description: "Play azan for all prayer times via solat.my integration"</code></pre>
+            <pre data-prefix=" "><code>mode: single</code></pre>
             <pre data-prefix=" "><code>triggers:</code></pre>
             <pre data-prefix=" "><code>  - trigger: time</code></pre>
             <pre data-prefix=" "><code>    at: sensor.waktu_solat_subuh</code></pre>
@@ -280,77 +294,116 @@
             <pre data-prefix=" "><code>    id: isyak</code></pre>
             <pre data-prefix=" "><code>conditions: []</code></pre>
             <pre data-prefix=" "><code>actions:</code></pre>
+            <pre data-prefix=" "><code>  # Persistent notification</code></pre>
             <pre data-prefix=" "><code>  - action: persistent_notification.create</code></pre>
             <pre data-prefix=" "><code>    data:</code></pre>
             <pre data-prefix=" "><code>      notification_id: solat_azan</code></pre>
             <pre data-prefix=" "><code>      title: ></code></pre>
-            <pre data-prefix=" "><code>        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',</code></pre>
-            <pre data-prefix=" "><code>        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ names[trigger.id] }}</code></pre>
+            <pre data-prefix=" "><code>        🕋 Waktu Solat —</code></pre>
+            <pre data-prefix=" "><code>        {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>        {{ names.get(tid, 'Zohor') }}</code></pre>
             <pre data-prefix=" "><code>      message: ></code></pre>
-            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
-            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M %p') }}</code></pre>
-            <pre data-prefix=" "><code>        — Sekarang telah masuk waktu {{ names[trigger.id] }}.</code></pre>
+            <pre data-prefix=" "><code>        {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>        {{ now().strftime('%-I:%M %p') }} — Sekarang telah masuk waktu</code></pre>
+            <pre data-prefix=" "><code>        {{ names.get(tid, 'Zohor') }} bagi kawasan ini dan kawasan yang sama waktu dengannya.</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Mobile push notification</code></pre>
             <pre data-prefix=" "><code>  - action: notify.notify</code></pre>
             <pre data-prefix=" "><code>    data:</code></pre>
             <pre data-prefix=" "><code>      title: ></code></pre>
-            <pre data-prefix=" "><code>        🕋 Waktu Solat — {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor',</code></pre>
-            <pre data-prefix=" "><code>        'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ names[trigger.id] }}</code></pre>
+            <pre data-prefix=" "><code>        🕋 Waktu Solat —</code></pre>
+            <pre data-prefix=" "><code>        {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>        {{ names.get(tid, 'Zohor') }}</code></pre>
             <pre data-prefix=" "><code>      message: ></code></pre>
-            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
-            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} {{ now().strftime('%-I:%M %p') }}</code></pre>
-            <pre data-prefix=" "><code>        — Sekarang telah masuk waktu {{ names[trigger.id] }}.</code></pre>
-            <pre data-prefix=" "><code>  - action: media_player.volume_set</code></pre>
-            <pre data-prefix=" "><code>    target:</code></pre>
-            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
-            <pre data-prefix=" "><code>    data:</code></pre>
-            <pre data-prefix=" "><code>      volume_level: "{{ states('number.waktu_solat_kelantangan_azan') | float }}"</code></pre>
-            <pre data-prefix=" "><code>  - action: tts.google_translate_say</code></pre>
-            <pre data-prefix=" "><code>    data:</code></pre>
-            <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
-            <pre data-prefix=" "><code>      language: id</code></pre>
-            <pre data-prefix=" "><code>      message: ></code></pre>
-            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
-            <pre data-prefix=" "><code>        'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Sekarang telah masuk waktu</code></pre>
-            <pre data-prefix=" "><code>        {{ names[trigger.id] }} bagi kawasan ini dan kawasan yang sama waktu dengannya.</code></pre>
-            <pre data-prefix=" "><code>  - delay: "00:00:10"</code></pre>
+            <pre data-prefix=" "><code>        {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>        {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>        {{ now().strftime('%-I:%M %p') }} — Sekarang telah masuk waktu {{ names.get(tid, 'Zohor') }}.</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Set volume — skipped if media player does not support it (e.g. TV)</code></pre>
+            <pre data-prefix=" "><code>  - if:</code></pre>
+            <pre data-prefix=" "><code>      - condition: template</code></pre>
+            <pre data-prefix=" "><code>        value_template: ></code></pre>
+            <pre data-prefix=" "><code>          {{ state_attr(states('select.waktu_solat_pemain_media_azan'), 'supported_features') | int(0) | bitwise_and(4) > 0 }}</code></pre>
+            <pre data-prefix=" "><code>    then:</code></pre>
+            <pre data-prefix=" "><code>      - action: media_player.volume_set</code></pre>
+            <pre data-prefix=" "><code>        target:</code></pre>
+            <pre data-prefix=" "><code>          entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>        data:</code></pre>
+            <pre data-prefix=" "><code>          volume_level: "{{ states('number.waktu_solat_kelantangan_azan') | float }}"</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Announcement — TTS or pre-recorded audio based on user setting</code></pre>
+            <pre data-prefix=" "><code>  - choose:</code></pre>
+            <pre data-prefix=" "><code>      - conditions:</code></pre>
+            <pre data-prefix=" "><code>          - condition: template</code></pre>
+            <pre data-prefix=" "><code>            value_template: ></code></pre>
+            <pre data-prefix=" "><code>              {{ states('select.waktu_solat_mod_pengumuman_azan') == 'audio' }}</code></pre>
+            <pre data-prefix=" "><code>        sequence:</code></pre>
+            <pre data-prefix=" "><code>          - action: media_player.play_media</code></pre>
+            <pre data-prefix=" "><code>            target:</code></pre>
+            <pre data-prefix=" "><code>              entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>            data:</code></pre>
+            <pre data-prefix=" "><code>              media:</code></pre>
+            <pre data-prefix=" "><code>                media_content_type: audio/mp3</code></pre>
+            <pre data-prefix=" "><code>                media_content_id: ></code></pre>
+            <pre data-prefix=" "><code>                  {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>                  media-source://media_source/local/tts/tts_{{ tid }}.mp3</code></pre>
+            <pre data-prefix=" "><code>                metadata: {}</code></pre>
+            <pre data-prefix=" "><code>          - delay: "00:00:10"</code></pre>
+            <pre data-prefix=" "><code>    default:</code></pre>
+            <pre data-prefix=" "><code>      - action: tts.google_translate_say</code></pre>
+            <pre data-prefix=" "><code>        data:</code></pre>
+            <pre data-prefix=" "><code>          entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
+            <pre data-prefix=" "><code>          language: id</code></pre>
+            <pre data-prefix=" "><code>          message: ></code></pre>
+            <pre data-prefix=" "><code>            {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>            {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>            Sekarang telah masuk waktu {{ names.get(tid, 'Zohor') }}.</code></pre>
+            <pre data-prefix=" "><code>      - delay: "00:00:10"</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Play azan audio (random selection from text entity)</code></pre>
             <pre data-prefix=" "><code>  - action: media_player.play_media</code></pre>
             <pre data-prefix=" "><code>    target:</code></pre>
             <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
             <pre data-prefix=" "><code>    data:</code></pre>
             <pre data-prefix=" "><code>      extra:</code></pre>
             <pre data-prefix=" "><code>        title: ></code></pre>
-            <pre data-prefix=" "><code>          {% set names = {'subuh': 'Subuh', 'zohor': 'Zohor', 'asar': 'Asar',</code></pre>
-            <pre data-prefix=" "><code>          'maghrib': 'Maghrib', 'isyak': 'Isyak'} %} Azan {{ names[trigger.id] }}</code></pre>
-            <pre data-prefix=" "><code>        thumb: https://solat.my/icon.png</code></pre>
+            <pre data-prefix=" "><code>          {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>          {% set names = {'subuh': 'Subuh', 'syuruk': 'Syuruk', 'zohor': 'Zohor', 'asar': 'Asar', 'maghrib': 'Maghrib', 'isyak': 'Isyak'} %}</code></pre>
+            <pre data-prefix=" "><code>          Azan {{ names.get(tid, 'Zohor') }}</code></pre>
+            <pre data-prefix=" "><code>        thumb: "https://solat.my/icon-512.png"</code></pre>
             <pre data-prefix=" "><code>      media:</code></pre>
             <pre data-prefix=" "><code>        media_content_type: audio/mp3</code></pre>
-            <pre data-prefix=" "><code>        media_content_id: |</code></pre>
-            <pre data-prefix=" "><code>          {% if trigger.id == 'subuh' %}</code></pre>
-            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~</code></pre>
-            <pre data-prefix=" "><code>               states('text.waktu_solat_fail_audio_azan_subuh').split(', ') | random }}</code></pre>
+            <pre data-prefix=" "><code>        media_content_id: ></code></pre>
+            <pre data-prefix=" "><code>          {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>          {% if tid == 'subuh' %}</code></pre>
+            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~ states('text.waktu_solat_fail_audio_azan_subuh').split(', ') | random | trim }}</code></pre>
             <pre data-prefix=" "><code>          {% else %}</code></pre>
-            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~</code></pre>
-            <pre data-prefix=" "><code>               states('text.waktu_solat_fail_audio_azan').split(', ') | random }}</code></pre>
+            <pre data-prefix=" "><code>            {{ "media-source://media_source/local/azan/" ~ states('text.waktu_solat_fail_audio_azan').split(', ') | random | trim }}</code></pre>
             <pre data-prefix=" "><code>          {% endif %}</code></pre>
+            <pre data-prefix=" "><code>        metadata: {}</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Wait for azan to finish, then play doa</code></pre>
             <pre data-prefix=" "><code>  - choose:</code></pre>
             <pre data-prefix=" "><code>      - conditions:</code></pre>
-            <pre data-prefix=" "><code>          - condition: trigger</code></pre>
-            <pre data-prefix=" "><code>            id: subuh</code></pre>
+            <pre data-prefix=" "><code>          - condition: template</code></pre>
+            <pre data-prefix=" "><code>            value_template: ></code></pre>
+            <pre data-prefix=" "><code>              {% set tid = trigger.id if trigger is defined else states('sensor.waktu_solat_waktu_solat_semasa') | lower %}</code></pre>
+            <pre data-prefix=" "><code>              {{ tid == 'subuh' }}</code></pre>
             <pre data-prefix=" "><code>        sequence:</code></pre>
             <pre data-prefix=" "><code>          - delay:</code></pre>
             <pre data-prefix=" "><code>              minutes: 4</code></pre>
             <pre data-prefix=" "><code>              seconds: 30</code></pre>
-            <pre data-prefix=" "><code>      - conditions:</code></pre>
-            <pre data-prefix=" "><code>          - condition: not</code></pre>
-            <pre data-prefix=" "><code>            conditions:</code></pre>
-            <pre data-prefix=" "><code>              - condition: trigger</code></pre>
-            <pre data-prefix=" "><code>                id: subuh</code></pre>
-            <pre data-prefix=" "><code>        sequence:</code></pre>
-            <pre data-prefix=" "><code>          - delay:</code></pre>
-            <pre data-prefix=" "><code>              minutes: 2</code></pre>
-            <pre data-prefix=" "><code>              seconds: 47</code></pre>
+            <pre data-prefix=" "><code>    default:</code></pre>
+            <pre data-prefix=" "><code>      - delay:</code></pre>
+            <pre data-prefix=" "><code>          minutes: 2</code></pre>
+            <pre data-prefix=" "><code>          seconds: 47</code></pre>
+            <pre data-prefix=" "><code></code></pre>
+            <pre data-prefix=" "><code>  # Play doa selepas azan</code></pre>
             <pre data-prefix=" "><code>  - action: media_player.play_media</code></pre>
-            <pre data-prefix=" "><code>    alias: Doa Selepas Azan</code></pre>
+            <pre data-prefix=" "><code>    alias: "Doa Selepas Azan"</code></pre>
             <pre data-prefix=" "><code>    target:</code></pre>
             <pre data-prefix=" "><code>      entity_id: "{{ states('select.waktu_solat_pemain_media_azan') }}"</code></pre>
             <pre data-prefix=" "><code>    data:</code></pre>
@@ -360,7 +413,6 @@
             <pre data-prefix=" "><code>        metadata:</code></pre>
             <pre data-prefix=" "><code>          title: doa_selepas_azan.mp3</code></pre>
             <pre data-prefix=" "><code>          media_class: music</code></pre>
-            <pre data-prefix=" "><code>mode: single</code></pre>
             <%= render "pages/api_copy_button" %>
           </div>
         </div>
