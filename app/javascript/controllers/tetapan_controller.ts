@@ -12,7 +12,7 @@ export default class TetapanController extends Controller {
   static targets = ['backdrop', 'drawer']
 
   declare readonly backdropTarget: HTMLElement
-  declare readonly drawertarget: HTMLElement
+  declare readonly drawerTarget: HTMLElement
   declare readonly hasBackdropTarget: boolean
   declare readonly hasDrawerTarget: boolean
 
@@ -37,8 +37,8 @@ export default class TetapanController extends Controller {
   open() {
     if (this.hasBackdropTarget && this.hasDrawerTarget) {
       this.backdropTarget.classList.remove('hidden')
-      this.drawertarget.classList.add('translate-y-0')
-      this.drawertarget.classList.remove('translate-y-full')
+      this.drawerTarget.classList.add('translate-y-0')
+      this.drawerTarget.classList.remove('translate-y-full')
       document.body.style.overflow = 'hidden'
     }
   }
@@ -46,8 +46,8 @@ export default class TetapanController extends Controller {
   close() {
     if (this.hasBackdropTarget && this.hasDrawerTarget) {
       this.backdropTarget.classList.add('hidden')
-      this.drawertarget.classList.remove('translate-y-0')
-      this.drawertarget.classList.add('translate-y-full')
+      this.drawerTarget.classList.remove('translate-y-0')
+      this.drawerTarget.classList.add('translate-y-full')
       document.body.style.overflow = 'auto'
 
       // Update the checkbox if it exists
