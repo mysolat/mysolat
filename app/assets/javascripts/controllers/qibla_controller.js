@@ -221,18 +221,16 @@ export default class extends Controller {
     if (this.qiblaBearing === null) return;
 
     // Rotate compass dial opposite to device heading (so North indicator follows real North)
-    this.compassTarget.style.transform = `rotate(${-deviceHeading}deg)`;
+    this.compassTarget.setAttribute("transform", `rotate(${-deviceHeading} 200 200)`);
 
     // Needle points to Qibla relative to current device heading
-    // When device faces North (heading=0), needle shows raw qiblaBearing
-    // As device rotates, needle counter-rotates to keep pointing at real-world Qibla
     const needleRotation = this.qiblaBearing - deviceHeading;
-    this.needleTarget.style.transform = `rotate(${needleRotation}deg)`;
+    this.needleTarget.setAttribute("transform", `rotate(${needleRotation} 200 200)`);
 
-    // Update bearing display (always shows the fixed bearing from North)
+    // Update bearing display
     this.bearingTarget.textContent = Math.round(this.qiblaBearing) + "°";
 
-    // Check if device is aligned with Qibla direction
+    // Check alignment
     this.checkAlignment(deviceHeading);
   }
 
@@ -287,7 +285,7 @@ export default class extends Controller {
   updateStaticBearing() {
     if (this.qiblaBearing !== null) {
       this.bearingTarget.textContent = Math.round(this.qiblaBearing) + "°";
-      this.needleTarget.style.transform = `rotate(${this.qiblaBearing}deg)`;
+      this.needleTarget.setAttribute("transform", `rotate(${this.qiblaBearing} 200 200)`);
     }
   }
 
@@ -296,11 +294,8 @@ export default class extends Controller {
       this.updateStatus(message);
     }
 
-    // Show bearing as static number
     this.updateStaticBearing();
-
-    // Add visual indicator that compass is static
-    this.compassTarget.classList.add("opacity-70");
+    this.compassTarget.style.opacity = "0.7";
   }
 
   showWarning(message) {

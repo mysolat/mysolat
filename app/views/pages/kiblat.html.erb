@@ -12,54 +12,91 @@
     <h1 class="text-2xl font-bold text-center mb-2">Arah Kiblat</h1>
     <p class="text-center text-base-content/60 text-sm mb-6" data-qibla-target="status">Memulakan...</p>
 
-    <!-- Compass Container -->
-    <div class="relative w-72 h-72 mx-auto mb-6">
+    <!-- Compass Container (SVG) -->
+    <div class="relative w-72 h-72 md:w-80 md:h-80 mx-auto mb-6" data-qibla-target="container">
       <!-- Outer ring for alignment highlight -->
       <div class="absolute inset-0 rounded-full transition-all duration-300 ease-out"
            data-qibla-target="ring"></div>
 
-      <!-- Compass Rose (outer dial) - rotates with device -->
-      <div class="absolute inset-0 rounded-full border-4 border-white/30 bg-base-100/20 transition-transform duration-100 ease-out"
-           data-qibla-target="compass">
+      <svg viewBox="0 0 400 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="compassShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.15"/>
+          </filter>
+          <linearGradient id="needleGrad" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="oklch(var(--p))" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="oklch(var(--p))"/>
+          </linearGradient>
+        </defs>
 
-        <!-- Cardinal directions -->
-        <div class="absolute top-2 left-1/2 -translate-x-1/2 text-lg font-bold text-primary">U</div>
-        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 text-lg font-bold text-base-content/60">S</div>
-        <div class="absolute left-2 top-1/2 -translate-y-1/2 text-lg font-bold text-base-content/60">B</div>
-        <div class="absolute right-2 top-1/2 -translate-y-1/2 text-lg font-bold text-base-content/60">T</div>
+        <!-- Compass dial (rotates with device heading) -->
+        <g data-qibla-target="compass">
+          <!-- Outer circle -->
+          <circle cx="200" cy="200" r="190" fill="oklch(var(--b100) / 0.2)" stroke="oklch(var(--bc) / 0.3)" stroke-width="3" filter="url(#compassShadow)"/>
 
-        <!-- Degree markers -->
-        <% [30, 60, 120, 150, 210, 240, 300, 330].each do |deg| %>
-          <div class="absolute w-1 h-3 bg-white/30 left-1/2 -translate-x-1/2"
-               style="top: 4px; transform-origin: center <%= (272/2) - 4 %>px; transform: translateX(-50%) rotate(<%= deg %>deg);">
-          </div>
-        <% end %>
-      </div>
+          <!-- Inner circle -->
+          <circle cx="200" cy="200" r="170" fill="none" stroke="oklch(var(--bc) / 0.15)" stroke-width="1"/>
 
-      <!-- Qibla Direction Needle - points to Qibla -->
-      <div class="absolute inset-0 flex items-center justify-center transition-transform duration-100 ease-out"
-           data-qibla-target="needle"
-           style="transform: rotate(0deg)">
-        <!-- Needle body -->
-        <div class="absolute w-3 h-28 bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom">
-          <div class="w-full h-full bg-gradient-to-t from-primary via-primary to-primary/70 rounded-full shadow-lg"></div>
-          <!-- Kaaba indicator at top -->
-          <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-6 bg-primary rounded-sm rotate-45 flex items-center justify-center shadow-lg">
-            <svg class="w-4 h-4 -rotate-45 fill-primary-content" viewBox="0 0 24 24">
-              <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.5L19 8v7l-7 3.5L5 15V8l7-3.5z"/>
-            </svg>
-          </div>
-        </div>
-        <!-- Opposite end (south indicator) -->
-        <div class="absolute w-2 h-20 top-1/2 left-1/2 -translate-x-1/2 origin-top">
-          <div class="w-full h-full bg-base-content/30 rounded-full"></div>
-        </div>
-      </div>
+          <!-- Minor tick marks (every 10°, skip cardinals/intercardinals) -->
+          <% (0...360).step(10).reject { |d| d % 45 == 0 }.each do |deg| %>
+            <line x1="200" y1="15" x2="200" y2="25"
+                  stroke="oklch(var(--bc) / 0.35)" stroke-width="1.5"
+                  transform="rotate(<%= deg %> 200 200)"/>
+          <% end %>
 
-      <!-- Center point -->
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div class="w-6 h-6 rounded-full bg-base-100 border-4 border-primary shadow-lg"></div>
-      </div>
+          <!-- Intercardinal tick marks -->
+          <% [45, 135, 225, 315].each do |deg| %>
+            <line x1="200" y1="12" x2="200" y2="28"
+                  stroke="oklch(var(--bc) / 0.5)" stroke-width="2.5"
+                  transform="rotate(<%= deg %> 200 200)"/>
+          <% end %>
+
+          <!-- Cardinal tick marks (N/S/E/W) -->
+          <% [0, 90, 180, 270].each do |deg| %>
+            <line x1="200" y1="10" x2="200" y2="32"
+                  stroke="oklch(var(--bc) / 0.8)" stroke-width="3"
+                  transform="rotate(<%= deg %> 200 200)"/>
+          <% end %>
+
+          <!-- Cardinal labels -->
+          <text x="200" y="54" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--p))" font-size="22" font-weight="bold">U</text>
+          <text x="200" y="350" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.6)" font-size="20">S</text>
+          <text x="54" y="204" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.6)" font-size="20">B</text>
+          <text x="346" y="204" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.6)" font-size="20">T</text>
+
+          <!-- Intercardinal labels -->
+          <text x="96" y="96" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.45)" font-size="14">BL</text>
+          <text x="304" y="96" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.45)" font-size="14">TL</text>
+          <text x="304" y="310" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.45)" font-size="14">TD</text>
+          <text x="96" y="310" text-anchor="middle" dominant-baseline="middle"
+                fill="oklch(var(--bc) / 0.45)" font-size="14">BD</text>
+        </g>
+
+        <!-- Qibla needle (fixed, rotates to point at bearing) -->
+        <g data-qibla-target="needle">
+          <!-- Main needle (points UP toward qibla) -->
+          <polygon points="200,55 194,170 206,170" fill="url(#needleGrad)" opacity="0.9"/>
+          <!-- Tail needle (opposite direction) -->
+          <polygon points="200,345 196,235 204,235" fill="oklch(var(--bc) / 0.25)"/>
+          <!-- Kaaba icon at needle tip -->
+          <g transform="translate(200, 45)">
+            <rect x="-10" y="-10" width="20" height="20" rx="2" fill="oklch(var(--p))" stroke="oklch(var(--pc))" stroke-width="1"/>
+            <line x1="-6" y1="0" x2="6" y2="0" stroke="oklch(var(--pc))" stroke-width="1.5"/>
+            <rect x="-3" y="2" width="6" height="5" rx="1" fill="none" stroke="oklch(var(--pc))" stroke-width="1"/>
+          </g>
+        </g>
+
+        <!-- Center cap -->
+        <circle cx="200" cy="200" r="14" fill="oklch(var(--b100))" stroke="oklch(var(--p))" stroke-width="3"/>
+        <circle cx="200" cy="200" r="5" fill="oklch(var(--p))"/>
+      </svg>
     </div>
 
     <!-- Bearing Display -->
