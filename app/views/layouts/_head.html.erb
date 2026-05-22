@@ -79,6 +79,7 @@
 
 <%= tag.meta name: "current-user-id", content: Current.user.id if Current.user %>
 <%= tag.meta name: "vapid-public-key", content: Rails.configuration.x.vapid.public_key %>
+<%= tag.meta name: "cache-version", content: Rails.configuration.x.cache_version %>
 
 <%# Stylesheets %>
 <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>

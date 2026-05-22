@@ -1,6 +1,7 @@
 const DB_NAME = "mysolat";
 const DB_VERSION = 1;
 const STORE_NAME = "prayer_times";
+const VERSION_KEY = "mysolat:cache-version";
 
 class PrayerTimesDB {
   constructor() {
@@ -9,6 +10,8 @@ class PrayerTimesDB {
 
   async open() {
     if (this.db) return this.db;
+
+    await this.checkServerVersion();
 
     return new Promise((resolve, reject) => {
       const request = indexedDB.open(DB_NAME, DB_VERSION);
@@ -27,6 +30,23 @@ class PrayerTimesDB {
         }
       };
     });
+  }
+
+  async checkServerVersion() {
+    const meta = document.querySelector('meta[name="cache-version"]');
+    const serverVersion = meta?.content;
+    if (!serverVersion) return;
+
+    const localVersion = localStorage.getItem(VERSION_KEY);
+    if (localVersion === serverVersion) return;
+
+    localStorage.setItem(VERSION_KEY, serverVersion);
+    if (localVersion !== null) {
+      await new Promise((resolve) => {
+        const req = indexedDB.deleteDatabase(DB_NAME);
+        req.onsuccess = req.onerror = req.onblocked = () => resolve();
+      });
+    }
   }
 
   generateId(zone, year) {
@@ -78,11 +98,14 @@ class PrayerTimesDB {
 
     if (!cached) return null;
 
-    const dateStr = this.formatDate(date);
+    const target = date.toDateString();
     const prayerTimes = cached.data.prayerTime || [];
 
     return {
-      today: prayerTimes.find((p) => p.date === dateStr),
+      today: prayerTimes.find((p) => {
+        const d = this.parseDate(p.date);
+        return d && d.toDateString() === target;
+      }),
       bearing: cached.data.bearing,
       prayerTime: prayerTimes,
     };

@@ -26,6 +26,9 @@ module PrayerTime
 
   def self.islamic_events
     Jakim::ApiResource.islamic_events.as_json
+  rescue Flexirest::HTTPException => e
+    Rails.logger.warn("JAKIM islamic_events fetch failed: #{e.class} #{e.message}")
+    { "event" => [] }
   end
 
   def self.validate_zone!(zone)
